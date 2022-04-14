@@ -1,0 +1,583 @@
+Generation of mission files.
+Mission files generated.
+> Execution : C:/Program Files/Systema-4.9.0/applications//Thermica-4.9.0/ConductionWIN.exe -param Conduction.sysprm -mission cas_chaud.sysset -log cas_chaud.cond.log -gl cas_chaud.gl.nwk -edg cas_chaud.edg.h5
+>  
+>  
+>  **************************
+> Conduction Computation
+>  **************************
+> THERMICA 4.9.0 - 64 bits
+AIRBUS Defence and Space SAS - 2020 - All rights reserved
+Information contact : Systema Support
+Telephone : +33 (0)5 31 96 80 00
+Email : engineering.software@airbus.com
+
+About license :
+Valid local license found, expires at 31/12/2021
+(file: C:/Program Files/Systema-4.9.0/licenses\ISAE_SUPAERO_CubeSat_Marie.moslf).
+
+>   - Number of active threads : 4 ( / 4 available)
+
+> State  1 : Model Initialisation
+> State  2 : Thermal Data Loading
+> State  3 : Mission Data Loading
+> State  4 : Edges creation (border)
+> State  4 : Edges creation (contact)
+> State  4 : Edges creation (edges)
+> State  5 : Computation of couplings via RCN
+> * WARNING *
+> Node 5500 has a conductivity or thickness negative or null.
+> * WARNING *
+Execution of computation executable "Thermica - Conduction" completed.
+> Node 5600 has a conductivity or thickness negative or null.
+> * WARNING *
+> Node 5700 has a conductivity or thickness negative or null.
+> * WARNING *
+> Node 5800 has a conductivity or thickness negative or null.
+> * WARNING *
+> Node 5900 has a conductivity or thickness negative or null.
+> * WARNING *
+> Node 6000 has a conductivity or thickness negative or null.
+> State  6 : Simplification of couplings
+> State  7 : Network Output generation
+>  
+> Execution completed on Thu Mar 11 18:37:28 2021
+
+>  **************************
+>  
+> Execution : C:/Program Files/Systema-4.9.0/applications//Thermica-4.9.0/NodeWIN.exe -param Nodal_Description.sysprm -mission cas_chaud.sysset -log cas_chaud.nod.log -nwk cas_chaud.nod.nwk
+>  
+>  
+>  **************************
+> Nodal description
+>  **************************
+> THERMICA 4.9.0 - 64 bits
+AIRBUS Defence and Space SAS - 2020 - All rights reserved
+Information contact : Systema Support
+Telephone : +33 (0)5 31 96 80 00
+Email : engineering.software@airbus.com
+
+About license :
+Valid local license found, expires at 31/12/2021
+(file: C:/Program Files/Systema-4.9.0/licenses\ISAE_SUPAERO_CubeSat_Marie.moslf).
+
+> State  1 : Model Initialisation
+> State  2 : Thermal Data Loading
+> State  3 : Contact Management
+> State  4 : Mission Data Loading
+> State  5 : Network Output generation
+> State  6 : Adding specific items
+Execution of computation executable "Thermica - Nodal_Description" completed.
+>  
+> Execution completed on Thu Mar 11 18:37:37 2021
+
+>  **************************
+>  
+> Execution : C:/Program Files/Systema-4.9.0/applications//Thermica-4.9.0/RadiationWIN.exe -param Radiation.sysprm -mission cas_chaud.sysset -h5 cas_chaud.rad.h5 -box cas_chaud.box.h5 -log cas_chaud.rad.log -gb cas_chaud.gb.txt -gr cas_chaud.gr.nwk
+>  
+>  
+>  **************************
+> Radiation Computation
+>  **************************
+> THERMICA 4.9.0 - 64 bits
+AIRBUS Defence and Space SAS - 2020 - All rights reserved
+Information contact : Systema Support
+Telephone : +33 (0)5 31 96 80 00
+Email : engineering.software@airbus.com
+
+About license :
+Valid local license found, expires at 31/12/2021
+(file: C:/Program Files/Systema-4.9.0/licenses\ISAE_SUPAERO_CubeSat_Marie.moslf).
+
+>   - Number of active threads : 4 ( / 4 available)
+
+> State  1 : Model Initialisation
+> State  2 : Thermal Data Loading
+> State  3 : Mission Data Loading
+> State  4 : Ray-Tracing Initialisation
+> State  5 : REF ray-tracing
+> * WARNING *
+> SUPERPOSITION TO BE SOLVED (orbital position 1):   Node  4300 and Shape [4600]  (100.000000 %)!!!!
+> * WARNING *
+> SUPERPOSITION TO BE SOLVED (orbital position 1):   Node  4600 and Shape [4300]  (100.000000 %)!!!!
+> State  6 : Symmetrization of Matrix
+> State  7 : Radiation Check-list generation
+> State  8 : Network Output Generation
+Execution of computation executable "Thermica - Radiation" completed.
+>  
+> Execution completed on Thu Mar 11 18:37:46 2021
+
+>  **************************
+>  
+> Execution : C:/Program Files/Systema-4.9.0/applications//Thermica-4.9.0/PlanetFluxesWIN.exe -param Planet_Fluxes.sysprm -mission cas_chaud.sysset -refh5 cas_chaud.box.h5 -hdf5 cas_chaud.pf.h5 -log cas_chaud.pf.log -fap cas_chaud.pf.nwk
+>  
+>  
+>  **************************
+> Planets Fluxes Computation
+>  **************************
+> THERMICA 4.9.0 - 64 bits
+AIRBUS Defence and Space SAS - 2020 - All rights reserved
+Information contact : Systema Support
+Telephone : +33 (0)5 31 96 80 00
+Email : engineering.software@airbus.com
+
+About license :
+Valid local license found, expires at 31/12/2021
+(file: C:/Program Files/Systema-4.9.0/licenses\ISAE_SUPAERO_CubeSat_Marie.moslf).
+
+> State  1 : Model Initialisation
+> State  2 : Thermal Data Loading
+> State  3 : Mission Data Loading
+> State  4 : Planetes Fluxes Computation
+> Time position 0  -  Sun constant on planet Earth : 1327.87 W/m2
+> Time position 1  -  Sun constant on planet Earth : 1327.87 W/m2
+> Time position 2  -  Sun constant on planet Earth : 1327.87 W/m2
+> Time position 3  -  Sun constant on planet Earth : 1327.87 W/m2
+> Time position 4  -  Sun constant on planet Earth : 1327.86 W/m2
+> Time position 5  -  Sun constant on planet Earth : 1327.86 W/m2
+> Time position 6  -  Sun constant on planet Earth : 1327.86 W/m2
+> Time position 7  -  Sun constant on planet Earth : 1327.86 W/m2
+> Time position 8  -  Sun constant on planet Earth : 1327.86 W/m2
+> Time position 9  -  Sun constant on planet Earth : 1327.86 W/m2
+> Time position 10  -  Sun constant on planet Earth : 1327.86 W/m2
+> Time position 11  -  Sun constant on planet Earth : 1327.86 W/m2
+> Time position 12  -  Sun constant on planet Earth : 1327.86 W/m2
+> Time position 13  -  Sun constant on planet Earth : 1327.86 W/m2
+> Time position 14  -  Sun constant on planet Earth : 1327.86 W/m2
+> Time position 15  -  Sun constant on planet Earth : 1327.86 W/m2
+> Time position 16  -  Sun constant on planet Earth : 1327.86 W/m2
+> Time position 17  -  Sun constant on planet Earth : 1327.86 W/m2
+> Time position 18  -  Sun constant on planet Earth : 1327.86 W/m2
+> Time position 19  -  Sun constant on planet Earth : 1327.86 W/m2
+> Time position 20  -  Sun constant on planet Earth : 1327.86 W/m2
+> Time position 21  -  Sun constant on planet Earth : 1327.86 W/m2
+> Time position 22  -  Sun constant on planet Earth : 1327.86 W/m2
+> Time position 23  -  Sun constant on planet Earth : 1327.86 W/m2
+> Time position 24  -  Sun constant on planet Earth : 1327.86 W/m2
+> Time position 25  -  Sun constant on planet Earth : 1327.86 W/m2
+> Time position 26  -  Sun constant on planet Earth : 1327.86 W/m2
+> Time position 27  -  Sun constant on planet Earth : 1327.86 W/m2
+> Time position 28  -  Sun constant on planet Earth : 1327.86 W/m2
+> Time position 29  -  Sun constant on planet Earth : 1327.86 W/m2
+> Time position 30  -  Sun constant on planet Earth : 1327.85 W/m2
+> Time position 31  -  Sun constant on planet Earth : 1327.85 W/m2
+> Time position 32  -  Sun constant on planet Earth : 1327.85 W/m2
+> Time position 33  -  Sun constant on planet Earth : 1327.85 W/m2
+> Time position 34  -  Sun constant on planet Earth : 1327.85 W/m2
+> Time position 35  -  Sun constant on planet Earth : 1327.85 W/m2
+> Time position 36  -  Sun constant on planet Earth : 1327.85 W/m2
+> Time position 37  -  Sun constant on planet Earth : 1327.85 W/m2
+> Time position 38  -  Sun constant on planet Earth : 1327.85 W/m2
+> Time position 39  -  Sun constant on planet Earth : 1327.85 W/m2
+> Time position 40  -  Sun constant on planet Earth : 1327.85 W/m2
+> Time position 41  -  Sun constant on planet Earth : 1327.85 W/m2
+> Time position 42  -  Sun constant on planet Earth : 1327.85 W/m2
+> Time position 43  -  Sun constant on planet Earth : 1327.85 W/m2
+> Time position 44  -  Sun constant on planet Earth : 1327.85 W/m2
+> Time position 45  -  Sun constant on planet Earth : 1327.85 W/m2
+> Time position 46  -  Sun constant on planet Earth : 1327.85 W/m2
+> Time position 47  -  Sun constant on planet Earth : 1327.85 W/m2
+> Time position 48  -  Sun constant on planet Earth : 1327.85 W/m2
+> Time position 49  -  Sun constant on planet Earth : 1327.85 W/m2
+> Time position 50  -  Sun constant on planet Earth : 1327.85 W/m2
+> Time position 51  -  Sun constant on planet Earth : 1327.85 W/m2
+> Time position 52  -  Sun constant on planet Earth : 1327.85 W/m2
+> Time position 53  -  Sun constant on planet Earth : 1327.85 W/m2
+> Time position 54  -  Sun constant on planet Earth : 1327.85 W/m2
+> Time position 55  -  Sun constant on planet Earth : 1327.85 W/m2
+> Time position 56  -  Sun constant on planet Earth : 1327.84 W/m2
+> Time position 57  -  Sun constant on planet Earth : 1327.84 W/m2
+> Time position 58  -  Sun constant on planet Earth : 1327.84 W/m2
+> Time position 59  -  Sun constant on planet Earth : 1327.84 W/m2
+> Time position 60  -  Sun constant on planet Earth : 1327.84 W/m2
+> Time position 61  -  Sun constant on planet Earth : 1327.84 W/m2
+> Time position 62  -  Sun constant on planet Earth : 1327.84 W/m2
+> Time position 63  -  Sun constant on planet Earth : 1327.84 W/m2
+> Time position 64  -  Sun constant on planet Earth : 1327.84 W/m2
+> Time position 65  -  Sun constant on planet Earth : 1327.84 W/m2
+> Time position 66  -  Sun constant on planet Earth : 1327.84 W/m2
+> Time position 67  -  Sun constant on planet Earth : 1327.84 W/m2
+> Time position 68  -  Sun constant on planet Earth : 1327.84 W/m2
+> Time position 69  -  Sun constant on planet Earth : 1327.84 W/m2
+> Time position 70  -  Sun constant on planet Earth : 1327.84 W/m2
+> Time position 71  -  Sun constant on planet Earth : 1327.84 W/m2
+> Time position 72  -  Sun constant on planet Earth : 1327.84 W/m2
+> Time position 73  -  Sun constant on planet Earth : 1327.84 W/m2
+> Time position 74  -  Sun constant on planet Earth : 1327.84 W/m2
+> Time position 75  -  Sun constant on planet Earth : 1327.84 W/m2
+> Time position 76  -  Sun constant on planet Earth : 1327.84 W/m2
+> Time position 77  -  Sun constant on planet Earth : 1327.84 W/m2
+> Time position 78  -  Sun constant on planet Earth : 1327.84 W/m2
+> Time position 79  -  Sun constant on planet Earth : 1327.84 W/m2
+> Time position 80  -  Sun constant on planet Earth : 1327.84 W/m2
+> Time position 81  -  Sun constant on planet Earth : 1327.84 W/m2
+> State  5 : Network Outputs Generation
+Execution of computation executable "Thermica - Planet_Fluxes" completed.
+>  
+> Execution completed on Thu Mar 11 18:38:06 2021
+
+>  **************************
+>  
+> Execution : C:/Program Files/Systema-4.9.0/applications//Thermica-4.9.0/SolarFluxWIN.exe -param Solar_Flux.sysprm -mission cas_chaud.sysset -refh5 cas_chaud.box.h5 -hdf5 cas_chaud.sf.h5 -log cas_chaud.sf.log -fas cas_chaud.sf.nwk
+>  
+>  
+>  **************************
+> Solar Flux Computation
+>  **************************
+> THERMICA 4.9.0 - 64 bits
+AIRBUS Defence and Space SAS - 2020 - All rights reserved
+Information contact : Systema Support
+Telephone : +33 (0)5 31 96 80 00
+Email : engineering.software@airbus.com
+
+About license :
+Valid local license found, expires at 31/12/2021
+(file: C:/Program Files/Systema-4.9.0/licenses\ISAE_SUPAERO_CubeSat_Marie.moslf).
+
+>   - Number of active threads : 4 ( / 4 available)
+
+> State  1 : Model Initialisation
+> State  2 : Thermal Data Loading
+> State  3 : Mission Data Loading
+> State  4 : Ray-Tracing Initialisation
+> State  5 : Sun ray-tracing
+> Time position 0  -  Sun constant : 1327.96 W/m2
+> Time position 1  -  Sun constant : 1327.95 W/m2
+> Time position 2  -  Sun constant : 1327.93 W/m2
+> Time position 3  -  Sun constant : 1327.91 W/m2
+> Time position 4  -  Sun constant : 1327.89 W/m2
+> Time position 5  -  Sun constant : 1327.86 W/m2
+> Time position 6  -  Sun constant : 1327.84 W/m2
+> Time position 7  -  Sun constant : 1327.82 W/m2
+> Time position 8  -  Into eclipse
+> Time position 9  -  Into eclipse
+> Time position 10  -  Into eclipse
+> Time position 11  -  Into eclipse
+> Time position 12  -  Into eclipse
+> Time position 13  -  Into eclipse
+> Time position 14  -  Into eclipse
+> Time position 15  -  Into eclipse
+> Time position 16  -  Into eclipse
+> Time position 17  -  Into eclipse
+> Time position 18  -  Sun constant : 1327.82 W/m2
+> Time position 19  -  Sun constant : 1327.84 W/m2
+> Time position 20  -  Sun constant : 1327.86 W/m2
+> Time position 21  -  Sun constant : 1327.89 W/m2
+> Time position 22  -  Sun constant : 1327.91 W/m2
+> Time position 23  -  Sun constant : 1327.93 W/m2
+> Time position 24  -  Sun constant : 1327.94 W/m2
+> Time position 25  -  Sun constant : 1327.95 W/m2
+> Time position 26  -  Sun constant : 1327.95 W/m2
+> Time position 27  -  Sun constant : 1327.95 W/m2
+> Time position 28  -  Sun constant : 1327.94 W/m2
+> Time position 29  -  Sun constant : 1327.92 W/m2
+> Time position 30  -  Sun constant : 1327.9 W/m2
+> Time position 31  -  Sun constant : 1327.88 W/m2
+> Time position 32  -  Sun constant : 1327.85 W/m2
+> Time position 33  -  Sun constant : 1327.83 W/m2
+> Time position 34  -  Sun constant : 1327.81 W/m2
+> Time position 35  -  Into eclipse
+> Time position 36  -  Into eclipse
+> Time position 37  -  Into eclipse
+> Time position 38  -  Into eclipse
+> Time position 39  -  Into eclipse
+> Time position 40  -  Into eclipse
+> Time position 41  -  Into eclipse
+> Time position 42  -  Into eclipse
+> Time position 43  -  Into eclipse
+> Time position 44  -  Into eclipse
+> Time position 45  -  Sun constant : 1327.8 W/m2
+> Time position 46  -  Sun constant : 1327.83 W/m2
+> Time position 47  -  Sun constant : 1327.85 W/m2
+> Time position 48  -  Sun constant : 1327.88 W/m2
+> Time position 49  -  Sun constant : 1327.9 W/m2
+> Time position 50  -  Sun constant : 1327.92 W/m2
+> Time position 51  -  Sun constant : 1327.93 W/m2
+> Time position 52  -  Sun constant : 1327.94 W/m2
+> Time position 53  -  Sun constant : 1327.94 W/m2
+> Time position 54  -  Sun constant : 1327.94 W/m2
+> Time position 55  -  Sun constant : 1327.93 W/m2
+> Time position 56  -  Sun constant : 1327.91 W/m2
+> Time position 57  -  Sun constant : 1327.89 W/m2
+> Time position 58  -  Sun constant : 1327.87 W/m2
+> Time position 59  -  Sun constant : 1327.84 W/m2
+> Time position 60  -  Sun constant : 1327.82 W/m2
+> Time position 61  -  Sun constant : 1327.8 W/m2
+> Time position 62  -  Into eclipse
+> Time position 63  -  Into eclipse
+> Time position 64  -  Into eclipse
+> Time position 65  -  Into eclipse
+> Time position 66  -  Into eclipse
+> Time position 67  -  Into eclipse
+> Time position 68  -  Into eclipse
+> Time position 69  -  Into eclipse
+> Time position 70  -  Into eclipse
+> Time position 71  -  Into eclipse
+> Time position 72  -  Sun constant : 1327.79 W/m2
+> Time position 73  -  Sun constant : 1327.82 W/m2
+> Time position 74  -  Sun constant : 1327.84 W/m2
+> Time position 75  -  Sun constant : 1327.87 W/m2
+> Time position 76  -  Sun constant : 1327.89 W/m2
+> Time position 77  -  Sun constant : 1327.91 W/m2
+> Time position 78  -  Sun constant : 1327.92 W/m2
+> Time position 79  -  Sun constant : 1327.93 W/m2
+> Time position 80  -  Sun constant : 1327.93 W/m2
+> Time position 81  -  Sun constant : 1327.93 W/m2
+> State  6 : SolarFlux Check-list generation
+> State  7 : Network Output Generation
+Execution of computation executable "Thermica - Solar_Flux" completed.
+>  
+> Execution completed on Thu Mar 11 18:38:18 2021
+
+>  **************************
+>  
+> Execution : C:/Program Files/Systema-4.9.0/applications//Thermisol-4.9.0/SkeletonWIN.exe -param Skeleton.sysprm -nwk cas_chaud.nod.nwk -gl cas_chaud.gl.nwk -gr cas_chaud.gr.nwk -fs cas_chaud.sf.nwk -usr TOLOSAT_V5.usr -dck processing.dck
+>  
+>  
+>  **************************
+> Skeleton Generation
+>  **************************
+> THERMISOL 4.9.0 - 64 bits
+AIRBUS Defence and Space SAS - 2020 - All rights reserved
+Information contact : Systema Support
+Telephone : +33 (0)5 31 96 80 00
+Email : engineering.software@airbus.com
+
+About license :
+Valid local license found, expires at 31/12/2021
+(file: C:/Program Files/Systema-4.9.0/licenses\ISAE_SUPAERO_CubeSat_Marie.moslf).
+
+> State  1 : Skeleton generation
+> State  1 : Skeleton expansion
+>    using file - cas_chaud.nod.nwk
+>    using file - cas_chaud.gl.nwk
+>    using file - cas_chaud.gr.nwk
+>    using file - cas_chaud.sf.nwk
+>    using file - TOLOSAT_V5.usr
+> Entering new block   $INFOS
+>    reading file - cas_chaud.nod.nwk
+>       -> block found
+>    reading file - cas_chaud.gl.nwk
+>       -> block found
+>    reading file - cas_chaud.gr.nwk
+>       -> block found
+>    reading file - cas_chaud.sf.nwk
+>       -> block found
+>    reading file - TOLOSAT_V5.usr
+>       -> block found
+> Entering new block   $GLOBAL
+> Entering new block   $LOCALS
+>    reading file - cas_chaud.nod.nwk
+>       -> block found
+>    reading file - cas_chaud.gl.nwk
+>    reading file - cas_chaud.gr.nwk
+>    reading file - cas_chaud.sf.nwk
+>    reading file - TOLOSAT_V5.usr
+> Entering new block   $VARIABLES
+>    reading file - cas_chaud.nod.nwk
+>    reading file - cas_chaud.gl.nwk
+>    reading file - cas_chaud.gr.nwk
+>    reading file - cas_chaud.sf.nwk
+>    reading file - TOLOSAT_V5.usr
+> Entering new block   $ARRAYS
+>    reading file - cas_chaud.nod.nwk
+>    reading file - cas_chaud.gl.nwk
+>    reading file - cas_chaud.gr.nwk
+>    reading file - cas_chaud.sf.nwk
+>    reading file - TOLOSAT_V5.usr
+> Entering new block   $TABLES
+>    reading file - cas_chaud.nod.nwk
+>    reading file - cas_chaud.gl.nwk
+>    reading file - cas_chaud.gr.nwk
+>    reading file - cas_chaud.sf.nwk
+>    reading file - TOLOSAT_V5.usr
+> Entering new block   $EVENTS
+>    reading file - cas_chaud.nod.nwk
+>    reading file - cas_chaud.gl.nwk
+>    reading file - cas_chaud.gr.nwk
+>    reading file - cas_chaud.sf.nwk
+>    reading file - TOLOSAT_V5.usr
+> Entering new block   $MODEL
+> Opening model  processing
+>    reading file - cas_chaud.nod.nwk
+>    reading file - cas_chaud.gl.nwk
+>    reading file - cas_chaud.gr.nwk
+>    reading file - cas_chaud.sf.nwk
+>    reading file - TOLOSAT_V5.usr
+> Entering new block   $ENTITIES
+>    reading file - cas_chaud.nod.nwk
+>       -> block found
+>    reading file - cas_chaud.gl.nwk
+>    reading file - cas_chaud.gr.nwk
+>    reading file - cas_chaud.sf.nwk
+>    reading file - TOLOSAT_V5.usr
+> Entering new block   $NODES
+>    reading file - cas_chaud.nod.nwk
+>       -> block found
+>    reading file - cas_chaud.gl.nwk
+>    reading file - cas_chaud.gr.nwk
+>    reading file - cas_chaud.sf.nwk
+>    reading file - TOLOSAT_V5.usr
+> Entering new block   $EDGES
+>    reading file - cas_chaud.nod.nwk
+>    reading file - cas_chaud.gl.nwk
+>    reading file - cas_chaud.gr.nwk
+>    reading file - cas_chaud.sf.nwk
+>    reading file - TOLOSAT_V5.usr
+> Entering new block   $CONDUCTORS
+>    reading file - cas_chaud.nod.nwk
+>    reading file - cas_chaud.gl.nwk
+>       -> block found
+>    reading file - cas_chaud.gr.nwk
+>       -> block found
+>    reading file - cas_chaud.sf.nwk
+>    reading file - TOLOSAT_V5.usr
+>       -> block found
+> Entering new block   $LOCALS
+>    reading file - cas_chaud.nod.nwk
+>    reading file - cas_chaud.gl.nwk
+>    reading file - cas_chaud.gr.nwk
+>    reading file - cas_chaud.sf.nwk
+>    reading file - TOLOSAT_V5.usr
+> Entering new block   $EVENTS
+>    reading file - cas_chaud.nod.nwk
+>       -> block found
+>    reading file - cas_chaud.gl.nwk
+>    reading file - cas_chaud.gr.nwk
+>    reading file - cas_chaud.sf.nwk
+>    reading file - TOLOSAT_V5.usr
+> Entering new block   $ARRAYS
+>    reading file - cas_chaud.nod.nwk
+>       -> block found
+>    reading file - cas_chaud.gl.nwk
+>    reading file - cas_chaud.gr.nwk
+>    reading file - cas_chaud.sf.nwk
+>       -> block found
+>    reading file - TOLOSAT_V5.usr
+> Entering new block   $TABLES
+>    reading file - cas_chaud.nod.nwk
+>    reading file - cas_chaud.gl.nwk
+>    reading file - cas_chaud.gr.nwk
+>    reading file - cas_chaud.sf.nwk
+>    reading file - TOLOSAT_V5.usr
+> Entering new block   $VARIABLES
+>    reading file - cas_chaud.nod.nwk
+>    reading file - cas_chaud.gl.nwk
+>    reading file - cas_chaud.gr.nwk
+>    reading file - cas_chaud.sf.nwk
+>    reading file - TOLOSAT_V5.usr
+> Entering new block   $CONTROL
+>    reading file - cas_chaud.nod.nwk
+>       -> block found
+>    reading file - cas_chaud.gl.nwk
+>    reading file - cas_chaud.gr.nwk
+>    reading file - cas_chaud.sf.nwk
+>       -> block found
+>    reading file - TOLOSAT_V5.usr
+> Entering new block   $SUBROUTINES
+>    reading file - cas_chaud.nod.nwk
+>    reading file - cas_chaud.gl.nwk
+>    reading file - cas_chaud.gr.nwk
+>    reading file - cas_chaud.sf.nwk
+>       -> block found
+>    reading file - TOLOSAT_V5.usr
+> Entering new block   $INITIAL
+>    reading file - cas_chaud.nod.nwk
+>    reading file - cas_chaud.gl.nwk
+>    reading file - cas_chaud.gr.nwk
+>    reading file - cas_chaud.sf.nwk
+>       -> block found
+>    reading file - TOLOSAT_V5.usr
+>       -> block found
+> Entering new block   $VTEMPERATURE
+>    reading file - cas_chaud.nod.nwk
+>    reading file - cas_chaud.gl.nwk
+>    reading file - cas_chaud.gr.nwk
+>    reading file - cas_chaud.sf.nwk
+>    reading file - TOLOSAT_V5.usr
+> Entering new block   $VTIME
+>    reading file - cas_chaud.nod.nwk
+>    reading file - cas_chaud.gl.nwk
+>    reading file - cas_chaud.gr.nwk
+>    reading file - cas_chaud.sf.nwk
+>       -> block found
+>    reading file - TOLOSAT_V5.usr
+> Entering new block   $VRESULT
+>    reading file - cas_chaud.nod.nwk
+>    reading file - cas_chaud.gl.nwk
+>    reading file - cas_chaud.gr.nwk
+>    reading file - cas_chaud.sf.nwk
+>    reading file - TOLOSAT_V5.usr
+> Entering new block   $OUTPUTS
+>    reading file - cas_chaud.nod.nwk
+>    reading file - cas_chaud.gl.nwk
+>    reading file - cas_chaud.gr.nwk
+>    reading file - cas_chaud.sf.nwk
+>    reading file - TOLOSAT_V5.usr
+> Entering new block   $EXECUTION
+>    reading file - cas_chaud.nod.nwk
+>    reading file - cas_chaud.gl.nwk
+>    reading file - cas_chaud.gr.nwk
+>    reading file - cas_chaud.sf.nwk
+>    reading file - TOLOSAT_V5.usr
+> Closing model  processing
+>  
+Execution of computation executable "Thermisol - Skeleton" completed.
+> Execution completed on Thu Mar 11 18:38:24 2021
+
+>  **************************
+>  
+> Execution : C:/Program Files/Systema-4.9.0/applications//Thermisol-4.9.0/SolverWIN.exe -param Solver.sysprm -dck processing.dck -log processing.temp.log -csv processing.temp.csv -out processing.temp.out -hdf processing.temp.h5
+>  
+>  
+>  **************************
+> Temperature Solver Execution
+>  **************************
+> State  1 : Creation of user fortran code
+> "C:\Program Files\Systema-4.9.0\applications\Thermisol-4.9.0\PreproWIN.exe" "processing.dck" "processing.temp.out" "processing.temp.h5" "processing.temp.csv" "processing.temp.log" "-" 0
+> State  2 : Compilation of user code
+> g77 -fno-underscoring -fno-globals -w -c "zz_processing_for.f"
+> State  3 : Link with solver library
+> g77 -fno-underscoring -fno-globals -w -o "zz_processing_prg_WIN.exe" "zz_processing_for.o" "C:\Program Files\Systema-4.9.0\applications\Thermisol-4.9.0\..\Libsolver-4.9.0\SolverLibWIN.a"  -ladvapi32 -lnetapi32 -lwsock32 "C:\Program Files\Systema-4.9.0\applications\Thermisol-4.9.0\..\Libsolver-4.9.0\PowerDummyLibWIN.a"
+> State  4 : Execution of solution program
+> .\zz_processing_prg_WIN.exe
+> THERMISOL 4.9.0 - 64 bits
+AIRBUS Defence and Space SAS - 2020 - All rights reserved
+Information contact : Systema Support
+Telephone : +33 (0)5 31 96 80 00
+Email : engineering.software@airbus.com
+
+About license :
+Valid local license found, expires at 31/12/2021
+(file: C:/Program Files/Systema-4.9.0/licenses\ISAE_SUPAERO_CubeSat_Marie.moslf).
+
+Execution of computation executable "Thermisol - Solver" completed.
+>  
+> Execution completed on Thu Mar 11 18:38:37 2021
+
+>  **************************
+>  
+> Execution : C:/Program Files/Systema-4.9.0/applications//Thermisol-4.9.0/PostherWIN.exe -param Posther.sysprm -h5 processing.temp.h5 -xls processing.xls -txt processing.txt
+>  
+>  
+>  **************************
+> Posther - Thermal Post-processing ToolBox
+>  **************************
+> THERMISOL 4.9.0 - 64 bits
+AIRBUS Defence and Space SAS - 2020 - All rights reserved
+Information contact : Systema Support
+Telephone : +33 (0)5 31 96 80 00
+Email : engineering.software@airbus.com
+
+About license :
+Valid local license found, expires at 31/12/2021
+(file: C:/Program Files/Systema-4.9.0/licenses\ISAE_SUPAERO_CubeSat_Marie.moslf).
+
+> State  1 : Initialisation
+> State  2 : Extraction
+Execution of computation executable "Thermisol - Posther" completed.
+>  
+> Execution completed on Thu Mar 11 18:38:44 2021
+
+>  **************************
+>  

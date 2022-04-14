@@ -1,0 +1,142 @@
+
+*------------------------------------*
+*                                    *
+*   SYSTEMA V4 APPLICATION LOG FILE  *
+*                                    *
+*------------------------------------*
+
+
+
+              **********
+
+      solver Computation
+
+
+Execution started on Thu Apr 22 19:23:44 2021
+
+
+
+State  1 : Creation of user fortran code                                       Time :  Thu Apr 22 19:23:44 2021
+
+"D:\Program Files (x86)\Systema-4.9.0\applications\Thermisol-4.9.0\PreproWIN.exe" "processing.dck" "processing.temp.out" "processing.temp.h5" "processing.temp.csv" "processing.temp.log" "-" 0
+
+ - Loading input file
+
+[file processing.dck line 894]
+Warning : Ambiguous C character found on 1st column in Mixed format: interpreted as an assignement
+
+
+
+ - Translating Mortran into Fortran
+
+No undeclared symbol has been found. The model is clean.
+
+
+
+
+ Preprocessing : Generation of the binary interface for solving program :
+ ------------------------------------------------------------------------
+
+    Sizes: 
+       - Number of Models : 1
+       - Number of Thermal Nodes  : 30
+       - Number of Thermal Edges  : 0
+       - Number of GL     : 108
+           --> Warning : GL between processing:200 and processing:100 has been multi-defined
+           --> Warning : GL between processing:300 and processing:100 has been multi-defined
+           --> Warning : GL between processing:400 and processing:100 has been multi-defined
+           --> Warning : GL between processing:500 and processing:100 has been multi-defined
+           --> Warning : GL between processing:202 and processing:600 has been multi-defined
+           --> Warning : GL between processing:302 and processing:600 has been multi-defined
+           --> Warning : GL between processing:402 and processing:600 has been multi-defined
+           --> Warning : GL between processing:502 and processing:600 has been multi-defined
+           --> Warning : GL between processing:200 and processing:400 has been multi-defined
+           --> Warning : GL between processing:400 and processing:300 has been multi-defined
+           --> Warning : GL between processing:300 and processing:500 has been multi-defined
+           --> Warning : GL between processing:500 and processing:200 has been multi-defined
+           --> Warning : GL between processing:201 and processing:401 has been multi-defined
+           --> Warning : GL between processing:401 and processing:301 has been multi-defined
+           --> Warning : GL between processing:301 and processing:501 has been multi-defined
+           --> Warning : GL between processing:501 and processing:201 has been multi-defined
+           --> Warning : GL between processing:202 and processing:402 has been multi-defined
+           --> Warning : GL between processing:402 and processing:302 has been multi-defined
+           --> Warning : GL between processing:302 and processing:502 has been multi-defined
+           --> Warning : GL between processing:502 and processing:202 has been multi-defined
+           --> Warning : GL between processing:2000 and processing:201 has been multi-defined
+           --> Warning : GL between processing:2000 and processing:301 has been multi-defined
+           --> Warning : GL between processing:2000 and processing:401 has been multi-defined
+           --> Warning : GL between processing:2000 and processing:501 has been multi-defined
+       - Number of GR     : 108
+       - Number of GRWLB  : 0
+       - Number of GF     : 0
+       - Number of Electric Nodes      : 0
+       - Number of Electric Components : 0
+       - Number of Outgassing Nodes      : 0
+       - Number of Outgassing ViewFactor : 0
+    Model 'processing': 
+       - Number of Events : 0
+       - Number of Thermal    Nodes : 30
+       - Number of Electric   Nodes : 0
+       - Number of Outgassing Nodes : 0
+
+       - List of unused symbols :
+           -- SEQNAME (char array)
+           -- SEQNB (real array)
+           -- ECLFLG (real array)
+ End of Pre-Processing
+
+State  2 : Compilation of user code                                            Time :  Thu Apr 22 19:23:45 2021
+
+g77 -fno-underscoring -fno-globals -w -c "zz_processing_for.f"
+State  3 : Link with solver library                                            Time :  Thu Apr 22 19:23:45 2021
+
+g77 -fno-underscoring -fno-globals -w -o "zz_processing_prg_WIN.exe" "zz_processing_for.o" "D:\Program Files (x86)\Systema-4.9.0\applications\Thermisol-4.9.0\..\Libsolver-4.9.0\SolverLibWIN.a"  -ladvapi32 -lnetapi32 -lwsock32 "D:\Program Files (x86)\Systema-4.9.0\applications\Thermisol-4.9.0\..\Libsolver-4.9.0\PowerDummyLibWIN.a"
+State  4 : Execution of solution program                                       Time :  Thu Apr 22 19:23:45 2021
+
+.\zz_processing_prg_WIN.exe
+THERMISOL 4.9.0 - 64 bits
+AIRBUS Defence and Space SAS - 2021 - All rights reserved
+Information contact : Systema Support
+Telephone : +33 (0)5 31 96 80 00
+Email : engineering.software@airbus.com
+
+About license :
+Valid local license found, expires at 31/12/2021
+(file: D:/Program Files (x86)/Systema-4.9.0/licenses\ISAE_SUPAERO_CubeSat_NouveauMembre2.moslf).
+
+
+
+------------------------------------------
+------------ Solution program ------------
+------------------------------------------
+
+
+
+ Number of models : 1
+ Number of thermal nodes : 30
+ Number of thermal edges : 0
+ Number of GLs : 108
+ Number of GRs : 108  (including 0 with wavelength dependencies)
+ Number of GFs : 0
+ Number of electrical nodes : 0
+ Number of electrical componants : 0
+ Number of outgassing nodes : 0
+ Number of outgassing VFs : 0
+
+Computing...
+Text data is output to file        processing.temp.out
+Convergence data is output to file processing.temp.csv
+Log is output to file              processing.temp.log
+H5 data is output to file          processing.temp.h5
+
+
+
+End of computation.
+
+
+
+Execution completed on Thu Apr 22 19:23:45 2021
+
+
+
+

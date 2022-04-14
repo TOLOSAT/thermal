@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SYSML SYSML_VERSION="1.7" CONTENTS="MISSION" SAVEDATE="1619112890" SYSTEMA_VERSION="4.9.0">
+    <DATA_STRUCTURE NAME="hot_case.sysmis" REFSET_ID="{07451663-ce53-4676-b2bd-60286db5318d}">
+        <DATA_NODE TYPE="MISSION" REFOBJ_ID="2" NAME="Mission">
+            <DATA_NODE TYPE="GENERIC_NODE" REFOBJ_ID="3" NAME="Sequences time items"/>
+            <DATA_NODE TYPE="GENERIC_NODE" REFOBJ_ID="4" NAME="Computation time items">
+                <DATA_NODE TYPE="CUSTOM_EVTSETRULE_NODE" REFOBJ_ID="6" NAME="Computation event rule (1)">
+                    <NODE_ATTRIBUTE TYPE="EVTSETRULE_ATT" NAME="EVTSETRULE">
+                        <ELEM TYPE="CUSTOMEVTSETRULE_ELEM">
+                            <ELEM TYPE="TIMEFREQ_WRAPPER">
+                                <ELEM TYPE="ANOMALYSTEP_FREQ">
+                                    <ELEM TYPE="VALUE" NAME="Anomaly step" VALUE="15"/>
+                                    <ELEM TYPE="BOOLEAN" NAME="Add a last computation point at the interval end" VALUE="true"/>
+                                </ELEM>
+                            </ELEM>
+                            <ELEM TYPE="TIMEZONE_WRAPPER">
+                                <ELEM TYPE="WHOLEMISSION_TIMEZONE"/>
+                            </ELEM>
+                        </ELEM>
+                    </NODE_ATTRIBUTE>
+                </DATA_NODE>
+                <DATA_NODE TYPE="CUSTOM_EVTSETRULE_NODE" REFOBJ_ID="7" NAME="Computation event rule (2)">
+                    <NODE_ATTRIBUTE TYPE="EVTSETRULE_ATT" NAME="EVTSETRULE">
+                        <ELEM TYPE="CUSTOMEVTSETRULE_ELEM">
+                            <ELEM TYPE="TIMEFREQ_WRAPPER">
+                                <ELEM TYPE="ECLIPSE_REL_FREQ">
+                                    <ELEM TYPE="STRING" NAME="Selected intervals" STR="Eclipse &amp; penumbra"/>
+                                    <ELEM TYPE="STRING" NAME="Create start or end of selected intervals" STR="Start &amp; end"/>
+                                </ELEM>
+                            </ELEM>
+                            <ELEM TYPE="TIMEZONE_WRAPPER">
+                                <ELEM TYPE="WHOLEMISSION_TIMEZONE"/>
+                            </ELEM>
+                        </ELEM>
+                    </NODE_ATTRIBUTE>
+                </DATA_NODE>
+            </DATA_NODE>
+            <DATA_NODE TYPE="GENERIC_NODE" REFOBJ_ID="5" NAME="Custom time items"/>
+            <DATA_NODE TYPE="MISSION_OBJECT" REFOBJ_ID="8" NAME="Structure">
+                <DATA_NODE TYPE="MISSION_SHAPE" REFOBJ_ID="9" NAME="Dessous">
+                    <NODE_ATTRIBUTE TYPE="REF_ATT" REFOBJ_ID="3" NAME="REF" REFSET_ID="{8ab27393-a2d5-49c0-8cc0-4874fbcec4c5}"/>
+                </DATA_NODE>
+                <DATA_NODE TYPE="MISSION_SHAPE" REFOBJ_ID="10" NAME="Coté 1">
+                    <NODE_ATTRIBUTE TYPE="REF_ATT" REFOBJ_ID="4" NAME="REF" REFSET_ID="{8ab27393-a2d5-49c0-8cc0-4874fbcec4c5}"/>
+                </DATA_NODE>
+                <DATA_NODE TYPE="MISSION_SHAPE" REFOBJ_ID="11" NAME="Coté 2">
+                    <NODE_ATTRIBUTE TYPE="REF_ATT" REFOBJ_ID="5" NAME="REF" REFSET_ID="{8ab27393-a2d5-49c0-8cc0-4874fbcec4c5}"/>
+                </DATA_NODE>
+                <DATA_NODE TYPE="MISSION_SHAPE" REFOBJ_ID="12" NAME="Coté 3">
+                    <NODE_ATTRIBUTE TYPE="REF_ATT" REFOBJ_ID="6" NAME="REF" REFSET_ID="{8ab27393-a2d5-49c0-8cc0-4874fbcec4c5}"/>
+                </DATA_NODE>
+                <DATA_NODE TYPE="MISSION_SHAPE" REFOBJ_ID="13" NAME="Coté 4">
+                    <NODE_ATTRIBUTE TYPE="REF_ATT" REFOBJ_ID="7" NAME="REF" REFSET_ID="{8ab27393-a2d5-49c0-8cc0-4874fbcec4c5}"/>
+                </DATA_NODE>
+                <DATA_NODE TYPE="MISSION_SHAPE" REFOBJ_ID="14" NAME="Dessus">
+                    <NODE_ATTRIBUTE TYPE="REF_ATT" REFOBJ_ID="8" NAME="REF" REFSET_ID="{8ab27393-a2d5-49c0-8cc0-4874fbcec4c5}"/>
+                </DATA_NODE>
+                <NODE_ATTRIBUTE TYPE="REF_ATT" REFOBJ_ID="16" NAME="REF" REFSET_ID="{8ab27393-a2d5-49c0-8cc0-4874fbcec4c5}"/>
+            </DATA_NODE>
+            <DATA_NODE TYPE="MISSION_OBJECT" REFOBJ_ID="15" NAME="Panneau Solaire Dessous">
+                <DATA_NODE TYPE="MISSION_SHAPE" REFOBJ_ID="16" NAME="Panneau 2">
+                    <NODE_ATTRIBUTE TYPE="REF_ATT" REFOBJ_ID="9" NAME="REF" REFSET_ID="{8ab27393-a2d5-49c0-8cc0-4874fbcec4c5}"/>
+                </DATA_NODE>
+                <DATA_NODE TYPE="MISSION_SHAPE" REFOBJ_ID="17" NAME="Panneau 1">
+                    <NODE_ATTRIBUTE TYPE="REF_ATT" REFOBJ_ID="10" NAME="REF" REFSET_ID="{8ab27393-a2d5-49c0-8cc0-4874fbcec4c5}"/>
+                </DATA_NODE>
+                <DATA_NODE TYPE="MISSION_SHAPE" REFOBJ_ID="18" NAME="Panneau 4">
+                    <NODE_ATTRIBUTE TYPE="REF_ATT" REFOBJ_ID="11" NAME="REF" REFSET_ID="{8ab27393-a2d5-49c0-8cc0-4874fbcec4c5}"/>
+                </DATA_NODE>
+                <DATA_NODE TYPE="MISSION_SHAPE" REFOBJ_ID="19" NAME="Panneau 3">
+                    <NODE_ATTRIBUTE TYPE="REF_ATT" REFOBJ_ID="12" NAME="REF" REFSET_ID="{8ab27393-a2d5-49c0-8cc0-4874fbcec4c5}"/>
+                </DATA_NODE>
+                <NODE_ATTRIBUTE TYPE="REF_ATT" REFOBJ_ID="17" NAME="REF" REFSET_ID="{8ab27393-a2d5-49c0-8cc0-4874fbcec4c5}"/>
+            </DATA_NODE>
+            <DATA_NODE TYPE="MISSION_OBJECT" REFOBJ_ID="20" NAME="Panneau Solaire Dessus">
+                <DATA_NODE TYPE="MISSION_SHAPE" REFOBJ_ID="21" NAME="Panneau 2 (1)">
+                    <NODE_ATTRIBUTE TYPE="REF_ATT" REFOBJ_ID="18" NAME="REF" REFSET_ID="{8ab27393-a2d5-49c0-8cc0-4874fbcec4c5}"/>
+                </DATA_NODE>
+                <DATA_NODE TYPE="MISSION_SHAPE" REFOBJ_ID="22" NAME="Panneau 1 (1)">
+                    <NODE_ATTRIBUTE TYPE="REF_ATT" REFOBJ_ID="19" NAME="REF" REFSET_ID="{8ab27393-a2d5-49c0-8cc0-4874fbcec4c5}"/>
+                </DATA_NODE>
+                <DATA_NODE TYPE="MISSION_SHAPE" REFOBJ_ID="23" NAME="Panneau 4 (1)">
+                    <NODE_ATTRIBUTE TYPE="REF_ATT" REFOBJ_ID="20" NAME="REF" REFSET_ID="{8ab27393-a2d5-49c0-8cc0-4874fbcec4c5}"/>
+                </DATA_NODE>
+                <DATA_NODE TYPE="MISSION_SHAPE" REFOBJ_ID="24" NAME="Panneau 3 (1)">
+                    <NODE_ATTRIBUTE TYPE="REF_ATT" REFOBJ_ID="21" NAME="REF" REFSET_ID="{8ab27393-a2d5-49c0-8cc0-4874fbcec4c5}"/>
+                </DATA_NODE>
+                <NODE_ATTRIBUTE TYPE="REF_ATT" REFOBJ_ID="22" NAME="REF" REFSET_ID="{8ab27393-a2d5-49c0-8cc0-4874fbcec4c5}"/>
+            </DATA_NODE>
+            <DATA_NODE TYPE="MISSION_OBJECT" REFOBJ_ID="25" NAME="Rack">
+                <DATA_NODE TYPE="MISSION_SHAPE" REFOBJ_ID="26" NAME="puissance">
+                    <NODE_ATTRIBUTE TYPE="REF_ATT" REFOBJ_ID="50" NAME="REF" REFSET_ID="{8ab27393-a2d5-49c0-8cc0-4874fbcec4c5}"/>
+                </DATA_NODE>
+                <DATA_NODE TYPE="MISSION_SHAPE" REFOBJ_ID="201" NAME="comms">
+                    <NODE_ATTRIBUTE TYPE="REF_ATT" REFOBJ_ID="155" NAME="REF" REFSET_ID="{8ab27393-a2d5-49c0-8cc0-4874fbcec4c5}"/>
+                </DATA_NODE>
+                <DATA_NODE TYPE="MISSION_SHAPE" REFOBJ_ID="27" NAME="Batteries">
+                    <NODE_ATTRIBUTE TYPE="REF_ATT" REFOBJ_ID="147" NAME="REF" REFSET_ID="{8ab27393-a2d5-49c0-8cc0-4874fbcec4c5}"/>
+                </DATA_NODE>
+                <DATA_NODE TYPE="MISSION_SHAPE" REFOBJ_ID="28" NAME="OBC">
+                    <NODE_ATTRIBUTE TYPE="REF_ATT" REFOBJ_ID="148" NAME="REF" REFSET_ID="{8ab27393-a2d5-49c0-8cc0-4874fbcec4c5}"/>
+                </DATA_NODE>
+                <DATA_NODE TYPE="MISSION_SHAPE" REFOBJ_ID="29" NAME="MTQ">
+                    <NODE_ATTRIBUTE TYPE="REF_ATT" REFOBJ_ID="149" NAME="REF" REFSET_ID="{8ab27393-a2d5-49c0-8cc0-4874fbcec4c5}"/>
+                </DATA_NODE>
+                <NODE_ATTRIBUTE TYPE="REF_ATT" REFOBJ_ID="23" NAME="REF" REFSET_ID="{8ab27393-a2d5-49c0-8cc0-4874fbcec4c5}"/>
+            </DATA_NODE>
+            <DATA_NODE TYPE="MISSION_OBJECT" REFOBJ_ID="30" NAME="Payload 1">
+                <DATA_NODE TYPE="MISSION_SHAPE" REFOBJ_ID="31" NAME="puissance">
+                    <NODE_ATTRIBUTE TYPE="REF_ATT" REFOBJ_ID="151" NAME="REF" REFSET_ID="{8ab27393-a2d5-49c0-8cc0-4874fbcec4c5}"/>
+                </DATA_NODE>
+                <NODE_ATTRIBUTE TYPE="REF_ATT" REFOBJ_ID="150" NAME="REF" REFSET_ID="{8ab27393-a2d5-49c0-8cc0-4874fbcec4c5}"/>
+            </DATA_NODE>
+            <DATA_NODE TYPE="MISSION_OBJECT" REFOBJ_ID="32" NAME="Payload 2">
+                <DATA_NODE TYPE="MISSION_SHAPE" REFOBJ_ID="33" NAME="puissance">
+                    <NODE_ATTRIBUTE TYPE="REF_ATT" REFOBJ_ID="153" NAME="REF" REFSET_ID="{8ab27393-a2d5-49c0-8cc0-4874fbcec4c5}"/>
+                </DATA_NODE>
+                <NODE_ATTRIBUTE TYPE="REF_ATT" REFOBJ_ID="152" NAME="REF" REFSET_ID="{8ab27393-a2d5-49c0-8cc0-4874fbcec4c5}"/>
+            </DATA_NODE>
+            <NODE_ATTRIBUTE TYPE="MODELREF_ATT" NAME="MODEL">
+                <ELEM FILE_PATH="C:/Users/thiba/Desktop/Tolosat_Thermal1/model.sysmdl" TYPE="FILE_DESCRIPTION" FILE_FORMAT="sysmdl" NAME="MODEL" FILE_RELATIVE_PATH="./model.sysmdl"/>
+            </NODE_ATTRIBUTE>
+            <NODE_ATTRIBUTE TYPE="MESHINGREF_ATT" NAME="MESHING">
+                <ELEM FILE_PATH="C:/Users/thiba/Desktop/Tolosat_Thermal1/meshing_1_node.sysmsh" TYPE="FILE_DESCRIPTION" FILE_FORMAT="sysmsh" NAME="MESHING" FILE_RELATIVE_PATH="./meshing_1_node.sysmsh"/>
+            </NODE_ATTRIBUTE>
+            <NODE_ATTRIBUTE TYPE="KINEREF_ATT" NAME="KINEMATICS">
+                <ELEM FILE_PATH="C:/Users/thiba/Desktop/Tolosat_Thermal1/kinematics_towards_sun.syskin" TYPE="FILE_DESCRIPTION" FILE_FORMAT="syskin" NAME="KINEMATICS" FILE_RELATIVE_PATH="./kinematics_towards_sun.syskin"/>
+            </NODE_ATTRIBUTE>
+            <NODE_ATTRIBUTE TYPE="KINEBODYLINKATT" NAME="KINEMATICS LINK">
+                <ELEM TYPE="DNLINK" REFOBJ_ID="2" REFSET_ID="{db6d6431-fcbd-4ccc-b786-4e1ee3083d5d}" SELF="false"/>
+            </NODE_ATTRIBUTE>
+            <NODE_ATTRIBUTE TYPE="REF_ATT" REFOBJ_ID="2" NAME="REF" REFSET_ID="{8ab27393-a2d5-49c0-8cc0-4874fbcec4c5}"/>
+            <NODE_ATTRIBUTE TYPE="TRAJREF_ATT" NAME="TRAJECTORY">
+                <ELEM FILE_PATH="C:/Users/thiba/Desktop/Tolosat_Thermal1/trajectory_summer_1period.systrj" TYPE="FILE_DESCRIPTION" FILE_FORMAT="systrj" NAME="TRAJECTORY" FILE_RELATIVE_PATH="./trajectory_summer_1period.systrj"/>
+            </NODE_ATTRIBUTE>
+        </DATA_NODE>
+    </DATA_STRUCTURE>
+</SYSML>

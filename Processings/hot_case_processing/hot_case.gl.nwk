@@ -1,0 +1,69 @@
+
+#**********************************************#
+#                                              #
+#   Conductive Couplings created by Thermica   #
+#                                              #
+#**********************************************#
+
+$INFOS
+
+#  Conductive couplings
+#  --------------------
+#
+#  File : hot_case.gl.nwk
+#  Version : Thermica  V.4.9.0 released on September 2020
+#  Executed on : Thu Apr 22 19:23:11 2021
+#  Input files :
+#    - Sysset : hot_case.sysset
+#  Parameters :
+#    - Contact threshold : 0.0001
+#    - Corrected local contact threshold (min/max) : 0.0001 0.0001
+
+
+
+$CONDUCTORS
+
+   GL(100, 400) =   1.000E-03 * COND_Aluminium_7075;
+   GL(100, 300) =   1.000E-03 * COND_Aluminium_7075;
+   GL(100, 500) =   1.000E-03 * COND_Aluminium_7075;
+   GL(100, 200) =   1.000E-03 * COND_Aluminium_7075;
+   GL(200, 500) =   1.000E-03 * COND_Aluminium_7075;
+   GL(200, 2100) = (  2.000E-03 * COND_Aluminium_7075) * (  5.150E-01) / (  2.000E-03 * COND_Aluminium_7075 +   5.150E-01 +   2.000E-03 * COND_Aluminium_7075);
+   GL(200, 201) = (  2.000E-03 * COND_Aluminium_7075) * (  2.000E-03 * COND_Aluminium_7075) / (  2.000E-03 * COND_Aluminium_7075 +   5.150E-01 +   2.000E-03 * COND_Aluminium_7075);
+   GL(201, 2100) = (  2.000E-03 * COND_Aluminium_7075) * (  5.150E-01) / (  2.000E-03 * COND_Aluminium_7075 +   5.150E-01 +   2.000E-03 * COND_Aluminium_7075);
+   GL(200, 400) =   1.000E-03 * COND_Aluminium_7075;
+   GL(201, 501) =   1.000E-03 * COND_Aluminium_7075;
+   GL(201, 2000) = (  2.000E-03 * COND_Aluminium_7075) * (  2.960E+00) / (  2.000E-03 * COND_Aluminium_7075 +   2.960E+00 +   2.000E-03 * COND_Aluminium_7075);
+   GL(201, 202) = (  2.000E-03 * COND_Aluminium_7075) * (  2.000E-03 * COND_Aluminium_7075) / (  2.000E-03 * COND_Aluminium_7075 +   2.960E+00 +   2.000E-03 * COND_Aluminium_7075);
+   GL(202, 2000) = (  2.000E-03 * COND_Aluminium_7075) * (  2.960E+00) / (  2.000E-03 * COND_Aluminium_7075 +   2.960E+00 +   2.000E-03 * COND_Aluminium_7075);
+   GL(201, 401) =   1.000E-03 * COND_Aluminium_7075;
+   GL(202, 502) =   1.000E-03 * COND_Aluminium_7075;
+   GL(202, 600) =   1.000E-03 * COND_Aluminium_7075;
+   GL(202, 402) =   1.000E-03 * COND_Aluminium_7075;
+   GL(300, 500) =   1.000E-03 * COND_Aluminium_7075;
+   GL(300, 2100) = (  2.000E-03 * COND_Aluminium_7075) * (  5.150E-01) / (  2.000E-03 * COND_Aluminium_7075 +   5.150E-01 +   2.000E-03 * COND_Aluminium_7075);
+   GL(300, 301) = (  2.000E-03 * COND_Aluminium_7075) * (  2.000E-03 * COND_Aluminium_7075) / (  2.000E-03 * COND_Aluminium_7075 +   5.150E-01 +   2.000E-03 * COND_Aluminium_7075);
+   GL(301, 2100) = (  2.000E-03 * COND_Aluminium_7075) * (  5.150E-01) / (  2.000E-03 * COND_Aluminium_7075 +   5.150E-01 +   2.000E-03 * COND_Aluminium_7075);
+   GL(300, 400) =   1.000E-03 * COND_Aluminium_7075;
+   GL(301, 501) =   1.000E-03 * COND_Aluminium_7075;
+   GL(301, 2000) = (  2.000E-03 * COND_Aluminium_7075) * (  2.960E+00) / (  2.000E-03 * COND_Aluminium_7075 +   2.960E+00 +   2.000E-03 * COND_Aluminium_7075);
+   GL(301, 302) = (  2.000E-03 * COND_Aluminium_7075) * (  2.000E-03 * COND_Aluminium_7075) / (  2.000E-03 * COND_Aluminium_7075 +   2.960E+00 +   2.000E-03 * COND_Aluminium_7075);
+   GL(302, 2000) = (  2.000E-03 * COND_Aluminium_7075) * (  2.960E+00) / (  2.000E-03 * COND_Aluminium_7075 +   2.960E+00 +   2.000E-03 * COND_Aluminium_7075);
+   GL(301, 401) =   1.000E-03 * COND_Aluminium_7075;
+   GL(302, 502) =   1.000E-03 * COND_Aluminium_7075;
+   GL(302, 600) =   1.000E-03 * COND_Aluminium_7075;
+   GL(302, 402) =   1.000E-03 * COND_Aluminium_7075;
+   GL(400, 2100) = (  2.000E-03 * COND_Aluminium_7075) * (  5.150E-01) / (  2.000E-03 * COND_Aluminium_7075 +   5.150E-01 +   2.000E-03 * COND_Aluminium_7075);
+   GL(400, 401) = (  2.000E-03 * COND_Aluminium_7075) * (  2.000E-03 * COND_Aluminium_7075) / (  2.000E-03 * COND_Aluminium_7075 +   5.150E-01 +   2.000E-03 * COND_Aluminium_7075);
+   GL(401, 2100) = (  2.000E-03 * COND_Aluminium_7075) * (  5.150E-01) / (  2.000E-03 * COND_Aluminium_7075 +   5.150E-01 +   2.000E-03 * COND_Aluminium_7075);
+   GL(401, 2000) = (  2.000E-03 * COND_Aluminium_7075) * (  2.960E+00) / (  2.000E-03 * COND_Aluminium_7075 +   2.960E+00 +   2.000E-03 * COND_Aluminium_7075);
+   GL(401, 402) = (  2.000E-03 * COND_Aluminium_7075) * (  2.000E-03 * COND_Aluminium_7075) / (  2.000E-03 * COND_Aluminium_7075 +   2.960E+00 +   2.000E-03 * COND_Aluminium_7075);
+   GL(402, 2000) = (  2.000E-03 * COND_Aluminium_7075) * (  2.960E+00) / (  2.000E-03 * COND_Aluminium_7075 +   2.960E+00 +   2.000E-03 * COND_Aluminium_7075);
+   GL(402, 600) =   1.000E-03 * COND_Aluminium_7075;
+   GL(500, 2100) = (  2.000E-03 * COND_Aluminium_7075) * (  5.150E-01) / (  2.000E-03 * COND_Aluminium_7075 +   5.150E-01 +   2.000E-03 * COND_Aluminium_7075);
+   GL(500, 501) = (  2.000E-03 * COND_Aluminium_7075) * (  2.000E-03 * COND_Aluminium_7075) / (  2.000E-03 * COND_Aluminium_7075 +   5.150E-01 +   2.000E-03 * COND_Aluminium_7075);
+   GL(501, 2100) = (  2.000E-03 * COND_Aluminium_7075) * (  5.150E-01) / (  2.000E-03 * COND_Aluminium_7075 +   5.150E-01 +   2.000E-03 * COND_Aluminium_7075);
+   GL(501, 2000) = (  2.000E-03 * COND_Aluminium_7075) * (  2.960E+00) / (  2.000E-03 * COND_Aluminium_7075 +   2.960E+00 +   2.000E-03 * COND_Aluminium_7075);
+   GL(501, 502) = (  2.000E-03 * COND_Aluminium_7075) * (  2.000E-03 * COND_Aluminium_7075) / (  2.000E-03 * COND_Aluminium_7075 +   2.960E+00 +   2.000E-03 * COND_Aluminium_7075);
+   GL(502, 2000) = (  2.000E-03 * COND_Aluminium_7075) * (  2.960E+00) / (  2.000E-03 * COND_Aluminium_7075 +   2.960E+00 +   2.000E-03 * COND_Aluminium_7075);
+   GL(502, 600) =   1.000E-03 * COND_Aluminium_7075;

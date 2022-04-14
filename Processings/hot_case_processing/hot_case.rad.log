@@ -1,0 +1,271 @@
+
+*------------------------------------*
+*                                    *
+*   SYSTEMA V4 APPLICATION LOG FILE  *
+*                                    *
+*------------------------------------*
+
+
+
+              **********
+
+      Radiation Computation
+
+
+Execution started on Thu Apr 22 19:23:22 2021
+
+
+
+  - Number of active threads : 8 ( / 8 available)
+
+State  1 : Model Initialisation                                                Time :  Thu Apr 22 19:23:22 2021
+
+State  2 : Thermal Data Loading                                                Time :  Thu Apr 22 19:23:22 2021
+
+State  3 : Mission Data Loading                                                Time :  Thu Apr 22 19:23:22 2021
+
+Nb eclipse event: 0
+Nb penumbra event: 0
+Nb arc event: 1
+Nb sequence event: 0
+
+State  4 : Ray-Tracing Initialisation                                          Time :  Thu Apr 22 19:23:22 2021
+
+
+
+
+DUMP RADIATION PARAMS
+---------------------
+
+ - model name         : hot_case.sysset
+
+ - IR computation : 1
+ - UV computation : 1
+ - Space couplings : Yes
+ - Reciprocal REF filter : 0.0001
+ - REF minimum variation : 0.05
+ - Ray emission (high criticity) :
+    - Number of rays per node : 50000
+ - Ray emission (normal criticity) :
+    - Number of rays per node : 10000
+ - Ray emission (low criticity) :
+    - Number of rays per node : 1000
+ - Ray threshold : 0.01
+ - Number of space divisions : 20
+
+ - output             : SOL
+ - output gv          : 
+ - output gr          : hot_case.gr.nwk
+
+MODEL INFO
+----------
+
+ - nb models       : 1
+ - nb surfaces     : 21
+ - nb mesh         : 29
+ - nb volumes      : 0
+ - nb vmesh        : 0
+ Model names :
+   - 
+
+
+ MISSION INFO
+ ------------
+
+ - number of times                : 25
+     -    1 -> 26084.0000000 GAMMA50   -> simulation time        0.00 seconds
+     -    2 -> 26084.0027287 GAMMA50   -> simulation time      235.76 seconds
+     -    3 -> 26084.0054584 GAMMA50   -> simulation time      471.60 seconds
+     -    4 -> 26084.0081895 GAMMA50   -> simulation time      707.57 seconds
+     -    5 -> 26084.0109228 GAMMA50   -> simulation time      943.73 seconds
+     -    6 -> 26084.0136585 GAMMA50   -> simulation time     1180.10 seconds
+     -    7 -> 26084.0163971 GAMMA50   -> simulation time     1416.71 seconds
+     -    8 -> 26084.0191385 GAMMA50   -> simulation time     1653.57 seconds
+     -    9 -> 26084.0218827 GAMMA50   -> simulation time     1890.66 seconds
+     -   10 -> 26084.0246292 GAMMA50   -> simulation time     2127.96 seconds
+     -   11 -> 26084.0273777 GAMMA50   -> simulation time     2365.43 seconds
+     -   12 -> 26084.0301275 GAMMA50   -> simulation time     2603.01 seconds
+     -   13 -> 26084.0328778 GAMMA50   -> simulation time     2840.65 seconds
+     -   14 -> 26084.0356281 GAMMA50   -> simulation time     3078.27 seconds
+     -   15 -> 26084.0383774 GAMMA50   -> simulation time     3315.81 seconds
+     -   16 -> 26084.0411253 GAMMA50   -> simulation time     3553.22 seconds
+     -   17 -> 26084.0438709 GAMMA50   -> simulation time     3790.45 seconds
+     -   18 -> 26084.0466141 GAMMA50   -> simulation time     4027.46 seconds
+     -   19 -> 26084.0493544 GAMMA50   -> simulation time     4264.22 seconds
+     -   20 -> 26084.0520919 GAMMA50   -> simulation time     4500.74 seconds
+     -   21 -> 26084.0548267 GAMMA50   -> simulation time     4737.03 seconds
+     -   22 -> 26084.0575591 GAMMA50   -> simulation time     4973.11 seconds
+     -   23 -> 26084.0602896 GAMMA50   -> simulation time     5209.02 seconds
+     -   24 -> 26084.0630188 GAMMA50   -> simulation time     5444.83 seconds
+     -   25 -> 26084.0657407 GAMMA50   -> simulation time     5680.00 seconds
+ - number of kinematics bodies    : 0
+ - mission kind                   :  Static
+
+
+DUMP BOX
+--------
+
+    Box Min / Max Points :
+        - -0.303802  -0.303802  -0.00380299
+        - 0.403802  0.403802  0.304782
+    Corrected Box size :
+        - 0.0336954  0.0336954  0.0342872
+    Number of divisions :
+        - nb_surf  :  21
+        => div_x   :  21
+        => div_y   :  21
+        => div_z   :  9
+    Divisions min / max dimensions :
+        - 0.0336954  0.0342872
+
+State  5 : REF ray-tracing                                                     Time :  Thu Apr 22 19:23:22 2021
+
+State  6 : Symmetrization of Matrix                                            Time :  Thu Apr 22 19:23:22 2021
+
+
+
+View Factor Absolute Symmetrisation Error :
+-------------------------------------------
+
+    |------------------------------------------------------|
+    | VF symmetrisation error above       10 % :           |
+    |------------------------------------------------------|
+    |         Emission Node    | Rays  Emitted |   Error   |
+    |--------------------------|---------------|-----------|
+    |------------------------------------------------------|
+    | VF sym error between        5 % and       10 %:      |
+    |------------------------------------------------------|
+    |         Emission Node    | Rays  Emitted |   Error   |
+    |--------------------------|---------------|-----------|
+    |------------------------------------------------------|
+    | VF sym error between        1 % and        5 %:      |
+    |------------------------------------------------------|
+    |         Emission Node    | Rays  Emitted |   Error   |
+    |--------------------------|---------------|-----------|
+    |------------------------------------------------------|
+    | Number of error below     1 %     29 (     100 %)    |
+    |------------------------------------------------------|
+
+
+
+
+Radiative Exchange Factor Absolute Symmetrisation Error :
+---------------------------------------------------------
+
+    |------------------------------------------------------|
+    | REF symmetrisation error above       10 % :          |
+    |------------------------------------------------------|
+    |         Emission Node    | Rays  Emitted |   Error   |
+    |--------------------------|---------------|-----------|
+    |------------------------------------------------------|
+    | REF sym error between        5 % and       10 %:     |
+    |------------------------------------------------------|
+    |         Emission Node    | Rays  Emitted |   Error   |
+    |--------------------------|---------------|-----------|
+    |------------------------------------------------------|
+    | REF sym error between        1 % and        5 %:     |
+    |------------------------------------------------------|
+    |         Emission Node    | Rays  Emitted |   Error   |
+    |--------------------------|---------------|-----------|
+    |------------------------------------------------------|
+    | Number of error below     1 %     29 (     100 %)    |
+    |------------------------------------------------------|
+
+
+State  7 : Radiation Check-list generation                                     Time :  Thu Apr 22 19:23:22 2021
+
+
+
+View Factor Budget :   (maximum error = 0.314525 %)
+--------------------
+
+    |-------------------------------------------------------------------|
+    |       VF sum : error above       10 % :                           |
+    |-------------------------------------------------------------------|
+    |         Emission Node    | Rays  Emitted |   VF sum   |   Error   |
+    |--------------------------|---------------|------------|-----------|
+    |-------------------------------------------------------------------|
+    |       VF sum : error between        5 % and       10 %:           |
+    |-------------------------------------------------------------------|
+    |         Emission Node    | Rays  Emitted |   VF sum   |   Error   |
+    |--------------------------|---------------|------------|-----------|
+    |-------------------------------------------------------------------|
+    |       VF sum : error between        1 % and        5 %:           |
+    |-------------------------------------------------------------------|
+    |         Emission Node    | Rays  Emitted |   VF sum   |   Error   |
+    |--------------------------|---------------|------------|-----------|
+    |-------------------------------------------------------------------|
+    | Number of View Factor below     1 % of error:     29 (     100 %) |
+    |-------------------------------------------------------------------|
+
+
+
+IR Gebhart Factor Budget :   (maximum error = 0.291525 %)
+--------------------------
+
+    |-------------------------------------------------------------------|
+    |       REF  sum : error above       10 % :                         |
+    |-------------------------------------------------------------------|
+    |         Emission Node    | Rays  Emitted |  REF sum   |   Error   |
+    |--------------------------|---------------|------------|-----------|
+    |-------------------------------------------------------------------|
+    |       REF  sum : error between        5 % and       10 %:         |
+    |-------------------------------------------------------------------|
+    |         Emission Node    | Rays  Emitted |  REF sum   |   Error   |
+    |--------------------------|---------------|------------|-----------|
+    |-------------------------------------------------------------------|
+    |       REF  sum : error between        1 % and        5 %:         |
+    |-------------------------------------------------------------------|
+    |         Emission Node    | Rays  Emitted |  REF sum   |   Error   |
+    |--------------------------|---------------|------------|-----------|
+    |-------------------------------------------------------------------|
+    | Number of REF (IR) below      1 % of error:     29 (     100 %)   |
+    |-------------------------------------------------------------------|
+
+
+
+Inactive Impingements Budget:  (GV)
+-----------------------------------
+
+    |--------------------------------------------------------------------------------|
+    |       GV Inactive Impingements level above         50 % :                      |
+    |--------------------------------------------------------------------------------|
+    |         Emission Node    | Rays  Emitted | Rays Impinged | Impingement percent |
+    |--------------------------|---------------|---------------|---------------------|
+    |--------------------------------------------------------------------------------|
+    |       GV Inactive Impingements level between       25 % and       50 % :       |
+    |--------------------------------------------------------------------------------|
+    |         Emission Node    | Rays  Emitted | Rays Impinged | Impingement percent |
+    |--------------------------|---------------|---------------|---------------------|
+    |--------------------------------------------------------------------------------|
+    |       GV Inactive Impingements level below         25 % :       0   (     0 %) |
+    |--------------------------------------------------------------------------------|
+    |       Number of nodes with zero inactive impingement (GV):      29   (   100 %)|
+    |--------------------------------------------------------------------------------|
+
+
+
+
+Low Space Couplings :
+---------------------
+
+    |------------------------------------------------------------------|
+    |  Number of nodes without space couplings:      7  (    24.1 %)   |
+    |------------------------------------------------------------------|
+    |         Emission Node    | Rays  Emitted | Direct VF |   IR REF  |
+    |--------------------------|---------------|-----------|-----------|
+    |------------------------------------------------------------------|
+    | Number of nodes above     5 % IR Space REF:     22 (    75.9 %)  |
+    |------------------------------------------------------------------|
+
+
+State  8 : Network Output Generation                                           Time :  Thu Apr 22 19:23:22 2021
+
+
+
+
+Execution completed on Thu Apr 22 19:23:22 2021
+
+
+
+

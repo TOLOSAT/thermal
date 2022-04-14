@@ -1,0 +1,139 @@
+
+*------------------------------------*
+*                                    *
+*   SYSTEMA V4 APPLICATION LOG FILE  *
+*                                    *
+*------------------------------------*
+
+
+
+              **********
+
+   Solar Flux Computation
+
+
+Execution started on Thu Apr 22 19:23:33 2021
+
+
+
+  - Number of active threads : 8 ( / 8 available)
+
+State  1 : Model Initialisation                                                Time :  Thu Apr 22 19:23:33 2021
+
+State  2 : Thermal Data Loading                                                Time :  Thu Apr 22 19:23:33 2021
+
+State  3 : Mission Data Loading                                                Time :  Thu Apr 22 19:23:33 2021
+
+Nb eclipse event: 0
+Nb penumbra event: 0
+Nb arc event: 1
+Nb sequence event: 0
+
+State  4 : Ray-Tracing Initialisation                                          Time :  Thu Apr 22 19:23:34 2021
+
+
+DUMP SOLAR FLUX PARAMETERS
+--------------------------
+
+ - model name         : hot_case.sysset
+ - enclosure          : -1
+ - seed               : 876743
+ - ray threshold      : 1.000000E-02
+
+ - direct only        : 0
+ - flux filter        : 1.000000E-01
+ - finit sun          : 1
+ - sun detail         : 1
+ - sun constant       : Automatic
+
+ - number of rays     : 2000
+ - min rays           : 0
+ - max rays           : 0
+ - ray density        : 0.000000E+00
+
+ - output             : SOL
+ - output fs          : hot_case.sf.nwk
+
+MODEL INFO
+----------
+
+ - nb models       : 1
+ - nb surfaces     : 21
+ - nb mesh         : 29
+ - nb volumes      : 0
+ - nb vmesh        : 0
+ Model names :
+   - 
+
+
+ MISSION INFO
+ ------------
+
+ - number of times                : 25
+     -    1 -> 26084.0000000 GAMMA50   -> simulation time        0.00 seconds
+     -    2 -> 26084.0027287 GAMMA50   -> simulation time      235.76 seconds
+     -    3 -> 26084.0054584 GAMMA50   -> simulation time      471.60 seconds
+     -    4 -> 26084.0081895 GAMMA50   -> simulation time      707.57 seconds
+     -    5 -> 26084.0109228 GAMMA50   -> simulation time      943.73 seconds
+     -    6 -> 26084.0136585 GAMMA50   -> simulation time     1180.10 seconds
+     -    7 -> 26084.0163971 GAMMA50   -> simulation time     1416.71 seconds
+     -    8 -> 26084.0191385 GAMMA50   -> simulation time     1653.57 seconds
+     -    9 -> 26084.0218827 GAMMA50   -> simulation time     1890.66 seconds
+     -   10 -> 26084.0246292 GAMMA50   -> simulation time     2127.96 seconds
+     -   11 -> 26084.0273777 GAMMA50   -> simulation time     2365.43 seconds
+     -   12 -> 26084.0301275 GAMMA50   -> simulation time     2603.01 seconds
+     -   13 -> 26084.0328778 GAMMA50   -> simulation time     2840.65 seconds
+     -   14 -> 26084.0356281 GAMMA50   -> simulation time     3078.27 seconds
+     -   15 -> 26084.0383774 GAMMA50   -> simulation time     3315.81 seconds
+     -   16 -> 26084.0411253 GAMMA50   -> simulation time     3553.22 seconds
+     -   17 -> 26084.0438709 GAMMA50   -> simulation time     3790.45 seconds
+     -   18 -> 26084.0466141 GAMMA50   -> simulation time     4027.46 seconds
+     -   19 -> 26084.0493544 GAMMA50   -> simulation time     4264.22 seconds
+     -   20 -> 26084.0520919 GAMMA50   -> simulation time     4500.74 seconds
+     -   21 -> 26084.0548267 GAMMA50   -> simulation time     4737.03 seconds
+     -   22 -> 26084.0575591 GAMMA50   -> simulation time     4973.11 seconds
+     -   23 -> 26084.0602896 GAMMA50   -> simulation time     5209.02 seconds
+     -   24 -> 26084.0630188 GAMMA50   -> simulation time     5444.83 seconds
+     -   25 -> 26084.0657407 GAMMA50   -> simulation time     5680.00 seconds
+ - number of kinematics bodies    : 0
+ - mission kind                   :  Static
+
+State  5 : Sun ray-tracing                                                     Time :  Thu Apr 22 19:23:34 2021
+
+Time position 0  -  Sun constant : 1333.69 W/m2
+Time position 1  -  Sun constant : 1333.68 W/m2
+Time position 2  -  Sun constant : 1333.67 W/m2
+Time position 3  -  Sun constant : 1333.66 W/m2
+Time position 4  -  Sun constant : 1333.66 W/m2
+Time position 5  -  Sun constant : 1333.65 W/m2
+Time position 6  -  Sun constant : 1333.65 W/m2
+Time position 7  -  Sun constant : 1333.65 W/m2
+Time position 8  -  Sun constant : 1333.65 W/m2
+Time position 9  -  Sun constant : 1333.65 W/m2
+Time position 10  -  Sun constant : 1333.66 W/m2
+Time position 11  -  Sun constant : 1333.66 W/m2
+Time position 12  -  Sun constant : 1333.67 W/m2
+Time position 13  -  Sun constant : 1333.68 W/m2
+Time position 14  -  Sun constant : 1333.68 W/m2
+Time position 15  -  Sun constant : 1333.69 W/m2
+Time position 16  -  Sun constant : 1333.69 W/m2
+Time position 17  -  Sun constant : 1333.69 W/m2
+Time position 18  -  Sun constant : 1333.69 W/m2
+Time position 19  -  Sun constant : 1333.69 W/m2
+Time position 20  -  Sun constant : 1333.69 W/m2
+Time position 21  -  Sun constant : 1333.68 W/m2
+Time position 22  -  Sun constant : 1333.68 W/m2
+Time position 23  -  Sun constant : 1333.67 W/m2
+Time position 24  -  Sun constant : 1333.66 W/m2
+State  6 : SolarFlux Check-list generation                                     Time :  Thu Apr 22 19:23:34 2021
+
+State  7 : Network Output Generation                                           Time :  Thu Apr 22 19:23:34 2021
+
+
+
+
+Execution completed on Thu Apr 22 19:23:34 2021
+
+
+
+

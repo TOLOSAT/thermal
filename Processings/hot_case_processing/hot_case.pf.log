@@ -1,0 +1,253 @@
+
+*------------------------------------*
+*                                    *
+*   SYSTEMA V4 APPLICATION LOG FILE  *
+*                                    *
+*------------------------------------*
+
+
+
+              **********
+
+   Planet Fluxes Computation
+
+
+Execution started on Thu Apr 22 19:23:27 2021
+
+
+
+State  1 : Model Initialisation                                                Time :  Thu Apr 22 19:23:27 2021
+
+State  2 : Thermal Data Loading                                                Time :  Thu Apr 22 19:23:27 2021
+
+State  3 : Mission Data Loading                                                Time :  Thu Apr 22 19:23:27 2021
+
+Nb eclipse event: 0
+Nb penumbra event: 0
+Nb arc event: 1
+Nb sequence event: 0
+
+DUMP PLANET FLUXES PARAMS
+-------------------------
+
+  - model name         : hot_case.sysset
+  - enclosure          : -1
+  - Albedo computation : 1
+  - IR computation : 1
+  - Flux filter : 0.1
+  - Earth temperature : 248.15 248.15
+  - Earth albedo coefficient : 0.35
+  - Sun constant       : Automatic
+
+
+PROPERTY MAPS
+-------------
+
+
+     Planet   (Albedo   IR)
+  EARTH        -1     -1
+
+  => Number of maps : 0
+
+
+
+MODEL INFO
+----------
+
+ - nb models       : 1
+ - nb surfaces     : 21
+ - nb mesh         : 29
+ - nb volumes      : 0
+ - nb vmesh        : 0
+ Model names :
+   - 
+
+
+ MISSION INFO
+ ------------
+
+ - number of times                : 25
+     -    1 -> 26084.0000000 GAMMA50   -> simulation time        0.00 seconds
+     -    2 -> 26084.0027287 GAMMA50   -> simulation time      235.76 seconds
+     -    3 -> 26084.0054584 GAMMA50   -> simulation time      471.60 seconds
+     -    4 -> 26084.0081895 GAMMA50   -> simulation time      707.57 seconds
+     -    5 -> 26084.0109228 GAMMA50   -> simulation time      943.73 seconds
+     -    6 -> 26084.0136585 GAMMA50   -> simulation time     1180.10 seconds
+     -    7 -> 26084.0163971 GAMMA50   -> simulation time     1416.71 seconds
+     -    8 -> 26084.0191385 GAMMA50   -> simulation time     1653.57 seconds
+     -    9 -> 26084.0218827 GAMMA50   -> simulation time     1890.66 seconds
+     -   10 -> 26084.0246292 GAMMA50   -> simulation time     2127.96 seconds
+     -   11 -> 26084.0273777 GAMMA50   -> simulation time     2365.43 seconds
+     -   12 -> 26084.0301275 GAMMA50   -> simulation time     2603.01 seconds
+     -   13 -> 26084.0328778 GAMMA50   -> simulation time     2840.65 seconds
+     -   14 -> 26084.0356281 GAMMA50   -> simulation time     3078.27 seconds
+     -   15 -> 26084.0383774 GAMMA50   -> simulation time     3315.81 seconds
+     -   16 -> 26084.0411253 GAMMA50   -> simulation time     3553.22 seconds
+     -   17 -> 26084.0438709 GAMMA50   -> simulation time     3790.45 seconds
+     -   18 -> 26084.0466141 GAMMA50   -> simulation time     4027.46 seconds
+     -   19 -> 26084.0493544 GAMMA50   -> simulation time     4264.22 seconds
+     -   20 -> 26084.0520919 GAMMA50   -> simulation time     4500.74 seconds
+     -   21 -> 26084.0548267 GAMMA50   -> simulation time     4737.03 seconds
+     -   22 -> 26084.0575591 GAMMA50   -> simulation time     4973.11 seconds
+     -   23 -> 26084.0602896 GAMMA50   -> simulation time     5209.02 seconds
+     -   24 -> 26084.0630188 GAMMA50   -> simulation time     5444.83 seconds
+     -   25 -> 26084.0657407 GAMMA50   -> simulation time     5680.00 seconds
+ - number of kinematics bodies    : 0
+ - mission kind                   :  Static
+
+ SUN :
+ -----
+      time 0  	-   distance : 1.51693e+08  	- direction : -2.00394e-17 1.57172e-17 1
+      time 235.763  	-   distance : 1.51693e+08  	- direction : -2.51475e-17 8.64444e-17 1
+      time 471.602  	-   distance : 1.51694e+08  	- direction : -5.20629e-17 -1.03733e-16 1
+      time 707.573  	-   distance : 1.51694e+08  	- direction : -1.56974e-16 -4.24361e-17 1
+      time 943.726  	-   distance : 1.51695e+08  	- direction : 9.84278e-17 1.91748e-16 1
+      time 1180.1  	-   distance : 1.51695e+08  	- direction : -6.83689e-17 3.61491e-17 1
+      time 1416.71  	-   distance : 1.51695e+08  	- direction : -1.0884e-16 1.5717e-16 1
+      time 1653.57  	-   distance : 1.51695e+08  	- direction : 1.11198e-16 -6.44396e-17 1
+      time 1890.66  	-   distance : 1.51695e+08  	- direction : 5.30448e-17 1.87032e-16 1
+      time 2127.96  	-   distance : 1.51695e+08  	- direction : 1.28683e-16 -6.2868e-17 1
+      time 2365.43  	-   distance : 1.51694e+08  	- direction : 1.77406e-16 2.35755e-17 1
+      time 2603.01  	-   distance : 1.51694e+08  	- direction : 2.60117e-16 1.1945e-16 1
+      time 2840.65  	-   distance : 1.51694e+08  	- direction : -3.55599e-17 -1.88605e-17 1
+      time 3078.27  	-   distance : 1.51693e+08  	- direction : -2.98626e-17 7.38705e-17 1
+      time 3315.81  	-   distance : 1.51693e+08  	- direction : -1.21219e-16 -1.14735e-16 1
+      time 3553.22  	-   distance : 1.51693e+08  	- direction : 1.06091e-17 8.17295e-17 1
+      time 3790.45  	-   distance : 1.51692e+08  	- direction : 6.77806e-17 9.116e-17 1
+      time 4027.46  	-   distance : 1.51692e+08  	- direction : 7.38711e-17 -9.90187e-17 1
+      time 4264.22  	-   distance : 1.51692e+08  	- direction : -4.91164e-17 -7.85863e-17 1
+      time 4500.74  	-   distance : 1.51692e+08  	- direction : 1.03537e-16 1.55601e-16 1
+      time 4737.03  	-   distance : 1.51693e+08  	- direction : 1.56976e-16 2.35758e-17 1
+      time 4973.11  	-   distance : 1.51693e+08  	- direction : -7.79966e-17 1.03733e-16 1
+      time 5209.02  	-   distance : 1.51693e+08  	- direction : 2.55404e-17 0 1
+      time 5444.83  	-   distance : 1.51694e+08  	- direction : 1.13949e-16 -5.02947e-17 1
+      time 5680  	-   distance : 1.51694e+08  	- direction : -5.10804e-17 5.65814e-17 1
+
+ PLANETS :
+ ---------
+  Planet 0 - 4 : Earth      time 0  	-   distance : 6864.39  	- direction : 0.977454 -0.209994 -0.0220489
+      time 235.763  	-   distance : 6865.38  	- direction : 0.893069 -0.447755 0.0440911
+      time 471.602  	-   distance : 6867.22  	- direction : 0.74795 -0.655036 0.107231
+      time 707.573  	-   distance : 6869.79  	- direction : 0.551984 -0.817753 0.163077
+      time 943.726  	-   distance : 6872.92  	- direction : 0.318501 -0.924858 0.207833
+      time 1180.1  	-   distance : 6876.4  	- direction : 0.0633774 -0.969082 0.238458
+      time 1416.71  	-   distance : 6879.99  	- direction : -0.19605 -0.947429 0.252871
+      time 1653.57  	-   distance : 6883.45  	- direction : -0.442152 -0.861369 0.250091
+      time 1890.66  	-   distance : 6886.53  	- direction : -0.658203 -0.716748 0.230304
+      time 2127.96  	-   distance : 6889.04  	- direction : -0.829517 -0.523387 0.194854
+      time 2365.43  	-   distance : 6890.79  	- direction : -0.944435 -0.294419 0.146148
+      time 2603.01  	-   distance : 6891.66  	- direction : -0.99513 -0.0454049 0.087493
+      time 2840.65  	-   distance : 6891.61  	- direction : -0.978132 0.206725 0.0228785
+      time 3078.27  	-   distance : 6890.62  	- direction : -0.894575 0.444816 -0.0433001
+      time 3315.81  	-   distance : 6888.77  	- direction : -0.750125 0.652658 -0.106538
+      time 3553.22  	-   distance : 6886.18  	- direction : -0.5546 0.816091 -0.162526
+      time 3790.45  	-   distance : 6883.03  	- direction : -0.321301 0.923975 -0.20745
+      time 4027.46  	-   distance : 6879.55  	- direction : -0.0661126 0.968952 -0.238245
+      time 4264.22  	-   distance : 6875.95  	- direction : 0.193583 0.947951 -0.252813
+      time 4500.74  	-   distance : 6872.5  	- direction : 0.440096 0.862402 -0.250158
+      time 4737.03  	-   distance : 6869.43  	- direction : 0.656634 0.718136 -0.230463
+      time 4973.11  	-   distance : 6866.94  	- direction : 0.828454 0.524988 -0.19507
+      time 5209.02  	-   distance : 6865.2  	- direction : 0.943865 0.296121 -0.146393
+      time 5444.83  	-   distance : 6864.33  	- direction : 0.995027 0.0471246 -0.0877494
+      time 5680  	-   distance : 6864.39  	- direction : 0.978602 -0.204442 -0.0232952
+
+ EVENTS :
+ --------
+  Event 0
+     type   : 3
+     planet : None
+     tin    : 2.608400E+04
+     tout   : 2.608407E+04
+
+  Eclipse flag
+   - planet 1 Earth
+   time        0.00  	--->  flag  : 0
+   time      235.76  	--->  flag  : 0
+   time      471.60  	--->  flag  : 0
+   time      707.57  	--->  flag  : 0
+   time      943.73  	--->  flag  : 0
+   time     1180.10  	--->  flag  : 0
+   time     1416.71  	--->  flag  : 0
+   time     1653.57  	--->  flag  : 0
+   time     1890.66  	--->  flag  : 0
+   time     2127.96  	--->  flag  : 0
+   time     2365.43  	--->  flag  : 0
+   time     2603.01  	--->  flag  : 0
+   time     2840.65  	--->  flag  : 0
+   time     3078.27  	--->  flag  : 0
+   time     3315.81  	--->  flag  : 0
+   time     3553.22  	--->  flag  : 0
+   time     3790.45  	--->  flag  : 0
+   time     4027.46  	--->  flag  : 0
+   time     4264.22  	--->  flag  : 0
+   time     4500.74  	--->  flag  : 0
+   time     4737.03  	--->  flag  : 0
+   time     4973.11  	--->  flag  : 0
+   time     5209.02  	--->  flag  : 0
+   time     5444.83  	--->  flag  : 0
+   time     5680.00  	--->  flag  : 0
+
+  Penombra ratio
+   time        0.00  	--->  ratio  : 0.000000E+00
+   time      235.76  	--->  ratio  : 0.000000E+00
+   time      471.60  	--->  ratio  : 0.000000E+00
+   time      707.57  	--->  ratio  : 0.000000E+00
+   time      943.73  	--->  ratio  : 0.000000E+00
+   time     1180.10  	--->  ratio  : 0.000000E+00
+   time     1416.71  	--->  ratio  : 0.000000E+00
+   time     1653.57  	--->  ratio  : 0.000000E+00
+   time     1890.66  	--->  ratio  : 0.000000E+00
+   time     2127.96  	--->  ratio  : 0.000000E+00
+   time     2365.43  	--->  ratio  : 0.000000E+00
+   time     2603.01  	--->  ratio  : 0.000000E+00
+   time     2840.65  	--->  ratio  : 0.000000E+00
+   time     3078.27  	--->  ratio  : 0.000000E+00
+   time     3315.81  	--->  ratio  : 0.000000E+00
+   time     3553.22  	--->  ratio  : 0.000000E+00
+   time     3790.45  	--->  ratio  : 0.000000E+00
+   time     4027.46  	--->  ratio  : 0.000000E+00
+   time     4264.22  	--->  ratio  : 0.000000E+00
+   time     4500.74  	--->  ratio  : 0.000000E+00
+   time     4737.03  	--->  ratio  : 0.000000E+00
+   time     4973.11  	--->  ratio  : 0.000000E+00
+   time     5209.02  	--->  ratio  : 0.000000E+00
+   time     5444.83  	--->  ratio  : 0.000000E+00
+   time     5680.00  	--->  ratio  : 0.000000E+00
+
+State  4 : Planetes Fluxes Computation                                         Time :  Thu Apr 22 19:23:27 2021
+
+Time position 0  -  Sun constant on planet Earth : 1333.68 W/m2
+Time position 1  -  Sun constant on planet Earth : 1333.68 W/m2
+Time position 2  -  Sun constant on planet Earth : 1333.68 W/m2
+Time position 3  -  Sun constant on planet Earth : 1333.68 W/m2
+Time position 4  -  Sun constant on planet Earth : 1333.68 W/m2
+Time position 5  -  Sun constant on planet Earth : 1333.68 W/m2
+Time position 6  -  Sun constant on planet Earth : 1333.68 W/m2
+Time position 7  -  Sun constant on planet Earth : 1333.68 W/m2
+Time position 8  -  Sun constant on planet Earth : 1333.68 W/m2
+Time position 9  -  Sun constant on planet Earth : 1333.67 W/m2
+Time position 10  -  Sun constant on planet Earth : 1333.67 W/m2
+Time position 11  -  Sun constant on planet Earth : 1333.67 W/m2
+Time position 12  -  Sun constant on planet Earth : 1333.67 W/m2
+Time position 13  -  Sun constant on planet Earth : 1333.67 W/m2
+Time position 14  -  Sun constant on planet Earth : 1333.67 W/m2
+Time position 15  -  Sun constant on planet Earth : 1333.67 W/m2
+Time position 16  -  Sun constant on planet Earth : 1333.67 W/m2
+Time position 17  -  Sun constant on planet Earth : 1333.67 W/m2
+Time position 18  -  Sun constant on planet Earth : 1333.66 W/m2
+Time position 19  -  Sun constant on planet Earth : 1333.66 W/m2
+Time position 20  -  Sun constant on planet Earth : 1333.66 W/m2
+Time position 21  -  Sun constant on planet Earth : 1333.66 W/m2
+Time position 22  -  Sun constant on planet Earth : 1333.66 W/m2
+Time position 23  -  Sun constant on planet Earth : 1333.66 W/m2
+Time position 24  -  Sun constant on planet Earth : 1333.66 W/m2
+State  5 : Network Outputs Generation                                          Time :  Thu Apr 22 19:23:29 2021
+
+
+
+
+Execution completed on Thu Apr 22 19:23:29 2021
+
+
+
+

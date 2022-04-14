@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SYSML SYSML_VERSION="1.7" CONTENTS="KINEMATICS" SAVEDATE="1606413742" SYSTEMA_VERSION="4.9.0">
+    <DATA_STRUCTURE NAME="kinematics_earth.syskin" REFSET_ID="{90c66352-6193-42ae-a09a-e0f099192a2b}">
+        <DATA_NODE TYPE="KINEMATICS" REFOBJ_ID="2" NAME="Kinematics">
+            <NODE_ATTRIBUTE TYPE="PHASES" NAME="PHASES">
+                <ELEM DEFAULT="Default phase" TYPE="PHASES">
+                    <ELEM TYPE="STRING" NAME="Default phase" STR="Default"/>
+                </ELEM>
+            </NODE_ATTRIBUTE>
+            <NODE_ATTRIBUTE TYPE="LAW_ATT" NAME="POINTING LAW_%P_Default">
+                <ELEM LAWTYPE="2 pointing vectors laws" TYPE="KINE_LAW_ELEM" NAME="Multiple laws">
+                    <ELEM LAWTYPE="Planet" TYPE="KINE_LAW_ELEM" NAME="Planet">
+                        <ELEM X="0" Y="0" Z="1" TYPE="VECTOR" NAME="Pointing vector"/>
+                        <ELEM TYPE="STRING" NAME="Choose the pointed planet" STR="Earth"/>
+                    </ELEM>
+                    <ELEM LAWTYPE="Planet" TYPE="KINE_LAW_ELEM" NAME="Planet">
+                        <ELEM X="0" Y="0" Z="1" TYPE="VECTOR" NAME="Pointing vector"/>
+                        <ELEM TYPE="STRING" NAME="Choose the pointed planet" STR="Earth"/>
+                    </ELEM>
+                </ELEM>
+            </NODE_ATTRIBUTE>
+        </DATA_NODE>
+    </DATA_STRUCTURE>
+</SYSML>

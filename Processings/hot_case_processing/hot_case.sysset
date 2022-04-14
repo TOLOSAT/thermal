@@ -1,0 +1,2934 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SYSSET VERSION="1.2" APPLICATION="Thermica">
+    <SOURCE_FILES>
+        <FILE PATH="C:/Users/thiba/Desktop/Tolosat_Thermal1/hot_case.sysmis" SAVEDATE="1619109178" TYPE="MISSION"/>
+        <FILE PATH="C:/Users/thiba/Desktop/Tolosat_Thermal1/model.sysmdl" SAVEDATE="1619112072" TYPE="MODEL"/>
+        <FILE PATH="C:/Users/thiba/Desktop/Tolosat_Thermal1/meshing_1_node.sysmsh" SAVEDATE="1618952321" TYPE="MESHING"/>
+        <FILE PATH="C:/Users/thiba/Desktop/Tolosat_Thermal1/trajectory_summer_1period.systrj" SAVEDATE="1619109288" TYPE="TRAJECTORY"/>
+        <FILE PATH="C:/Users/thiba/Desktop/Tolosat_Thermal1/kinematics_towards_sun.syskin" SAVEDATE="1619112176" TYPE="KINEMATICS"/>
+    </SOURCE_FILES>
+    <DESCRIPTION>
+        <MODEL>
+            <SHAPE REFOBJ_ID="3" NAME="Dessous" MOVING_BODY="MAIN_KINEMATIC_BODY">
+                <GEOMETRY>
+                    <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                        <ELEM X="0" Y="0" Z="0" TYPE="POINT" NAME="Point 1"/>
+                        <ELEM X="0.1" Y="0" Z="0" TYPE="POINT" NAME="Point 2"/>
+                        <ELEM X="0.1" Y="0.1" Z="0" TYPE="POINT" NAME="Point 3"/>
+                    </ELEM>
+                </GEOMETRY>
+                <PROPERTIES APPLICATION="Thermica">
+                    <CONTENER TYPE="SHELL" NAME="Bulk">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Geom_Prop" NAME="Geometrical properties">
+                                    <ELEM TYPE="VALUE" ID="Thickness" VALUE="0.001"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY NAME="Physical properties">
+                                    <ELEM TYPE="STRING" NAME="Selected material" STR="Aluminium 7075"/>
+                                    <ELEM TYPE="VALUE" ID="Conductivity" VALUE="130"/>
+                                    <ELEM TYPE="VALUE" ID="Density" VALUE="2800"/>
+                                    <ELEM TYPE="VALUE" ID="Specific_heat" VALUE="915"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Transverse">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="AreaCorrection" NAME="Area correction for contacts">
+                                    <ELEM TYPE="VALUE" ID="Geometrical area correction" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Trans_Prop" NAME="Transverse couplings">
+                                    <ELEM TYPE="VALUE" ID="Transverse conduction" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Transverse radiation" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Coating">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Ray_Emission" NAME="Ray emission">
+                                    <ELEM TYPE="STRING" ID="Emission_Choice" STR="AUTOMATIC"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Thermo_optical_IR" NAME="Thermo-optical IR">
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Epsilon" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="SpecE" VALUE="0"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Thermo_optical_UV" NAME="Thermo-optical UV">
+                                    <ELEM TYPE="VALUE" ID="Alpha" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="SpecA" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Miscellaneous">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Refrac_Ind_IR" NAME="Refraction Index IR">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Refrac_Ind_UV" NAME="Refraction Index UV">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Enclosure">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Enclosure" NAME="Enclosure">
+                                    <ELEM TYPE="INTEGER" ID="Enclosure" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                </PROPERTIES>
+                <MESHING APP_NAME="Thermica">
+                    <MESHING_NUMBER MTYPE="MESHING_GEOMETRIC_SHELL_SHAPE" ID="100" HEADER="" LABEL="/Structure"/>
+                    <MESHING_PARAMS>
+                        <ELEM TYPE="MESHING_PARAMETERS" ID="MESHING_PARAMETERS">
+                            <ELEM TYPE="INTEGER" ID="a" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="b" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="c" VALUE="1"/>
+                            <ELEM TYPE="BOOLEAN" ID="Enable_Ratio" VALUE="false"/>
+                            <ELEM TYPE="STRING" ID="Ratio a" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio b" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio c" STR=""/>
+                            <ELEM TYPE="BOOLEAN" ID="Disable_Meshing" VALUE="false"/>
+                        </ELEM>
+                    </MESHING_PARAMS>
+                    <NUMBERING_PARAMS>
+                        <ELEM TYPE="NUMBERING_PARAMETERS" ID="NUMBERING_PARAMETERS"/>
+                    </NUMBERING_PARAMS>
+                </MESHING>
+                <PARENT NAME="Structure">
+                    <PARENT NAME="Model"/>
+                </PARENT>
+            </SHAPE>
+            <SHAPE REFOBJ_ID="4" NAME="Coté 1" MOVING_BODY="MAIN_KINEMATIC_BODY">
+                <GEOMETRY>
+                    <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                        <ELEM X="0" Y="0" Z="0" TYPE="POINT" NAME="Point 1"/>
+                        <ELEM X="0" Y="0.1" Z="0" TYPE="POINT" NAME="Point 2"/>
+                        <ELEM X="0" Y="0.1" Z="0.3" TYPE="POINT" NAME="Point 3"/>
+                    </ELEM>
+                </GEOMETRY>
+                <PROPERTIES APPLICATION="Thermica">
+                    <CONTENER TYPE="SHELL" NAME="Bulk">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Geom_Prop" NAME="Geometrical properties">
+                                    <ELEM TYPE="VALUE" ID="Thickness" VALUE="0.001"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY NAME="Physical properties">
+                                    <ELEM TYPE="STRING" NAME="Selected material" STR="Aluminium 7075"/>
+                                    <ELEM TYPE="VALUE" ID="Conductivity" VALUE="130"/>
+                                    <ELEM TYPE="VALUE" ID="Density" VALUE="2800"/>
+                                    <ELEM TYPE="VALUE" ID="Specific_heat" VALUE="915"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Transverse">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="AreaCorrection" NAME="Area correction for contacts">
+                                    <ELEM TYPE="VALUE" ID="Geometrical area correction" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Trans_Prop" NAME="Transverse couplings">
+                                    <ELEM TYPE="VALUE" ID="Transverse conduction" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Transverse radiation" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Coating">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Ray_Emission" NAME="Ray emission">
+                                    <ELEM TYPE="STRING" ID="Emission_Choice" STR="AUTOMATIC"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Thermo_optical_IR" NAME="Thermo-optical IR">
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Epsilon" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="SpecE" VALUE="0"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Thermo_optical_UV" NAME="Thermo-optical UV">
+                                    <ELEM TYPE="VALUE" ID="Alpha" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="SpecA" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Miscellaneous">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Refrac_Ind_IR" NAME="Refraction Index IR">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Refrac_Ind_UV" NAME="Refraction Index UV">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Enclosure">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Enclosure" NAME="Enclosure">
+                                    <ELEM TYPE="INTEGER" ID="Enclosure" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                </PROPERTIES>
+                <MESHING APP_NAME="Thermica">
+                    <MESHING_NUMBER MTYPE="MESHING_GEOMETRIC_SHELL_SHAPE" ID="200" HEADER="" LABEL="/Structure"/>
+                    <MESHING_PARAMS>
+                        <ELEM TYPE="MESHING_PARAMETERS" ID="MESHING_PARAMETERS">
+                            <ELEM TYPE="INTEGER" ID="a" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="b" VALUE="3"/>
+                            <ELEM TYPE="INTEGER" ID="c" VALUE="1"/>
+                            <ELEM TYPE="BOOLEAN" ID="Enable_Ratio" VALUE="false"/>
+                            <ELEM TYPE="STRING" ID="Ratio a" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio b" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio c" STR=""/>
+                            <ELEM TYPE="BOOLEAN" ID="Disable_Meshing" VALUE="false"/>
+                        </ELEM>
+                    </MESHING_PARAMS>
+                    <NUMBERING_PARAMS>
+                        <ELEM TYPE="NUMBERING_PARAMETERS" ID="NUMBERING_PARAMETERS"/>
+                    </NUMBERING_PARAMS>
+                </MESHING>
+                <PARENT NAME="Structure">
+                    <PARENT NAME="Model"/>
+                </PARENT>
+            </SHAPE>
+            <SHAPE REFOBJ_ID="5" NAME="Coté 2" MOVING_BODY="MAIN_KINEMATIC_BODY">
+                <GEOMETRY>
+                    <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                        <ELEM X="0.1" Y="0" Z="0" TYPE="POINT" NAME="Point 1"/>
+                        <ELEM X="0.1" Y="0.1" Z="0" TYPE="POINT" NAME="Point 2"/>
+                        <ELEM X="0.1" Y="0.1" Z="0.3" TYPE="POINT" NAME="Point 3"/>
+                    </ELEM>
+                </GEOMETRY>
+                <PROPERTIES APPLICATION="Thermica">
+                    <CONTENER TYPE="SHELL" NAME="Bulk">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Geom_Prop" NAME="Geometrical properties">
+                                    <ELEM TYPE="VALUE" ID="Thickness" VALUE="0.001"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY NAME="Physical properties">
+                                    <ELEM TYPE="STRING" NAME="Selected material" STR="Aluminium 7075"/>
+                                    <ELEM TYPE="VALUE" ID="Conductivity" VALUE="130"/>
+                                    <ELEM TYPE="VALUE" ID="Density" VALUE="2800"/>
+                                    <ELEM TYPE="VALUE" ID="Specific_heat" VALUE="915"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Transverse">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="AreaCorrection" NAME="Area correction for contacts">
+                                    <ELEM TYPE="VALUE" ID="Geometrical area correction" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Trans_Prop" NAME="Transverse couplings">
+                                    <ELEM TYPE="VALUE" ID="Transverse conduction" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Transverse radiation" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Coating">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Ray_Emission" NAME="Ray emission">
+                                    <ELEM TYPE="STRING" ID="Emission_Choice" STR="AUTOMATIC"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Thermo_optical_IR" NAME="Thermo-optical IR">
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Epsilon" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="SpecE" VALUE="0"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Thermo_optical_UV" NAME="Thermo-optical UV">
+                                    <ELEM TYPE="VALUE" ID="Alpha" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="SpecA" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Miscellaneous">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Refrac_Ind_IR" NAME="Refraction Index IR">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Refrac_Ind_UV" NAME="Refraction Index UV">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Enclosure">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Enclosure" NAME="Enclosure">
+                                    <ELEM TYPE="INTEGER" ID="Enclosure" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                </PROPERTIES>
+                <MESHING APP_NAME="Thermica">
+                    <MESHING_NUMBER MTYPE="MESHING_GEOMETRIC_SHELL_SHAPE" ID="300" HEADER="" LABEL="/Structure"/>
+                    <MESHING_PARAMS>
+                        <ELEM TYPE="MESHING_PARAMETERS" ID="MESHING_PARAMETERS">
+                            <ELEM TYPE="INTEGER" ID="a" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="b" VALUE="3"/>
+                            <ELEM TYPE="INTEGER" ID="c" VALUE="1"/>
+                            <ELEM TYPE="BOOLEAN" ID="Enable_Ratio" VALUE="false"/>
+                            <ELEM TYPE="STRING" ID="Ratio a" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio b" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio c" STR=""/>
+                            <ELEM TYPE="BOOLEAN" ID="Disable_Meshing" VALUE="false"/>
+                        </ELEM>
+                    </MESHING_PARAMS>
+                    <NUMBERING_PARAMS>
+                        <ELEM TYPE="NUMBERING_PARAMETERS" ID="NUMBERING_PARAMETERS"/>
+                    </NUMBERING_PARAMS>
+                </MESHING>
+                <PARENT NAME="Structure">
+                    <PARENT NAME="Model"/>
+                </PARENT>
+            </SHAPE>
+            <SHAPE REFOBJ_ID="6" NAME="Coté 3" MOVING_BODY="MAIN_KINEMATIC_BODY">
+                <GEOMETRY>
+                    <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                        <ELEM X="0.1" Y="0" Z="0" TYPE="POINT" NAME="Point 1"/>
+                        <ELEM X="0" Y="0" Z="0" TYPE="POINT" NAME="Point 2"/>
+                        <ELEM X="0" Y="0" Z="0.3" TYPE="POINT" NAME="Point 3"/>
+                    </ELEM>
+                </GEOMETRY>
+                <PROPERTIES APPLICATION="Thermica">
+                    <CONTENER TYPE="SHELL" NAME="Bulk">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Geom_Prop" NAME="Geometrical properties">
+                                    <ELEM TYPE="VALUE" ID="Thickness" VALUE="0.001"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY NAME="Physical properties">
+                                    <ELEM TYPE="STRING" NAME="Selected material" STR="Aluminium 7075"/>
+                                    <ELEM TYPE="VALUE" ID="Conductivity" VALUE="130"/>
+                                    <ELEM TYPE="VALUE" ID="Density" VALUE="2800"/>
+                                    <ELEM TYPE="VALUE" ID="Specific_heat" VALUE="915"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Transverse">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="AreaCorrection" NAME="Area correction for contacts">
+                                    <ELEM TYPE="VALUE" ID="Geometrical area correction" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Trans_Prop" NAME="Transverse couplings">
+                                    <ELEM TYPE="VALUE" ID="Transverse conduction" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Transverse radiation" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Coating">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Ray_Emission" NAME="Ray emission">
+                                    <ELEM TYPE="STRING" ID="Emission_Choice" STR="AUTOMATIC"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Thermo_optical_IR" NAME="Thermo-optical IR">
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Epsilon" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="SpecE" VALUE="0"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Thermo_optical_UV" NAME="Thermo-optical UV">
+                                    <ELEM TYPE="VALUE" ID="Alpha" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="SpecA" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Miscellaneous">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Refrac_Ind_IR" NAME="Refraction Index IR">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Refrac_Ind_UV" NAME="Refraction Index UV">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Enclosure">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Enclosure" NAME="Enclosure">
+                                    <ELEM TYPE="INTEGER" ID="Enclosure" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                </PROPERTIES>
+                <MESHING APP_NAME="Thermica">
+                    <MESHING_NUMBER MTYPE="MESHING_GEOMETRIC_SHELL_SHAPE" ID="400" HEADER="" LABEL="/Structure"/>
+                    <MESHING_PARAMS>
+                        <ELEM TYPE="MESHING_PARAMETERS" ID="MESHING_PARAMETERS">
+                            <ELEM TYPE="INTEGER" ID="a" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="b" VALUE="3"/>
+                            <ELEM TYPE="INTEGER" ID="c" VALUE="1"/>
+                            <ELEM TYPE="BOOLEAN" ID="Enable_Ratio" VALUE="false"/>
+                            <ELEM TYPE="STRING" ID="Ratio a" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio b" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio c" STR=""/>
+                            <ELEM TYPE="BOOLEAN" ID="Disable_Meshing" VALUE="false"/>
+                        </ELEM>
+                    </MESHING_PARAMS>
+                    <NUMBERING_PARAMS>
+                        <ELEM TYPE="NUMBERING_PARAMETERS" ID="NUMBERING_PARAMETERS"/>
+                    </NUMBERING_PARAMS>
+                </MESHING>
+                <PARENT NAME="Structure">
+                    <PARENT NAME="Model"/>
+                </PARENT>
+            </SHAPE>
+            <SHAPE REFOBJ_ID="7" NAME="Coté 4" MOVING_BODY="MAIN_KINEMATIC_BODY">
+                <GEOMETRY>
+                    <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                        <ELEM X="0.1" Y="0.1" Z="0" TYPE="POINT" NAME="Point 1"/>
+                        <ELEM X="0" Y="0.1" Z="0" TYPE="POINT" NAME="Point 2"/>
+                        <ELEM X="0" Y="0.1" Z="0.3" TYPE="POINT" NAME="Point 3"/>
+                    </ELEM>
+                </GEOMETRY>
+                <PROPERTIES APPLICATION="Thermica">
+                    <CONTENER TYPE="SHELL" NAME="Bulk">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Geom_Prop" NAME="Geometrical properties">
+                                    <ELEM TYPE="VALUE" ID="Thickness" VALUE="0.001"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY NAME="Physical properties">
+                                    <ELEM TYPE="STRING" NAME="Selected material" STR="Aluminium 7075"/>
+                                    <ELEM TYPE="VALUE" ID="Conductivity" VALUE="130"/>
+                                    <ELEM TYPE="VALUE" ID="Density" VALUE="2800"/>
+                                    <ELEM TYPE="VALUE" ID="Specific_heat" VALUE="915"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Transverse">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="AreaCorrection" NAME="Area correction for contacts">
+                                    <ELEM TYPE="VALUE" ID="Geometrical area correction" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Trans_Prop" NAME="Transverse couplings">
+                                    <ELEM TYPE="VALUE" ID="Transverse conduction" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Transverse radiation" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Coating">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Ray_Emission" NAME="Ray emission">
+                                    <ELEM TYPE="STRING" ID="Emission_Choice" STR="AUTOMATIC"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Thermo_optical_IR" NAME="Thermo-optical IR">
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Epsilon" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="SpecE" VALUE="0"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Thermo_optical_UV" NAME="Thermo-optical UV">
+                                    <ELEM TYPE="VALUE" ID="Alpha" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="SpecA" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Miscellaneous">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Refrac_Ind_IR" NAME="Refraction Index IR">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Refrac_Ind_UV" NAME="Refraction Index UV">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Enclosure">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Enclosure" NAME="Enclosure">
+                                    <ELEM TYPE="INTEGER" ID="Enclosure" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                </PROPERTIES>
+                <MESHING APP_NAME="Thermica">
+                    <MESHING_NUMBER MTYPE="MESHING_GEOMETRIC_SHELL_SHAPE" ID="500" HEADER="" LABEL="/Structure"/>
+                    <MESHING_PARAMS>
+                        <ELEM TYPE="MESHING_PARAMETERS" ID="MESHING_PARAMETERS">
+                            <ELEM TYPE="INTEGER" ID="a" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="b" VALUE="3"/>
+                            <ELEM TYPE="INTEGER" ID="c" VALUE="1"/>
+                            <ELEM TYPE="BOOLEAN" ID="Enable_Ratio" VALUE="false"/>
+                            <ELEM TYPE="STRING" ID="Ratio a" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio b" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio c" STR=""/>
+                            <ELEM TYPE="BOOLEAN" ID="Disable_Meshing" VALUE="false"/>
+                        </ELEM>
+                    </MESHING_PARAMS>
+                    <NUMBERING_PARAMS>
+                        <ELEM TYPE="NUMBERING_PARAMETERS" ID="NUMBERING_PARAMETERS"/>
+                    </NUMBERING_PARAMS>
+                </MESHING>
+                <PARENT NAME="Structure">
+                    <PARENT NAME="Model"/>
+                </PARENT>
+            </SHAPE>
+            <SHAPE REFOBJ_ID="8" NAME="Dessus" MOVING_BODY="MAIN_KINEMATIC_BODY">
+                <GEOMETRY>
+                    <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                        <ELEM X="0" Y="0" Z="0.3" TYPE="POINT" NAME="Point 1"/>
+                        <ELEM X="0.1" Y="0" Z="0.3" TYPE="POINT" NAME="Point 2"/>
+                        <ELEM X="0.1" Y="0.1" Z="0.3" TYPE="POINT" NAME="Point 3"/>
+                    </ELEM>
+                </GEOMETRY>
+                <PROPERTIES APPLICATION="Thermica">
+                    <CONTENER TYPE="SHELL" NAME="Bulk">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Geom_Prop" NAME="Geometrical properties">
+                                    <ELEM TYPE="VALUE" ID="Thickness" VALUE="0.001"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY NAME="Physical properties">
+                                    <ELEM TYPE="STRING" NAME="Selected material" STR="Aluminium 7075"/>
+                                    <ELEM TYPE="VALUE" ID="Conductivity" VALUE="130"/>
+                                    <ELEM TYPE="VALUE" ID="Density" VALUE="2800"/>
+                                    <ELEM TYPE="VALUE" ID="Specific_heat" VALUE="915"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Transverse">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="AreaCorrection" NAME="Area correction for contacts">
+                                    <ELEM TYPE="VALUE" ID="Geometrical area correction" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Trans_Prop" NAME="Transverse couplings">
+                                    <ELEM TYPE="VALUE" ID="Transverse conduction" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Transverse radiation" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Coating">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Ray_Emission" NAME="Ray emission">
+                                    <ELEM TYPE="STRING" ID="Emission_Choice" STR="AUTOMATIC"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Thermo_optical_IR" NAME="Thermo-optical IR">
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Epsilon" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="SpecE" VALUE="0"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Thermo_optical_UV" NAME="Thermo-optical UV">
+                                    <ELEM TYPE="VALUE" ID="Alpha" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="SpecA" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Miscellaneous">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Refrac_Ind_IR" NAME="Refraction Index IR">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Refrac_Ind_UV" NAME="Refraction Index UV">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Enclosure">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Enclosure" NAME="Enclosure">
+                                    <ELEM TYPE="INTEGER" ID="Enclosure" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                </PROPERTIES>
+                <MESHING APP_NAME="Thermica">
+                    <MESHING_NUMBER MTYPE="MESHING_GEOMETRIC_SHELL_SHAPE" ID="600" HEADER="" LABEL="/Structure"/>
+                    <MESHING_PARAMS>
+                        <ELEM TYPE="MESHING_PARAMETERS" ID="MESHING_PARAMETERS">
+                            <ELEM TYPE="INTEGER" ID="a" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="b" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="c" VALUE="1"/>
+                            <ELEM TYPE="BOOLEAN" ID="Enable_Ratio" VALUE="false"/>
+                            <ELEM TYPE="STRING" ID="Ratio a" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio b" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio c" STR=""/>
+                            <ELEM TYPE="BOOLEAN" ID="Disable_Meshing" VALUE="false"/>
+                        </ELEM>
+                    </MESHING_PARAMS>
+                    <NUMBERING_PARAMS>
+                        <ELEM TYPE="NUMBERING_PARAMETERS" ID="NUMBERING_PARAMETERS"/>
+                    </NUMBERING_PARAMS>
+                </MESHING>
+                <PARENT NAME="Structure">
+                    <PARENT NAME="Model"/>
+                </PARENT>
+            </SHAPE>
+            <SHAPE REFOBJ_ID="9" NAME="Panneau 2" MOVING_BODY="MAIN_KINEMATIC_BODY">
+                <GEOMETRY>
+                    <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                        <ELEM X="0.4" Y="0" Z="0.3" TYPE="POINT" NAME="Point 1"/>
+                        <ELEM X="0.4" Y="0.1" Z="0.3" TYPE="POINT" NAME="Point 2"/>
+                        <ELEM X="0.101" Y="0.09" Z="0.3" TYPE="POINT" NAME="Point 3"/>
+                    </ELEM>
+                </GEOMETRY>
+                <PROPERTIES APPLICATION="Thermica">
+                    <CONTENER TYPE="SHELL" NAME="Bulk">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Geom_Prop" NAME="Geometrical properties">
+                                    <ELEM TYPE="VALUE" ID="Thickness" VALUE="0.01"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Phys_Prop" NAME="Physical properties">
+                                    <ELEM TYPE="VALUE" ID="Conductivity" VALUE="148"/>
+                                    <ELEM TYPE="VALUE" ID="Density" VALUE="2333"/>
+                                    <ELEM TYPE="VALUE" ID="Specific_heat" VALUE="700"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Transverse">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="AreaCorrection" NAME="Area correction for contacts">
+                                    <ELEM TYPE="VALUE" ID="Geometrical area correction" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Trans_Prop" NAME="Transverse couplings">
+                                    <ELEM TYPE="VALUE" ID="Transverse conduction" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Transverse radiation" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Coating">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Ray_Emission" NAME="Ray emission">
+                                    <ELEM TYPE="STRING" ID="Emission_Choice" STR="AUTOMATIC"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Thermo_optical_IR" NAME="Thermo-optical IR">
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Epsilon" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="SpecE" VALUE="0"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Thermo_optical_UV" NAME="Thermo-optical UV">
+                                    <ELEM TYPE="VALUE" ID="Alpha" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="SpecA" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Miscellaneous">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Refrac_Ind_IR" NAME="Refraction Index IR">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Refrac_Ind_UV" NAME="Refraction Index UV">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Enclosure">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Enclosure" NAME="Enclosure">
+                                    <ELEM TYPE="INTEGER" ID="Enclosure" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                </PROPERTIES>
+                <MESHING APP_NAME="Thermica">
+                    <MESHING_NUMBER MTYPE="MESHING_GEOMETRIC_SHELL_SHAPE" ID="700" HEADER="" LABEL="/Panneau Solaire Dessous"/>
+                    <MESHING_PARAMS>
+                        <ELEM TYPE="MESHING_PARAMETERS" ID="MESHING_PARAMETERS">
+                            <ELEM TYPE="INTEGER" ID="a" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="b" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="c" VALUE="1"/>
+                            <ELEM TYPE="BOOLEAN" ID="Enable_Ratio" VALUE="false"/>
+                            <ELEM TYPE="STRING" ID="Ratio a" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio b" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio c" STR=""/>
+                            <ELEM TYPE="BOOLEAN" ID="Disable_Meshing" VALUE="false"/>
+                        </ELEM>
+                    </MESHING_PARAMS>
+                    <NUMBERING_PARAMS>
+                        <ELEM TYPE="NUMBERING_PARAMETERS" ID="NUMBERING_PARAMETERS"/>
+                    </NUMBERING_PARAMS>
+                </MESHING>
+                <PARENT NAME="Panneau Solaire Dessous">
+                    <PARENT NAME="Model"/>
+                </PARENT>
+            </SHAPE>
+            <SHAPE REFOBJ_ID="10" NAME="Panneau 1" MOVING_BODY="MAIN_KINEMATIC_BODY">
+                <GEOMETRY>
+                    <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                        <ELEM X="-0.3" Y="0" Z="0.3" TYPE="POINT" NAME="Point 1"/>
+                        <ELEM X="-0.3" Y="0.1" Z="0.3" TYPE="POINT" NAME="Point 2"/>
+                        <ELEM X="-0.001" Y="0.09" Z="0.3" TYPE="POINT" NAME="Point 3"/>
+                    </ELEM>
+                </GEOMETRY>
+                <PROPERTIES APPLICATION="Thermica">
+                    <CONTENER TYPE="SHELL" NAME="Bulk">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Geom_Prop" NAME="Geometrical properties">
+                                    <ELEM TYPE="VALUE" ID="Thickness" VALUE="0.01"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Phys_Prop" NAME="Physical properties">
+                                    <ELEM TYPE="VALUE" ID="Conductivity" VALUE="148"/>
+                                    <ELEM TYPE="VALUE" ID="Density" VALUE="2333"/>
+                                    <ELEM TYPE="VALUE" ID="Specific_heat" VALUE="700"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Transverse">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="AreaCorrection" NAME="Area correction for contacts">
+                                    <ELEM TYPE="VALUE" ID="Geometrical area correction" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Trans_Prop" NAME="Transverse couplings">
+                                    <ELEM TYPE="VALUE" ID="Transverse conduction" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Transverse radiation" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Coating">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Ray_Emission" NAME="Ray emission">
+                                    <ELEM TYPE="STRING" ID="Emission_Choice" STR="AUTOMATIC"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Thermo_optical_IR" NAME="Thermo-optical IR">
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Epsilon" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="SpecE" VALUE="0"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Thermo_optical_UV" NAME="Thermo-optical UV">
+                                    <ELEM TYPE="VALUE" ID="Alpha" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="SpecA" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Miscellaneous">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Refrac_Ind_IR" NAME="Refraction Index IR">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Refrac_Ind_UV" NAME="Refraction Index UV">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Enclosure">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Enclosure" NAME="Enclosure">
+                                    <ELEM TYPE="INTEGER" ID="Enclosure" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                </PROPERTIES>
+                <MESHING APP_NAME="Thermica">
+                    <MESHING_NUMBER MTYPE="MESHING_GEOMETRIC_SHELL_SHAPE" ID="800" HEADER="" LABEL="/Panneau Solaire Dessous"/>
+                    <MESHING_PARAMS>
+                        <ELEM TYPE="MESHING_PARAMETERS" ID="MESHING_PARAMETERS">
+                            <ELEM TYPE="INTEGER" ID="a" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="b" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="c" VALUE="1"/>
+                            <ELEM TYPE="BOOLEAN" ID="Enable_Ratio" VALUE="false"/>
+                            <ELEM TYPE="STRING" ID="Ratio a" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio b" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio c" STR=""/>
+                            <ELEM TYPE="BOOLEAN" ID="Disable_Meshing" VALUE="false"/>
+                        </ELEM>
+                    </MESHING_PARAMS>
+                    <NUMBERING_PARAMS>
+                        <ELEM TYPE="NUMBERING_PARAMETERS" ID="NUMBERING_PARAMETERS"/>
+                    </NUMBERING_PARAMS>
+                </MESHING>
+                <PARENT NAME="Panneau Solaire Dessous">
+                    <PARENT NAME="Model"/>
+                </PARENT>
+            </SHAPE>
+            <SHAPE REFOBJ_ID="11" NAME="Panneau 4" MOVING_BODY="MAIN_KINEMATIC_BODY">
+                <GEOMETRY>
+                    <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                        <ELEM X="0.1" Y="-0.3" Z="0.3" TYPE="POINT" NAME="Point 1"/>
+                        <ELEM X="0" Y="-0.3" Z="0.3" TYPE="POINT" NAME="Point 2"/>
+                        <ELEM X="0.01" Y="-0.001" Z="0.3" TYPE="POINT" NAME="Point 3"/>
+                    </ELEM>
+                </GEOMETRY>
+                <PROPERTIES APPLICATION="Thermica">
+                    <CONTENER TYPE="SHELL" NAME="Bulk">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Geom_Prop" NAME="Geometrical properties">
+                                    <ELEM TYPE="VALUE" ID="Thickness" VALUE="0.01"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Phys_Prop" NAME="Physical properties">
+                                    <ELEM TYPE="VALUE" ID="Conductivity" VALUE="148"/>
+                                    <ELEM TYPE="VALUE" ID="Density" VALUE="2333"/>
+                                    <ELEM TYPE="VALUE" ID="Specific_heat" VALUE="700"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Transverse">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="AreaCorrection" NAME="Area correction for contacts">
+                                    <ELEM TYPE="VALUE" ID="Geometrical area correction" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Trans_Prop" NAME="Transverse couplings">
+                                    <ELEM TYPE="VALUE" ID="Transverse conduction" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Transverse radiation" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Coating">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Ray_Emission" NAME="Ray emission">
+                                    <ELEM TYPE="STRING" ID="Emission_Choice" STR="AUTOMATIC"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Thermo_optical_IR" NAME="Thermo-optical IR">
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Epsilon" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="SpecE" VALUE="0"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Thermo_optical_UV" NAME="Thermo-optical UV">
+                                    <ELEM TYPE="VALUE" ID="Alpha" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="SpecA" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Miscellaneous">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Refrac_Ind_IR" NAME="Refraction Index IR">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Refrac_Ind_UV" NAME="Refraction Index UV">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Enclosure">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Enclosure" NAME="Enclosure">
+                                    <ELEM TYPE="INTEGER" ID="Enclosure" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                </PROPERTIES>
+                <MESHING APP_NAME="Thermica">
+                    <MESHING_NUMBER MTYPE="MESHING_GEOMETRIC_SHELL_SHAPE" ID="900" HEADER="" LABEL="/Panneau Solaire Dessous"/>
+                    <MESHING_PARAMS>
+                        <ELEM TYPE="MESHING_PARAMETERS" ID="MESHING_PARAMETERS">
+                            <ELEM TYPE="INTEGER" ID="a" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="b" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="c" VALUE="1"/>
+                            <ELEM TYPE="BOOLEAN" ID="Enable_Ratio" VALUE="false"/>
+                            <ELEM TYPE="STRING" ID="Ratio a" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio b" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio c" STR=""/>
+                            <ELEM TYPE="BOOLEAN" ID="Disable_Meshing" VALUE="false"/>
+                        </ELEM>
+                    </MESHING_PARAMS>
+                    <NUMBERING_PARAMS>
+                        <ELEM TYPE="NUMBERING_PARAMETERS" ID="NUMBERING_PARAMETERS"/>
+                    </NUMBERING_PARAMS>
+                </MESHING>
+                <PARENT NAME="Panneau Solaire Dessous">
+                    <PARENT NAME="Model"/>
+                </PARENT>
+            </SHAPE>
+            <SHAPE REFOBJ_ID="12" NAME="Panneau 3" MOVING_BODY="MAIN_KINEMATIC_BODY">
+                <GEOMETRY>
+                    <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                        <ELEM X="0.1" Y="0.4" Z="0.3" TYPE="POINT" NAME="Point 1"/>
+                        <ELEM X="0" Y="0.4" Z="0.3" TYPE="POINT" NAME="Point 2"/>
+                        <ELEM X="0.01" Y="0.101" Z="0.3" TYPE="POINT" NAME="Point 3"/>
+                    </ELEM>
+                </GEOMETRY>
+                <PROPERTIES APPLICATION="Thermica">
+                    <CONTENER TYPE="SHELL" NAME="Bulk">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Geom_Prop" NAME="Geometrical properties">
+                                    <ELEM TYPE="VALUE" ID="Thickness" VALUE="0.01"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Phys_Prop" NAME="Physical properties">
+                                    <ELEM TYPE="VALUE" ID="Conductivity" VALUE="148"/>
+                                    <ELEM TYPE="VALUE" ID="Density" VALUE="2333"/>
+                                    <ELEM TYPE="VALUE" ID="Specific_heat" VALUE="700"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Transverse">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="AreaCorrection" NAME="Area correction for contacts">
+                                    <ELEM TYPE="VALUE" ID="Geometrical area correction" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Trans_Prop" NAME="Transverse couplings">
+                                    <ELEM TYPE="VALUE" ID="Transverse conduction" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Transverse radiation" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Coating">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Ray_Emission" NAME="Ray emission">
+                                    <ELEM TYPE="STRING" ID="Emission_Choice" STR="AUTOMATIC"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Thermo_optical_IR" NAME="Thermo-optical IR">
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Epsilon" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="SpecE" VALUE="0"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Thermo_optical_UV" NAME="Thermo-optical UV">
+                                    <ELEM TYPE="VALUE" ID="Alpha" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="SpecA" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Miscellaneous">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Refrac_Ind_IR" NAME="Refraction Index IR">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Refrac_Ind_UV" NAME="Refraction Index UV">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Enclosure">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Enclosure" NAME="Enclosure">
+                                    <ELEM TYPE="INTEGER" ID="Enclosure" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                </PROPERTIES>
+                <MESHING APP_NAME="Thermica">
+                    <MESHING_NUMBER MTYPE="MESHING_GEOMETRIC_SHELL_SHAPE" ID="1000" HEADER="" LABEL="/Panneau Solaire Dessous"/>
+                    <MESHING_PARAMS>
+                        <ELEM TYPE="MESHING_PARAMETERS" ID="MESHING_PARAMETERS">
+                            <ELEM TYPE="INTEGER" ID="a" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="b" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="c" VALUE="1"/>
+                            <ELEM TYPE="BOOLEAN" ID="Enable_Ratio" VALUE="false"/>
+                            <ELEM TYPE="STRING" ID="Ratio a" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio b" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio c" STR=""/>
+                            <ELEM TYPE="BOOLEAN" ID="Disable_Meshing" VALUE="false"/>
+                        </ELEM>
+                    </MESHING_PARAMS>
+                    <NUMBERING_PARAMS>
+                        <ELEM TYPE="NUMBERING_PARAMETERS" ID="NUMBERING_PARAMETERS"/>
+                    </NUMBERING_PARAMS>
+                </MESHING>
+                <PARENT NAME="Panneau Solaire Dessous">
+                    <PARENT NAME="Model"/>
+                </PARENT>
+            </SHAPE>
+            <SHAPE REFOBJ_ID="18" NAME="Panneau 2 (1)" MOVING_BODY="MAIN_KINEMATIC_BODY">
+                <GEOMETRY>
+                    <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                        <ELEM X="0.39" Y="0.01" Z="0.301" TYPE="POINT" NAME="Point 1"/>
+                        <ELEM X="0.39" Y="0.09" Z="0.301" TYPE="POINT" NAME="Point 2"/>
+                        <ELEM X="0.111" Y="0.09" Z="0.301" TYPE="POINT" NAME="Point 3"/>
+                    </ELEM>
+                </GEOMETRY>
+                <PROPERTIES APPLICATION="Thermica">
+                    <CONTENER TYPE="SHELL" NAME="Bulk">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Geom_Prop" NAME="Geometrical properties">
+                                    <ELEM TYPE="VALUE" ID="Thickness" VALUE="0.01"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Phys_Prop" NAME="Physical properties">
+                                    <ELEM TYPE="VALUE" ID="Conductivity" VALUE="148"/>
+                                    <ELEM TYPE="VALUE" ID="Density" VALUE="2333"/>
+                                    <ELEM TYPE="VALUE" ID="Specific_heat" VALUE="700"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Transverse">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="AreaCorrection" NAME="Area correction for contacts">
+                                    <ELEM TYPE="VALUE" ID="Geometrical area correction" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Trans_Prop" NAME="Transverse couplings">
+                                    <ELEM TYPE="VALUE" ID="Transverse conduction" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Transverse radiation" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Coating">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Ray_Emission" NAME="Ray emission">
+                                    <ELEM TYPE="STRING" ID="Emission_Choice" STR="AUTOMATIC"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY NAME="Thermo-optical IR">
+                                    <ELEM TYPE="STRING" NAME="Selected material" STR="SunCell"/>
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Epsilon" VALUE="0.82"/>
+                                    <ELEM TYPE="VALUE" ID="SpecE" VALUE="0"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY NAME="Thermo-optical UV">
+                                    <ELEM TYPE="STRING" NAME="Selected material" STR="SunCell"/>
+                                    <ELEM TYPE="VALUE" ID="Alpha" VALUE="0.74"/>
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="SpecA" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Miscellaneous">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Refrac_Ind_IR" NAME="Refraction Index IR">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Refrac_Ind_UV" NAME="Refraction Index UV">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Enclosure">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Enclosure" NAME="Enclosure">
+                                    <ELEM TYPE="INTEGER" ID="Enclosure" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                </PROPERTIES>
+                <MESHING APP_NAME="Thermica">
+                    <MESHING_NUMBER MTYPE="MESHING_GEOMETRIC_SHELL_SHAPE" ID="1100" HEADER="" LABEL="/Panneau Solaire Dessus"/>
+                    <MESHING_PARAMS>
+                        <ELEM TYPE="MESHING_PARAMETERS" ID="MESHING_PARAMETERS">
+                            <ELEM TYPE="INTEGER" ID="a" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="b" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="c" VALUE="1"/>
+                            <ELEM TYPE="BOOLEAN" ID="Enable_Ratio" VALUE="false"/>
+                            <ELEM TYPE="STRING" ID="Ratio a" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio b" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio c" STR=""/>
+                            <ELEM TYPE="BOOLEAN" ID="Disable_Meshing" VALUE="false"/>
+                        </ELEM>
+                    </MESHING_PARAMS>
+                    <NUMBERING_PARAMS>
+                        <ELEM TYPE="NUMBERING_PARAMETERS" ID="NUMBERING_PARAMETERS"/>
+                    </NUMBERING_PARAMS>
+                </MESHING>
+                <PARENT NAME="Panneau Solaire Dessus">
+                    <PARENT NAME="Model"/>
+                </PARENT>
+            </SHAPE>
+            <SHAPE REFOBJ_ID="19" NAME="Panneau 1 (1)" MOVING_BODY="MAIN_KINEMATIC_BODY">
+                <GEOMETRY>
+                    <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                        <ELEM X="-0.29" Y="0.01" Z="0.301" TYPE="POINT" NAME="Point 1"/>
+                        <ELEM X="-0.29" Y="0.09" Z="0.301" TYPE="POINT" NAME="Point 2"/>
+                        <ELEM X="-0.011" Y="0.09" Z="0.301" TYPE="POINT" NAME="Point 3"/>
+                    </ELEM>
+                </GEOMETRY>
+                <PROPERTIES APPLICATION="Thermica">
+                    <CONTENER TYPE="SHELL" NAME="Bulk">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Geom_Prop" NAME="Geometrical properties">
+                                    <ELEM TYPE="VALUE" ID="Thickness" VALUE="0.01"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Phys_Prop" NAME="Physical properties">
+                                    <ELEM TYPE="VALUE" ID="Conductivity" VALUE="148"/>
+                                    <ELEM TYPE="VALUE" ID="Density" VALUE="2333"/>
+                                    <ELEM TYPE="VALUE" ID="Specific_heat" VALUE="700"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Transverse">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="AreaCorrection" NAME="Area correction for contacts">
+                                    <ELEM TYPE="VALUE" ID="Geometrical area correction" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Trans_Prop" NAME="Transverse couplings">
+                                    <ELEM TYPE="VALUE" ID="Transverse conduction" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Transverse radiation" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Coating">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Ray_Emission" NAME="Ray emission">
+                                    <ELEM TYPE="STRING" ID="Emission_Choice" STR="AUTOMATIC"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY NAME="Thermo-optical IR">
+                                    <ELEM TYPE="STRING" NAME="Selected material" STR="SunCell"/>
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Epsilon" VALUE="0.82"/>
+                                    <ELEM TYPE="VALUE" ID="SpecE" VALUE="0"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY NAME="Thermo-optical UV">
+                                    <ELEM TYPE="STRING" NAME="Selected material" STR="SunCell"/>
+                                    <ELEM TYPE="VALUE" ID="Alpha" VALUE="0.74"/>
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="SpecA" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Miscellaneous">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Refrac_Ind_IR" NAME="Refraction Index IR">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Refrac_Ind_UV" NAME="Refraction Index UV">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Enclosure">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Enclosure" NAME="Enclosure">
+                                    <ELEM TYPE="INTEGER" ID="Enclosure" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                </PROPERTIES>
+                <MESHING APP_NAME="Thermica">
+                    <MESHING_NUMBER MTYPE="MESHING_GEOMETRIC_SHELL_SHAPE" ID="1200" HEADER="" LABEL="/Panneau Solaire Dessus"/>
+                    <MESHING_PARAMS>
+                        <ELEM TYPE="MESHING_PARAMETERS" ID="MESHING_PARAMETERS">
+                            <ELEM TYPE="INTEGER" ID="a" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="b" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="c" VALUE="1"/>
+                            <ELEM TYPE="BOOLEAN" ID="Enable_Ratio" VALUE="false"/>
+                            <ELEM TYPE="STRING" ID="Ratio a" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio b" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio c" STR=""/>
+                            <ELEM TYPE="BOOLEAN" ID="Disable_Meshing" VALUE="false"/>
+                        </ELEM>
+                    </MESHING_PARAMS>
+                    <NUMBERING_PARAMS>
+                        <ELEM TYPE="NUMBERING_PARAMETERS" ID="NUMBERING_PARAMETERS"/>
+                    </NUMBERING_PARAMS>
+                </MESHING>
+                <PARENT NAME="Panneau Solaire Dessus">
+                    <PARENT NAME="Model"/>
+                </PARENT>
+            </SHAPE>
+            <SHAPE REFOBJ_ID="20" NAME="Panneau 4 (1)" MOVING_BODY="MAIN_KINEMATIC_BODY">
+                <GEOMETRY>
+                    <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                        <ELEM X="0.09" Y="-0.29" Z="0.301" TYPE="POINT" NAME="Point 1"/>
+                        <ELEM X="0.01" Y="-0.29" Z="0.301" TYPE="POINT" NAME="Point 2"/>
+                        <ELEM X="0.011" Y="-0.011" Z="0.301" TYPE="POINT" NAME="Point 3"/>
+                    </ELEM>
+                </GEOMETRY>
+                <PROPERTIES APPLICATION="Thermica">
+                    <CONTENER TYPE="SHELL" NAME="Bulk">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Geom_Prop" NAME="Geometrical properties">
+                                    <ELEM TYPE="VALUE" ID="Thickness" VALUE="0.01"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Phys_Prop" NAME="Physical properties">
+                                    <ELEM TYPE="VALUE" ID="Conductivity" VALUE="148"/>
+                                    <ELEM TYPE="VALUE" ID="Density" VALUE="2333"/>
+                                    <ELEM TYPE="VALUE" ID="Specific_heat" VALUE="700"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Transverse">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="AreaCorrection" NAME="Area correction for contacts">
+                                    <ELEM TYPE="VALUE" ID="Geometrical area correction" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Trans_Prop" NAME="Transverse couplings">
+                                    <ELEM TYPE="VALUE" ID="Transverse conduction" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Transverse radiation" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Coating">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Ray_Emission" NAME="Ray emission">
+                                    <ELEM TYPE="STRING" ID="Emission_Choice" STR="AUTOMATIC"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY NAME="Thermo-optical IR">
+                                    <ELEM TYPE="STRING" NAME="Selected material" STR="SunCell"/>
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Epsilon" VALUE="0.82"/>
+                                    <ELEM TYPE="VALUE" ID="SpecE" VALUE="0"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY NAME="Thermo-optical UV">
+                                    <ELEM TYPE="STRING" NAME="Selected material" STR="SunCell"/>
+                                    <ELEM TYPE="VALUE" ID="Alpha" VALUE="0.74"/>
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="SpecA" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Miscellaneous">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Refrac_Ind_IR" NAME="Refraction Index IR">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Refrac_Ind_UV" NAME="Refraction Index UV">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Enclosure">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Enclosure" NAME="Enclosure">
+                                    <ELEM TYPE="INTEGER" ID="Enclosure" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                </PROPERTIES>
+                <MESHING APP_NAME="Thermica">
+                    <MESHING_NUMBER MTYPE="MESHING_GEOMETRIC_SHELL_SHAPE" ID="1300" HEADER="" LABEL="/Panneau Solaire Dessus"/>
+                    <MESHING_PARAMS>
+                        <ELEM TYPE="MESHING_PARAMETERS" ID="MESHING_PARAMETERS">
+                            <ELEM TYPE="INTEGER" ID="a" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="b" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="c" VALUE="1"/>
+                            <ELEM TYPE="BOOLEAN" ID="Enable_Ratio" VALUE="false"/>
+                            <ELEM TYPE="STRING" ID="Ratio a" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio b" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio c" STR=""/>
+                            <ELEM TYPE="BOOLEAN" ID="Disable_Meshing" VALUE="false"/>
+                        </ELEM>
+                    </MESHING_PARAMS>
+                    <NUMBERING_PARAMS>
+                        <ELEM TYPE="NUMBERING_PARAMETERS" ID="NUMBERING_PARAMETERS"/>
+                    </NUMBERING_PARAMS>
+                </MESHING>
+                <PARENT NAME="Panneau Solaire Dessus">
+                    <PARENT NAME="Model"/>
+                </PARENT>
+            </SHAPE>
+            <SHAPE REFOBJ_ID="21" NAME="Panneau 3 (1)" MOVING_BODY="MAIN_KINEMATIC_BODY">
+                <GEOMETRY>
+                    <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                        <ELEM X="0.09" Y="0.39" Z="0.301" TYPE="POINT" NAME="Point 1"/>
+                        <ELEM X="0.01" Y="0.39" Z="0.301" TYPE="POINT" NAME="Point 2"/>
+                        <ELEM X="0.01" Y="0.111" Z="0.301" TYPE="POINT" NAME="Point 3"/>
+                    </ELEM>
+                </GEOMETRY>
+                <PROPERTIES APPLICATION="Thermica">
+                    <CONTENER TYPE="SHELL" NAME="Bulk">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Geom_Prop" NAME="Geometrical properties">
+                                    <ELEM TYPE="VALUE" ID="Thickness" VALUE="0.01"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Phys_Prop" NAME="Physical properties">
+                                    <ELEM TYPE="VALUE" ID="Conductivity" VALUE="148"/>
+                                    <ELEM TYPE="VALUE" ID="Density" VALUE="2333"/>
+                                    <ELEM TYPE="VALUE" ID="Specific_heat" VALUE="700"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Transverse">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="AreaCorrection" NAME="Area correction for contacts">
+                                    <ELEM TYPE="VALUE" ID="Geometrical area correction" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Trans_Prop" NAME="Transverse couplings">
+                                    <ELEM TYPE="VALUE" ID="Transverse conduction" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Transverse radiation" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Coating">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Ray_Emission" NAME="Ray emission">
+                                    <ELEM TYPE="STRING" ID="Emission_Choice" STR="AUTOMATIC"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY NAME="Thermo-optical IR">
+                                    <ELEM TYPE="STRING" NAME="Selected material" STR="SunCell"/>
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Epsilon" VALUE="0.82"/>
+                                    <ELEM TYPE="VALUE" ID="SpecE" VALUE="0"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY NAME="Thermo-optical UV">
+                                    <ELEM TYPE="STRING" NAME="Selected material" STR="SunCell"/>
+                                    <ELEM TYPE="VALUE" ID="Alpha" VALUE="0.74"/>
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="SpecA" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Miscellaneous">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Refrac_Ind_IR" NAME="Refraction Index IR">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Refrac_Ind_UV" NAME="Refraction Index UV">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Enclosure">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Enclosure" NAME="Enclosure">
+                                    <ELEM TYPE="INTEGER" ID="Enclosure" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                </PROPERTIES>
+                <MESHING APP_NAME="Thermica">
+                    <MESHING_NUMBER MTYPE="MESHING_GEOMETRIC_SHELL_SHAPE" ID="1400" HEADER="" LABEL="/Panneau Solaire Dessus"/>
+                    <MESHING_PARAMS>
+                        <ELEM TYPE="MESHING_PARAMETERS" ID="MESHING_PARAMETERS">
+                            <ELEM TYPE="INTEGER" ID="a" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="b" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="c" VALUE="1"/>
+                            <ELEM TYPE="BOOLEAN" ID="Enable_Ratio" VALUE="false"/>
+                            <ELEM TYPE="STRING" ID="Ratio a" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio b" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio c" STR=""/>
+                            <ELEM TYPE="BOOLEAN" ID="Disable_Meshing" VALUE="false"/>
+                        </ELEM>
+                    </MESHING_PARAMS>
+                    <NUMBERING_PARAMS>
+                        <ELEM TYPE="NUMBERING_PARAMETERS" ID="NUMBERING_PARAMETERS"/>
+                    </NUMBERING_PARAMS>
+                </MESHING>
+                <PARENT NAME="Panneau Solaire Dessus">
+                    <PARENT NAME="Model"/>
+                </PARENT>
+            </SHAPE>
+            <SHAPE REFOBJ_ID="50" NAME="puissance" MOVING_BODY="MAIN_KINEMATIC_BODY">
+                <GEOMETRY>
+                    <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                        <ELEM X="0" Y="0" Z="0.29" TYPE="POINT" NAME="Point 1"/>
+                        <ELEM X="0.1" Y="0" Z="0.29" TYPE="POINT" NAME="Point 2"/>
+                        <ELEM X="0.1" Y="0.1" Z="0.29" TYPE="POINT" NAME="Point 3"/>
+                    </ELEM>
+                </GEOMETRY>
+                <PROPERTIES APPLICATION="Thermica">
+                    <CONTENER TYPE="SHELL" NAME="Bulk">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Geom_Prop" NAME="Geometrical properties">
+                                    <ELEM TYPE="VALUE" ID="Thickness" VALUE="0.01"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Phys_Prop" NAME="Physical properties">
+                                    <ELEM TYPE="VALUE" ID="Conductivity" VALUE="148"/>
+                                    <ELEM TYPE="VALUE" ID="Density" VALUE="2333"/>
+                                    <ELEM TYPE="VALUE" ID="Specific_heat" VALUE="750"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Transverse">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="AreaCorrection" NAME="Area correction for contacts">
+                                    <ELEM TYPE="VALUE" ID="Geometrical area correction" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Trans_Prop" NAME="Transverse couplings">
+                                    <ELEM TYPE="VALUE" ID="Transverse conduction" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Transverse radiation" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Coating">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Ray_Emission" NAME="Ray emission">
+                                    <ELEM TYPE="STRING" ID="Emission_Choice" STR="AUTOMATIC"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Thermo_optical_IR" NAME="Thermo-optical IR">
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Epsilon" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="SpecE" VALUE="0"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Thermo_optical_UV" NAME="Thermo-optical UV">
+                                    <ELEM TYPE="VALUE" ID="Alpha" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="SpecA" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Miscellaneous">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Refrac_Ind_IR" NAME="Refraction Index IR">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Refrac_Ind_UV" NAME="Refraction Index UV">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Enclosure">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Enclosure" NAME="Enclosure">
+                                    <ELEM TYPE="INTEGER" ID="Enclosure" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                </PROPERTIES>
+                <MESHING APP_NAME="Thermica">
+                    <MESHING_NUMBER MTYPE="MESHING_GEOMETRIC_SHELL_SHAPE" ID="1500" HEADER="" LABEL="/Rack"/>
+                    <MESHING_PARAMS>
+                        <ELEM TYPE="MESHING_PARAMETERS" ID="MESHING_PARAMETERS">
+                            <ELEM TYPE="INTEGER" ID="a" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="b" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="c" VALUE="1"/>
+                            <ELEM TYPE="BOOLEAN" ID="Enable_Ratio" VALUE="false"/>
+                            <ELEM TYPE="STRING" ID="Ratio a" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio b" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio c" STR=""/>
+                            <ELEM TYPE="BOOLEAN" ID="Disable_Meshing" VALUE="false"/>
+                        </ELEM>
+                    </MESHING_PARAMS>
+                    <NUMBERING_PARAMS>
+                        <ELEM TYPE="NUMBERING_PARAMETERS" ID="NUMBERING_PARAMETERS"/>
+                    </NUMBERING_PARAMS>
+                </MESHING>
+                <PARENT NAME="Rack">
+                    <PARENT NAME="Model"/>
+                </PARENT>
+            </SHAPE>
+            <SHAPE REFOBJ_ID="155" NAME="comms" MOVING_BODY="MAIN_KINEMATIC_BODY">
+                <GEOMETRY>
+                    <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                        <ELEM X="0" Y="0" Z="0.26" TYPE="POINT" NAME="Point 1"/>
+                        <ELEM X="0.1" Y="0" Z="0.26" TYPE="POINT" NAME="Point 2"/>
+                        <ELEM X="0.1" Y="0.1" Z="0.26" TYPE="POINT" NAME="Point 3"/>
+                    </ELEM>
+                </GEOMETRY>
+                <PROPERTIES APPLICATION="Thermica">
+                    <CONTENER TYPE="SHELL" NAME="Bulk">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Geom_Prop" NAME="Geometrical properties">
+                                    <ELEM TYPE="VALUE" ID="Thickness" VALUE="0.01"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Phys_Prop" NAME="Physical properties">
+                                    <ELEM TYPE="VALUE" ID="Conductivity" VALUE="148"/>
+                                    <ELEM TYPE="VALUE" ID="Density" VALUE="2333"/>
+                                    <ELEM TYPE="VALUE" ID="Specific_heat" VALUE="750"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Transverse">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="AreaCorrection" NAME="Area correction for contacts">
+                                    <ELEM TYPE="VALUE" ID="Geometrical area correction" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Trans_Prop" NAME="Transverse couplings">
+                                    <ELEM TYPE="VALUE" ID="Transverse conduction" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Transverse radiation" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Coating">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Ray_Emission" NAME="Ray emission">
+                                    <ELEM TYPE="STRING" ID="Emission_Choice" STR="AUTOMATIC"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Thermo_optical_IR" NAME="Thermo-optical IR">
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Epsilon" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="SpecE" VALUE="0"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Thermo_optical_UV" NAME="Thermo-optical UV">
+                                    <ELEM TYPE="VALUE" ID="Alpha" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="SpecA" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Miscellaneous">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Refrac_Ind_IR" NAME="Refraction Index IR">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Refrac_Ind_UV" NAME="Refraction Index UV">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Enclosure">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Enclosure" NAME="Enclosure">
+                                    <ELEM TYPE="INTEGER" ID="Enclosure" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                </PROPERTIES>
+                <MESHING APP_NAME="Thermica">
+                    <MESHING_NUMBER MTYPE="MESHING_GEOMETRIC_SHELL_SHAPE" ID="1600" HEADER="" LABEL="/Rack"/>
+                    <MESHING_PARAMS>
+                        <ELEM TYPE="MESHING_PARAMETERS" ID="MESHING_PARAMETERS">
+                            <ELEM TYPE="INTEGER" ID="a" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="b" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="c" VALUE="1"/>
+                            <ELEM TYPE="BOOLEAN" ID="Enable_Ratio" VALUE="false"/>
+                            <ELEM TYPE="STRING" ID="Ratio a" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio b" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio c" STR=""/>
+                            <ELEM TYPE="BOOLEAN" ID="Disable_Meshing" VALUE="false"/>
+                        </ELEM>
+                    </MESHING_PARAMS>
+                    <NUMBERING_PARAMS>
+                        <ELEM TYPE="NUMBERING_PARAMETERS" ID="NUMBERING_PARAMETERS"/>
+                    </NUMBERING_PARAMS>
+                </MESHING>
+                <PARENT NAME="Rack">
+                    <PARENT NAME="Model"/>
+                </PARENT>
+            </SHAPE>
+            <SHAPE REFOBJ_ID="147" NAME="Batteries" MOVING_BODY="MAIN_KINEMATIC_BODY">
+                <GEOMETRY>
+                    <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                        <ELEM X="0" Y="0" Z="0.28" TYPE="POINT" NAME="Point 1"/>
+                        <ELEM X="0.1" Y="0" Z="0.28" TYPE="POINT" NAME="Point 2"/>
+                        <ELEM X="0.1" Y="0.1" Z="0.28" TYPE="POINT" NAME="Point 3"/>
+                    </ELEM>
+                </GEOMETRY>
+                <PROPERTIES APPLICATION="Thermica">
+                    <CONTENER TYPE="SHELL" NAME="Bulk">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Geom_Prop" NAME="Geometrical properties">
+                                    <ELEM TYPE="VALUE" ID="Thickness" VALUE="0.01"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Phys_Prop" NAME="Physical properties">
+                                    <ELEM TYPE="VALUE" ID="Conductivity" VALUE="148"/>
+                                    <ELEM TYPE="VALUE" ID="Density" VALUE="2333"/>
+                                    <ELEM TYPE="VALUE" ID="Specific_heat" VALUE="750"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Transverse">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="AreaCorrection" NAME="Area correction for contacts">
+                                    <ELEM TYPE="VALUE" ID="Geometrical area correction" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Trans_Prop" NAME="Transverse couplings">
+                                    <ELEM TYPE="VALUE" ID="Transverse conduction" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Transverse radiation" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Coating">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Ray_Emission" NAME="Ray emission">
+                                    <ELEM TYPE="STRING" ID="Emission_Choice" STR="AUTOMATIC"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Thermo_optical_IR" NAME="Thermo-optical IR">
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Epsilon" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="SpecE" VALUE="0"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Thermo_optical_UV" NAME="Thermo-optical UV">
+                                    <ELEM TYPE="VALUE" ID="Alpha" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="SpecA" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Miscellaneous">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Refrac_Ind_IR" NAME="Refraction Index IR">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Refrac_Ind_UV" NAME="Refraction Index UV">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Enclosure">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Enclosure" NAME="Enclosure">
+                                    <ELEM TYPE="INTEGER" ID="Enclosure" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                </PROPERTIES>
+                <MESHING APP_NAME="Thermica">
+                    <MESHING_NUMBER MTYPE="MESHING_GEOMETRIC_SHELL_SHAPE" ID="1700" HEADER="" LABEL="/Rack"/>
+                    <MESHING_PARAMS>
+                        <ELEM TYPE="MESHING_PARAMETERS" ID="MESHING_PARAMETERS">
+                            <ELEM TYPE="INTEGER" ID="a" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="b" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="c" VALUE="1"/>
+                            <ELEM TYPE="BOOLEAN" ID="Enable_Ratio" VALUE="false"/>
+                            <ELEM TYPE="STRING" ID="Ratio a" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio b" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio c" STR=""/>
+                            <ELEM TYPE="BOOLEAN" ID="Disable_Meshing" VALUE="false"/>
+                        </ELEM>
+                    </MESHING_PARAMS>
+                    <NUMBERING_PARAMS>
+                        <ELEM TYPE="NUMBERING_PARAMETERS" ID="NUMBERING_PARAMETERS"/>
+                    </NUMBERING_PARAMS>
+                </MESHING>
+                <PARENT NAME="Rack">
+                    <PARENT NAME="Model"/>
+                </PARENT>
+            </SHAPE>
+            <SHAPE REFOBJ_ID="148" NAME="OBC" MOVING_BODY="MAIN_KINEMATIC_BODY">
+                <GEOMETRY>
+                    <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                        <ELEM X="0" Y="0" Z="0.27" TYPE="POINT" NAME="Point 1"/>
+                        <ELEM X="0.1" Y="0" Z="0.27" TYPE="POINT" NAME="Point 2"/>
+                        <ELEM X="0.1" Y="0.1" Z="0.27" TYPE="POINT" NAME="Point 3"/>
+                    </ELEM>
+                </GEOMETRY>
+                <PROPERTIES APPLICATION="Thermica">
+                    <CONTENER TYPE="SHELL" NAME="Bulk">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Geom_Prop" NAME="Geometrical properties">
+                                    <ELEM TYPE="VALUE" ID="Thickness" VALUE="0.01"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Phys_Prop" NAME="Physical properties">
+                                    <ELEM TYPE="VALUE" ID="Conductivity" VALUE="148"/>
+                                    <ELEM TYPE="VALUE" ID="Density" VALUE="2333"/>
+                                    <ELEM TYPE="VALUE" ID="Specific_heat" VALUE="750"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Transverse">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="AreaCorrection" NAME="Area correction for contacts">
+                                    <ELEM TYPE="VALUE" ID="Geometrical area correction" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Trans_Prop" NAME="Transverse couplings">
+                                    <ELEM TYPE="VALUE" ID="Transverse conduction" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Transverse radiation" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Coating">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Ray_Emission" NAME="Ray emission">
+                                    <ELEM TYPE="STRING" ID="Emission_Choice" STR="AUTOMATIC"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Thermo_optical_IR" NAME="Thermo-optical IR">
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Epsilon" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="SpecE" VALUE="0"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Thermo_optical_UV" NAME="Thermo-optical UV">
+                                    <ELEM TYPE="VALUE" ID="Alpha" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="SpecA" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Miscellaneous">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Refrac_Ind_IR" NAME="Refraction Index IR">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Refrac_Ind_UV" NAME="Refraction Index UV">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Enclosure">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Enclosure" NAME="Enclosure">
+                                    <ELEM TYPE="INTEGER" ID="Enclosure" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                </PROPERTIES>
+                <MESHING APP_NAME="Thermica">
+                    <MESHING_NUMBER MTYPE="MESHING_GEOMETRIC_SHELL_SHAPE" ID="1800" HEADER="" LABEL="/Rack"/>
+                    <MESHING_PARAMS>
+                        <ELEM TYPE="MESHING_PARAMETERS" ID="MESHING_PARAMETERS">
+                            <ELEM TYPE="INTEGER" ID="a" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="b" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="c" VALUE="1"/>
+                            <ELEM TYPE="BOOLEAN" ID="Enable_Ratio" VALUE="false"/>
+                            <ELEM TYPE="STRING" ID="Ratio a" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio b" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio c" STR=""/>
+                            <ELEM TYPE="BOOLEAN" ID="Disable_Meshing" VALUE="false"/>
+                        </ELEM>
+                    </MESHING_PARAMS>
+                    <NUMBERING_PARAMS>
+                        <ELEM TYPE="NUMBERING_PARAMETERS" ID="NUMBERING_PARAMETERS"/>
+                    </NUMBERING_PARAMS>
+                </MESHING>
+                <PARENT NAME="Rack">
+                    <PARENT NAME="Model"/>
+                </PARENT>
+            </SHAPE>
+            <SHAPE REFOBJ_ID="149" NAME="MTQ" MOVING_BODY="MAIN_KINEMATIC_BODY">
+                <GEOMETRY>
+                    <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                        <ELEM X="0" Y="0" Z="0.25" TYPE="POINT" NAME="Point 1"/>
+                        <ELEM X="0.1" Y="0" Z="0.25" TYPE="POINT" NAME="Point 2"/>
+                        <ELEM X="0.1" Y="0.1" Z="0.25" TYPE="POINT" NAME="Point 3"/>
+                    </ELEM>
+                </GEOMETRY>
+                <PROPERTIES APPLICATION="Thermica">
+                    <CONTENER TYPE="SHELL" NAME="Bulk">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Geom_Prop" NAME="Geometrical properties">
+                                    <ELEM TYPE="VALUE" ID="Thickness" VALUE="0.01"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Phys_Prop" NAME="Physical properties">
+                                    <ELEM TYPE="VALUE" ID="Conductivity" VALUE="148"/>
+                                    <ELEM TYPE="VALUE" ID="Density" VALUE="2333"/>
+                                    <ELEM TYPE="VALUE" ID="Specific_heat" VALUE="750"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Transverse">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="AreaCorrection" NAME="Area correction for contacts">
+                                    <ELEM TYPE="VALUE" ID="Geometrical area correction" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Trans_Prop" NAME="Transverse couplings">
+                                    <ELEM TYPE="VALUE" ID="Transverse conduction" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Transverse radiation" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Coating">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Ray_Emission" NAME="Ray emission">
+                                    <ELEM TYPE="STRING" ID="Emission_Choice" STR="AUTOMATIC"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Thermo_optical_IR" NAME="Thermo-optical IR">
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Epsilon" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="SpecE" VALUE="0"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Thermo_optical_UV" NAME="Thermo-optical UV">
+                                    <ELEM TYPE="VALUE" ID="Alpha" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="SpecA" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Miscellaneous">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Refrac_Ind_IR" NAME="Refraction Index IR">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Refrac_Ind_UV" NAME="Refraction Index UV">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Enclosure">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Enclosure" NAME="Enclosure">
+                                    <ELEM TYPE="INTEGER" ID="Enclosure" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                </PROPERTIES>
+                <MESHING APP_NAME="Thermica">
+                    <MESHING_NUMBER MTYPE="MESHING_GEOMETRIC_SHELL_SHAPE" ID="1900" HEADER="" LABEL="/Rack"/>
+                    <MESHING_PARAMS>
+                        <ELEM TYPE="MESHING_PARAMETERS" ID="MESHING_PARAMETERS">
+                            <ELEM TYPE="INTEGER" ID="a" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="b" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="c" VALUE="1"/>
+                            <ELEM TYPE="BOOLEAN" ID="Enable_Ratio" VALUE="false"/>
+                            <ELEM TYPE="STRING" ID="Ratio a" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio b" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio c" STR=""/>
+                            <ELEM TYPE="BOOLEAN" ID="Disable_Meshing" VALUE="false"/>
+                        </ELEM>
+                    </MESHING_PARAMS>
+                    <NUMBERING_PARAMS>
+                        <ELEM TYPE="NUMBERING_PARAMETERS" ID="NUMBERING_PARAMETERS"/>
+                    </NUMBERING_PARAMS>
+                </MESHING>
+                <PARENT NAME="Rack">
+                    <PARENT NAME="Model"/>
+                </PARENT>
+            </SHAPE>
+            <SHAPE REFOBJ_ID="151" NAME="puissance" MOVING_BODY="MAIN_KINEMATIC_BODY">
+                <GEOMETRY>
+                    <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                        <ELEM X="0" Y="0" Z="0.2" TYPE="POINT" NAME="Point 1"/>
+                        <ELEM X="0.1" Y="0" Z="0.2" TYPE="POINT" NAME="Point 2"/>
+                        <ELEM X="0.1" Y="0.1" Z="0.2" TYPE="POINT" NAME="Point 3"/>
+                    </ELEM>
+                </GEOMETRY>
+                <PROPERTIES APPLICATION="Thermica">
+                    <CONTENER TYPE="SHELL" NAME="Bulk">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Geom_Prop" NAME="Geometrical properties">
+                                    <ELEM TYPE="VALUE" ID="Thickness" VALUE="0.01"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Phys_Prop" NAME="Physical properties">
+                                    <ELEM TYPE="VALUE" ID="Conductivity" VALUE="148"/>
+                                    <ELEM TYPE="VALUE" ID="Density" VALUE="2333"/>
+                                    <ELEM TYPE="VALUE" ID="Specific_heat" VALUE="750"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Transverse">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="AreaCorrection" NAME="Area correction for contacts">
+                                    <ELEM TYPE="VALUE" ID="Geometrical area correction" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Trans_Prop" NAME="Transverse couplings">
+                                    <ELEM TYPE="VALUE" ID="Transverse conduction" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Transverse radiation" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Coating">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Ray_Emission" NAME="Ray emission">
+                                    <ELEM TYPE="STRING" ID="Emission_Choice" STR="AUTOMATIC"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY NAME="Thermo-optical IR">
+                                    <ELEM TYPE="STRING" NAME="Selected material" STR="PCBZ"/>
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Epsilon" VALUE="0.8"/>
+                                    <ELEM TYPE="VALUE" ID="SpecE" VALUE="0"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY NAME="Thermo-optical UV">
+                                    <ELEM TYPE="STRING" NAME="Selected material" STR="PCBZ"/>
+                                    <ELEM TYPE="VALUE" ID="Alpha" VALUE="0.29"/>
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="SpecA" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Miscellaneous">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Refrac_Ind_IR" NAME="Refraction Index IR">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Refrac_Ind_UV" NAME="Refraction Index UV">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Enclosure">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Enclosure" NAME="Enclosure">
+                                    <ELEM TYPE="INTEGER" ID="Enclosure" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                </PROPERTIES>
+                <MESHING APP_NAME="Thermica">
+                    <MESHING_NUMBER MTYPE="MESHING_GEOMETRIC_SHELL_SHAPE" ID="2000" HEADER="" LABEL="/Payload 1"/>
+                    <MESHING_PARAMS>
+                        <ELEM TYPE="MESHING_PARAMETERS" ID="MESHING_PARAMETERS">
+                            <ELEM TYPE="INTEGER" ID="a" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="b" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="c" VALUE="1"/>
+                            <ELEM TYPE="BOOLEAN" ID="Enable_Ratio" VALUE="false"/>
+                            <ELEM TYPE="STRING" ID="Ratio a" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio b" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio c" STR=""/>
+                            <ELEM TYPE="BOOLEAN" ID="Disable_Meshing" VALUE="false"/>
+                        </ELEM>
+                    </MESHING_PARAMS>
+                    <NUMBERING_PARAMS>
+                        <ELEM TYPE="NUMBERING_PARAMETERS" ID="NUMBERING_PARAMETERS"/>
+                    </NUMBERING_PARAMS>
+                </MESHING>
+                <PARENT NAME="Payload 1">
+                    <PARENT NAME="Model"/>
+                </PARENT>
+            </SHAPE>
+            <SHAPE REFOBJ_ID="153" NAME="puissance" MOVING_BODY="MAIN_KINEMATIC_BODY">
+                <GEOMETRY>
+                    <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                        <ELEM X="0" Y="0" Z="0.1" TYPE="POINT" NAME="Point 1"/>
+                        <ELEM X="0.1" Y="0" Z="0.1" TYPE="POINT" NAME="Point 2"/>
+                        <ELEM X="0.1" Y="0.1" Z="0.1" TYPE="POINT" NAME="Point 3"/>
+                    </ELEM>
+                </GEOMETRY>
+                <PROPERTIES APPLICATION="Thermica">
+                    <CONTENER TYPE="SHELL" NAME="Bulk">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Geom_Prop" NAME="Geometrical properties">
+                                    <ELEM TYPE="VALUE" ID="Thickness" VALUE="0.00174"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Phys_Prop" NAME="Physical properties">
+                                    <ELEM TYPE="VALUE" ID="Conductivity" VALUE="148"/>
+                                    <ELEM TYPE="VALUE" ID="Density" VALUE="2333"/>
+                                    <ELEM TYPE="VALUE" ID="Specific_heat" VALUE="750"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Transverse">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="AreaCorrection" NAME="Area correction for contacts">
+                                    <ELEM TYPE="VALUE" ID="Geometrical area correction" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Trans_Prop" NAME="Transverse couplings">
+                                    <ELEM TYPE="VALUE" ID="Transverse conduction" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Transverse radiation" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Coating">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Ray_Emission" NAME="Ray emission">
+                                    <ELEM TYPE="STRING" ID="Emission_Choice" STR="AUTOMATIC"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY NAME="Thermo-optical IR">
+                                    <ELEM TYPE="STRING" NAME="Selected material" STR="PCBZ"/>
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransE" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Epsilon" VALUE="0.8"/>
+                                    <ELEM TYPE="VALUE" ID="SpecE" VALUE="0"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY NAME="Thermo-optical UV">
+                                    <ELEM TYPE="STRING" NAME="Selected material" STR="PCBZ"/>
+                                    <ELEM TYPE="VALUE" ID="Alpha" VALUE="0.29"/>
+                                    <ELEM TYPE="VALUE" ID="Diffuse_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="Direct_TransA" VALUE="0"/>
+                                    <ELEM TYPE="VALUE" ID="SpecA" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Miscellaneous">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Refrac_Ind_IR" NAME="Refraction Index IR">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Refrac_Ind_UV" NAME="Refraction Index UV">
+                                    <ELEM TYPE="VALUE" ID="Minus_index" VALUE="1"/>
+                                    <ELEM TYPE="VALUE" ID="Plus_index" VALUE="1"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="SHELL" NAME="Enclosure">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Enclosure" NAME="Enclosure">
+                                    <ELEM TYPE="INTEGER" ID="Enclosure" VALUE="0"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                </PROPERTIES>
+                <MESHING APP_NAME="Thermica">
+                    <MESHING_NUMBER MTYPE="MESHING_GEOMETRIC_SHELL_SHAPE" ID="2100" HEADER="" LABEL="/Payload 2"/>
+                    <MESHING_PARAMS>
+                        <ELEM TYPE="MESHING_PARAMETERS" ID="MESHING_PARAMETERS">
+                            <ELEM TYPE="INTEGER" ID="a" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="b" VALUE="1"/>
+                            <ELEM TYPE="INTEGER" ID="c" VALUE="1"/>
+                            <ELEM TYPE="BOOLEAN" ID="Enable_Ratio" VALUE="false"/>
+                            <ELEM TYPE="STRING" ID="Ratio a" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio b" STR=""/>
+                            <ELEM TYPE="STRING" ID="Ratio c" STR=""/>
+                            <ELEM TYPE="BOOLEAN" ID="Disable_Meshing" VALUE="false"/>
+                        </ELEM>
+                    </MESHING_PARAMS>
+                    <NUMBERING_PARAMS>
+                        <ELEM TYPE="NUMBERING_PARAMETERS" ID="NUMBERING_PARAMETERS"/>
+                    </NUMBERING_PARAMS>
+                </MESHING>
+                <PARENT NAME="Payload 2">
+                    <PARENT NAME="Model"/>
+                </PARENT>
+            </SHAPE>
+            <VIRTUAL_ITEM TYPE="SpaceNode" NAME="Space Node">
+                <MESHING APP_NAME="Thermica">
+                    <MESHING_NUMBER MTYPE="MESHING_SPACE_NODE" ID="99999999" HEADER="" LABEL="Space"/>
+                </MESHING>
+                <PROPERTIES APPLICATION="Thermica">
+                    <CONTENER TYPE="SHELL" NAME="SpaceNode">
+                        <ELEM TYPE="STRING" ID="ActivityId" STR="BOTHFACE"/>
+                        <ELEM TYPE="STRING" ID="FaceId" STR="NONEFACE"/>
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="SpaceNodeCat" NAME="Space Node">
+                                    <ELEM TYPE="VALUE" ID="Temperature" VALUE="-269"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                </PROPERTIES>
+                <REFERENCE_LIST/>
+            </VIRTUAL_ITEM>
+        </MODEL>
+        <ENVIRONMENT>
+            <PLANET NAME="Sun" MOVING_BODY="P1"/>
+            <PLANET NAME="Earth" MOVING_BODY="P4"/>
+        </ENVIRONMENT>
+        <TIME_ITEM TIMETYPE="TIMELINE">
+            <TIME_ITEM TIMETYPE="INTERVAL" USER_NAME="New General keplerian" USER_GROUP="Arcs" USER_DESC="Arc">
+                <TIME_ITEM TIMETYPE="EVENT" USER_NAME="New General keplerian start" USER_GROUP="Arcs">
+                    <ELEM TYPE="DATE" DateTYPE="GAMMA50">
+                        <ELEM TYPE="VALUE" NAME="Gamma 50" VALUE="26084"/>
+                    </ELEM>
+                </TIME_ITEM>
+                <TIME_ITEM TIMETYPE="EVENT" USER_NAME="New General keplerian end" USER_GROUP="Arcs">
+                    <ELEM TYPE="DATE" DateTYPE="GAMMA50">
+                        <ELEM TYPE="VALUE" NAME="Gamma 50" VALUE="26084.0657407407"/>
+                    </ELEM>
+                </TIME_ITEM>
+            </TIME_ITEM>
+            <TIME_ITEM TIMETYPE="EVENT" USER_NAME="Computation generated event (1)" USER_GROUP="Computation" USER_DESC="Computation generated event">
+                <ELEM TYPE="DATE" DateTYPE="GAMMA50">
+                    <ELEM TYPE="VALUE" NAME="Gamma 50" VALUE="26084"/>
+                </ELEM>
+            </TIME_ITEM>
+            <TIME_ITEM TIMETYPE="EVENT" USER_NAME="Computation generated event (2)" USER_GROUP="Computation" USER_DESC="Computation generated event">
+                <ELEM TYPE="DATE" DateTYPE="GAMMA50">
+                    <ELEM TYPE="VALUE" NAME="Gamma 50" VALUE="26084.0027287417"/>
+                </ELEM>
+            </TIME_ITEM>
+            <TIME_ITEM TIMETYPE="EVENT" USER_NAME="Computation generated event (3)" USER_GROUP="Computation" USER_DESC="Computation generated event">
+                <ELEM TYPE="DATE" DateTYPE="GAMMA50">
+                    <ELEM TYPE="VALUE" NAME="Gamma 50" VALUE="26084.0054583518"/>
+                </ELEM>
+            </TIME_ITEM>
+            <TIME_ITEM TIMETYPE="EVENT" USER_NAME="Computation generated event (4)" USER_GROUP="Computation" USER_DESC="Computation generated event">
+                <ELEM TYPE="DATE" DateTYPE="GAMMA50">
+                    <ELEM TYPE="VALUE" NAME="Gamma 50" VALUE="26084.0081895006"/>
+                </ELEM>
+            </TIME_ITEM>
+            <TIME_ITEM TIMETYPE="EVENT" USER_NAME="Computation generated event (5)" USER_GROUP="Computation" USER_DESC="Computation generated event">
+                <ELEM TYPE="DATE" DateTYPE="GAMMA50">
+                    <ELEM TYPE="VALUE" NAME="Gamma 50" VALUE="26084.010922755"/>
+                </ELEM>
+            </TIME_ITEM>
+            <TIME_ITEM TIMETYPE="EVENT" USER_NAME="Computation generated event (6)" USER_GROUP="Computation" USER_DESC="Computation generated event">
+                <ELEM TYPE="DATE" DateTYPE="GAMMA50">
+                    <ELEM TYPE="VALUE" NAME="Gamma 50" VALUE="26084.0136585403"/>
+                </ELEM>
+            </TIME_ITEM>
+            <TIME_ITEM TIMETYPE="EVENT" USER_NAME="Computation generated event (7)" USER_GROUP="Computation" USER_DESC="Computation generated event">
+                <ELEM TYPE="DATE" DateTYPE="GAMMA50">
+                    <ELEM TYPE="VALUE" NAME="Gamma 50" VALUE="26084.0163971104"/>
+                </ELEM>
+            </TIME_ITEM>
+            <TIME_ITEM TIMETYPE="EVENT" USER_NAME="Computation generated event (8)" USER_GROUP="Computation" USER_DESC="Computation generated event">
+                <ELEM TYPE="DATE" DateTYPE="GAMMA50">
+                    <ELEM TYPE="VALUE" NAME="Gamma 50" VALUE="26084.0191385302"/>
+                </ELEM>
+            </TIME_ITEM>
+            <TIME_ITEM TIMETYPE="EVENT" USER_NAME="Computation generated event (9)" USER_GROUP="Computation" USER_DESC="Computation generated event">
+                <ELEM TYPE="DATE" DateTYPE="GAMMA50">
+                    <ELEM TYPE="VALUE" NAME="Gamma 50" VALUE="26084.0218826704"/>
+                </ELEM>
+            </TIME_ITEM>
+            <TIME_ITEM TIMETYPE="EVENT" USER_NAME="Computation generated event (10)" USER_GROUP="Computation" USER_DESC="Computation generated event">
+                <ELEM TYPE="DATE" DateTYPE="GAMMA50">
+                    <ELEM TYPE="VALUE" NAME="Gamma 50" VALUE="26084.0246292152"/>
+                </ELEM>
+            </TIME_ITEM>
+            <TIME_ITEM TIMETYPE="EVENT" USER_NAME="Computation generated event (11)" USER_GROUP="Computation" USER_DESC="Computation generated event">
+                <ELEM TYPE="DATE" DateTYPE="GAMMA50">
+                    <ELEM TYPE="VALUE" NAME="Gamma 50" VALUE="26084.0273776833"/>
+                </ELEM>
+            </TIME_ITEM>
+            <TIME_ITEM TIMETYPE="EVENT" USER_NAME="Computation generated event (12)" USER_GROUP="Computation" USER_DESC="Computation generated event">
+                <ELEM TYPE="DATE" DateTYPE="GAMMA50">
+                    <ELEM TYPE="VALUE" NAME="Gamma 50" VALUE="26084.0301274609"/>
+                </ELEM>
+            </TIME_ITEM>
+            <TIME_ITEM TIMETYPE="EVENT" USER_NAME="Computation generated event (13)" USER_GROUP="Computation" USER_DESC="Computation generated event">
+                <ELEM TYPE="DATE" DateTYPE="GAMMA50">
+                    <ELEM TYPE="VALUE" NAME="Gamma 50" VALUE="26084.0328778434"/>
+                </ELEM>
+            </TIME_ITEM>
+            <TIME_ITEM TIMETYPE="EVENT" USER_NAME="Computation generated event (14)" USER_GROUP="Computation" USER_DESC="Computation generated event">
+                <ELEM TYPE="DATE" DateTYPE="GAMMA50">
+                    <ELEM TYPE="VALUE" NAME="Gamma 50" VALUE="26084.0356280842"/>
+                </ELEM>
+            </TIME_ITEM>
+            <TIME_ITEM TIMETYPE="EVENT" USER_NAME="Computation generated event (15)" USER_GROUP="Computation" USER_DESC="Computation generated event">
+                <ELEM TYPE="DATE" DateTYPE="GAMMA50">
+                    <ELEM TYPE="VALUE" NAME="Gamma 50" VALUE="26084.0383774469"/>
+                </ELEM>
+            </TIME_ITEM>
+            <TIME_ITEM TIMETYPE="EVENT" USER_NAME="Computation generated event (16)" USER_GROUP="Computation" USER_DESC="Computation generated event">
+                <ELEM TYPE="DATE" DateTYPE="GAMMA50">
+                    <ELEM TYPE="VALUE" NAME="Gamma 50" VALUE="26084.0411252555"/>
+                </ELEM>
+            </TIME_ITEM>
+            <TIME_ITEM TIMETYPE="EVENT" USER_NAME="Computation generated event (17)" USER_GROUP="Computation" USER_DESC="Computation generated event">
+                <ELEM TYPE="DATE" DateTYPE="GAMMA50">
+                    <ELEM TYPE="VALUE" NAME="Gamma 50" VALUE="26084.0438709417"/>
+                </ELEM>
+            </TIME_ITEM>
+            <TIME_ITEM TIMETYPE="EVENT" USER_NAME="Computation generated event (18)" USER_GROUP="Computation" USER_DESC="Computation generated event">
+                <ELEM TYPE="DATE" DateTYPE="GAMMA50">
+                    <ELEM TYPE="VALUE" NAME="Gamma 50" VALUE="26084.0466140835"/>
+                </ELEM>
+            </TIME_ITEM>
+            <TIME_ITEM TIMETYPE="EVENT" USER_NAME="Computation generated event (19)" USER_GROUP="Computation" USER_DESC="Computation generated event">
+                <ELEM TYPE="DATE" DateTYPE="GAMMA50">
+                    <ELEM TYPE="VALUE" NAME="Gamma 50" VALUE="26084.0493544334"/>
+                </ELEM>
+            </TIME_ITEM>
+            <TIME_ITEM TIMETYPE="EVENT" USER_NAME="Computation generated event (20)" USER_GROUP="Computation" USER_DESC="Computation generated event">
+                <ELEM TYPE="DATE" DateTYPE="GAMMA50">
+                    <ELEM TYPE="VALUE" NAME="Gamma 50" VALUE="26084.0520919353"/>
+                </ELEM>
+            </TIME_ITEM>
+            <TIME_ITEM TIMETYPE="EVENT" USER_NAME="Computation generated event (21)" USER_GROUP="Computation" USER_DESC="Computation generated event">
+                <ELEM TYPE="DATE" DateTYPE="GAMMA50">
+                    <ELEM TYPE="VALUE" NAME="Gamma 50" VALUE="26084.0548267267"/>
+                </ELEM>
+            </TIME_ITEM>
+            <TIME_ITEM TIMETYPE="EVENT" USER_NAME="Computation generated event (22)" USER_GROUP="Computation" USER_DESC="Computation generated event">
+                <ELEM TYPE="DATE" DateTYPE="GAMMA50">
+                    <ELEM TYPE="VALUE" NAME="Gamma 50" VALUE="26084.0575591288"/>
+                </ELEM>
+            </TIME_ITEM>
+            <TIME_ITEM TIMETYPE="EVENT" USER_NAME="Computation generated event (23)" USER_GROUP="Computation" USER_DESC="Computation generated event">
+                <ELEM TYPE="DATE" DateTYPE="GAMMA50">
+                    <ELEM TYPE="VALUE" NAME="Gamma 50" VALUE="26084.0602896242"/>
+                </ELEM>
+            </TIME_ITEM>
+            <TIME_ITEM TIMETYPE="EVENT" USER_NAME="Computation generated event (24)" USER_GROUP="Computation" USER_DESC="Computation generated event">
+                <ELEM TYPE="DATE" DateTYPE="GAMMA50">
+                    <ELEM TYPE="VALUE" NAME="Gamma 50" VALUE="26084.063018824"/>
+                </ELEM>
+            </TIME_ITEM>
+            <TIME_ITEM TIMETYPE="EVENT" USER_NAME="Computation generated event (25)" USER_GROUP="Computation" USER_DESC="Computation generated event">
+                <ELEM TYPE="DATE" DateTYPE="GAMMA50">
+                    <ELEM TYPE="VALUE" NAME="Gamma 50" VALUE="26084.0657407407"/>
+                </ELEM>
+            </TIME_ITEM>
+            <TIME_ITEM TIMETYPE="EVENT" USER_NAME="&quot;New General keplerian&quot; start" USER_GROUP="Arcs" USER_DESC="Arc">
+                <ELEM TYPE="DATE" DateTYPE="GAMMA50">
+                    <ELEM TYPE="VALUE" NAME="Gamma 50" VALUE="26084"/>
+                </ELEM>
+            </TIME_ITEM>
+            <TIME_ITEM TIMETYPE="EVENT" USER_NAME="&quot;New General keplerian&quot; end" USER_GROUP="Arcs" USER_DESC="Arc">
+                <ELEM TYPE="DATE" DateTYPE="GAMMA50">
+                    <ELEM TYPE="VALUE" NAME="Gamma 50" VALUE="26084.0657407407"/>
+                </ELEM>
+            </TIME_ITEM>
+        </TIME_ITEM>
+        <CONTEXTS>
+            <REFERENCE TYPE="MAIN_KINEMATIC_BODY" ID="MAIN_KINEMATIC_BODY"/>
+        </CONTEXTS>
+    </DESCRIPTION>
+    <DYNAMIC>
+        <MOVING_ELEMENTS>
+            <STATE>
+                <DATE GAMMA50="26084"/>
+                <MOVING_BODIES REFERENCE="MAIN_KINEMATIC_BODY">
+                    <MOVING_BODY ID="P1">
+                        <TRSF I1J1="-0.993393874612475" I1J2="0.0271646930877713" I2J1="0.111122888515056" I1J3="-0.111493001268505" I2J2="-0.0147780372154369" I3J1="-0.028641116083039" I1J4="-3.03983688354492e-06" I2J3="-0.993696791412816" I3J2="-0.999521730161732" I4J1="0" I2J4="2.38418579101562e-06" I3J3="0.0116617924870721" I4J2="0" I3J4="151692669904.524" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <MOVING_BODY ID="P4">
+                        <TRSF I1J1="-0.136200073366958" I1J2="0.929187927961639" I2J1="-0.349913172345747" I1J3="-0.3435976346618" I2J2="-0.369595531078101" I3J1="-0.926828091845388" I1J4="6709628.25773498" I2J3="-0.860790285276281" I3J2="0.00298963834681135" I4J1="0" I2J4="-1441482.49160933" I3J3="0.375474034027367" I4J2="0" I3J4="-151352.235656738" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <VELOCITY>
+                        <VECTOR X="1506.32603538584" Y="7224.59742556343" Z="-1928.44153092847"/>
+                    </VELOCITY>
+                </MOVING_BODIES>
+            </STATE>
+            <STATE>
+                <DATE GAMMA50="26084.0027287417"/>
+                <MOVING_BODIES REFERENCE="MAIN_KINEMATIC_BODY">
+                    <MOVING_BODY ID="P1">
+                        <TRSF I1J1="-0.993380056585083" I1J2="0.0277880670423802" I2J1="0.111082939116126" I1J3="-0.111462489246656" I2J2="-0.014852277145542" I3J1="-0.0292684782032763" I1J4="-3.814697265625e-06" I2J3="-0.993700151203023" I3J2="-0.999503493337385" I4J1="0" I2J4="1.31130218505859e-05" I3J3="0.0116671757518322" I4J2="0" I3J4="151693189565.476" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <MOVING_BODY ID="P4">
+                        <TRSF I1J1="-0.120239911402087" I1J2="0.931403932468666" I2J1="-0.356218919463853" I1J3="-0.343553603223592" I2J2="-0.363497382358309" I3J1="-0.926633932641156" I1J4="6131251.7680181" I2J3="-0.860800635707625" I3J2="0.0188777011458758" I4J1="0" I2J4="-3074006.21595907" I3J3="0.375490595458026" I4J2="0" I3J4="302702.284332275" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <VELOCITY>
+                        <VECTOR X="3379.28994400646" Y="6565.95318544709" Z="-1906.49872806586"/>
+                    </VELOCITY>
+                </MOVING_BODIES>
+            </STATE>
+            <STATE>
+                <DATE GAMMA50="26084.0054583518"/>
+                <MOVING_BODIES REFERENCE="MAIN_KINEMATIC_BODY">
+                    <MOVING_BODY ID="P1">
+                        <TRSF I1J1="-0.993366152859712" I1J2="0.0284089198291702" I2J1="0.111040920545513" I1J3="-0.111429886596165" I2J2="-0.0149250620031948" I3J1="-0.0298931483303375" I1J4="-7.89761543273926e-06" I2J3="-0.993703756905751" I3J2="-0.999484955263629" I4J1="0" I2J4="-1.57356262207031e-05" I3J3="0.0116714988137716" I4J2="0" I3J4="151693688866.346" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <MOVING_BODY ID="P4">
+                        <TRSF I1J1="-0.104240502316711" I1J2="0.933347218115325" I2J1="-0.362419314845008" I1J3="-0.343506751190046" I2J2="-0.357287804027422" I3J1="-0.92616745672909" I1J4="5136337.53753743" I2J3="-0.860812212576316" I3J2="0.0347619839716171" I4J1="0" I2J4="-4498271.646559" I3J3="0.375506919465304" I4J2="0" I3J4="736378.739837646" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <VELOCITY>
+                        <VECTOR X="5022.2740651346" Y="5461.80788363556" Z="-1755.10032687017"/>
+                    </VELOCITY>
+                </MOVING_BODIES>
+            </STATE>
+            <STATE>
+                <DATE GAMMA50="26084.0081895006"/>
+                <MOVING_BODIES REFERENCE="MAIN_KINEMATIC_BODY">
+                    <MOVING_BODY ID="P1">
+                        <TRSF I1J1="-0.993352137675298" I1J2="0.0290278463210447" I2J1="0.110996962443197" I1J3="-0.111395308311772" I2J2="-0.0149957711648452" I3J1="-0.0305156501535908" I1J4="-2.38120555877686e-05" I2J3="-0.993707603460672" I3J2="-0.999466112974888" I4J1="0" I2J4="-6.43730163574219e-06" I3J3="0.0116740785747847" I4J2="0" I3J4="151694138451.554" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <MOVING_BODY ID="P4">
+                        <TRSF I1J1="-0.0882021754950147" I1J2="0.935017344639371" I2J1="-0.368513205199908" I1J3="-0.343457335722327" I2J2="-0.350967181522857" I3J1="-0.92542876215905" I1J4="3792012.6650326" I2J3="-0.860825217501895" I3J2="0.0506419067318195" I4J1="0" I2J4="-5617790.28654218" I3J3="0.375522307528232" I4J2="0" I3J4="1120305.83306885" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <VELOCITY>
+                        <VECTOR X="6323.64175688137" Y="3987.36451272884" Z="-1484.57252969256"/>
+                    </VELOCITY>
+                </MOVING_BODIES>
+            </STATE>
+            <STATE>
+                <DATE GAMMA50="26084.010922755"/>
+                <MOVING_BODIES REFERENCE="MAIN_KINEMATIC_BODY">
+                    <MOVING_BODY ID="P1">
+                        <TRSF I1J1="-0.993337964946869" I1J2="0.0296455712953209" I2J1="0.110951323641642" I1J3="-0.11135900276936" I2J2="-0.0150639202192774" I3J1="-0.0311366532784113" I1J4="1.49309635162354e-05" I2J3="-0.993711669494624" I3J2="-0.99944695627642" I4J1="0" I2J4="2.90870666503906e-05" I3J3="0.0116743484794105" I4J2="0" I3J4="151694512273.745" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <MOVING_BODY ID="P4">
+                        <TRSF I1J1="-0.0721257701119558" I1J2="0.936413551097047" I2J1="-0.374499259789466" I1J3="-0.343405787090976" I2J2="-0.344536237350406" I3J1="-0.924417750642477" I1J4="2189035.50057316" I2J3="-0.860839756034515" I3J2="0.0665164827260118" I4J1="0" I2J4="-6356475.95541453" I3J3="0.375536123193043" I4J2="0" I3J4="1428423.20553589" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <VELOCITY>
+                        <VECTOR X="7195.02072146404" Y="2242.93625891749" Z="-1113.33177285081"/>
+                    </VELOCITY>
+                </MOVING_BODIES>
+            </STATE>
+            <STATE>
+                <DATE GAMMA50="26084.0136585403"/>
+                <MOVING_BODIES REFERENCE="MAIN_KINEMATIC_BODY">
+                    <MOVING_BODY ID="P1">
+                        <TRSF I1J1="-0.99332357118288" I1J2="0.030262901344478" I2J1="0.110904375026845" I1J3="-0.111321335487418" I2J2="-0.0151291939528685" I3J1="-0.0317569288879263" I1J4="-1.0371208190918e-05" I2J3="-0.993715918706266" I3J2="-0.999427468249972" I4J1="0" I2J4="5.48362731933594e-06" I3J3="0.0116718968062733" I4J2="0" I3J4="151694789347.59" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <MOVING_BODY ID="P4">
+                        <TRSF I1J1="-0.0560129118964403" I1J2="0.937534794308036" I2J1="-0.380375950010001" I1J3="-0.343352680436113" I2J2="-0.337996118441701" I3J1="-0.923134167039041" I1J4="435808.718326807" I2J3="-0.860855830306285" I3J2="0.0823840602308837" I4J1="0" I2J4="-6663799.48805451" I3J3="0.375547834855965" I4J2="0" I3J4="1639736.0020752" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <VELOCITY>
+                        <VECTOR X="7577.27028995605" Y="347.122529534154" Z="-666.628941702481"/>
+                    </VELOCITY>
+                </MOVING_BODIES>
+            </STATE>
+            <STATE>
+                <DATE GAMMA50="26084.0163971104"/>
+                <MOVING_BODIES REFERENCE="MAIN_KINEMATIC_BODY">
+                    <MOVING_BODY ID="P1">
+                        <TRSF I1J1="-0.993308879610397" I1J2="0.0308806710065778" I2J1="0.11085657508403" I1J3="-0.111282765266324" I2J2="-0.0151914684195707" I3J1="-0.0323772983396558" I1J4="-1.65104866027832e-05" I2J3="-0.993720302221855" I3J2="-0.999407626269401" I4J1="0" I2J4="2.38418579101562e-05" I3J3="0.0116664950513946" I4J2="0" I3J4="151694955183.863" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <MOVING_BODY ID="P4">
+                        <TRSF I1J1="-0.0398662389478614" I1J2="0.938379820211868" I2J1="-0.386141546663899" I1J3="-0.343298697945814" I2J2="-0.331348458934824" I3J1="-0.921577662995453" I1J4="-1348819.8932794" I2J3="-0.860873338361413" I3J2="0.0982421079815401" I4J1="0" I2J4="-6518298.91155958" I3J3="0.375557051973704" I4J2="0" I3J4="1739749.46295166" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <VELOCITY>
+                        <VECTOR X="7444.4661704822" Y="-1571.23708914606" Z="-174.833980347439"/>
+                    </VELOCITY>
+                </MOVING_BODIES>
+            </STATE>
+            <STATE>
+                <DATE GAMMA50="26084.0191385302"/>
+                <MOVING_BODIES REFERENCE="MAIN_KINEMATIC_BODY">
+                    <MOVING_BODY ID="P1">
+                        <TRSF I1J1="-0.993293805330465" I1J2="0.0314996865829266" I2J1="0.110808438955965" I1J3="-0.111243813478753" I2J2="-0.0152508204456293" I3J1="-0.0329985779733056" I1J4="1.68681144714355e-05" I2J3="-0.993724761859074" I3J2="-0.999387403473201" I4J1="0" I2J4="-9.77516174316406e-06" I3J3="0.0116581143769945" I4J2="0" I3J4="151695002804.799" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <MOVING_BODY ID="P4">
+                        <TRSF I1J1="-0.0236895577400372" I1J2="0.938947262085151" I2J1="-0.391794135133379" I1J3="-0.343244583171925" I2J2="-0.324595411732431" I3J1="-0.91974787878481" I1J4="-3043526.32232437" I2J3="-0.860892080552102" I3J2="0.114087061952882" I4J1="0" I2J4="-5929187.40445638" I3J3="0.375563552232894" I4J2="0" I3J4="1721484.56686401" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <VELOCITY>
+                        <VECTOR X="6805.64203410484" Y="-3381.78991963612" Z="328.623187256421"/>
+                    </VELOCITY>
+                </MOVING_BODIES>
+            </STATE>
+            <STATE>
+                <DATE GAMMA50="26084.0218826704"/>
+                <MOVING_BODIES REFERENCE="MAIN_KINEMATIC_BODY">
+                    <MOVING_BODY ID="P1">
+                        <TRSF I1J1="-0.993278261099851" I1J2="0.0321206712110625" I2J1="0.110760503683861" I1J3="-0.111205029146192" I2J2="-0.0153075236679262" I3J1="-0.0336215236143746" I1J4="8.04662704467773e-06" I2J3="-0.993729234018427" I3J2="-0.999366770610322" I4J1="0" I2J4="2.83718109130859e-05" I3J3="0.0116469287686213" I4J2="0" I3J4="151694933263.984" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <MOVING_BODY ID="P4">
+                        <TRSF I1J1="-0.00748791914560635" I1J2="0.939235756417545" I2J1="-0.397331645795308" I1J3="-0.343191090988132" I2J2="-0.317739646982755" I3J1="-0.917644535926878" I1J4="-4532738.17424273" I2J3="-0.86091177247431" I3J2="0.129914243260814" I4J1="0" I2J4="-4935910.40376568" I3J3="0.375567297673145" I4J2="0" I3J4="1585997.95755005" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <VELOCITY>
+                        <VECTOR X="5704.17528773575" Y="-4961.49475214923" Z="809.517312689498"/>
+                    </VELOCITY>
+                </MOVING_BODIES>
+            </STATE>
+            <STATE>
+                <DATE GAMMA50="26084.0246292152"/>
+                <MOVING_BODIES REFERENCE="MAIN_KINEMATIC_BODY">
+                    <MOVING_BODY ID="P1">
+                        <TRSF I1J1="-0.993262163419106" I1J2="0.0327442149965601" I2J1="0.110713291330353" I1J3="-0.111166951493022" I2J2="-0.0153620310356237" I3J1="-0.0342467785754095" I1J4="1.95205211639404e-05" I2J3="-0.993733654016636" I3J2="-0.999345698137894" I4J1="0" I2J4="-9.5367431640625e-06" I3J3="0.0116333043666571" I4J2="0" I3J4="151694755623.467" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <MOVING_BODY ID="P4">
+                        <TRSF I1J1="0.00873239407193023" I1J2="0.939244066208515" I2J1="-0.402751897111228" I1J3="-0.34313893598054" I2J2="-0.310784315375495" I3J1="-0.915267531745265" I1J4="-5714569.38191307" I2J3="-0.860932063922514" I3J2="0.145717855490223" I4J1="0" I2J4="-3605632.86572647" I3J3="0.375568438402711" I4J2="0" I3J4="1342358.88442993" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <VELOCITY>
+                        <VECTOR X="4214.85872490721" Y="-6202.95537427764" Z="1235.14673704242"/>
+                    </VELOCITY>
+                </MOVING_BODIES>
+            </STATE>
+            <STATE>
+                <DATE GAMMA50="26084.0273776833"/>
+                <MOVING_BODIES REFERENCE="MAIN_KINEMATIC_BODY">
+                    <MOVING_BODY ID="P1">
+                        <TRSF I1J1="-0.993245438477473" I1J2="0.0333707337463464" I2J1="0.110667272753218" I1J3="-0.111130072765747" I2J2="-0.0154149446684071" I3J1="-0.0348748288175654" I1J4="2.69114971160889e-05" I2J3="-0.993737960542029" I3J2="-0.999324158424131" I4J1="0" I2J4="3.57627868652344e-06" I3J3="0.0116177753827961" I4J2="0" I3J4="151694486376.648" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <MOVING_BODY ID="P4">
+                        <TRSF I1J1="0.0249639685126255" I1J2="0.93897120013296" I2J1="-0.408052647195144" I1J3="-0.343088743034454" I2J2="-0.303732978221584" I3J1="-0.912617026683772" I1J4="-6507903.18964386" I2J3="-0.860952562605904" I3J2="0.161491062481822" I4J1="0" I2J4="-2028781.55884743" I3J3="0.375567303349688" I4J2="0" I3J4="1007071.68093872" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <VELOCITY>
+                        <VECTOR X="2438.8511287631" Y="-7021.70610308457" Z="1576.55150704638"/>
+                    </VELOCITY>
+                </MOVING_BODIES>
+            </STATE>
+            <STATE>
+                <DATE GAMMA50="26084.0301274609"/>
+                <MOVING_BODIES REFERENCE="MAIN_KINEMATIC_BODY">
+                    <MOVING_BODY ID="P1">
+                        <TRSF I1J1="-0.993228027514809" I1J2="0.0340004394165113" I2J1="0.110622834676863" I1J3="-0.111094804012274" I2J2="-0.0154669749312331" I3J1="-0.0355059686122918" I1J4="3.94582748413086e-05" I2J3="-0.9937420999105" I3J2="-0.999302127890239" I4J1="0" I2J4="1.81198120117188e-05" I3J3="0.0116010080140561" I4J2="0" I3J4="151694148345.532" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <MOVING_BODY ID="P4">
+                        <TRSF I1J1="0.041198444455971" I1J2="0.938416516234304" I2J1="-0.413231649377062" I1J3="-0.343041003719786" I2J2="-0.29658950844781" I3J1="-0.909693515491629" I1J4="-6858101.19731066" I2J3="-0.860972861030936" I3J2="0.177226142364372" I4J1="0" I2J4="-312915.208620071" I3J3="0.375564378416167" I4J2="0" I3J4="602972.411407471" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <VELOCITY>
+                        <VECTOR X="496.839893103835" Y="-7361.95926664678" Z="1810.48174168686"/>
+                    </VELOCITY>
+                </MOVING_BODIES>
+            </STATE>
+            <STATE>
+                <DATE GAMMA50="26084.0328778434"/>
+                <MOVING_BODIES REFERENCE="MAIN_KINEMATIC_BODY">
+                    <MOVING_BODY ID="P1">
+                        <TRSF I1J1="-0.993209891207215" I1J2="0.0346333246099155" I2J1="0.110580252377342" I1J3="-0.111061446211616" I2J2="-0.0155188914731155" I3J1="-0.0361402793613259" I1J4="-5.39422035217285e-06" I2J3="-0.993746029824325" I3J2="-0.999279588920893" I4J1="0" I2J4="-2.86102294921875e-06" I3J3="0.0115837547356388" I4J2="0" I3J4="151693769122.093" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <MOVING_BODY ID="P4">
+                        <TRSF I1J1="0.0574267699197022" I1J2="0.937579800085656" I2J1="-0.418286706764426" I1J3="-0.342996041621369" I2J2="-0.289357969389057" I3J1="-0.90649787481315" I1J4="-6740898.88384908" I2J3="-0.860992564715404" I3J2="0.192914706599522" I4J1="0" I2J4="1424666.84071875" I3J3="0.375560273374141" I4J2="0" I3J4="157669.406707764" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <VELOCITY>
+                        <VECTOR X="-1479.13111698236" Y="-7200.42336013283" Z="1920.98300630952"/>
+                    </VELOCITY>
+                </MOVING_BODIES>
+            </STATE>
+            <STATE>
+                <DATE GAMMA50="26084.0356280842"/>
+                <MOVING_BODIES REFERENCE="MAIN_KINEMATIC_BODY">
+                    <MOVING_BODY ID="P1">
+                        <TRSF I1J1="-0.993191012709631" I1J2="0.0352691625082635" I2J1="0.11053967022051" I1J3="-0.111030169092825" I2J2="-0.0155714697122881" I3J1="-0.0367776233647124" I1J4="-4.52995300292969e-06" I2J3="-0.993749722333817" I3J2="-0.999256531380687" I4J1="0" I2J4="1.12056732177734e-05" I3J3="0.0115668021803077" I4J2="0" I3J4="151693379161.236" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <MOVING_BODY ID="P4">
+                        <TRSF I1J1="0.0736395073226471" I1J2="0.936461309454845" I2J1="-0.423215721784223" I1J3="-0.342953989414598" I2J2="-0.282042479588257" I3J1="-0.903031381401516" I1J4="-6164174.42964521" I2J3="-0.8610113196366" I3J2="0.20854796954614" I4J1="0" I2J4="3065055.12343097" I3J3="0.375555679762995" I4J2="0" I3J4="-298364.79196167" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <VELOCITY>
+                        <VECTOR X="-3354.62297799282" Y="-6547.92608232188" Z="1900.49006001542"/>
+                    </VELOCITY>
+                </MOVING_BODIES>
+            </STATE>
+            <STATE>
+                <DATE GAMMA50="26084.0383774469"/>
+                <MOVING_BODIES REFERENCE="MAIN_KINEMATIC_BODY">
+                    <MOVING_BODY ID="P1">
+                        <TRSF I1J1="-0.993171399115056" I1J2="0.0359075223606309" I2J1="0.110501091469288" I1J3="-0.111000999174611" I2J2="-0.015625436681823" I3J1="-0.037417653105683" I1J4="-1.8388032913208e-05" I2J3="-0.993753165787459" I3J2="-0.999232953603123" I4J1="0" I2J4="-1.74045562744141e-05" I3J3="0.0115509163982624" I4J2="0" I3J4="151693009663.063" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <MOVING_BODY ID="P4">
+                        <TRSF I1J1="0.0898271682592899" I1J2="0.935061780797349" I2J1="-0.428016736411221" I1J3="-0.342914779405325" I2J2="-0.274647074178859" I3J1="-0.899295698418713" I1J4="-5167438.4658643" I2J3="-0.861028836913652" I3J2="0.224117046957785" I4J1="0" I2J4="4496006.02670145" I3J3="0.37555132281556" I4J2="0" I3J4="-733912.326934814" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <VELOCITY>
+                        <VECTOR X="-5001.94853860948" Y="-5448.72154740892" Z="1750.35248336881"/>
+                    </VELOCITY>
+                </MOVING_BODIES>
+            </STATE>
+            <STATE>
+                <DATE GAMMA50="26084.0411252555"/>
+                <MOVING_BODIES REFERENCE="MAIN_KINEMATIC_BODY">
+                    <MOVING_BODY ID="P1">
+                        <TRSF I1J1="-0.993151081193518" I1J2="0.0365477994939012" I2J1="0.110464378184876" I1J3="-0.110973817976576" I2J2="-0.0156814202675513" I3J1="-0.0380598354748597" I1J4="1.60932540893555e-06" I2J3="-0.993756365620175" I3J2="-0.999208862756203" I4J1="0" I2J4="1.23977661132812e-05" I3J3="0.0115367895482491" I4J2="0" I3J4="151692690400.748" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <MOVING_BODY ID="P4">
+                        <TRSF I1J1="0.105980552025086" I1J2="0.933382396448971" I2J1="-0.432687960675255" I1J3="-0.342878148314575" I2J2="-0.267175572802074" I3J1="-0.895292829904911" I1J4="-3819072.47985056" I2J3="-0.861044912873056" I3J2="0.239613261939021" I4J1="0" I2J4="5619750.03882575" I3J3="0.375547910956506" I4J2="0" I3J4="-1119183.38775635" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <VELOCITY>
+                        <VECTOR X="-6308.8824728735" Y="-3977.51709004034" Z="1480.75364384063"/>
+                    </VELOCITY>
+                </MOVING_BODIES>
+            </STATE>
+            <STATE>
+                <DATE GAMMA50="26084.0438709417"/>
+                <MOVING_BODIES REFERENCE="MAIN_KINEMATIC_BODY">
+                    <MOVING_BODY ID="P1">
+                        <TRSF I1J1="-0.993130111409988" I1J2="0.0371892576086036" I2J1="0.110429261251563" I1J3="-0.110948370557233" I2J2="-0.0157399056083823" I3J1="-0.0387034891220203" I1J4="1.02818012237549e-05" I2J3="-0.99375934392129" I3J2="-0.999184274540967" I4J1="0" I2J4="1.38282775878906e-05" I3J3="0.0115249919662232" I4J2="0" I3J4="151692447655.035" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <MOVING_BODY ID="P4">
+                        <TRSF I1J1="0.122091061948659" I1J2="0.93142471523818" I2J1="-0.437227787842714" I1J3="-0.342843655965401" I2J2="-0.259631464095987" I3J1="-0.891025046859186" I1J4="-2211523.68410808" I2J3="-0.861059443005847" I3J2="0.255028435071165" I4J1="0" I2J4="6359754.61392474" I3J3="0.375546086618855" I4J2="0" I3J4="-1427882.94238281" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <VELOCITY>
+                        <VECTOR X="-7186.33589929325" Y="-2234.41183149212" Z="1110.02570610535"/>
+                    </VELOCITY>
+                </MOVING_BODIES>
+            </STATE>
+            <STATE>
+                <DATE GAMMA50="26084.0466140835"/>
+                <MOVING_BODIES REFERENCE="MAIN_KINEMATIC_BODY">
+                    <MOVING_BODY ID="P1">
+                        <TRSF I1J1="-0.993108560364178" I1J2="0.037831080173095" I2J1="0.11039535968599" I1J3="-0.110924283654771" I2J2="-0.015801201827631" I3J1="-0.039347832102774" I1J4="1.12056732177734e-05" I2J3="-0.993762137828062" I3J2="-0.999159212234835" I4J1="0" I2J4="-1.50203704833984e-05" I3J3="0.011515933096044" I4J2="0" I3J4="151692302406.468" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <MOVING_BODY ID="P4">
+                        <TRSF I1J1="0.138150975782036" I1J2="0.929190572825375" I2J1="-0.441634796013164" I1J3="-0.342810716377008" I2J2="-0.252017815316001" I3J1="-0.886494791209107" I1J4="-454824.635548174" I2J3="-0.8610724288431" I3J2="0.270355137061969" I4J1="0" I2J4="6665951.70405531" I3J3="0.375546381986727" I4J2="0" I3J4="-1639019.61480713" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <VELOCITY>
+                        <VECTOR X="-7574.4629845809" Y="-338.085583942618" Z="663.405224721933"/>
+                    </VELOCITY>
+                </MOVING_BODIES>
+            </STATE>
+            <STATE>
+                <DATE GAMMA50="26084.0493544334"/>
+                <MOVING_BODIES REFERENCE="MAIN_KINEMATIC_BODY">
+                    <MOVING_BODY ID="P1">
+                        <TRSF I1J1="-0.993086511922977" I1J2="0.0384724270627657" I2J1="0.110362207641219" I1J3="-0.110901091935798" I2J2="-0.015865421394047" I3J1="-0.0399920362223363" I1J4="-7.45058059692383e-06" I2J3="-0.993764796885331" I3J2="-0.999133705146557" I4J1="0" I2J4="-1.19209289550781e-05" I3J3="0.0115098340084398" I4J2="0" I3J4="151692268913.439" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <MOVING_BODY ID="P4">
+                        <TRSF I1J1="0.154153650584758" I1J2="0.926681960973364" I2J1="-0.445907737127178" I1J3="-0.34277863880053" I2J2="-0.244337213505785" I3J1="-0.88170456615666" I1J4="1331069.99738529" I2J3="-0.861083977360129" I3J2="0.285586885733187" I4J1="0" I2J4="6518069.02594709" I3J3="0.375549182818586" I4J2="0" I3J4="-1738328.5020752" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <VELOCITY>
+                        <VECTOR X="-7446.77193936879" Y="1582.29833729086" Z="171.31321604403"/>
+                    </VELOCITY>
+                </MOVING_BODIES>
+            </STATE>
+            <STATE>
+                <DATE GAMMA50="26084.0520919353"/>
+                <MOVING_BODIES REFERENCE="MAIN_KINEMATIC_BODY">
+                    <MOVING_BODY ID="P1">
+                        <TRSF I1J1="-0.993064057398461" I1J2="0.0391124923242782" I2J1="0.110329287089001" I1J3="-0.110878270402664" I2J2="-0.0159324733879196" I3J1="-0.0406352840981322" I1J4="1.57058238983154e-05" I2J3="-0.99376737957239" I3J2="-0.999107786595583" I4J1="0" I2J4="2.36034393310547e-05" I3J3="0.0115067132725887" I4J2="0" I3J4="151692353771.077" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <MOVING_BODY ID="P4">
+                        <TRSF I1J1="0.170093648491624" I1J2="0.92390089678283" I2J1="-0.450045515544612" I1J3="-0.342746675646437" I2J2="-0.236591742035308" I3J1="-0.876656822639844" I1J4="3024560.70392078" I2J3="-0.861094293059056" I3J2="0.300718274344234" I4J1="0" I2J4="5926859.01041794" I3J3="0.375554702798984" I4J2="0" I3J4="-1719212.82803345" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <VELOCITY>
+                        <VECTOR X="-6811.95019290198" Y="3395.91954769072" Z="-332.722566918414"/>
+                    </VELOCITY>
+                </MOVING_BODIES>
+            </STATE>
+            <STATE>
+                <DATE GAMMA50="26084.0548267267"/>
+                <MOVING_BODIES REFERENCE="MAIN_KINEMATIC_BODY">
+                    <MOVING_BODY ID="P1">
+                        <TRSF I1J1="-0.993041289206212" I1J2="0.0397505589478522" I2J1="0.110296063676816" I1J3="-0.110855270488127" I2J2="-0.0160020708583308" I3J1="-0.0412768248423026" I1J4="2.38120555877686e-05" I2J3="-0.993769949266751" I3J2="-0.999081491566917" I4J1="0" I2J4="3.57627868652344e-06" I3J3="0.0115063868942246" I4J2="0" I3J4="151692555507" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <MOVING_BODY ID="P4">
+                        <TRSF I1J1="0.185966775356061" I1J2="0.920849293927331" I2J1="-0.454047158850161" I1J3="-0.342714073736689" I2J2="-0.228782993930839" I3J1="-0.871353852349181" I1J4="4510700.42465645" I2J3="-0.861103663462263" I3J2="0.315745023019478" I4J1="0" I2J4="4933182.42714" I3J3="0.375562969999259" I4J2="0" I3J4="-1583148.33868408" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <VELOCITY>
+                        <VECTOR X="-5713.27341166484" Y="4979.24534239337" Z="-814.359732519278"/>
+                    </VELOCITY>
+                </MOVING_BODIES>
+            </STATE>
+            <STATE>
+                <DATE GAMMA50="26084.0575591288"/>
+                <MOVING_BODIES REFERENCE="MAIN_KINEMATIC_BODY">
+                    <MOVING_BODY ID="P1">
+                        <TRSF I1J1="-0.993018294442898" I1J2="0.0403860469559034" I2J1="0.110262023313637" I1J3="-0.110831557387736" I2J2="-0.0160737514524697" I3J1="-0.0419160245788921" I1J4="-1.1831521987915e-05" I2J3="-0.993772569921823" I3J2="-0.999054854212479" I4J1="0" I2J4="1.57356262207031e-05" I3J3="0.0115084820016331" I4J2="0" I3J4="151692864729.367" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <MOVING_BODY ID="P4">
+                        <TRSF I1J1="0.201770031907486" I1J2="0.917528847443588" I2J1="-0.457911784315139" I1J3="-0.342680125383554" I2J2="-0.220912120465275" I3J1="-0.865797696930047" I1J4="5688941.45766044" I2J3="-0.861112439125609" I3J2="0.330663951982027" I4J1="0" I2J4="3605058.59144258" I3J3="0.375573826098478" I4J2="0" I3J4="-1339534.99111938" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <VELOCITY>
+                        <VECTOR X="-4225.63851554511" Y="6224.47338591872" Z="-1240.78896682856"/>
+                    </VELOCITY>
+                </MOVING_BODIES>
+            </STATE>
+            <STATE>
+                <DATE GAMMA50="26084.0602896242"/>
+                <MOVING_BODIES REFERENCE="MAIN_KINEMATIC_BODY">
+                    <MOVING_BODY ID="P1">
+                        <TRSF I1J1="-0.992995148846165" I1J2="0.041018551713411" I2J1="0.110226706829787" I1J3="-0.110806645934782" I2J2="-0.0161469096108349" I3J1="-0.0425524085034227" I1J4="3.87430191040039e-06" I2J3="-0.993775301771724" I3J2="-0.999027905378701" I4J1="0" I2J4="0" I3J3="0.01151246303812" I4J2="0" I3J4="151693264804.295" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <MOVING_BODY ID="P4">
+                        <TRSF I1J1="0.21750148260375" I1J2="0.913940942561197" I2J1="-0.461638564303743" I1J3="-0.342644215733351" I2J2="-0.212979911273593" I3J1="-0.859990081926967" I1J4="6479825.01970479" I2J3="-0.861121009696937" I3J2="0.345472880128448" I4J1="0" I2J4="2032928.01854277" I3J3="0.375586938115539" I4J2="0" I3J4="-1005018.884552" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <VELOCITY>
+                        <VECTOR X="-2450.42861811099" Y="7046.88765099424" Z="-1582.97476339738"/>
+                    </VELOCITY>
+                </MOVING_BODIES>
+            </STATE>
+            <STATE>
+                <DATE GAMMA50="26084.063018824"/>
+                <MOVING_BODIES REFERENCE="MAIN_KINEMATIC_BODY">
+                    <MOVING_BODY ID="P1">
+                        <TRSF I1J1="-0.992971911507648" I1J2="0.0416478701368994" I2J1="0.110189740777215" I1J3="-0.110780133010888" I2J2="-0.0162208379615786" I3J1="-0.0431856918932669" I1J4="1.72853469848633e-05" I2J3="-0.993778197307265" I3J2="-0.999000670334554" I4J1="0" I2J4="-7.62939453125e-06" I3J3="0.0115176684626565" I4J2="0" I3J4="151693733006.345" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <MOVING_BODY ID="P4">
+                        <TRSF I1J1="0.233160053009997" I1J2="0.910086595818319" I2J1="-0.465226693971008" I1J3="-0.342605863627883" I2J2="-0.204986900553634" I3J1="-0.853932381923293" I1J4="6830198.99354568" I2J3="-0.861129777570275" I3J2="0.360170457857453" I4J1="0" I2J4="323478.696256399" I3J3="0.375601821600444" I4J2="0" I3J4="-602340.8152771" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <VELOCITY>
+                        <VECTOR X="-508.569845349552" Y="7390.62134391771" Z="-1817.63458912753"/>
+                    </VELOCITY>
+                </MOVING_BODIES>
+            </STATE>
+            <STATE>
+                <DATE GAMMA50="26084.0657407407"/>
+                <MOVING_BODIES REFERENCE="MAIN_KINEMATIC_BODY">
+                    <MOVING_BODY ID="P1">
+                        <TRSF I1J1="-0.992948677856811" I1J2="0.0422724830897362" I2J1="0.11015095961807" I1J3="-0.110751795993751" I2J2="-0.0162945945176508" I3J1="-0.0438142583827664" I1J4="-7.74860382080078e-06" I2J3="-0.993781289965114" I3J2="-0.998973234557831" I4J1="0" I2J4="8.58306884765625e-06" I3J3="0.0115233415047413" I4J2="0" I3J4="151694240785.895" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <MOVING_BODY ID="P4">
+                        <TRSF I1J1="0.248707177908107" I1J2="0.9059768530398" I2J1="-0.468667085992371" I1J3="-0.342564857235957" I2J2="-0.196953295621725" I3J1="-0.847641375915788" I1J4="6717504.1534439" I2J3="-0.861139107143073" I3J2="0.374720350528028" I4J1="0" I2J4="-1403367.5741415" I3J3="0.37561783335692" I4J2="0" I3J4="-159907.243530273" I4J3="0" I4J4="1"/>
+                    </MOVING_BODY>
+                    <VELOCITY>
+                        <VECTOR X="1462.96144714901" Y="7233.43391183633" Z="-1928.70741398705"/>
+                    </VELOCITY>
+                </MOVING_BODIES>
+            </STATE>
+        </MOVING_ELEMENTS>
+    </DYNAMIC>
+</SYSSET>

@@ -1,0 +1,63 @@
+
+*------------------------------------*
+*                                    *
+*   SYSTEMA V4 APPLICATION LOG FILE  *
+*                                    *
+*------------------------------------*
+
+
+
+              **********
+
+      Nodal Description
+
+
+Execution started on Thu Mar 11 18:37:36 2021
+
+
+
+State  1 : Model Initialisation                                                Time :  Thu Mar 11 18:37:36 2021
+
+State  2 : Thermal Data Loading                                                Time :  Thu Mar 11 18:37:36 2021
+
+State  3 : Contact Management                                                  Time :  Thu Mar 11 18:37:36 2021
+
+
+State  4 : Mission Data Loading                                                Time :  Thu Mar 11 18:37:36 2021
+
+Nb eclipse event: 3
+Nb penumbra event: 3
+Nb arc event: 1
+Nb sequence event: 0
+
+
+NODE PARAMETERS
+---------------
+
+ - output             : SOL
+ - output nwk         : cas_chaud.nod.nwk
+
+MODEL INFO
+----------
+
+ - nb models       : 1
+ - nb surfaces     : 60
+ - nb mesh         : 60
+ - nb volumes      : 0
+ - nb vmesh        : 0
+ Model names :
+   - 
+
+
+State  5 : Network Output generation                                           Time :  Thu Mar 11 18:37:37 2021
+
+State  6 : Adding specific items                                               Time :  Thu Mar 11 18:37:37 2021
+
+
+
+
+Execution completed on Thu Mar 11 18:37:37 2021
+
+
+
+

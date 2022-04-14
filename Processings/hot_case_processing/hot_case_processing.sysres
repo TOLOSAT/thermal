@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SYSML SYSML_VERSION="1.7" CONTENTS="RESULT" SAVEDATE="1619112233" SYSTEMA_VERSION="4.9.0">
+    <RESULT NAME="hot_case_processing">
+        <RESULT_SET FILE_TYPE="MISSION_SET" FILE_PATH="C:/Users/thiba/Desktop/Tolosat_Thermal1/hot_case_processing/hot_case.sysset" TYPE="FILE" FILE_NAME="hot_case.sysset" FILE_FORMAT="sysset"/>
+        <RESULT_SET FILE_TYPE="MISSION_DATA" FILE_PATH="C:/Users/thiba/Desktop/Tolosat_Thermal1/hot_case_processing/hot_case.html" TYPE="FILE" FILE_NAME="hot_case.html" FILE_FORMAT="html"/>
+        <RESULT_SET FILE_TYPE="HDF5" FILE_PATH="C:/Users/thiba/Desktop/Tolosat_Thermal1/hot_case_processing/hot_case.rad.h5" TYPE="FILE" FILE_NAME="hot_case.rad.h5" FILE_FORMAT="h5"/>
+        <RESULT_SET FILE_TYPE="HDF5" FILE_PATH="C:/Users/thiba/Desktop/Tolosat_Thermal1/hot_case_processing/hot_case.box.h5" TYPE="FILE" FILE_NAME="hot_case.box.h5" FILE_FORMAT="h5"/>
+        <RESULT_SET FILE_TYPE="TXT" FILE_PATH="C:/Users/thiba/Desktop/Tolosat_Thermal1/hot_case_processing/hot_case.rad.log" TYPE="FILE" FILE_NAME="hot_case.rad.log" FILE_FORMAT="LOG"/>
+        <RESULT_SET FILE_TYPE="TXT" FILE_PATH="C:/Users/thiba/Desktop/Tolosat_Thermal1/hot_case_processing/hot_case.gb.txt" TYPE="FILE" FILE_NAME="hot_case.gb.txt" FILE_FORMAT="TXT"/>
+        <RESULT_SET FILE_TYPE="TXT" FILE_PATH="C:/Users/thiba/Desktop/Tolosat_Thermal1/hot_case_processing/hot_case.gr.nwk" TYPE="FILE" FILE_NAME="hot_case.gr.nwk" FILE_FORMAT="NWK"/>
+        <RESULT_SET FILE_TYPE="HDF5" FILE_PATH="C:/Users/thiba/Desktop/Tolosat_Thermal1/hot_case_processing/hot_case.sf.h5" TYPE="FILE" FILE_NAME="hot_case.sf.h5" FILE_FORMAT="h5"/>
+        <RESULT_SET FILE_TYPE="TXT" FILE_PATH="C:/Users/thiba/Desktop/Tolosat_Thermal1/hot_case_processing/hot_case.sf.log" TYPE="FILE" FILE_NAME="hot_case.sf.log" FILE_FORMAT="LOG"/>
+        <RESULT_SET FILE_TYPE="TXT" FILE_PATH="C:/Users/thiba/Desktop/Tolosat_Thermal1/hot_case_processing/hot_case.sf.nwk" TYPE="FILE" FILE_NAME="hot_case.sf.nwk" FILE_FORMAT="NWK"/>
+        <RESULT_SET FILE_TYPE="TXT" FILE_PATH="C:/Users/thiba/Desktop/Tolosat_Thermal1/hot_case_processing/processing.dck" TYPE="FILE" FILE_NAME="processing.dck" FILE_FORMAT="DCK"/>
+        <RESULT_SET FILE_TYPE="TXT" FILE_PATH="C:/Users/thiba/Desktop/Tolosat_Thermal1/hot_case_processing/processing.temp.log" TYPE="FILE" FILE_NAME="processing.temp.log" FILE_FORMAT="LOG"/>
+        <RESULT_SET FILE_TYPE="CSV" FILE_PATH="C:/Users/thiba/Desktop/Tolosat_Thermal1/hot_case_processing/processing.temp.csv" TYPE="FILE" FILE_NAME="processing.temp.csv" FILE_FORMAT="CSV"/>
+        <RESULT_SET FILE_TYPE="TXT" FILE_PATH="C:/Users/thiba/Desktop/Tolosat_Thermal1/hot_case_processing/processing.temp.out" TYPE="FILE" FILE_NAME="processing.temp.out" FILE_FORMAT="OUT"/>
+        <RESULT_SET FILE_TYPE="HDF5" FILE_PATH="C:/Users/thiba/Desktop/Tolosat_Thermal1/hot_case_processing/processing.temp.h5" TYPE="FILE" FILE_NAME="processing.temp.h5" FILE_FORMAT="h5"/>
+        <RESULT_SET FILE_TYPE="TXT" FILE_PATH="C:/Users/thiba/Desktop/Tolosat_Thermal1/hot_case_processing/hot_case.nod.log" TYPE="FILE" FILE_NAME="hot_case.nod.log" FILE_FORMAT="LOG"/>
+        <RESULT_SET FILE_TYPE="TXT" FILE_PATH="C:/Users/thiba/Desktop/Tolosat_Thermal1/hot_case_processing/hot_case.nod.nwk" TYPE="FILE" FILE_NAME="hot_case.nod.nwk" FILE_FORMAT="NWK"/>
+        <RESULT_SET FILE_TYPE="TXT" FILE_PATH="C:/Users/thiba/Desktop/Tolosat_Thermal1/hot_case_processing/hot_case.cond.log" TYPE="FILE" FILE_NAME="hot_case.cond.log" FILE_FORMAT="LOG"/>
+        <RESULT_SET FILE_TYPE="TXT" FILE_PATH="C:/Users/thiba/Desktop/Tolosat_Thermal1/hot_case_processing/hot_case.gl.nwk" TYPE="FILE" FILE_NAME="hot_case.gl.nwk" FILE_FORMAT="NWK"/>
+        <RESULT_SET FILE_TYPE="HDF5" FILE_PATH="C:/Users/thiba/Desktop/Tolosat_Thermal1/hot_case_processing/hot_case.edg.h5" TYPE="FILE" FILE_NAME="hot_case.edg.h5" FILE_FORMAT="h5"/>
+        <RESULT_SET FILE_TYPE="HDF5" FILE_PATH="C:/Users/thiba/Desktop/Tolosat_Thermal1/hot_case_processing/hot_case.pf.h5" TYPE="FILE" FILE_NAME="hot_case.pf.h5" FILE_FORMAT="h5"/>
+        <RESULT_SET FILE_TYPE="TXT" FILE_PATH="C:/Users/thiba/Desktop/Tolosat_Thermal1/hot_case_processing/hot_case.pf.log" TYPE="FILE" FILE_NAME="hot_case.pf.log" FILE_FORMAT="LOG"/>
+        <RESULT_SET FILE_TYPE="TXT" FILE_PATH="C:/Users/thiba/Desktop/Tolosat_Thermal1/hot_case_processing/hot_case.pf.nwk" TYPE="FILE" FILE_NAME="hot_case.pf.nwk" FILE_FORMAT="NWK"/>
+        <RESULT_SET FILE_TYPE="XLS" FILE_PATH="C:/Users/thiba/Desktop/Tolosat_Thermal1/hot_case_processing/processing.xls" TYPE="FILE" FILE_NAME="processing.xls" FILE_FORMAT="xls"/>
+        <RESULT_SET FILE_TYPE="TXT" FILE_PATH="C:/Users/thiba/Desktop/Tolosat_Thermal1/hot_case_processing/processing.txt" TYPE="FILE" FILE_NAME="processing.txt" FILE_FORMAT="txt"/>
+    </RESULT>
+</SYSML>

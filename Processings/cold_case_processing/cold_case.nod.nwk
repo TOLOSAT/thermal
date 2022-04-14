@@ -1,0 +1,241 @@
+
+#**********************************************#
+#                                              #
+#     Nodal Description created by Thermica    #
+#                                              #
+#**********************************************#
+
+$INFOS
+
+#  Nodal description
+#  --------------------
+#
+#  File : cold_case.nod.nwk
+#  Version : Thermica  V.4.9.0 released on September 2020
+#  Executed on : Thu Dec 02 18:39:13 2021
+#  Input files :
+#    - Sysset : cold_case.sysset
+
+$GLOBAL
+   $LOCALS
+      # Aluminium
+      REAL EPS_Aluminium  = 0.780;
+      REAL ALP_Aluminium  = 0.230;
+      REAL COND_Aluminium = 120.00;
+      REAL DENS_Aluminium = 2770.00;
+      REAL CP_Aluminium   = 920.00;
+      # PCB
+      REAL EPS_PCB  = 0.800;
+      REAL ALP_PCB  = 0.290;
+      REAL COND_PCB = 78.00;
+      REAL DENS_PCB = 1700.00;
+      REAL CP_PCB   = 1038.00;
+      # Panneau_solaire
+      REAL EPS_Panneau_solaire  = 0.820;
+      REAL ALP_Panneau_solaire  = 0.740;
+      REAL COND_Panneau_solaire = 1.20;
+      REAL DENS_Panneau_solaire = 2530.00;
+      REAL CP_Panneau_solaire   = 720.00;
+$ENDGLOBAL
+
+
+$ENTITIES
+
+$NODES
+
+   # Geometrical Nodes
+  D       100 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       101 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       102 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       103 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       104 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       105 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       106 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       107 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       108 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       200 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       201 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       202 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       203 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       204 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       205 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       206 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       207 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       208 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       209 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       210 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       211 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       212 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       213 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       214 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       215 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       216 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       217 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       218 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       219 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       220 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       221 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       222 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       223 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       224 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       225 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       226 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       300 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       301 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       302 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       303 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       304 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       305 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       306 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       307 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       308 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       309 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       310 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       311 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       312 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       313 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       314 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       315 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       316 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       317 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       318 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       319 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       320 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       321 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       322 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       323 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       324 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       325 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       326 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       400 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       401 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       402 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       403 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       404 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       405 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       406 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       407 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       408 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       409 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       410 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       411 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       412 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       413 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       414 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       415 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       416 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       417 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       418 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       419 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       420 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       421 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       422 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       423 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       424 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       425 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       426 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       500 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       501 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       502 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       503 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       504 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       505 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       506 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       507 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       508 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       509 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       510 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       511 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       512 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       513 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       514 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       515 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       516 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       517 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       518 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       519 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       520 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       521 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       522 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       523 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       524 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       525 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       526 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       600 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       601 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       602 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       603 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       604 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       605 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       606 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       607 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       608 = '/Structure              ', T= 0.000, A= 2.222222E-03, C= 1.1111E-06*DENS_Aluminium      *CP_Aluminium      , ALP= ALP_Aluminium      , EPS= EPS_Aluminium      ;
+  D       700 = '/Panneau Solaire Dessous', T= 0.000, A= 1.495000E-02, C= 1.3190E+02                                        , ALP= ALP_PCB            , EPS= EPS_PCB            ;
+  D       701 = '/Panneau Solaire Dessous', T= 0.000, A= 1.495000E-02, C= 1.3190E+02                                        , ALP= ALP_PCB            , EPS= EPS_PCB            ;
+  D       702 = '/Panneau Solaire Dessous', T= 0.000, A= 1.495000E-02, C= 1.3190E+02                                        , ALP= ALP_PCB            , EPS= EPS_PCB            ;
+  D       703 = '/Panneau Solaire Dessous', T= 0.000, A= 1.495000E-02, C= 1.3190E+02                                        , ALP= ALP_PCB            , EPS= EPS_PCB            ;
+  D       800 = '/Panneau Solaire Dessous', T= 0.000, A= 1.495000E-02, C= 1.3190E+02                                        , ALP= ALP_PCB            , EPS= EPS_PCB            ;
+  D       801 = '/Panneau Solaire Dessous', T= 0.000, A= 1.495000E-02, C= 1.3190E+02                                        , ALP= ALP_PCB            , EPS= EPS_PCB            ;
+  D       802 = '/Panneau Solaire Dessous', T= 0.000, A= 1.495000E-02, C= 1.3190E+02                                        , ALP= ALP_PCB            , EPS= EPS_PCB            ;
+  D       803 = '/Panneau Solaire Dessous', T= 0.000, A= 1.495000E-02, C= 1.3190E+02                                        , ALP= ALP_PCB            , EPS= EPS_PCB            ;
+  D       900 = '/Panneau Solaire Dessous', T= 0.000, A= 1.495000E-02, C= 1.3190E+02                                        , ALP= ALP_PCB            , EPS= EPS_PCB            ;
+  D       901 = '/Panneau Solaire Dessous', T= 0.000, A= 1.495000E-02, C= 1.3190E+02                                        , ALP= ALP_PCB            , EPS= EPS_PCB            ;
+  D       902 = '/Panneau Solaire Dessous', T= 0.000, A= 1.495000E-02, C= 1.3190E+02                                        , ALP= ALP_PCB            , EPS= EPS_PCB            ;
+  D       903 = '/Panneau Solaire Dessous', T= 0.000, A= 1.495000E-02, C= 1.3190E+02                                        , ALP= ALP_PCB            , EPS= EPS_PCB            ;
+  D      1000 = '/Panneau Solaire Dessous', T= 0.000, A= 1.495000E-02, C= 1.3190E+02                                        , ALP= ALP_PCB            , EPS= EPS_PCB            ;
+  D      1001 = '/Panneau Solaire Dessous', T= 0.000, A= 1.495000E-02, C= 1.3190E+02                                        , ALP= ALP_PCB            , EPS= EPS_PCB            ;
+  D      1002 = '/Panneau Solaire Dessous', T= 0.000, A= 1.495000E-02, C= 1.3190E+02                                        , ALP= ALP_PCB            , EPS= EPS_PCB            ;
+  D      1003 = '/Panneau Solaire Dessous', T= 0.000, A= 1.495000E-02, C= 1.3190E+02                                        , ALP= ALP_PCB            , EPS= EPS_PCB            ;
+  D      1100 = '/Panneau Solaire Dessus ', T= 0.000, A= 1.116000E-02, C= 5.5800E-05*DENS_Panneau_solaire*CP_Panneau_solaire, ALP= ALP_Panneau_solaire, EPS= EPS_Panneau_solaire;
+  D      1101 = '/Panneau Solaire Dessus ', T= 0.000, A= 1.116000E-02, C= 5.5800E-05*DENS_Panneau_solaire*CP_Panneau_solaire, ALP= ALP_Panneau_solaire, EPS= EPS_Panneau_solaire;
+  D      1102 = '/Panneau Solaire Dessus ', T= 0.000, A= 1.116000E-02, C= 5.5800E-05*DENS_Panneau_solaire*CP_Panneau_solaire, ALP= ALP_Panneau_solaire, EPS= EPS_Panneau_solaire;
+  D      1103 = '/Panneau Solaire Dessus ', T= 0.000, A= 1.116000E-02, C= 5.5800E-05*DENS_Panneau_solaire*CP_Panneau_solaire, ALP= ALP_Panneau_solaire, EPS= EPS_Panneau_solaire;
+  D      1200 = '/Panneau Solaire Dessus ', T= 0.000, A= 1.116000E-02, C= 5.5800E-05*DENS_Panneau_solaire*CP_Panneau_solaire, ALP= ALP_Panneau_solaire, EPS= EPS_Panneau_solaire;
+  D      1201 = '/Panneau Solaire Dessus ', T= 0.000, A= 1.116000E-02, C= 5.5800E-05*DENS_Panneau_solaire*CP_Panneau_solaire, ALP= ALP_Panneau_solaire, EPS= EPS_Panneau_solaire;
+  D      1202 = '/Panneau Solaire Dessus ', T= 0.000, A= 1.116000E-02, C= 5.5800E-05*DENS_Panneau_solaire*CP_Panneau_solaire, ALP= ALP_Panneau_solaire, EPS= EPS_Panneau_solaire;
+  D      1203 = '/Panneau Solaire Dessus ', T= 0.000, A= 1.116000E-02, C= 5.5800E-05*DENS_Panneau_solaire*CP_Panneau_solaire, ALP= ALP_Panneau_solaire, EPS= EPS_Panneau_solaire;
+  D      1300 = '/Panneau Solaire Dessus ', T= 0.000, A= 1.116000E-02, C= 5.5800E-05*DENS_Panneau_solaire*CP_Panneau_solaire, ALP= ALP_Panneau_solaire, EPS= EPS_Panneau_solaire;
+  D      1301 = '/Panneau Solaire Dessus ', T= 0.000, A= 1.116000E-02, C= 5.5800E-05*DENS_Panneau_solaire*CP_Panneau_solaire, ALP= ALP_Panneau_solaire, EPS= EPS_Panneau_solaire;
+  D      1302 = '/Panneau Solaire Dessus ', T= 0.000, A= 1.116000E-02, C= 5.5800E-05*DENS_Panneau_solaire*CP_Panneau_solaire, ALP= ALP_Panneau_solaire, EPS= EPS_Panneau_solaire;
+  D      1303 = '/Panneau Solaire Dessus ', T= 0.000, A= 1.116000E-02, C= 5.5800E-05*DENS_Panneau_solaire*CP_Panneau_solaire, ALP= ALP_Panneau_solaire, EPS= EPS_Panneau_solaire;
+  D      1400 = '/Panneau Solaire Dessus ', T= 0.000, A= 1.116000E-02, C= 5.5800E-05*DENS_Panneau_solaire*CP_Panneau_solaire, ALP= ALP_Panneau_solaire, EPS= EPS_Panneau_solaire;
+  D      1401 = '/Panneau Solaire Dessus ', T= 0.000, A= 1.116000E-02, C= 5.5800E-05*DENS_Panneau_solaire*CP_Panneau_solaire, ALP= ALP_Panneau_solaire, EPS= EPS_Panneau_solaire;
+  D      1402 = '/Panneau Solaire Dessus ', T= 0.000, A= 1.116000E-02, C= 5.5800E-05*DENS_Panneau_solaire*CP_Panneau_solaire, ALP= ALP_Panneau_solaire, EPS= EPS_Panneau_solaire;
+  D      1403 = '/Panneau Solaire Dessus ', T= 0.000, A= 1.116000E-02, C= 5.5800E-05*DENS_Panneau_solaire*CP_Panneau_solaire, ALP= ALP_Panneau_solaire, EPS= EPS_Panneau_solaire;
+  D      1500 = '/Rack                   ', T= 0.000, A= 2.000000E-02, C= 1.0000E-04*DENS_PCB            *CP_PCB            , ALP= ALP_PCB            , EPS= EPS_PCB            ;
+  D      1600 = '/Rack                   ', T= 0.000, A= 2.000000E-02, C= 1.0000E-04*DENS_PCB            *CP_PCB            , ALP= ALP_PCB            , EPS= EPS_PCB            ;
+  D      1700 = '/Rack                   ', T= 0.000, A= 2.000000E-02, C= 1.0000E-04*DENS_PCB            *CP_PCB            , ALP= ALP_PCB            , EPS= EPS_PCB            ;
+  D      1800 = '/Rack                   ', T= 0.000, A= 2.000000E-02, C= 1.0000E-04*DENS_PCB            *CP_PCB            , ALP= ALP_PCB            , EPS= EPS_PCB            ;
+  D      1900 = '/Rack                   ', T= 0.000, A= 2.000000E-02, C= 1.0000E-04*DENS_PCB            *CP_PCB            , ALP= ALP_PCB            , EPS= EPS_PCB            ;
+  D      2000 = '/Payload 1              ', T= 0.000, A= 2.000000E-02, C= 1.0000E-04*DENS_PCB            *CP_PCB            , ALP= ALP_PCB            , EPS= EPS_PCB            ;
+  D      2100 = '/Payload 2              ', T= 0.000, A= 2.000000E-02, C= 1.0000E-04*DENS_PCB            *CP_PCB            , ALP= ALP_PCB            , EPS= EPS_PCB            ;
+
+   # Sensor nodes
+
+   # Space (or environment) node
+  B  99999999 = 'Space Node', T= -269.000;
+
+
+
+
+
+$CONTROLS
+   DATE50 = 2.626700E+04;
+   PERIOD = 5.680000E+03;
+
+
+$EVENTS
+
+   $TIMESTEP
+   $OUTPUT
+      # Earth_PenumbraIN_1   =  5.073768E+02 [PERIOD];
+      # Earth_PenumbraOUT_1  =  1.773993E+03 [PERIOD];
+      # Earth_EclipseIN_2   =  5.338494E+02 [PERIOD];
+      # Earth_EclipseOUT_2  =  1.747714E+03 [PERIOD];
+
+
+$ARRAYS
+   CHARACTER* SEQNAME(1) = 'Default';
+
+   REAL* SEQNB(2,*) =
+       0.000000E+00,  1;

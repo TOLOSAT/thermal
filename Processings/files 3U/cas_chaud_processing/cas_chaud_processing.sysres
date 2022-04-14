@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SYSML SYSML_VERSION="1.7" CONTENTS="RESULT" SAVEDATE="1615484327" SYSTEMA_VERSION="4.9.0">
+    <RESULT NAME="cas_chaud_processing">
+        <RESULT_SET FILE_TYPE="MISSION_SET" FILE_PATH="C:/Users/Marie NGUYEN/Documents/GitHub/Tolosat_Thermal/files 3U/cas_chaud_processing/cas_chaud.sysset" TYPE="FILE" FILE_NAME="cas_chaud.sysset" FILE_FORMAT="sysset"/>
+        <RESULT_SET FILE_TYPE="MISSION_DATA" FILE_PATH="C:/Users/Marie NGUYEN/Documents/GitHub/Tolosat_Thermal/files 3U/cas_chaud_processing/cas_chaud.html" TYPE="FILE" FILE_NAME="cas_chaud.html" FILE_FORMAT="html"/>
+        <RESULT_SET FILE_TYPE="HDF5" FILE_PATH="C:/Users/Marie NGUYEN/Documents/GitHub/Tolosat_Thermal/files 3U/cas_chaud_processing/cas_chaud.rad.h5" TYPE="FILE" FILE_NAME="cas_chaud.rad.h5" FILE_FORMAT="h5"/>
+        <RESULT_SET FILE_TYPE="HDF5" FILE_PATH="C:/Users/Marie NGUYEN/Documents/GitHub/Tolosat_Thermal/files 3U/cas_chaud_processing/cas_chaud.box.h5" TYPE="FILE" FILE_NAME="cas_chaud.box.h5" FILE_FORMAT="h5"/>
+        <RESULT_SET FILE_TYPE="TXT" FILE_PATH="C:/Users/Marie NGUYEN/Documents/GitHub/Tolosat_Thermal/files 3U/cas_chaud_processing/cas_chaud.rad.log" TYPE="FILE" FILE_NAME="cas_chaud.rad.log" FILE_FORMAT="LOG"/>
+        <RESULT_SET FILE_TYPE="TXT" FILE_PATH="C:/Users/Marie NGUYEN/Documents/GitHub/Tolosat_Thermal/files 3U/cas_chaud_processing/cas_chaud.gb.txt" TYPE="FILE" FILE_NAME="cas_chaud.gb.txt" FILE_FORMAT="TXT"/>
+        <RESULT_SET FILE_TYPE="TXT" FILE_PATH="C:/Users/Marie NGUYEN/Documents/GitHub/Tolosat_Thermal/files 3U/cas_chaud_processing/cas_chaud.gr.nwk" TYPE="FILE" FILE_NAME="cas_chaud.gr.nwk" FILE_FORMAT="NWK"/>
+        <RESULT_SET FILE_TYPE="HDF5" FILE_PATH="C:/Users/Marie NGUYEN/Documents/GitHub/Tolosat_Thermal/files 3U/cas_chaud_processing/cas_chaud.sf.h5" TYPE="FILE" FILE_NAME="cas_chaud.sf.h5" FILE_FORMAT="h5"/>
+        <RESULT_SET FILE_TYPE="TXT" FILE_PATH="C:/Users/Marie NGUYEN/Documents/GitHub/Tolosat_Thermal/files 3U/cas_chaud_processing/cas_chaud.sf.log" TYPE="FILE" FILE_NAME="cas_chaud.sf.log" FILE_FORMAT="LOG"/>
+        <RESULT_SET FILE_TYPE="TXT" FILE_PATH="C:/Users/Marie NGUYEN/Documents/GitHub/Tolosat_Thermal/files 3U/cas_chaud_processing/cas_chaud.sf.nwk" TYPE="FILE" FILE_NAME="cas_chaud.sf.nwk" FILE_FORMAT="NWK"/>
+        <RESULT_SET FILE_TYPE="TXT" FILE_PATH="C:/Users/Marie NGUYEN/Documents/GitHub/Tolosat_Thermal/files 3U/cas_chaud_processing/processing.dck" TYPE="FILE" FILE_NAME="processing.dck" FILE_FORMAT="DCK"/>
+        <RESULT_SET FILE_TYPE="TXT" FILE_PATH="C:/Users/Marie NGUYEN/Documents/GitHub/Tolosat_Thermal/files 3U/cas_chaud_processing/processing.temp.log" TYPE="FILE" FILE_NAME="processing.temp.log" FILE_FORMAT="LOG"/>
+        <RESULT_SET FILE_TYPE="CSV" FILE_PATH="C:/Users/Marie NGUYEN/Documents/GitHub/Tolosat_Thermal/files 3U/cas_chaud_processing/processing.temp.csv" TYPE="FILE" FILE_NAME="processing.temp.csv" FILE_FORMAT="CSV"/>
+        <RESULT_SET FILE_TYPE="TXT" FILE_PATH="C:/Users/Marie NGUYEN/Documents/GitHub/Tolosat_Thermal/files 3U/cas_chaud_processing/processing.temp.out" TYPE="FILE" FILE_NAME="processing.temp.out" FILE_FORMAT="OUT"/>
+        <RESULT_SET FILE_TYPE="HDF5" FILE_PATH="C:/Users/Marie NGUYEN/Documents/GitHub/Tolosat_Thermal/files 3U/cas_chaud_processing/processing.temp.h5" TYPE="FILE" FILE_NAME="processing.temp.h5" FILE_FORMAT="h5"/>
+        <RESULT_SET FILE_TYPE="TXT" FILE_PATH="C:/Users/Marie NGUYEN/Documents/GitHub/Tolosat_Thermal/files 3U/cas_chaud_processing/cas_chaud.nod.log" TYPE="FILE" FILE_NAME="cas_chaud.nod.log" FILE_FORMAT="LOG"/>
+        <RESULT_SET FILE_TYPE="TXT" FILE_PATH="C:/Users/Marie NGUYEN/Documents/GitHub/Tolosat_Thermal/files 3U/cas_chaud_processing/cas_chaud.nod.nwk" TYPE="FILE" FILE_NAME="cas_chaud.nod.nwk" FILE_FORMAT="NWK"/>
+        <RESULT_SET FILE_TYPE="TXT" FILE_PATH="C:/Users/Marie NGUYEN/Documents/GitHub/Tolosat_Thermal/files 3U/cas_chaud_processing/cas_chaud.cond.log" TYPE="FILE" FILE_NAME="cas_chaud.cond.log" FILE_FORMAT="LOG"/>
+        <RESULT_SET FILE_TYPE="TXT" FILE_PATH="C:/Users/Marie NGUYEN/Documents/GitHub/Tolosat_Thermal/files 3U/cas_chaud_processing/cas_chaud.gl.nwk" TYPE="FILE" FILE_NAME="cas_chaud.gl.nwk" FILE_FORMAT="NWK"/>
+        <RESULT_SET FILE_TYPE="HDF5" FILE_PATH="C:/Users/Marie NGUYEN/Documents/GitHub/Tolosat_Thermal/files 3U/cas_chaud_processing/cas_chaud.edg.h5" TYPE="FILE" FILE_NAME="cas_chaud.edg.h5" FILE_FORMAT="h5"/>
+        <RESULT_SET FILE_TYPE="HDF5" FILE_PATH="C:/Users/Marie NGUYEN/Documents/GitHub/Tolosat_Thermal/files 3U/cas_chaud_processing/cas_chaud.pf.h5" TYPE="FILE" FILE_NAME="cas_chaud.pf.h5" FILE_FORMAT="h5"/>
+        <RESULT_SET FILE_TYPE="TXT" FILE_PATH="C:/Users/Marie NGUYEN/Documents/GitHub/Tolosat_Thermal/files 3U/cas_chaud_processing/cas_chaud.pf.log" TYPE="FILE" FILE_NAME="cas_chaud.pf.log" FILE_FORMAT="LOG"/>
+        <RESULT_SET FILE_TYPE="TXT" FILE_PATH="C:/Users/Marie NGUYEN/Documents/GitHub/Tolosat_Thermal/files 3U/cas_chaud_processing/cas_chaud.pf.nwk" TYPE="FILE" FILE_NAME="cas_chaud.pf.nwk" FILE_FORMAT="NWK"/>
+        <RESULT_SET FILE_TYPE="XLS" FILE_PATH="C:/Users/Marie NGUYEN/Documents/GitHub/Tolosat_Thermal/files 3U/cas_chaud_processing/processing.xls" TYPE="FILE" FILE_NAME="processing.xls" FILE_FORMAT="xls"/>
+        <RESULT_SET FILE_TYPE="TXT" FILE_PATH="C:/Users/Marie NGUYEN/Documents/GitHub/Tolosat_Thermal/files 3U/cas_chaud_processing/processing.txt" TYPE="FILE" FILE_NAME="processing.txt" FILE_FORMAT="txt"/>
+    </RESULT>
+</SYSML>

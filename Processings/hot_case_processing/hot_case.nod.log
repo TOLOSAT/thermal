@@ -1,0 +1,63 @@
+
+*------------------------------------*
+*                                    *
+*   SYSTEMA V4 APPLICATION LOG FILE  *
+*                                    *
+*------------------------------------*
+
+
+
+              **********
+
+      Nodal Description
+
+
+Execution started on Thu Apr 22 19:23:16 2021
+
+
+
+State  1 : Model Initialisation                                                Time :  Thu Apr 22 19:23:16 2021
+
+State  2 : Thermal Data Loading                                                Time :  Thu Apr 22 19:23:16 2021
+
+State  3 : Contact Management                                                  Time :  Thu Apr 22 19:23:16 2021
+
+
+State  4 : Mission Data Loading                                                Time :  Thu Apr 22 19:23:16 2021
+
+Nb eclipse event: 0
+Nb penumbra event: 0
+Nb arc event: 1
+Nb sequence event: 0
+
+
+NODE PARAMETERS
+---------------
+
+ - output             : SOL
+ - output nwk         : hot_case.nod.nwk
+
+MODEL INFO
+----------
+
+ - nb models       : 1
+ - nb surfaces     : 21
+ - nb mesh         : 29
+ - nb volumes      : 0
+ - nb vmesh        : 0
+ Model names :
+   - 
+
+
+State  5 : Network Output generation                                           Time :  Thu Apr 22 19:23:17 2021
+
+State  6 : Adding specific items                                               Time :  Thu Apr 22 19:23:17 2021
+
+
+
+
+Execution completed on Thu Apr 22 19:23:17 2021
+
+
+
+

@@ -1,0 +1,1157 @@
+
+*------------------------------------*
+*                                    *
+*   SYSTEMA V4 APPLICATION LOG FILE  *
+*                                    *
+*------------------------------------*
+
+
+
+              **********
+
+      Conduction Computation
+
+
+Execution started on Thu Mar 11 18:37:26 2021
+
+
+
+  - Number of active threads : 4 ( / 4 available)
+
+State  1 : Model Initialisation                                                Time :  Thu Mar 11 18:37:26 2021
+
+State  2 : Thermal Data Loading                                                Time :  Thu Mar 11 18:37:26 2021
+
+State  3 : Mission Data Loading                                                Time :  Thu Mar 11 18:37:26 2021
+
+Nb eclipse event: 3
+Nb penumbra event: 3
+Nb arc event: 1
+Nb sequence event: 0
+
+State  4 : Edges creation (border)                                             Time :  Thu Mar 11 18:37:28 2021
+
+
+BORDER Structure dump:
+----------------------
+
+  *Mesh 0 (0:100/100)
+      - 0: border 0   (A:0 0 0  / B:0.1 0 0    length: 0.1)
+      - 1: border 1   (A:0.1 0 0  / B:0.1 0.1 0    length: 0.1)
+      - 2: border 2   (A:0.1 0.1 0  / B:0 0.1 0    length: 0.1)
+      - 3: border 3   (A:0 0.1 0  / B:0 0 0    length: 0.1)
+  *Mesh 1 (0:200/200)
+      - 0: border 4   (A:0 0 0  / B:0 0.1 0    length: 0.1)
+      - 1: border 5   (A:0 0.1 0  / B:0 0.1 0.3    length: 0.3)
+      - 2: border 6   (A:0 0.1 0.3  / B:0 0 0.3    length: 0.1)
+      - 3: border 7   (A:0 0 0.3  / B:0 0 0    length: 0.3)
+  *Mesh 2 (0:300/300)
+      - 0: border 8   (A:0.1 0 0  / B:0.1 0.1 0    length: 0.1)
+      - 1: border 9   (A:0.1 0.1 0  / B:0.1 0.1 0.3    length: 0.3)
+      - 2: border 10   (A:0.1 0.1 0.3  / B:0.1 0 0.3    length: 0.1)
+      - 3: border 11   (A:0.1 0 0.3  / B:0.1 0 0    length: 0.3)
+  *Mesh 3 (0:400/400)
+      - 0: border 12   (A:0.1 0 0  / B:0 0 0    length: 0.1)
+      - 1: border 13   (A:0 0 0  / B:0 0 0.3    length: 0.3)
+      - 2: border 14   (A:0 0 0.3  / B:0.1 0 0.3    length: 0.1)
+      - 3: border 15   (A:0.1 0 0.3  / B:0.1 0 0    length: 0.3)
+  *Mesh 4 (0:500/500)
+      - 0: border 16   (A:0.1 0.1 0  / B:0 0.1 0    length: 0.1)
+      - 1: border 17   (A:0 0.1 0  / B:0 0.1 0.3    length: 0.3)
+      - 2: border 18   (A:0 0.1 0.3  / B:0.1 0.1 0.3    length: 0.1)
+      - 3: border 19   (A:0.1 0.1 0.3  / B:0.1 0.1 0    length: 0.3)
+  *Mesh 5 (0:600/600)
+      - 0: border 20   (A:0 0 0.3  / B:0.1 0 0.3    length: 0.1)
+      - 1: border 21   (A:0.1 0 0.3  / B:0.1 0.1 0.3    length: 0.1)
+      - 2: border 22   (A:0.1 0.1 0.3  / B:0 0.1 0.3    length: 0.1)
+      - 3: border 23   (A:0 0.1 0.3  / B:0 0 0.3    length: 0.1)
+  *Mesh 6 (0:700/700)
+      - 0: border 24   (A:0.1 0.4 0.3  / B:0 0.4 0.3    length: 0.1)
+      - 1: border 25   (A:0 0.4 0.3  / B:0 0.101 0.3    length: 0.299)
+      - 2: border 26   (A:0 0.101 0.3  / B:0.1 0.101 0.3    length: 0.1)
+      - 3: border 27   (A:0.1 0.101 0.3  / B:0.1 0.4 0.3    length: 0.299)
+  *Mesh 7 (0:800/800)
+      - 0: border 28   (A:0.1 0.4 0.2975  / B:0 0.4 0.2975    length: 0.1)
+      - 1: border 29   (A:0 0.4 0.2975  / B:0 0.101 0.2975    length: 0.299)
+      - 2: border 30   (A:0 0.101 0.2975  / B:0.1 0.101 0.2975    length: 0.1)
+      - 3: border 31   (A:0.1 0.101 0.2975  / B:0.1 0.4 0.2975    length: 0.299)
+  *Mesh 8 (0:900/900)
+      - 0: border 32   (A:0.1 0.101 0.2975  / B:0 0.101 0.2975    length: 0.1)
+      - 1: border 33   (A:0 0.101 0.2975  / B:0 0.101 0.3    length: 0.0025)
+      - 2: border 34   (A:0 0.101 0.3  / B:0.1 0.101 0.3    length: 0.1)
+      - 3: border 35   (A:0.1 0.101 0.3  / B:0.1 0.101 0.2975    length: 0.0025)
+  *Mesh 9 (0:1000/1000)
+      - 0: border 36   (A:0.1 0.4 0.2975  / B:0 0.4 0.2975    length: 0.1)
+      - 1: border 37   (A:0 0.4 0.2975  / B:0 0.4 0.3    length: 0.0025)
+      - 2: border 38   (A:0 0.4 0.3  / B:0.1 0.4 0.3    length: 0.1)
+      - 3: border 39   (A:0.1 0.4 0.3  / B:0.1 0.4 0.2975    length: 0.0025)
+  *Mesh 10 (0:1100/1100)
+      - 0: border 40   (A:0 0.4 0.3  / B:0 0.101 0.3    length: 0.299)
+      - 1: border 41   (A:0 0.101 0.3  / B:0 0.101 0.2975    length: 0.0025)
+      - 2: border 42   (A:0 0.101 0.2975  / B:0 0.4 0.2975    length: 0.299)
+      - 3: border 43   (A:0 0.4 0.2975  / B:0 0.4 0.3    length: 0.0025)
+  *Mesh 11 (0:1200/1200)
+      - 0: border 44   (A:0.1 0.4 0.3  / B:0.1 0.101 0.3    length: 0.299)
+      - 1: border 45   (A:0.1 0.101 0.3  / B:0.1 0.101 0.2975    length: 0.0025)
+      - 2: border 46   (A:0.1 0.101 0.2975  / B:0.1 0.4 0.2975    length: 0.299)
+      - 3: border 47   (A:0.1 0.4 0.2975  / B:0.1 0.4 0.3    length: 0.0025)
+  *Mesh 12 (0:1300/1300)
+      - 0: border 48   (A:-0.3 0 0.3  / B:-0.3 0.1 0.3    length: 0.1)
+      - 1: border 49   (A:-0.3 0.1 0.3  / B:-0.001 0.1 0.3    length: 0.299)
+      - 2: border 50   (A:-0.001 0.1 0.3  / B:-0.001 0 0.3    length: 0.1)
+      - 3: border 51   (A:-0.001 0 0.3  / B:-0.3 0 0.3    length: 0.299)
+  *Mesh 13 (0:1400/1400)
+      - 0: border 52   (A:-0.3 0 0.2975  / B:-0.3 0.1 0.2975    length: 0.1)
+      - 1: border 53   (A:-0.3 0.1 0.2975  / B:-0.001 0.1 0.2975    length: 0.299)
+      - 2: border 54   (A:-0.001 0.1 0.2975  / B:-0.001 0 0.2975    length: 0.1)
+      - 3: border 55   (A:-0.001 0 0.2975  / B:-0.3 0 0.2975    length: 0.299)
+  *Mesh 14 (0:1500/1500)
+      - 0: border 56   (A:-0.3 0.1 0.3  / B:-0.3 0.1 0.2975    length: 0.0025)
+      - 1: border 57   (A:-0.3 0.1 0.2975  / B:-0.001 0.1 0.2975    length: 0.299)
+      - 2: border 58   (A:-0.001 0.1 0.2975  / B:-0.001 0.1 0.3    length: 0.0025)
+      - 3: border 59   (A:-0.001 0.1 0.3  / B:-0.3 0.1 0.3    length: 0.299)
+  *Mesh 15 (0:1600/1600)
+      - 0: border 60   (A:-0.3 0 0.3  / B:-0.3 0 0.2975    length: 0.0025)
+      - 1: border 61   (A:-0.3 0 0.2975  / B:-0.001 0 0.2975    length: 0.299)
+      - 2: border 62   (A:-0.001 0 0.2975  / B:-0.001 0 0.3    length: 0.0025)
+      - 3: border 63   (A:-0.001 0 0.3  / B:-0.3 0 0.3    length: 0.299)
+  *Mesh 16 (0:1700/1700)
+      - 0: border 64   (A:-0.3 0 0.2975  / B:-0.3 0.1 0.2975    length: 0.1)
+      - 1: border 65   (A:-0.3 0.1 0.2975  / B:-0.3 0.1 0.3    length: 0.0025)
+      - 2: border 66   (A:-0.3 0.1 0.3  / B:-0.3 0 0.3    length: 0.1)
+      - 3: border 67   (A:-0.3 0 0.3  / B:-0.3 0 0.2975    length: 0.0025)
+  *Mesh 17 (0:1800/1800)
+      - 0: border 68   (A:-0.001 0 0.2975  / B:-0.001 0.1 0.2975    length: 0.1)
+      - 1: border 69   (A:-0.001 0.1 0.2975  / B:-0.001 0.1 0.3    length: 0.0025)
+      - 2: border 70   (A:-0.001 0.1 0.3  / B:-0.001 0 0.3    length: 0.1)
+      - 3: border 71   (A:-0.001 0 0.3  / B:-0.001 0 0.2975    length: 0.0025)
+  *Mesh 18 (0:1900/1900)
+      - 0: border 72   (A:0.4 0 0.3  / B:0.4 0.1 0.3    length: 0.1)
+      - 1: border 73   (A:0.4 0.1 0.3  / B:0.101 0.1 0.3    length: 0.299)
+      - 2: border 74   (A:0.101 0.1 0.3  / B:0.101 0 0.3    length: 0.1)
+      - 3: border 75   (A:0.101 0 0.3  / B:0.4 0 0.3    length: 0.299)
+  *Mesh 19 (0:2000/2000)
+      - 0: border 76   (A:0.4 0 0.2975  / B:0.4 0.1 0.2975    length: 0.1)
+      - 1: border 77   (A:0.4 0.1 0.2975  / B:0.101 0.1 0.2975    length: 0.299)
+      - 2: border 78   (A:0.101 0.1 0.2975  / B:0.101 0 0.2975    length: 0.1)
+      - 3: border 79   (A:0.101 0 0.2975  / B:0.4 0 0.2975    length: 0.299)
+  *Mesh 20 (0:2100/2100)
+      - 0: border 80   (A:0.4 0.1 0.3  / B:0.4 0.1 0.2975    length: 0.0025)
+      - 1: border 81   (A:0.4 0.1 0.2975  / B:0.101 0.1 0.2975    length: 0.299)
+      - 2: border 82   (A:0.101 0.1 0.2975  / B:0.101 0.1 0.3    length: 0.0025)
+      - 3: border 83   (A:0.101 0.1 0.3  / B:0.4 0.1 0.3    length: 0.299)
+  *Mesh 21 (0:2200/2200)
+      - 0: border 84   (A:0.4 0 0.3  / B:0.4 0 0.2975    length: 0.0025)
+      - 1: border 85   (A:0.4 0 0.2975  / B:0.101 0 0.2975    length: 0.299)
+      - 2: border 86   (A:0.101 0 0.2975  / B:0.101 0 0.3    length: 0.0025)
+      - 3: border 87   (A:0.101 0 0.3  / B:0.4 0 0.3    length: 0.299)
+  *Mesh 22 (0:2300/2300)
+      - 0: border 88   (A:0.101 0 0.2975  / B:0.101 0.1 0.2975    length: 0.1)
+      - 1: border 89   (A:0.101 0.1 0.2975  / B:0.101 0.1 0.3    length: 0.0025)
+      - 2: border 90   (A:0.101 0.1 0.3  / B:0.101 0 0.3    length: 0.1)
+      - 3: border 91   (A:0.101 0 0.3  / B:0.101 0 0.2975    length: 0.0025)
+  *Mesh 23 (0:2400/2400)
+      - 0: border 92   (A:0.4 0 0.2975  / B:0.4 0.1 0.2975    length: 0.1)
+      - 1: border 93   (A:0.4 0.1 0.2975  / B:0.4 0.1 0.3    length: 0.0025)
+      - 2: border 94   (A:0.4 0.1 0.3  / B:0.4 0 0.3    length: 0.1)
+      - 3: border 95   (A:0.4 0 0.3  / B:0.4 0 0.2975    length: 0.0025)
+  *Mesh 24 (0:2500/2500)
+      - 0: border 96   (A:0.1 -0.3 0.3  / B:0 -0.3 0.3    length: 0.1)
+      - 1: border 97   (A:0 -0.3 0.3  / B:0 -0.001 0.3    length: 0.299)
+      - 2: border 98   (A:0 -0.001 0.3  / B:0.1 -0.001 0.3    length: 0.1)
+      - 3: border 99   (A:0.1 -0.001 0.3  / B:0.1 -0.3 0.3    length: 0.299)
+  *Mesh 25 (0:2600/2600)
+      - 0: border 100   (A:0.1 -0.3 0.2975  / B:0 -0.3 0.2975    length: 0.1)
+      - 1: border 101   (A:0 -0.3 0.2975  / B:0 -0.001 0.2975    length: 0.299)
+      - 2: border 102   (A:0 -0.001 0.2975  / B:0.1 -0.001 0.2975    length: 0.1)
+      - 3: border 103   (A:0.1 -0.001 0.2975  / B:0.1 -0.3 0.2975    length: 0.299)
+  *Mesh 26 (0:2700/2700)
+      - 0: border 104   (A:0.1 -0.3 0.2975  / B:0 -0.3 0.2975    length: 0.1)
+      - 1: border 105   (A:0 -0.3 0.2975  / B:0 -0.3 0.3    length: 0.0025)
+      - 2: border 106   (A:0 -0.3 0.3  / B:0.1 -0.3 0.3    length: 0.1)
+      - 3: border 107   (A:0.1 -0.3 0.3  / B:0.1 -0.3 0.2975    length: 0.0025)
+  *Mesh 27 (0:2800/2800)
+      - 0: border 108   (A:0.1 -0.001 0.2975  / B:0 -0.001 0.2975    length: 0.1)
+      - 1: border 109   (A:0 -0.001 0.2975  / B:0 -0.001 0.3    length: 0.0025)
+      - 2: border 110   (A:0 -0.001 0.3  / B:0.1 -0.001 0.3    length: 0.1)
+      - 3: border 111   (A:0.1 -0.001 0.3  / B:0.1 -0.001 0.2975    length: 0.0025)
+  *Mesh 28 (0:2900/2900)
+      - 0: border 112   (A:0.1 -0.3 0.3  / B:0.1 -0.3 0.2975    length: 0.0025)
+      - 1: border 113   (A:0.1 -0.3 0.2975  / B:0.1 -0.001 0.2975    length: 0.299)
+      - 2: border 114   (A:0.1 -0.001 0.2975  / B:0.1 -0.001 0.3    length: 0.0025)
+      - 3: border 115   (A:0.1 -0.001 0.3  / B:0.1 -0.3 0.3    length: 0.299)
+  *Mesh 29 (0:3000/3000)
+      - 0: border 116   (A:0 -0.3 0.3  / B:0 -0.3 0.2975    length: 0.0025)
+      - 1: border 117   (A:0 -0.3 0.2975  / B:0 -0.001 0.2975    length: 0.299)
+      - 2: border 118   (A:0 -0.001 0.2975  / B:0 -0.001 0.3    length: 0.0025)
+      - 3: border 119   (A:0 -0.001 0.3  / B:0 -0.3 0.3    length: 0.299)
+  *Mesh 30 (0:3100/3100)
+      - 0: border 120   (A:0.09 -0.29 0.301  / B:0.01 -0.29 0.301    length: 0.08)
+      - 1: border 121   (A:0.01 -0.29 0.301  / B:0.01 -0.29 0.3028    length: 0.0018)
+      - 2: border 122   (A:0.01 -0.29 0.3028  / B:0.09 -0.29 0.3028    length: 0.08)
+      - 3: border 123   (A:0.09 -0.29 0.3028  / B:0.09 -0.29 0.301    length: 0.0018)
+  *Mesh 31 (0:3200/3200)
+      - 0: border 124   (A:0.09 -0.011 0.301  / B:0.01 -0.011 0.301    length: 0.08)
+      - 1: border 125   (A:0.01 -0.011 0.301  / B:0.01 -0.011 0.3028    length: 0.0018)
+      - 2: border 126   (A:0.01 -0.011 0.3028  / B:0.09 -0.011 0.3028    length: 0.08)
+      - 3: border 127   (A:0.09 -0.011 0.3028  / B:0.09 -0.011 0.301    length: 0.0018)
+  *Mesh 32 (0:3300/3300)
+      - 0: border 128   (A:0.09 -0.29 0.301  / B:0.09 -0.29 0.3028    length: 0.0018)
+      - 1: border 129   (A:0.09 -0.29 0.3028  / B:0.09 -0.011 0.3028    length: 0.279)
+      - 2: border 130   (A:0.09 -0.011 0.3028  / B:0.09 -0.011 0.301    length: 0.0018)
+      - 3: border 131   (A:0.09 -0.011 0.301  / B:0.09 -0.29 0.301    length: 0.279)
+  *Mesh 33 (0:3400/3400)
+      - 0: border 132   (A:0.01 -0.29 0.301  / B:0.01 -0.29 0.3028    length: 0.0018)
+      - 1: border 133   (A:0.01 -0.29 0.3028  / B:0.01 -0.011 0.3028    length: 0.279)
+      - 2: border 134   (A:0.01 -0.011 0.3028  / B:0.01 -0.011 0.301    length: 0.0018)
+      - 3: border 135   (A:0.01 -0.011 0.301  / B:0.01 -0.29 0.301    length: 0.279)
+  *Mesh 34 (0:3500/3500)
+      - 0: border 136   (A:0.09 -0.29 0.301  / B:0.01 -0.29 0.301    length: 0.08)
+      - 1: border 137   (A:0.01 -0.29 0.301  / B:0.01 -0.011 0.301    length: 0.279)
+      - 2: border 138   (A:0.01 -0.011 0.301  / B:0.09 -0.011 0.301    length: 0.08)
+      - 3: border 139   (A:0.09 -0.011 0.301  / B:0.09 -0.29 0.301    length: 0.279)
+  *Mesh 35 (0:3600/3600)
+      - 0: border 140   (A:0.09 -0.29 0.3028  / B:0.01 -0.29 0.3028    length: 0.08)
+      - 1: border 141   (A:0.01 -0.29 0.3028  / B:0.01 -0.011 0.3028    length: 0.279)
+      - 2: border 142   (A:0.01 -0.011 0.3028  / B:0.09 -0.011 0.3028    length: 0.08)
+      - 3: border 143   (A:0.09 -0.011 0.3028  / B:0.09 -0.29 0.3028    length: 0.279)
+  *Mesh 36 (0:3700/3700)
+      - 0: border 144   (A:0.09 0.39 0.301  / B:0.01 0.39 0.301    length: 0.08)
+      - 1: border 145   (A:0.01 0.39 0.301  / B:0.01 0.111 0.301    length: 0.279)
+      - 2: border 146   (A:0.01 0.111 0.301  / B:0.09 0.111 0.301    length: 0.08)
+      - 3: border 147   (A:0.09 0.111 0.301  / B:0.09 0.39 0.301    length: 0.279)
+  *Mesh 37 (0:3800/3800)
+      - 0: border 148   (A:0.09 0.111 0.301  / B:0.01 0.111 0.301    length: 0.08)
+      - 1: border 149   (A:0.01 0.111 0.301  / B:0.01 0.111 0.3028    length: 0.0018)
+      - 2: border 150   (A:0.01 0.111 0.3028  / B:0.09 0.111 0.3028    length: 0.08)
+      - 3: border 151   (A:0.09 0.111 0.3028  / B:0.09 0.111 0.301    length: 0.0018)
+  *Mesh 38 (0:3900/3900)
+      - 0: border 152   (A:0.09 0.39 0.301  / B:0.01 0.39 0.301    length: 0.08)
+      - 1: border 153   (A:0.01 0.39 0.301  / B:0.01 0.39 0.3028    length: 0.0018)
+      - 2: border 154   (A:0.01 0.39 0.3028  / B:0.09 0.39 0.3028    length: 0.08)
+      - 3: border 155   (A:0.09 0.39 0.3028  / B:0.09 0.39 0.301    length: 0.0018)
+  *Mesh 39 (0:4000/4000)
+      - 0: border 156   (A:0.09 0.39 0.3028  / B:0.01 0.39 0.3028    length: 0.08)
+      - 1: border 157   (A:0.01 0.39 0.3028  / B:0.01 0.111 0.3028    length: 0.279)
+      - 2: border 158   (A:0.01 0.111 0.3028  / B:0.09 0.111 0.3028    length: 0.08)
+      - 3: border 159   (A:0.09 0.111 0.3028  / B:0.09 0.39 0.3028    length: 0.279)
+  *Mesh 40 (0:4100/4100)
+      - 0: border 160   (A:0.01 0.39 0.301  / B:0.01 0.39 0.3028    length: 0.0018)
+      - 1: border 161   (A:0.01 0.39 0.3028  / B:0.01 0.111 0.3028    length: 0.279)
+      - 2: border 162   (A:0.01 0.111 0.3028  / B:0.01 0.111 0.301    length: 0.0018)
+      - 3: border 163   (A:0.01 0.111 0.301  / B:0.01 0.39 0.301    length: 0.279)
+  *Mesh 41 (0:4200/4200)
+      - 0: border 164   (A:0.09 0.39 0.301  / B:0.09 0.39 0.3028    length: 0.0018)
+      - 1: border 165   (A:0.09 0.39 0.3028  / B:0.09 0.111 0.3028    length: 0.279)
+      - 2: border 166   (A:0.09 0.111 0.3028  / B:0.09 0.111 0.301    length: 0.0018)
+      - 3: border 167   (A:0.09 0.111 0.301  / B:0.09 0.39 0.301    length: 0.279)
+  *Mesh 42 (0:4300/4300)
+      - 0: border 168   (A:0.111 0.01 0.3028  / B:0.111 0.09 0.3028    length: 0.08)
+      - 1: border 169   (A:0.111 0.09 0.3028  / B:0.111 0.09 0.301    length: 0.0018)
+      - 2: border 170   (A:0.111 0.09 0.301  / B:0.111 0.01 0.301    length: 0.08)
+      - 3: border 171   (A:0.111 0.01 0.301  / B:0.111 0.01 0.3028    length: 0.0018)
+  *Mesh 43 (0:4400/4400)
+      - 0: border 172   (A:0.39 0.09 0.3028  / B:0.111 0.09 0.3028    length: 0.279)
+      - 1: border 173   (A:0.111 0.09 0.3028  / B:0.111 0.09 0.301    length: 0.0018)
+      - 2: border 174   (A:0.111 0.09 0.301  / B:0.39 0.09 0.301    length: 0.279)
+      - 3: border 175   (A:0.39 0.09 0.301  / B:0.39 0.09 0.3028    length: 0.0018)
+  *Mesh 44 (0:4500/4500)
+      - 0: border 176   (A:0.39 0.01 0.3028  / B:0.111 0.01 0.3028    length: 0.279)
+      - 1: border 177   (A:0.111 0.01 0.3028  / B:0.111 0.01 0.301    length: 0.0018)
+      - 2: border 178   (A:0.111 0.01 0.301  / B:0.39 0.01 0.301    length: 0.279)
+      - 3: border 179   (A:0.39 0.01 0.301  / B:0.39 0.01 0.3028    length: 0.0018)
+  *Mesh 45 (0:4600/4600)
+      - 0: border 180   (A:0.111 0.01 0.3028  / B:0.111 0.09 0.3028    length: 0.08)
+      - 1: border 181   (A:0.111 0.09 0.3028  / B:0.111 0.09 0.301    length: 0.0018)
+      - 2: border 182   (A:0.111 0.09 0.301  / B:0.111 0.01 0.301    length: 0.08)
+      - 3: border 183   (A:0.111 0.01 0.301  / B:0.111 0.01 0.3028    length: 0.0018)
+  *Mesh 46 (0:4700/4700)
+      - 0: border 184   (A:0.39 0.01 0.301  / B:0.39 0.09 0.301    length: 0.08)
+      - 1: border 185   (A:0.39 0.09 0.301  / B:0.111 0.09 0.301    length: 0.279)
+      - 2: border 186   (A:0.111 0.09 0.301  / B:0.111 0.01 0.301    length: 0.08)
+      - 3: border 187   (A:0.111 0.01 0.301  / B:0.39 0.01 0.301    length: 0.279)
+  *Mesh 47 (0:4800/4800)
+      - 0: border 188   (A:0.39 0.01 0.3028  / B:0.39 0.09 0.3028    length: 0.08)
+      - 1: border 189   (A:0.39 0.09 0.3028  / B:0.111 0.09 0.3028    length: 0.279)
+      - 2: border 190   (A:0.111 0.09 0.3028  / B:0.111 0.01 0.3028    length: 0.08)
+      - 3: border 191   (A:0.111 0.01 0.3028  / B:0.39 0.01 0.3028    length: 0.279)
+  *Mesh 48 (0:4900/4900)
+      - 0: border 192   (A:-0.29 0.01 0.301  / B:-0.29 0.09 0.301    length: 0.08)
+      - 1: border 193   (A:-0.29 0.09 0.301  / B:-0.011 0.09 0.301    length: 0.279)
+      - 2: border 194   (A:-0.011 0.09 0.301  / B:-0.011 0.01 0.301    length: 0.08)
+      - 3: border 195   (A:-0.011 0.01 0.301  / B:-0.29 0.01 0.301    length: 0.279)
+  *Mesh 49 (0:5000/5000)
+      - 0: border 196   (A:-0.29 0.01 0.3028  / B:-0.29 0.09 0.3028    length: 0.08)
+      - 1: border 197   (A:-0.29 0.09 0.3028  / B:-0.011 0.09 0.3028    length: 0.279)
+      - 2: border 198   (A:-0.011 0.09 0.3028  / B:-0.011 0.01 0.3028    length: 0.08)
+      - 3: border 199   (A:-0.011 0.01 0.3028  / B:-0.29 0.01 0.3028    length: 0.279)
+  *Mesh 50 (0:5100/5100)
+      - 0: border 200   (A:-0.011 0.01 0.3028  / B:-0.011 0.09 0.3028    length: 0.08)
+      - 1: border 201   (A:-0.011 0.09 0.3028  / B:-0.011 0.09 0.301    length: 0.0018)
+      - 2: border 202   (A:-0.011 0.09 0.301  / B:-0.011 0.01 0.301    length: 0.08)
+      - 3: border 203   (A:-0.011 0.01 0.301  / B:-0.011 0.01 0.3028    length: 0.0018)
+  *Mesh 51 (0:5200/5200)
+      - 0: border 204   (A:-0.011 0.09 0.3028  / B:-0.29 0.09 0.3028    length: 0.279)
+      - 1: border 205   (A:-0.29 0.09 0.3028  / B:-0.29 0.09 0.301    length: 0.0018)
+      - 2: border 206   (A:-0.29 0.09 0.301  / B:-0.011 0.09 0.301    length: 0.279)
+      - 3: border 207   (A:-0.011 0.09 0.301  / B:-0.011 0.09 0.3028    length: 0.0018)
+  *Mesh 52 (0:5300/5300)
+      - 0: border 208   (A:-0.011 0.01 0.3028  / B:-0.29 0.01 0.3028    length: 0.279)
+      - 1: border 209   (A:-0.29 0.01 0.3028  / B:-0.29 0.01 0.301    length: 0.0018)
+      - 2: border 210   (A:-0.29 0.01 0.301  / B:-0.011 0.01 0.301    length: 0.279)
+      - 3: border 211   (A:-0.011 0.01 0.301  / B:-0.011 0.01 0.3028    length: 0.0018)
+  *Mesh 53 (0:5400/5400)
+      - 0: border 212   (A:-0.29 0.01 0.3028  / B:-0.29 0.09 0.3028    length: 0.08)
+      - 1: border 213   (A:-0.29 0.09 0.3028  / B:-0.29 0.09 0.301    length: 0.0018)
+      - 2: border 214   (A:-0.29 0.09 0.301  / B:-0.29 0.01 0.301    length: 0.08)
+      - 3: border 215   (A:-0.29 0.01 0.301  / B:-0.29 0.01 0.3028    length: 0.0018)
+  *Mesh 54 (0:5500/5500)
+      - 0: border 216   (A:0 0 0.29  / B:0.1 0 0.29    length: 0.1)
+      - 1: border 217   (A:0.1 0 0.29  / B:0.1 0.1 0.29    length: 0.1)
+      - 2: border 218   (A:0.1 0.1 0.29  / B:0 0.1 0.29    length: 0.1)
+      - 3: border 219   (A:0 0.1 0.29  / B:0 0 0.29    length: 0.1)
+  *Mesh 55 (0:5600/5600)
+      - 0: border 220   (A:0 0 0.28  / B:0.1 0 0.28    length: 0.1)
+      - 1: border 221   (A:0.1 0 0.28  / B:0.1 0.1 0.28    length: 0.1)
+      - 2: border 222   (A:0.1 0.1 0.28  / B:0 0.1 0.28    length: 0.1)
+      - 3: border 223   (A:0 0.1 0.28  / B:0 0 0.28    length: 0.1)
+  *Mesh 56 (0:5700/5700)
+      - 0: border 224   (A:0 0 0.27  / B:0.1 0 0.27    length: 0.1)
+      - 1: border 225   (A:0.1 0 0.27  / B:0.1 0.1 0.27    length: 0.1)
+      - 2: border 226   (A:0.1 0.1 0.27  / B:0 0.1 0.27    length: 0.1)
+      - 3: border 227   (A:0 0.1 0.27  / B:0 0 0.27    length: 0.1)
+  *Mesh 57 (0:5800/5800)
+      - 0: border 228   (A:0 0 0.26  / B:0.1 0 0.26    length: 0.1)
+      - 1: border 229   (A:0.1 0 0.26  / B:0.1 0.1 0.26    length: 0.1)
+      - 2: border 230   (A:0.1 0.1 0.26  / B:0 0.1 0.26    length: 0.1)
+      - 3: border 231   (A:0 0.1 0.26  / B:0 0 0.26    length: 0.1)
+  *Mesh 58 (0:5900/5900)
+      - 0: border 232   (A:0 0 0.2  / B:0.1 0 0.2    length: 0.1)
+      - 1: border 233   (A:0.1 0 0.2  / B:0.1 0.1 0.2    length: 0.1)
+      - 2: border 234   (A:0.1 0.1 0.2  / B:0 0.1 0.2    length: 0.1)
+      - 3: border 235   (A:0 0.1 0.2  / B:0 0 0.2    length: 0.1)
+  *Mesh 59 (0:6000/6000)
+      - 0: border 236   (A:0 0 0.1  / B:0.1 0 0.1    length: 0.1)
+      - 1: border 237   (A:0.1 0 0.1  / B:0.1 0.1 0.1    length: 0.1)
+      - 2: border 238   (A:0.1 0.1 0.1  / B:0 0.1 0.1    length: 0.1)
+      - 3: border 239   (A:0 0.1 0.1  / B:0 0 0.1    length: 0.1)
+State  4 : Edges creation (contact)                                            Time :  Thu Mar 11 18:37:28 2021
+
+
+CONTACT Structure dump:
+-----------------------
+
+  *Border 0
+      - 0:   contact 2  (0 12) (resistance -1) (forced 0), (A:0 0 0  / B:0.1 0 0)  dist=0   length=0.1
+  *Border 1
+      - 0:   contact 1  (1 8) (resistance -1) (forced 0), (A:0.1 0 0  / B:0.1 0.1 0)  dist=0   length=0.1
+  *Border 2
+      - 0:   contact 3  (2 16) (resistance -1) (forced 0), (A:0.1 0.1 0  / B:0 0.1 0)  dist=0   length=0.1
+  *Border 3
+      - 0:   contact 0  (3 4) (resistance -1) (forced 0), (A:0 0.1 0  / B:0 0 0)  dist=0   length=0.1
+  *Border 4
+      - 0:   contact 0  (3 4) (resistance -1) (forced 0), (A:0 0.1 0  / B:0 0 0)  dist=0   length=0.1
+  *Border 5
+      - 0:   contact 5  (5 17) (resistance -1) (forced 0), (A:0 0.1 0  / B:0 0.1 0.3)  dist=0   length=0.3
+  *Border 6
+      - 0:   contact 6  (6 23) (resistance -1) (forced 0), (A:0 0.1 0.3  / B:0 0 0.3)  dist=0   length=0.1
+  *Border 7
+      - 0:   contact 4  (7 13) (resistance -1) (forced 0), (A:0 0 0.3  / B:0 0 0)  dist=0   length=0.3
+  *Border 8
+      - 0:   contact 1  (1 8) (resistance -1) (forced 0), (A:0.1 0 0  / B:0.1 0.1 0)  dist=0   length=0.1
+  *Border 9
+      - 0:   contact 8  (9 19) (resistance -1) (forced 0), (A:0.1 0.1 0  / B:0.1 0.1 0.3)  dist=0   length=0.3
+  *Border 10
+      - 0:   contact 9  (10 21) (resistance -1) (forced 0), (A:0.1 0.1 0.3  / B:0.1 0 0.3)  dist=0   length=0.1
+  *Border 11
+      - 0:   contact 7  (11 15) (resistance -1) (forced 0), (A:0.1 0 0.3  / B:0.1 0 0)  dist=0   length=0.3
+  *Border 12
+      - 0:   contact 2  (0 12) (resistance -1) (forced 0), (A:0 0 0  / B:0.1 0 0)  dist=0   length=0.1
+  *Border 13
+      - 0:   contact 4  (7 13) (resistance -1) (forced 0), (A:0 0 0.3  / B:0 0 0)  dist=0   length=0.3
+  *Border 14
+      - 0:   contact 10  (14 20) (resistance -1) (forced 0), (A:0 0 0.3  / B:0.1 0 0.3)  dist=0   length=0.1
+  *Border 15
+      - 0:   contact 7  (11 15) (resistance -1) (forced 0), (A:0.1 0 0.3  / B:0.1 0 0)  dist=0   length=0.3
+  *Border 16
+      - 0:   contact 3  (2 16) (resistance -1) (forced 0), (A:0.1 0.1 0  / B:0 0.1 0)  dist=0   length=0.1
+  *Border 17
+      - 0:   contact 5  (5 17) (resistance -1) (forced 0), (A:0 0.1 0  / B:0 0.1 0.3)  dist=0   length=0.3
+  *Border 18
+      - 0:   contact 11  (18 22) (resistance -1) (forced 0), (A:0 0.1 0.3  / B:0.1 0.1 0.3)  dist=0   length=0.1
+  *Border 19
+      - 0:   contact 8  (9 19) (resistance -1) (forced 0), (A:0.1 0.1 0  / B:0.1 0.1 0.3)  dist=0   length=0.3
+  *Border 20
+      - 0:   contact 10  (14 20) (resistance -1) (forced 0), (A:0 0 0.3  / B:0.1 0 0.3)  dist=0   length=0.1
+  *Border 21
+      - 0:   contact 9  (10 21) (resistance -1) (forced 0), (A:0.1 0.1 0.3  / B:0.1 0 0.3)  dist=0   length=0.1
+  *Border 22
+      - 0:   contact 11  (18 22) (resistance -1) (forced 0), (A:0 0.1 0.3  / B:0.1 0.1 0.3)  dist=0   length=0.1
+  *Border 23
+      - 0:   contact 6  (6 23) (resistance -1) (forced 0), (A:0 0.1 0.3  / B:0 0 0.3)  dist=0   length=0.1
+  *Border 24
+      - 0:   contact 13  (24 38) (resistance -1) (forced 0), (A:0.1 0.4 0.3  / B:0 0.4 0.3)  dist=0   length=0.1
+  *Border 25
+      - 0:   contact 14  (25 40) (resistance -1) (forced 0), (A:0 0.4 0.3  / B:0 0.101 0.3)  dist=0   length=0.299
+  *Border 26
+      - 0:   contact 12  (26 34) (resistance -1) (forced 0), (A:0 0.101 0.3  / B:0.1 0.101 0.3)  dist=2.77556e-17   length=0.1
+  *Border 27
+      - 0:   contact 15  (27 44) (resistance -1) (forced 0), (A:0.1 0.101 0.3  / B:0.1 0.4 0.3)  dist=0   length=0.299
+  *Border 28
+      - 0:   contact 17  (28 36) (resistance -1) (forced 0), (A:0.1 0.4 0.2975  / B:0 0.4 0.2975)  dist=0   length=0.1
+  *Border 29
+      - 0:   contact 18  (29 42) (resistance -1) (forced 0), (A:0 0.4 0.2975  / B:0 0.101 0.2975)  dist=0   length=0.299
+  *Border 30
+      - 0:   contact 16  (30 32) (resistance -1) (forced 0), (A:0 0.101 0.2975  / B:0.1 0.101 0.2975)  dist=2.77556e-17   length=0.1
+  *Border 31
+      - 0:   contact 19  (31 46) (resistance -1) (forced 0), (A:0.1 0.101 0.2975  / B:0.1 0.4 0.2975)  dist=0   length=0.299
+  *Border 32
+      - 0:   contact 16  (30 32) (resistance -1) (forced 0), (A:0 0.101 0.2975  / B:0.1 0.101 0.2975)  dist=2.77556e-17   length=0.1
+  *Border 33
+      - 0:   contact 20  (33 41) (resistance -1) (forced 0), (A:0 0.101 0.2975  / B:0 0.101 0.3)  dist=2.77556e-17   length=0.0025
+  *Border 34
+      - 0:   contact 12  (26 34) (resistance -1) (forced 0), (A:0 0.101 0.3  / B:0.1 0.101 0.3)  dist=2.77556e-17   length=0.1
+  *Border 35
+      - 0:   contact 21  (35 45) (resistance -1) (forced 0), (A:0.1 0.101 0.3  / B:0.1 0.101 0.2975)  dist=2.77556e-17   length=0.0025
+  *Border 36
+      - 0:   contact 17  (28 36) (resistance -1) (forced 0), (A:0.1 0.4 0.2975  / B:0 0.4 0.2975)  dist=0   length=0.1
+  *Border 37
+      - 0:   contact 22  (37 43) (resistance -1) (forced 0), (A:0 0.4 0.2975  / B:0 0.4 0.3)  dist=0   length=0.0025
+  *Border 38
+      - 0:   contact 13  (24 38) (resistance -1) (forced 0), (A:0.1 0.4 0.3  / B:0 0.4 0.3)  dist=0   length=0.1
+  *Border 39
+      - 0:   contact 23  (39 47) (resistance -1) (forced 0), (A:0.1 0.4 0.3  / B:0.1 0.4 0.2975)  dist=0   length=0.0025
+  *Border 40
+      - 0:   contact 14  (25 40) (resistance -1) (forced 0), (A:0 0.4 0.3  / B:0 0.101 0.3)  dist=0   length=0.299
+  *Border 41
+      - 0:   contact 20  (33 41) (resistance -1) (forced 0), (A:0 0.101 0.2975  / B:0 0.101 0.3)  dist=2.77556e-17   length=0.0025
+  *Border 42
+      - 0:   contact 18  (29 42) (resistance -1) (forced 0), (A:0 0.4 0.2975  / B:0 0.101 0.2975)  dist=0   length=0.299
+  *Border 43
+      - 0:   contact 22  (37 43) (resistance -1) (forced 0), (A:0 0.4 0.2975  / B:0 0.4 0.3)  dist=0   length=0.0025
+  *Border 44
+      - 0:   contact 15  (27 44) (resistance -1) (forced 0), (A:0.1 0.101 0.3  / B:0.1 0.4 0.3)  dist=0   length=0.299
+  *Border 45
+      - 0:   contact 21  (35 45) (resistance -1) (forced 0), (A:0.1 0.101 0.3  / B:0.1 0.101 0.2975)  dist=2.77556e-17   length=0.0025
+  *Border 46
+      - 0:   contact 19  (31 46) (resistance -1) (forced 0), (A:0.1 0.101 0.2975  / B:0.1 0.4 0.2975)  dist=0   length=0.299
+  *Border 47
+      - 0:   contact 23  (39 47) (resistance -1) (forced 0), (A:0.1 0.4 0.3  / B:0.1 0.4 0.2975)  dist=0   length=0.0025
+  *Border 48
+      - 0:   contact 26  (48 66) (resistance -1) (forced 0), (A:-0.3 0 0.3  / B:-0.3 0.1 0.3)  dist=0   length=0.1
+  *Border 49
+      - 0:   contact 24  (49 59) (resistance -1) (forced 0), (A:-0.3 0.1 0.3  / B:-0.001 0.1 0.3)  dist=0   length=0.299
+  *Border 50
+      - 0:   contact 27  (50 70) (resistance -1) (forced 0), (A:-0.001 0.1 0.3  / B:-0.001 0 0.3)  dist=8.67362e-19   length=0.1
+  *Border 51
+      - 0:   contact 25  (51 63) (resistance -1) (forced 0), (A:-0.001 0 0.3  / B:-0.3 0 0.3)  dist=0   length=0.299
+  *Border 52
+      - 0:   contact 30  (52 64) (resistance -1) (forced 0), (A:-0.3 0 0.2975  / B:-0.3 0.1 0.2975)  dist=0   length=0.1
+  *Border 53
+      - 0:   contact 28  (53 57) (resistance -1) (forced 0), (A:-0.3 0.1 0.2975  / B:-0.001 0.1 0.2975)  dist=0   length=0.299
+  *Border 54
+      - 0:   contact 31  (54 68) (resistance -1) (forced 0), (A:-0.001 0.1 0.2975  / B:-0.001 0 0.2975)  dist=8.67362e-19   length=0.1
+  *Border 55
+      - 0:   contact 29  (55 61) (resistance -1) (forced 0), (A:-0.001 0 0.2975  / B:-0.3 0 0.2975)  dist=0   length=0.299
+  *Border 56
+      - 0:   contact 32  (56 65) (resistance -1) (forced 0), (A:-0.3 0.1 0.3  / B:-0.3 0.1 0.2975)  dist=0   length=0.0025
+  *Border 57
+      - 0:   contact 28  (53 57) (resistance -1) (forced 0), (A:-0.3 0.1 0.2975  / B:-0.001 0.1 0.2975)  dist=0   length=0.299
+  *Border 58
+      - 0:   contact 33  (58 69) (resistance -1) (forced 0), (A:-0.001 0.1 0.2975  / B:-0.001 0.1 0.3)  dist=8.67362e-19   length=0.0025
+  *Border 59
+      - 0:   contact 24  (49 59) (resistance -1) (forced 0), (A:-0.3 0.1 0.3  / B:-0.001 0.1 0.3)  dist=0   length=0.299
+  *Border 60
+      - 0:   contact 34  (60 67) (resistance -1) (forced 0), (A:-0.3 0 0.3  / B:-0.3 0 0.2975)  dist=0   length=0.0025
+  *Border 61
+      - 0:   contact 29  (55 61) (resistance -1) (forced 0), (A:-0.001 0 0.2975  / B:-0.3 0 0.2975)  dist=0   length=0.299
+  *Border 62
+      - 0:   contact 35  (62 71) (resistance -1) (forced 0), (A:-0.001 0 0.2975  / B:-0.001 0 0.3)  dist=8.67362e-19   length=0.0025
+  *Border 63
+      - 0:   contact 25  (51 63) (resistance -1) (forced 0), (A:-0.001 0 0.3  / B:-0.3 0 0.3)  dist=0   length=0.299
+  *Border 64
+      - 0:   contact 30  (52 64) (resistance -1) (forced 0), (A:-0.3 0 0.2975  / B:-0.3 0.1 0.2975)  dist=0   length=0.1
+  *Border 65
+      - 0:   contact 32  (56 65) (resistance -1) (forced 0), (A:-0.3 0.1 0.3  / B:-0.3 0.1 0.2975)  dist=0   length=0.0025
+  *Border 66
+      - 0:   contact 26  (48 66) (resistance -1) (forced 0), (A:-0.3 0 0.3  / B:-0.3 0.1 0.3)  dist=0   length=0.1
+  *Border 67
+      - 0:   contact 34  (60 67) (resistance -1) (forced 0), (A:-0.3 0 0.3  / B:-0.3 0 0.2975)  dist=0   length=0.0025
+  *Border 68
+      - 0:   contact 31  (54 68) (resistance -1) (forced 0), (A:-0.001 0.1 0.2975  / B:-0.001 0 0.2975)  dist=8.67362e-19   length=0.1
+  *Border 69
+      - 0:   contact 33  (58 69) (resistance -1) (forced 0), (A:-0.001 0.1 0.2975  / B:-0.001 0.1 0.3)  dist=8.67362e-19   length=0.0025
+  *Border 70
+      - 0:   contact 27  (50 70) (resistance -1) (forced 0), (A:-0.001 0.1 0.3  / B:-0.001 0 0.3)  dist=8.67362e-19   length=0.1
+  *Border 71
+      - 0:   contact 35  (62 71) (resistance -1) (forced 0), (A:-0.001 0 0.2975  / B:-0.001 0 0.3)  dist=8.67362e-19   length=0.0025
+  *Border 72
+      - 0:   contact 39  (72 94) (resistance -1) (forced 0), (A:0.4 0 0.3  / B:0.4 0.1 0.3)  dist=0   length=0.1
+  *Border 73
+      - 0:   contact 36  (73 83) (resistance -1) (forced 0), (A:0.4 0.1 0.3  / B:0.101 0.1 0.3)  dist=0   length=0.299
+  *Border 74
+      - 0:   contact 38  (74 90) (resistance -1) (forced 0), (A:0.101 0.1 0.3  / B:0.101 0 0.3)  dist=2.77556e-17   length=0.1
+  *Border 75
+      - 0:   contact 37  (75 87) (resistance -1) (forced 0), (A:0.101 0 0.3  / B:0.4 0 0.3)  dist=0   length=0.299
+  *Border 76
+      - 0:   contact 43  (76 92) (resistance -1) (forced 0), (A:0.4 0 0.2975  / B:0.4 0.1 0.2975)  dist=0   length=0.1
+  *Border 77
+      - 0:   contact 40  (77 81) (resistance -1) (forced 0), (A:0.4 0.1 0.2975  / B:0.101 0.1 0.2975)  dist=0   length=0.299
+  *Border 78
+      - 0:   contact 42  (78 88) (resistance -1) (forced 0), (A:0.101 0.1 0.2975  / B:0.101 0 0.2975)  dist=2.77556e-17   length=0.1
+  *Border 79
+      - 0:   contact 41  (79 85) (resistance -1) (forced 0), (A:0.101 0 0.2975  / B:0.4 0 0.2975)  dist=0   length=0.299
+  *Border 80
+      - 0:   contact 45  (80 93) (resistance -1) (forced 0), (A:0.4 0.1 0.3  / B:0.4 0.1 0.2975)  dist=0   length=0.0025
+  *Border 81
+      - 0:   contact 40  (77 81) (resistance -1) (forced 0), (A:0.4 0.1 0.2975  / B:0.101 0.1 0.2975)  dist=0   length=0.299
+  *Border 82
+      - 0:   contact 44  (82 89) (resistance -1) (forced 0), (A:0.101 0.1 0.2975  / B:0.101 0.1 0.3)  dist=2.77556e-17   length=0.0025
+  *Border 83
+      - 0:   contact 36  (73 83) (resistance -1) (forced 0), (A:0.4 0.1 0.3  / B:0.101 0.1 0.3)  dist=0   length=0.299
+  *Border 84
+      - 0:   contact 47  (84 95) (resistance -1) (forced 0), (A:0.4 0 0.3  / B:0.4 0 0.2975)  dist=0   length=0.0025
+  *Border 85
+      - 0:   contact 41  (79 85) (resistance -1) (forced 0), (A:0.101 0 0.2975  / B:0.4 0 0.2975)  dist=0   length=0.299
+  *Border 86
+      - 0:   contact 46  (86 91) (resistance -1) (forced 0), (A:0.101 0 0.2975  / B:0.101 0 0.3)  dist=2.77556e-17   length=0.0025
+  *Border 87
+      - 0:   contact 37  (75 87) (resistance -1) (forced 0), (A:0.101 0 0.3  / B:0.4 0 0.3)  dist=0   length=0.299
+  *Border 88
+      - 0:   contact 42  (78 88) (resistance -1) (forced 0), (A:0.101 0.1 0.2975  / B:0.101 0 0.2975)  dist=2.77556e-17   length=0.1
+  *Border 89
+      - 0:   contact 44  (82 89) (resistance -1) (forced 0), (A:0.101 0.1 0.2975  / B:0.101 0.1 0.3)  dist=2.77556e-17   length=0.0025
+  *Border 90
+      - 0:   contact 38  (74 90) (resistance -1) (forced 0), (A:0.101 0.1 0.3  / B:0.101 0 0.3)  dist=2.77556e-17   length=0.1
+  *Border 91
+      - 0:   contact 46  (86 91) (resistance -1) (forced 0), (A:0.101 0 0.2975  / B:0.101 0 0.3)  dist=2.77556e-17   length=0.0025
+  *Border 92
+      - 0:   contact 43  (76 92) (resistance -1) (forced 0), (A:0.4 0 0.2975  / B:0.4 0.1 0.2975)  dist=0   length=0.1
+  *Border 93
+      - 0:   contact 45  (80 93) (resistance -1) (forced 0), (A:0.4 0.1 0.3  / B:0.4 0.1 0.2975)  dist=0   length=0.0025
+  *Border 94
+      - 0:   contact 39  (72 94) (resistance -1) (forced 0), (A:0.4 0 0.3  / B:0.4 0.1 0.3)  dist=0   length=0.1
+  *Border 95
+      - 0:   contact 47  (84 95) (resistance -1) (forced 0), (A:0.4 0 0.3  / B:0.4 0 0.2975)  dist=0   length=0.0025
+  *Border 96
+      - 0:   contact 48  (96 106) (resistance -1) (forced 0), (A:0.1 -0.3 0.3  / B:0 -0.3 0.3)  dist=0   length=0.1
+  *Border 97
+      - 0:   contact 51  (97 119) (resistance -1) (forced 0), (A:0 -0.3 0.3  / B:0 -0.001 0.3)  dist=0   length=0.299
+  *Border 98
+      - 0:   contact 49  (98 110) (resistance -1) (forced 0), (A:0 -0.001 0.3  / B:0.1 -0.001 0.3)  dist=8.67362e-19   length=0.1
+  *Border 99
+      - 0:   contact 50  (99 115) (resistance -1) (forced 0), (A:0.1 -0.001 0.3  / B:0.1 -0.3 0.3)  dist=0   length=0.299
+  *Border 100
+      - 0:   contact 52  (100 104) (resistance -1) (forced 0), (A:0.1 -0.3 0.2975  / B:0 -0.3 0.2975)  dist=0   length=0.1
+  *Border 101
+      - 0:   contact 55  (101 117) (resistance -1) (forced 0), (A:0 -0.3 0.2975  / B:0 -0.001 0.2975)  dist=0   length=0.299
+  *Border 102
+      - 0:   contact 53  (102 108) (resistance -1) (forced 0), (A:0 -0.001 0.2975  / B:0.1 -0.001 0.2975)  dist=8.67362e-19   length=0.1
+  *Border 103
+      - 0:   contact 54  (103 113) (resistance -1) (forced 0), (A:0.1 -0.001 0.2975  / B:0.1 -0.3 0.2975)  dist=0   length=0.299
+  *Border 104
+      - 0:   contact 52  (100 104) (resistance -1) (forced 0), (A:0.1 -0.3 0.2975  / B:0 -0.3 0.2975)  dist=0   length=0.1
+  *Border 105
+      - 0:   contact 57  (105 116) (resistance -1) (forced 0), (A:0 -0.3 0.2975  / B:0 -0.3 0.3)  dist=0   length=0.0025
+  *Border 106
+      - 0:   contact 48  (96 106) (resistance -1) (forced 0), (A:0.1 -0.3 0.3  / B:0 -0.3 0.3)  dist=0   length=0.1
+  *Border 107
+      - 0:   contact 56  (107 112) (resistance -1) (forced 0), (A:0.1 -0.3 0.3  / B:0.1 -0.3 0.2975)  dist=0   length=0.0025
+  *Border 108
+      - 0:   contact 53  (102 108) (resistance -1) (forced 0), (A:0 -0.001 0.2975  / B:0.1 -0.001 0.2975)  dist=8.67362e-19   length=0.1
+  *Border 109
+      - 0:   contact 59  (109 118) (resistance -1) (forced 0), (A:0 -0.001 0.2975  / B:0 -0.001 0.3)  dist=8.67362e-19   length=0.0025
+  *Border 110
+      - 0:   contact 49  (98 110) (resistance -1) (forced 0), (A:0 -0.001 0.3  / B:0.1 -0.001 0.3)  dist=8.67362e-19   length=0.1
+  *Border 111
+      - 0:   contact 58  (111 114) (resistance -1) (forced 0), (A:0.1 -0.001 0.3  / B:0.1 -0.001 0.2975)  dist=8.67362e-19   length=0.0025
+  *Border 112
+      - 0:   contact 56  (107 112) (resistance -1) (forced 0), (A:0.1 -0.3 0.3  / B:0.1 -0.3 0.2975)  dist=0   length=0.0025
+  *Border 113
+      - 0:   contact 54  (103 113) (resistance -1) (forced 0), (A:0.1 -0.001 0.2975  / B:0.1 -0.3 0.2975)  dist=0   length=0.299
+  *Border 114
+      - 0:   contact 58  (111 114) (resistance -1) (forced 0), (A:0.1 -0.001 0.3  / B:0.1 -0.001 0.2975)  dist=8.67362e-19   length=0.0025
+  *Border 115
+      - 0:   contact 50  (99 115) (resistance -1) (forced 0), (A:0.1 -0.001 0.3  / B:0.1 -0.3 0.3)  dist=0   length=0.299
+  *Border 116
+      - 0:   contact 57  (105 116) (resistance -1) (forced 0), (A:0 -0.3 0.2975  / B:0 -0.3 0.3)  dist=0   length=0.0025
+  *Border 117
+      - 0:   contact 55  (101 117) (resistance -1) (forced 0), (A:0 -0.3 0.2975  / B:0 -0.001 0.2975)  dist=0   length=0.299
+  *Border 118
+      - 0:   contact 59  (109 118) (resistance -1) (forced 0), (A:0 -0.001 0.2975  / B:0 -0.001 0.3)  dist=8.67362e-19   length=0.0025
+  *Border 119
+      - 0:   contact 51  (97 119) (resistance -1) (forced 0), (A:0 -0.3 0.3  / B:0 -0.001 0.3)  dist=0   length=0.299
+  *Border 120
+      - 0:   contact 62  (120 136) (resistance -1) (forced 0), (A:0.09 -0.29 0.301  / B:0.01 -0.29 0.301)  dist=0   length=0.08
+  *Border 121
+      - 0:   contact 61  (121 132) (resistance -1) (forced 0), (A:0.01 -0.29 0.301  / B:0.01 -0.29 0.3028)  dist=5.20417e-18   length=0.0018
+  *Border 122
+      - 0:   contact 63  (122 140) (resistance -1) (forced 0), (A:0.01 -0.29 0.3028  / B:0.09 -0.29 0.3028)  dist=0   length=0.08
+  *Border 123
+      - 0:   contact 60  (123 128) (resistance -1) (forced 0), (A:0.09 -0.29 0.3028  / B:0.09 -0.29 0.301)  dist=0   length=0.0018
+  *Border 124
+      - 0:   contact 66  (124 138) (resistance -1) (forced 0), (A:0.09 -0.011 0.301  / B:0.01 -0.011 0.301)  dist=1.04083e-17   length=0.08
+  *Border 125
+      - 0:   contact 65  (125 134) (resistance -1) (forced 0), (A:0.01 -0.011 0.301  / B:0.01 -0.011 0.3028)  dist=1.16369e-17   length=0.0018
+  *Border 126
+      - 0:   contact 67  (126 142) (resistance -1) (forced 0), (A:0.01 -0.011 0.3028  / B:0.09 -0.011 0.3028)  dist=1.04083e-17   length=0.08
+  *Border 127
+      - 0:   contact 64  (127 130) (resistance -1) (forced 0), (A:0.09 -0.011 0.3028  / B:0.09 -0.011 0.301)  dist=1.04083e-17   length=0.0018
+  *Border 128
+      - 0:   contact 60  (123 128) (resistance -1) (forced 0), (A:0.09 -0.29 0.3028  / B:0.09 -0.29 0.301)  dist=0   length=0.0018
+  *Border 129
+      - 0:   contact 69  (129 143) (resistance -1) (forced 0), (A:0.09 -0.29 0.3028  / B:0.09 -0.011 0.3028)  dist=0   length=0.279
+  *Border 130
+      - 0:   contact 64  (127 130) (resistance -1) (forced 0), (A:0.09 -0.011 0.3028  / B:0.09 -0.011 0.301)  dist=1.04083e-17   length=0.0018
+  *Border 131
+      - 0:   contact 68  (131 139) (resistance -1) (forced 0), (A:0.09 -0.011 0.301  / B:0.09 -0.29 0.301)  dist=0   length=0.279
+  *Border 132
+      - 0:   contact 61  (121 132) (resistance -1) (forced 0), (A:0.01 -0.29 0.301  / B:0.01 -0.29 0.3028)  dist=5.20417e-18   length=0.0018
+  *Border 133
+      - 0:   contact 71  (133 141) (resistance -1) (forced 0), (A:0.01 -0.29 0.3028  / B:0.01 -0.011 0.3028)  dist=5.20417e-18   length=0.279
+  *Border 134
+      - 0:   contact 65  (125 134) (resistance -1) (forced 0), (A:0.01 -0.011 0.301  / B:0.01 -0.011 0.3028)  dist=1.16369e-17   length=0.0018
+  *Border 135
+      - 0:   contact 70  (135 137) (resistance -1) (forced 0), (A:0.01 -0.011 0.301  / B:0.01 -0.29 0.301)  dist=5.20417e-18   length=0.279
+  *Border 136
+      - 0:   contact 62  (120 136) (resistance -1) (forced 0), (A:0.09 -0.29 0.301  / B:0.01 -0.29 0.301)  dist=0   length=0.08
+  *Border 137
+      - 0:   contact 70  (135 137) (resistance -1) (forced 0), (A:0.01 -0.011 0.301  / B:0.01 -0.29 0.301)  dist=5.20417e-18   length=0.279
+  *Border 138
+      - 0:   contact 66  (124 138) (resistance -1) (forced 0), (A:0.09 -0.011 0.301  / B:0.01 -0.011 0.301)  dist=1.04083e-17   length=0.08
+  *Border 139
+      - 0:   contact 68  (131 139) (resistance -1) (forced 0), (A:0.09 -0.011 0.301  / B:0.09 -0.29 0.301)  dist=0   length=0.279
+  *Border 140
+      - 0:   contact 63  (122 140) (resistance -1) (forced 0), (A:0.01 -0.29 0.3028  / B:0.09 -0.29 0.3028)  dist=0   length=0.08
+  *Border 141
+      - 0:   contact 71  (133 141) (resistance -1) (forced 0), (A:0.01 -0.29 0.3028  / B:0.01 -0.011 0.3028)  dist=5.20417e-18   length=0.279
+  *Border 142
+      - 0:   contact 67  (126 142) (resistance -1) (forced 0), (A:0.01 -0.011 0.3028  / B:0.09 -0.011 0.3028)  dist=1.04083e-17   length=0.08
+  *Border 143
+      - 0:   contact 69  (129 143) (resistance -1) (forced 0), (A:0.09 -0.29 0.3028  / B:0.09 -0.011 0.3028)  dist=0   length=0.279
+  *Border 144
+      - 0:   contact 73  (144 152) (resistance -1) (forced 0), (A:0.09 0.39 0.301  / B:0.01 0.39 0.301)  dist=0   length=0.08
+  *Border 145
+      - 0:   contact 74  (145 163) (resistance -1) (forced 0), (A:0.01 0.39 0.301  / B:0.01 0.111 0.301)  dist=5.20417e-18   length=0.279
+  *Border 146
+      - 0:   contact 72  (146 148) (resistance -1) (forced 0), (A:0.01 0.111 0.301  / B:0.09 0.111 0.301)  dist=1.38778e-17   length=0.08
+  *Border 147
+      - 0:   contact 75  (147 167) (resistance -1) (forced 0), (A:0.09 0.111 0.301  / B:0.09 0.39 0.301)  dist=0   length=0.279
+  *Border 148
+      - 0:   contact 72  (146 148) (resistance -1) (forced 0), (A:0.01 0.111 0.301  / B:0.09 0.111 0.301)  dist=1.38778e-17   length=0.08
+  *Border 149
+      - 0:   contact 77  (149 162) (resistance -1) (forced 0), (A:0.01 0.111 0.301  / B:0.01 0.111 0.3028)  dist=1.48215e-17   length=0.0018
+  *Border 150
+      - 0:   contact 76  (150 158) (resistance -1) (forced 0), (A:0.01 0.111 0.3028  / B:0.09 0.111 0.3028)  dist=1.38778e-17   length=0.08
+  *Border 151
+      - 0:   contact 78  (151 166) (resistance -1) (forced 0), (A:0.09 0.111 0.3028  / B:0.09 0.111 0.301)  dist=1.38778e-17   length=0.0018
+  *Border 152
+      - 0:   contact 73  (144 152) (resistance -1) (forced 0), (A:0.09 0.39 0.301  / B:0.01 0.39 0.301)  dist=0   length=0.08
+  *Border 153
+      - 0:   contact 80  (153 160) (resistance -1) (forced 0), (A:0.01 0.39 0.301  / B:0.01 0.39 0.3028)  dist=5.20417e-18   length=0.0018
+  *Border 154
+      - 0:   contact 79  (154 156) (resistance -1) (forced 0), (A:0.01 0.39 0.3028  / B:0.09 0.39 0.3028)  dist=0   length=0.08
+  *Border 155
+      - 0:   contact 81  (155 164) (resistance -1) (forced 0), (A:0.09 0.39 0.3028  / B:0.09 0.39 0.301)  dist=0   length=0.0018
+  *Border 156
+      - 0:   contact 79  (154 156) (resistance -1) (forced 0), (A:0.01 0.39 0.3028  / B:0.09 0.39 0.3028)  dist=0   length=0.08
+  *Border 157
+      - 0:   contact 82  (157 161) (resistance -1) (forced 0), (A:0.01 0.39 0.3028  / B:0.01 0.111 0.3028)  dist=5.20417e-18   length=0.279
+  *Border 158
+      - 0:   contact 76  (150 158) (resistance -1) (forced 0), (A:0.01 0.111 0.3028  / B:0.09 0.111 0.3028)  dist=1.38778e-17   length=0.08
+  *Border 159
+      - 0:   contact 83  (159 165) (resistance -1) (forced 0), (A:0.09 0.111 0.3028  / B:0.09 0.39 0.3028)  dist=0   length=0.279
+  *Border 160
+      - 0:   contact 80  (153 160) (resistance -1) (forced 0), (A:0.01 0.39 0.301  / B:0.01 0.39 0.3028)  dist=5.20417e-18   length=0.0018
+  *Border 161
+      - 0:   contact 82  (157 161) (resistance -1) (forced 0), (A:0.01 0.39 0.3028  / B:0.01 0.111 0.3028)  dist=5.20417e-18   length=0.279
+  *Border 162
+      - 0:   contact 77  (149 162) (resistance -1) (forced 0), (A:0.01 0.111 0.301  / B:0.01 0.111 0.3028)  dist=1.48215e-17   length=0.0018
+  *Border 163
+      - 0:   contact 74  (145 163) (resistance -1) (forced 0), (A:0.01 0.39 0.301  / B:0.01 0.111 0.301)  dist=5.20417e-18   length=0.279
+  *Border 164
+      - 0:   contact 81  (155 164) (resistance -1) (forced 0), (A:0.09 0.39 0.3028  / B:0.09 0.39 0.301)  dist=0   length=0.0018
+  *Border 165
+      - 0:   contact 83  (159 165) (resistance -1) (forced 0), (A:0.09 0.111 0.3028  / B:0.09 0.39 0.3028)  dist=0   length=0.279
+  *Border 166
+      - 0:   contact 78  (151 166) (resistance -1) (forced 0), (A:0.09 0.111 0.3028  / B:0.09 0.111 0.301)  dist=1.38778e-17   length=0.0018
+  *Border 167
+      - 0:   contact 75  (147 167) (resistance -1) (forced 0), (A:0.09 0.111 0.301  / B:0.09 0.39 0.301)  dist=0   length=0.279
+  *Border 168
+      - 0:   contact 86  (168 180) (resistance -1) (forced 0), (A:0.111 0.01 0.3028  / B:0.111 0.09 0.3028)  dist=0   length=0.08
+      - 1:   contact 91  (168 190) (resistance -1) (forced 0), (A:0.111 0.01 0.3028  / B:0.111 0.09 0.3028)  dist=1.38778e-17   length=0.08
+  *Border 169
+      - 0:   contact 84  (169 173) (resistance -1) (forced 0), (A:0.111 0.09 0.3028  / B:0.111 0.09 0.301)  dist=1.38778e-17   length=0.0018
+      - 1:   contact 87  (169 181) (resistance -1) (forced 0), (A:0.111 0.09 0.3028  / B:0.111 0.09 0.301)  dist=0   length=0.0018
+  *Border 170
+      - 0:   contact 88  (170 182) (resistance -1) (forced 0), (A:0.111 0.09 0.301  / B:0.111 0.01 0.301)  dist=0   length=0.08
+      - 1:   contact 90  (170 186) (resistance -1) (forced 0), (A:0.111 0.09 0.301  / B:0.111 0.01 0.301)  dist=1.38778e-17   length=0.08
+  *Border 171
+      - 0:   contact 85  (171 177) (resistance -1) (forced 0), (A:0.111 0.01 0.301  / B:0.111 0.01 0.3028)  dist=1.38778e-17   length=0.0018
+      - 1:   contact 89  (171 183) (resistance -1) (forced 0), (A:0.111 0.01 0.301  / B:0.111 0.01 0.3028)  dist=0   length=0.0018
+  *Border 172
+      - 0:   contact 94  (172 189) (resistance -1) (forced 0), (A:0.39 0.09 0.3028  / B:0.111 0.09 0.3028)  dist=0   length=0.279
+  *Border 173
+      - 0:   contact 84  (169 173) (resistance -1) (forced 0), (A:0.111 0.09 0.3028  / B:0.111 0.09 0.301)  dist=1.38778e-17   length=0.0018
+      - 1:   contact 92  (173 181) (resistance -1) (forced 0), (A:0.111 0.09 0.3028  / B:0.111 0.09 0.301)  dist=1.38778e-17   length=0.0018
+  *Border 174
+      - 0:   contact 93  (174 185) (resistance -1) (forced 0), (A:0.111 0.09 0.301  / B:0.39 0.09 0.301)  dist=0   length=0.279
+  *Border 175
+  *Border 176
+      - 0:   contact 97  (176 191) (resistance -1) (forced 0), (A:0.39 0.01 0.3028  / B:0.111 0.01 0.3028)  dist=0   length=0.279
+  *Border 177
+      - 0:   contact 85  (171 177) (resistance -1) (forced 0), (A:0.111 0.01 0.301  / B:0.111 0.01 0.3028)  dist=1.38778e-17   length=0.0018
+      - 1:   contact 95  (177 183) (resistance -1) (forced 0), (A:0.111 0.01 0.3028  / B:0.111 0.01 0.301)  dist=1.38778e-17   length=0.0018
+  *Border 178
+      - 0:   contact 96  (178 187) (resistance -1) (forced 0), (A:0.111 0.01 0.301  / B:0.39 0.01 0.301)  dist=0   length=0.279
+  *Border 179
+  *Border 180
+      - 0:   contact 86  (168 180) (resistance -1) (forced 0), (A:0.111 0.01 0.3028  / B:0.111 0.09 0.3028)  dist=0   length=0.08
+      - 1:   contact 99  (180 190) (resistance -1) (forced 0), (A:0.111 0.01 0.3028  / B:0.111 0.09 0.3028)  dist=1.38778e-17   length=0.08
+  *Border 181
+      - 0:   contact 87  (169 181) (resistance -1) (forced 0), (A:0.111 0.09 0.3028  / B:0.111 0.09 0.301)  dist=0   length=0.0018
+      - 1:   contact 92  (173 181) (resistance -1) (forced 0), (A:0.111 0.09 0.3028  / B:0.111 0.09 0.301)  dist=1.38778e-17   length=0.0018
+  *Border 182
+      - 0:   contact 88  (170 182) (resistance -1) (forced 0), (A:0.111 0.09 0.301  / B:0.111 0.01 0.301)  dist=0   length=0.08
+      - 1:   contact 98  (182 186) (resistance -1) (forced 0), (A:0.111 0.09 0.301  / B:0.111 0.01 0.301)  dist=1.38778e-17   length=0.08
+  *Border 183
+      - 0:   contact 89  (171 183) (resistance -1) (forced 0), (A:0.111 0.01 0.301  / B:0.111 0.01 0.3028)  dist=0   length=0.0018
+      - 1:   contact 95  (177 183) (resistance -1) (forced 0), (A:0.111 0.01 0.3028  / B:0.111 0.01 0.301)  dist=1.38778e-17   length=0.0018
+  *Border 184
+  *Border 185
+      - 0:   contact 93  (174 185) (resistance -1) (forced 0), (A:0.111 0.09 0.301  / B:0.39 0.09 0.301)  dist=0   length=0.279
+  *Border 186
+      - 0:   contact 90  (170 186) (resistance -1) (forced 0), (A:0.111 0.09 0.301  / B:0.111 0.01 0.301)  dist=1.38778e-17   length=0.08
+      - 1:   contact 98  (182 186) (resistance -1) (forced 0), (A:0.111 0.09 0.301  / B:0.111 0.01 0.301)  dist=1.38778e-17   length=0.08
+  *Border 187
+      - 0:   contact 96  (178 187) (resistance -1) (forced 0), (A:0.111 0.01 0.301  / B:0.39 0.01 0.301)  dist=0   length=0.279
+  *Border 188
+  *Border 189
+      - 0:   contact 94  (172 189) (resistance -1) (forced 0), (A:0.39 0.09 0.3028  / B:0.111 0.09 0.3028)  dist=0   length=0.279
+  *Border 190
+      - 0:   contact 91  (168 190) (resistance -1) (forced 0), (A:0.111 0.01 0.3028  / B:0.111 0.09 0.3028)  dist=1.38778e-17   length=0.08
+      - 1:   contact 99  (180 190) (resistance -1) (forced 0), (A:0.111 0.01 0.3028  / B:0.111 0.09 0.3028)  dist=1.38778e-17   length=0.08
+  *Border 191
+      - 0:   contact 97  (176 191) (resistance -1) (forced 0), (A:0.39 0.01 0.3028  / B:0.111 0.01 0.3028)  dist=0   length=0.279
+  *Border 192
+      - 0:   contact 103  (192 214) (resistance -1) (forced 0), (A:-0.29 0.01 0.301  / B:-0.29 0.09 0.301)  dist=0   length=0.08
+  *Border 193
+      - 0:   contact 101  (193 206) (resistance -1) (forced 0), (A:-0.29 0.09 0.301  / B:-0.011 0.09 0.301)  dist=0   length=0.279
+  *Border 194
+      - 0:   contact 100  (194 202) (resistance -1) (forced 0), (A:-0.011 0.09 0.301  / B:-0.011 0.01 0.301)  dist=1.04083e-17   length=0.08
+  *Border 195
+      - 0:   contact 102  (195 210) (resistance -1) (forced 0), (A:-0.011 0.01 0.301  / B:-0.29 0.01 0.301)  dist=0   length=0.279
+  *Border 196
+      - 0:   contact 107  (196 212) (resistance -1) (forced 0), (A:-0.29 0.01 0.3028  / B:-0.29 0.09 0.3028)  dist=0   length=0.08
+  *Border 197
+      - 0:   contact 105  (197 204) (resistance -1) (forced 0), (A:-0.29 0.09 0.3028  / B:-0.011 0.09 0.3028)  dist=0   length=0.279
+  *Border 198
+      - 0:   contact 104  (198 200) (resistance -1) (forced 0), (A:-0.011 0.09 0.3028  / B:-0.011 0.01 0.3028)  dist=1.04083e-17   length=0.08
+  *Border 199
+      - 0:   contact 106  (199 208) (resistance -1) (forced 0), (A:-0.011 0.01 0.3028  / B:-0.29 0.01 0.3028)  dist=0   length=0.279
+  *Border 200
+      - 0:   contact 104  (198 200) (resistance -1) (forced 0), (A:-0.011 0.09 0.3028  / B:-0.011 0.01 0.3028)  dist=1.04083e-17   length=0.08
+  *Border 201
+      - 0:   contact 108  (201 207) (resistance -1) (forced 0), (A:-0.011 0.09 0.3028  / B:-0.011 0.09 0.301)  dist=0   length=0.0018
+  *Border 202
+      - 0:   contact 100  (194 202) (resistance -1) (forced 0), (A:-0.011 0.09 0.301  / B:-0.011 0.01 0.301)  dist=1.04083e-17   length=0.08
+  *Border 203
+      - 0:   contact 109  (203 211) (resistance -1) (forced 0), (A:-0.011 0.01 0.301  / B:-0.011 0.01 0.3028)  dist=0   length=0.0018
+  *Border 204
+      - 0:   contact 105  (197 204) (resistance -1) (forced 0), (A:-0.29 0.09 0.3028  / B:-0.011 0.09 0.3028)  dist=0   length=0.279
+  *Border 205
+      - 0:   contact 110  (205 213) (resistance -1) (forced 0), (A:-0.29 0.09 0.3028  / B:-0.29 0.09 0.301)  dist=0   length=0.0018
+  *Border 206
+      - 0:   contact 101  (193 206) (resistance -1) (forced 0), (A:-0.29 0.09 0.301  / B:-0.011 0.09 0.301)  dist=0   length=0.279
+  *Border 207
+      - 0:   contact 108  (201 207) (resistance -1) (forced 0), (A:-0.011 0.09 0.3028  / B:-0.011 0.09 0.301)  dist=0   length=0.0018
+  *Border 208
+      - 0:   contact 106  (199 208) (resistance -1) (forced 0), (A:-0.011 0.01 0.3028  / B:-0.29 0.01 0.3028)  dist=0   length=0.279
+  *Border 209
+      - 0:   contact 111  (209 215) (resistance -1) (forced 0), (A:-0.29 0.01 0.3028  / B:-0.29 0.01 0.301)  dist=0   length=0.0018
+  *Border 210
+      - 0:   contact 102  (195 210) (resistance -1) (forced 0), (A:-0.011 0.01 0.301  / B:-0.29 0.01 0.301)  dist=0   length=0.279
+  *Border 211
+      - 0:   contact 109  (203 211) (resistance -1) (forced 0), (A:-0.011 0.01 0.301  / B:-0.011 0.01 0.3028)  dist=0   length=0.0018
+  *Border 212
+      - 0:   contact 107  (196 212) (resistance -1) (forced 0), (A:-0.29 0.01 0.3028  / B:-0.29 0.09 0.3028)  dist=0   length=0.08
+  *Border 213
+      - 0:   contact 110  (205 213) (resistance -1) (forced 0), (A:-0.29 0.09 0.3028  / B:-0.29 0.09 0.301)  dist=0   length=0.0018
+  *Border 214
+      - 0:   contact 103  (192 214) (resistance -1) (forced 0), (A:-0.29 0.01 0.301  / B:-0.29 0.09 0.301)  dist=0   length=0.08
+  *Border 215
+      - 0:   contact 111  (209 215) (resistance -1) (forced 0), (A:-0.29 0.01 0.3028  / B:-0.29 0.01 0.301)  dist=0   length=0.0018
+  *Border 216
+  *Border 217
+  *Border 218
+  *Border 219
+  *Border 220
+  *Border 221
+  *Border 222
+  *Border 223
+  *Border 224
+  *Border 225
+  *Border 226
+  *Border 227
+  *Border 228
+  *Border 229
+  *Border 230
+  *Border 231
+  *Border 232
+  *Border 233
+  *Border 234
+  *Border 235
+  *Border 236
+  *Border 237
+  *Border 238
+  *Border 239
+State  4 : Edges creation (edges)                                              Time :  Thu Mar 11 18:37:28 2021
+
+
+EDGE Structure dump:
+--------------------
+
+  *Node 0:100
+      - 0: edge 0 (cond with -1 / internal 0)  (A:0 0 0  / B:0.1 0 0)
+      - 1: edge 1 (cond with -1 / internal 0)  (A:0.1 0 0  / B:0.1 0.1 0)
+      - 2: edge 2 (cond with -1 / internal 0)  (A:0.1 0.1 0  / B:0 0.1 0)
+      - 3: edge 3 (cond with -1 / internal 0)  (A:0 0.1 0  / B:0 0 0)
+  *Node 0:200
+      - 0: edge 3 (cond with -1 / internal 0)  (A:0 0.1 0  / B:0 0 0)
+      - 1: edge 4 (cond with -1 / internal 0)  (A:0 0.1 0  / B:0 0.1 0.3)
+      - 2: edge 5 (cond with -1 / internal 0)  (A:0 0.1 0.3  / B:0 0 0.3)
+      - 3: edge 6 (cond with -1 / internal 0)  (A:0 0 0.3  / B:0 0 0)
+  *Node 0:300
+      - 0: edge 1 (cond with -1 / internal 0)  (A:0.1 0 0  / B:0.1 0.1 0)
+      - 1: edge 7 (cond with -1 / internal 0)  (A:0.1 0.1 0  / B:0.1 0.1 0.3)
+      - 2: edge 8 (cond with -1 / internal 0)  (A:0.1 0.1 0.3  / B:0.1 0 0.3)
+      - 3: edge 9 (cond with -1 / internal 0)  (A:0.1 0 0.3  / B:0.1 0 0)
+  *Node 0:400
+      - 0: edge 0 (cond with -1 / internal 0)  (A:0 0 0  / B:0.1 0 0)
+      - 1: edge 6 (cond with -1 / internal 0)  (A:0 0 0.3  / B:0 0 0)
+      - 2: edge 10 (cond with -1 / internal 0)  (A:0 0 0.3  / B:0.1 0 0.3)
+      - 3: edge 9 (cond with -1 / internal 0)  (A:0.1 0 0.3  / B:0.1 0 0)
+  *Node 0:500
+      - 0: edge 2 (cond with -1 / internal 0)  (A:0.1 0.1 0  / B:0 0.1 0)
+      - 1: edge 4 (cond with -1 / internal 0)  (A:0 0.1 0  / B:0 0.1 0.3)
+      - 2: edge 11 (cond with -1 / internal 0)  (A:0 0.1 0.3  / B:0.1 0.1 0.3)
+      - 3: edge 7 (cond with -1 / internal 0)  (A:0.1 0.1 0  / B:0.1 0.1 0.3)
+  *Node 0:600
+      - 0: edge 10 (cond with -1 / internal 0)  (A:0 0 0.3  / B:0.1 0 0.3)
+      - 1: edge 8 (cond with -1 / internal 0)  (A:0.1 0.1 0.3  / B:0.1 0 0.3)
+      - 2: edge 11 (cond with -1 / internal 0)  (A:0 0.1 0.3  / B:0.1 0.1 0.3)
+      - 3: edge 5 (cond with -1 / internal 0)  (A:0 0.1 0.3  / B:0 0 0.3)
+  *Node 0:700
+      - 0: edge 12 (cond with -1 / internal 0)  (A:0.1 0.4 0.3  / B:0 0.4 0.3)
+      - 1: edge 13 (cond with -1 / internal 0)  (A:0 0.4 0.3  / B:0 0.101 0.3)
+      - 2: edge 14 (cond with -1 / internal 0)  (A:0 0.101 0.3  / B:0.1 0.101 0.3)
+      - 3: edge 15 (cond with -1 / internal 0)  (A:0.1 0.101 0.3  / B:0.1 0.4 0.3)
+  *Node 0:800
+      - 0: edge 16 (cond with -1 / internal 0)  (A:0.1 0.4 0.2975  / B:0 0.4 0.2975)
+      - 1: edge 17 (cond with -1 / internal 0)  (A:0 0.4 0.2975  / B:0 0.101 0.2975)
+      - 2: edge 18 (cond with -1 / internal 0)  (A:0 0.101 0.2975  / B:0.1 0.101 0.2975)
+      - 3: edge 19 (cond with -1 / internal 0)  (A:0.1 0.101 0.2975  / B:0.1 0.4 0.2975)
+  *Node 0:900
+      - 0: edge 18 (cond with -1 / internal 0)  (A:0 0.101 0.2975  / B:0.1 0.101 0.2975)
+      - 1: edge 20 (cond with -1 / internal 0)  (A:0 0.101 0.2975  / B:0 0.101 0.3)
+      - 2: edge 14 (cond with -1 / internal 0)  (A:0 0.101 0.3  / B:0.1 0.101 0.3)
+      - 3: edge 21 (cond with -1 / internal 0)  (A:0.1 0.101 0.3  / B:0.1 0.101 0.2975)
+  *Node 0:1000
+      - 0: edge 16 (cond with -1 / internal 0)  (A:0.1 0.4 0.2975  / B:0 0.4 0.2975)
+      - 1: edge 22 (cond with -1 / internal 0)  (A:0 0.4 0.2975  / B:0 0.4 0.3)
+      - 2: edge 12 (cond with -1 / internal 0)  (A:0.1 0.4 0.3  / B:0 0.4 0.3)
+      - 3: edge 23 (cond with -1 / internal 0)  (A:0.1 0.4 0.3  / B:0.1 0.4 0.2975)
+  *Node 0:1100
+      - 0: edge 13 (cond with -1 / internal 0)  (A:0 0.4 0.3  / B:0 0.101 0.3)
+      - 1: edge 20 (cond with -1 / internal 0)  (A:0 0.101 0.2975  / B:0 0.101 0.3)
+      - 2: edge 17 (cond with -1 / internal 0)  (A:0 0.4 0.2975  / B:0 0.101 0.2975)
+      - 3: edge 22 (cond with -1 / internal 0)  (A:0 0.4 0.2975  / B:0 0.4 0.3)
+  *Node 0:1200
+      - 0: edge 15 (cond with -1 / internal 0)  (A:0.1 0.101 0.3  / B:0.1 0.4 0.3)
+      - 1: edge 21 (cond with -1 / internal 0)  (A:0.1 0.101 0.3  / B:0.1 0.101 0.2975)
+      - 2: edge 19 (cond with -1 / internal 0)  (A:0.1 0.101 0.2975  / B:0.1 0.4 0.2975)
+      - 3: edge 23 (cond with -1 / internal 0)  (A:0.1 0.4 0.3  / B:0.1 0.4 0.2975)
+  *Node 0:1300
+      - 0: edge 24 (cond with -1 / internal 0)  (A:-0.3 0 0.3  / B:-0.3 0.1 0.3)
+      - 1: edge 25 (cond with -1 / internal 0)  (A:-0.3 0.1 0.3  / B:-0.001 0.1 0.3)
+      - 2: edge 26 (cond with -1 / internal 0)  (A:-0.001 0.1 0.3  / B:-0.001 0 0.3)
+      - 3: edge 27 (cond with -1 / internal 0)  (A:-0.001 0 0.3  / B:-0.3 0 0.3)
+  *Node 0:1400
+      - 0: edge 28 (cond with -1 / internal 0)  (A:-0.3 0 0.2975  / B:-0.3 0.1 0.2975)
+      - 1: edge 29 (cond with -1 / internal 0)  (A:-0.3 0.1 0.2975  / B:-0.001 0.1 0.2975)
+      - 2: edge 30 (cond with -1 / internal 0)  (A:-0.001 0.1 0.2975  / B:-0.001 0 0.2975)
+      - 3: edge 31 (cond with -1 / internal 0)  (A:-0.001 0 0.2975  / B:-0.3 0 0.2975)
+  *Node 0:1500
+      - 0: edge 32 (cond with -1 / internal 0)  (A:-0.3 0.1 0.3  / B:-0.3 0.1 0.2975)
+      - 1: edge 29 (cond with -1 / internal 0)  (A:-0.3 0.1 0.2975  / B:-0.001 0.1 0.2975)
+      - 2: edge 33 (cond with -1 / internal 0)  (A:-0.001 0.1 0.2975  / B:-0.001 0.1 0.3)
+      - 3: edge 25 (cond with -1 / internal 0)  (A:-0.3 0.1 0.3  / B:-0.001 0.1 0.3)
+  *Node 0:1600
+      - 0: edge 34 (cond with -1 / internal 0)  (A:-0.3 0 0.3  / B:-0.3 0 0.2975)
+      - 1: edge 31 (cond with -1 / internal 0)  (A:-0.001 0 0.2975  / B:-0.3 0 0.2975)
+      - 2: edge 35 (cond with -1 / internal 0)  (A:-0.001 0 0.2975  / B:-0.001 0 0.3)
+      - 3: edge 27 (cond with -1 / internal 0)  (A:-0.001 0 0.3  / B:-0.3 0 0.3)
+  *Node 0:1700
+      - 0: edge 28 (cond with -1 / internal 0)  (A:-0.3 0 0.2975  / B:-0.3 0.1 0.2975)
+      - 1: edge 32 (cond with -1 / internal 0)  (A:-0.3 0.1 0.3  / B:-0.3 0.1 0.2975)
+      - 2: edge 24 (cond with -1 / internal 0)  (A:-0.3 0 0.3  / B:-0.3 0.1 0.3)
+      - 3: edge 34 (cond with -1 / internal 0)  (A:-0.3 0 0.3  / B:-0.3 0 0.2975)
+  *Node 0:1800
+      - 0: edge 30 (cond with -1 / internal 0)  (A:-0.001 0.1 0.2975  / B:-0.001 0 0.2975)
+      - 1: edge 33 (cond with -1 / internal 0)  (A:-0.001 0.1 0.2975  / B:-0.001 0.1 0.3)
+      - 2: edge 26 (cond with -1 / internal 0)  (A:-0.001 0.1 0.3  / B:-0.001 0 0.3)
+      - 3: edge 35 (cond with -1 / internal 0)  (A:-0.001 0 0.2975  / B:-0.001 0 0.3)
+  *Node 0:1900
+      - 0: edge 36 (cond with -1 / internal 0)  (A:0.4 0 0.3  / B:0.4 0.1 0.3)
+      - 1: edge 37 (cond with -1 / internal 0)  (A:0.4 0.1 0.3  / B:0.101 0.1 0.3)
+      - 2: edge 38 (cond with -1 / internal 0)  (A:0.101 0.1 0.3  / B:0.101 0 0.3)
+      - 3: edge 39 (cond with -1 / internal 0)  (A:0.101 0 0.3  / B:0.4 0 0.3)
+  *Node 0:2000
+      - 0: edge 40 (cond with -1 / internal 0)  (A:0.4 0 0.2975  / B:0.4 0.1 0.2975)
+      - 1: edge 41 (cond with -1 / internal 0)  (A:0.4 0.1 0.2975  / B:0.101 0.1 0.2975)
+      - 2: edge 42 (cond with -1 / internal 0)  (A:0.101 0.1 0.2975  / B:0.101 0 0.2975)
+      - 3: edge 43 (cond with -1 / internal 0)  (A:0.101 0 0.2975  / B:0.4 0 0.2975)
+  *Node 0:2100
+      - 0: edge 44 (cond with -1 / internal 0)  (A:0.4 0.1 0.3  / B:0.4 0.1 0.2975)
+      - 1: edge 41 (cond with -1 / internal 0)  (A:0.4 0.1 0.2975  / B:0.101 0.1 0.2975)
+      - 2: edge 45 (cond with -1 / internal 0)  (A:0.101 0.1 0.2975  / B:0.101 0.1 0.3)
+      - 3: edge 37 (cond with -1 / internal 0)  (A:0.4 0.1 0.3  / B:0.101 0.1 0.3)
+  *Node 0:2200
+      - 0: edge 46 (cond with -1 / internal 0)  (A:0.4 0 0.3  / B:0.4 0 0.2975)
+      - 1: edge 43 (cond with -1 / internal 0)  (A:0.101 0 0.2975  / B:0.4 0 0.2975)
+      - 2: edge 47 (cond with -1 / internal 0)  (A:0.101 0 0.2975  / B:0.101 0 0.3)
+      - 3: edge 39 (cond with -1 / internal 0)  (A:0.101 0 0.3  / B:0.4 0 0.3)
+  *Node 0:2300
+      - 0: edge 42 (cond with -1 / internal 0)  (A:0.101 0.1 0.2975  / B:0.101 0 0.2975)
+      - 1: edge 45 (cond with -1 / internal 0)  (A:0.101 0.1 0.2975  / B:0.101 0.1 0.3)
+      - 2: edge 38 (cond with -1 / internal 0)  (A:0.101 0.1 0.3  / B:0.101 0 0.3)
+      - 3: edge 47 (cond with -1 / internal 0)  (A:0.101 0 0.2975  / B:0.101 0 0.3)
+  *Node 0:2400
+      - 0: edge 40 (cond with -1 / internal 0)  (A:0.4 0 0.2975  / B:0.4 0.1 0.2975)
+      - 1: edge 44 (cond with -1 / internal 0)  (A:0.4 0.1 0.3  / B:0.4 0.1 0.2975)
+      - 2: edge 36 (cond with -1 / internal 0)  (A:0.4 0 0.3  / B:0.4 0.1 0.3)
+      - 3: edge 46 (cond with -1 / internal 0)  (A:0.4 0 0.3  / B:0.4 0 0.2975)
+  *Node 0:2500
+      - 0: edge 48 (cond with -1 / internal 0)  (A:0.1 -0.3 0.3  / B:0 -0.3 0.3)
+      - 1: edge 49 (cond with -1 / internal 0)  (A:0 -0.3 0.3  / B:0 -0.001 0.3)
+      - 2: edge 50 (cond with -1 / internal 0)  (A:0 -0.001 0.3  / B:0.1 -0.001 0.3)
+      - 3: edge 51 (cond with -1 / internal 0)  (A:0.1 -0.001 0.3  / B:0.1 -0.3 0.3)
+  *Node 0:2600
+      - 0: edge 52 (cond with -1 / internal 0)  (A:0.1 -0.3 0.2975  / B:0 -0.3 0.2975)
+      - 1: edge 53 (cond with -1 / internal 0)  (A:0 -0.3 0.2975  / B:0 -0.001 0.2975)
+      - 2: edge 54 (cond with -1 / internal 0)  (A:0 -0.001 0.2975  / B:0.1 -0.001 0.2975)
+      - 3: edge 55 (cond with -1 / internal 0)  (A:0.1 -0.001 0.2975  / B:0.1 -0.3 0.2975)
+  *Node 0:2700
+      - 0: edge 52 (cond with -1 / internal 0)  (A:0.1 -0.3 0.2975  / B:0 -0.3 0.2975)
+      - 1: edge 56 (cond with -1 / internal 0)  (A:0 -0.3 0.2975  / B:0 -0.3 0.3)
+      - 2: edge 48 (cond with -1 / internal 0)  (A:0.1 -0.3 0.3  / B:0 -0.3 0.3)
+      - 3: edge 57 (cond with -1 / internal 0)  (A:0.1 -0.3 0.3  / B:0.1 -0.3 0.2975)
+  *Node 0:2800
+      - 0: edge 54 (cond with -1 / internal 0)  (A:0 -0.001 0.2975  / B:0.1 -0.001 0.2975)
+      - 1: edge 58 (cond with -1 / internal 0)  (A:0 -0.001 0.2975  / B:0 -0.001 0.3)
+      - 2: edge 50 (cond with -1 / internal 0)  (A:0 -0.001 0.3  / B:0.1 -0.001 0.3)
+      - 3: edge 59 (cond with -1 / internal 0)  (A:0.1 -0.001 0.3  / B:0.1 -0.001 0.2975)
+  *Node 0:2900
+      - 0: edge 57 (cond with -1 / internal 0)  (A:0.1 -0.3 0.3  / B:0.1 -0.3 0.2975)
+      - 1: edge 55 (cond with -1 / internal 0)  (A:0.1 -0.001 0.2975  / B:0.1 -0.3 0.2975)
+      - 2: edge 59 (cond with -1 / internal 0)  (A:0.1 -0.001 0.3  / B:0.1 -0.001 0.2975)
+      - 3: edge 51 (cond with -1 / internal 0)  (A:0.1 -0.001 0.3  / B:0.1 -0.3 0.3)
+  *Node 0:3000
+      - 0: edge 56 (cond with -1 / internal 0)  (A:0 -0.3 0.2975  / B:0 -0.3 0.3)
+      - 1: edge 53 (cond with -1 / internal 0)  (A:0 -0.3 0.2975  / B:0 -0.001 0.2975)
+      - 2: edge 58 (cond with -1 / internal 0)  (A:0 -0.001 0.2975  / B:0 -0.001 0.3)
+      - 3: edge 49 (cond with -1 / internal 0)  (A:0 -0.3 0.3  / B:0 -0.001 0.3)
+  *Node 0:3100
+      - 0: edge 60 (cond with -1 / internal 0)  (A:0.09 -0.29 0.301  / B:0.01 -0.29 0.301)
+      - 1: edge 61 (cond with -1 / internal 0)  (A:0.01 -0.29 0.301  / B:0.01 -0.29 0.3028)
+      - 2: edge 62 (cond with -1 / internal 0)  (A:0.01 -0.29 0.3028  / B:0.09 -0.29 0.3028)
+      - 3: edge 63 (cond with -1 / internal 0)  (A:0.09 -0.29 0.3028  / B:0.09 -0.29 0.301)
+  *Node 0:3200
+      - 0: edge 64 (cond with -1 / internal 0)  (A:0.09 -0.011 0.301  / B:0.01 -0.011 0.301)
+      - 1: edge 65 (cond with -1 / internal 0)  (A:0.01 -0.011 0.301  / B:0.01 -0.011 0.3028)
+      - 2: edge 66 (cond with -1 / internal 0)  (A:0.01 -0.011 0.3028  / B:0.09 -0.011 0.3028)
+      - 3: edge 67 (cond with -1 / internal 0)  (A:0.09 -0.011 0.3028  / B:0.09 -0.011 0.301)
+  *Node 0:3300
+      - 0: edge 63 (cond with -1 / internal 0)  (A:0.09 -0.29 0.3028  / B:0.09 -0.29 0.301)
+      - 1: edge 68 (cond with -1 / internal 0)  (A:0.09 -0.29 0.3028  / B:0.09 -0.011 0.3028)
+      - 2: edge 67 (cond with -1 / internal 0)  (A:0.09 -0.011 0.3028  / B:0.09 -0.011 0.301)
+      - 3: edge 69 (cond with -1 / internal 0)  (A:0.09 -0.011 0.301  / B:0.09 -0.29 0.301)
+  *Node 0:3400
+      - 0: edge 61 (cond with -1 / internal 0)  (A:0.01 -0.29 0.301  / B:0.01 -0.29 0.3028)
+      - 1: edge 70 (cond with -1 / internal 0)  (A:0.01 -0.29 0.3028  / B:0.01 -0.011 0.3028)
+      - 2: edge 65 (cond with -1 / internal 0)  (A:0.01 -0.011 0.301  / B:0.01 -0.011 0.3028)
+      - 3: edge 71 (cond with -1 / internal 0)  (A:0.01 -0.011 0.301  / B:0.01 -0.29 0.301)
+  *Node 0:3500
+      - 0: edge 60 (cond with -1 / internal 0)  (A:0.09 -0.29 0.301  / B:0.01 -0.29 0.301)
+      - 1: edge 71 (cond with -1 / internal 0)  (A:0.01 -0.011 0.301  / B:0.01 -0.29 0.301)
+      - 2: edge 64 (cond with -1 / internal 0)  (A:0.09 -0.011 0.301  / B:0.01 -0.011 0.301)
+      - 3: edge 69 (cond with -1 / internal 0)  (A:0.09 -0.011 0.301  / B:0.09 -0.29 0.301)
+  *Node 0:3600
+      - 0: edge 62 (cond with -1 / internal 0)  (A:0.01 -0.29 0.3028  / B:0.09 -0.29 0.3028)
+      - 1: edge 70 (cond with -1 / internal 0)  (A:0.01 -0.29 0.3028  / B:0.01 -0.011 0.3028)
+      - 2: edge 66 (cond with -1 / internal 0)  (A:0.01 -0.011 0.3028  / B:0.09 -0.011 0.3028)
+      - 3: edge 68 (cond with -1 / internal 0)  (A:0.09 -0.29 0.3028  / B:0.09 -0.011 0.3028)
+  *Node 0:3700
+      - 0: edge 72 (cond with -1 / internal 0)  (A:0.09 0.39 0.301  / B:0.01 0.39 0.301)
+      - 1: edge 73 (cond with -1 / internal 0)  (A:0.01 0.39 0.301  / B:0.01 0.111 0.301)
+      - 2: edge 74 (cond with -1 / internal 0)  (A:0.01 0.111 0.301  / B:0.09 0.111 0.301)
+      - 3: edge 75 (cond with -1 / internal 0)  (A:0.09 0.111 0.301  / B:0.09 0.39 0.301)
+  *Node 0:3800
+      - 0: edge 74 (cond with -1 / internal 0)  (A:0.01 0.111 0.301  / B:0.09 0.111 0.301)
+      - 1: edge 76 (cond with -1 / internal 0)  (A:0.01 0.111 0.301  / B:0.01 0.111 0.3028)
+      - 2: edge 77 (cond with -1 / internal 0)  (A:0.01 0.111 0.3028  / B:0.09 0.111 0.3028)
+      - 3: edge 78 (cond with -1 / internal 0)  (A:0.09 0.111 0.3028  / B:0.09 0.111 0.301)
+  *Node 0:3900
+      - 0: edge 72 (cond with -1 / internal 0)  (A:0.09 0.39 0.301  / B:0.01 0.39 0.301)
+      - 1: edge 79 (cond with -1 / internal 0)  (A:0.01 0.39 0.301  / B:0.01 0.39 0.3028)
+      - 2: edge 80 (cond with -1 / internal 0)  (A:0.01 0.39 0.3028  / B:0.09 0.39 0.3028)
+      - 3: edge 81 (cond with -1 / internal 0)  (A:0.09 0.39 0.3028  / B:0.09 0.39 0.301)
+  *Node 0:4000
+      - 0: edge 80 (cond with -1 / internal 0)  (A:0.01 0.39 0.3028  / B:0.09 0.39 0.3028)
+      - 1: edge 82 (cond with -1 / internal 0)  (A:0.01 0.39 0.3028  / B:0.01 0.111 0.3028)
+      - 2: edge 77 (cond with -1 / internal 0)  (A:0.01 0.111 0.3028  / B:0.09 0.111 0.3028)
+      - 3: edge 83 (cond with -1 / internal 0)  (A:0.09 0.111 0.3028  / B:0.09 0.39 0.3028)
+  *Node 0:4100
+      - 0: edge 79 (cond with -1 / internal 0)  (A:0.01 0.39 0.301  / B:0.01 0.39 0.3028)
+      - 1: edge 82 (cond with -1 / internal 0)  (A:0.01 0.39 0.3028  / B:0.01 0.111 0.3028)
+      - 2: edge 76 (cond with -1 / internal 0)  (A:0.01 0.111 0.301  / B:0.01 0.111 0.3028)
+      - 3: edge 73 (cond with -1 / internal 0)  (A:0.01 0.39 0.301  / B:0.01 0.111 0.301)
+  *Node 0:4200
+      - 0: edge 81 (cond with -1 / internal 0)  (A:0.09 0.39 0.3028  / B:0.09 0.39 0.301)
+      - 1: edge 83 (cond with -1 / internal 0)  (A:0.09 0.111 0.3028  / B:0.09 0.39 0.3028)
+      - 2: edge 78 (cond with -1 / internal 0)  (A:0.09 0.111 0.3028  / B:0.09 0.111 0.301)
+      - 3: edge 75 (cond with -1 / internal 0)  (A:0.09 0.111 0.301  / B:0.09 0.39 0.301)
+  *Node 0:4300
+      - 0: edge 84 (cond with -1 / internal 0)  (A:0.111 0.01 0.3028  / B:0.111 0.09 0.3028)
+      - 1: edge 85 (cond with -1 / internal 0)  (A:0.111 0.09 0.3028  / B:0.111 0.09 0.301)
+      - 2: edge 86 (cond with -1 / internal 0)  (A:0.111 0.09 0.301  / B:0.111 0.01 0.301)
+      - 3: edge 87 (cond with -1 / internal 0)  (A:0.111 0.01 0.301  / B:0.111 0.01 0.3028)
+  *Node 0:4400
+      - 0: edge 88 (cond with -1 / internal 0)  (A:0.39 0.09 0.3028  / B:0.111 0.09 0.3028)
+      - 1: edge 85 (cond with -1 / internal 0)  (A:0.111 0.09 0.3028  / B:0.111 0.09 0.301)
+      - 2: edge 89 (cond with -1 / internal 0)  (A:0.111 0.09 0.301  / B:0.39 0.09 0.301)
+      - 3: edge 90 (cond with -1 / internal 0)  (A:0.39 0.09 0.301  / B:0.39 0.09 0.3028)
+  *Node 0:4500
+      - 0: edge 91 (cond with -1 / internal 0)  (A:0.39 0.01 0.3028  / B:0.111 0.01 0.3028)
+      - 1: edge 87 (cond with -1 / internal 0)  (A:0.111 0.01 0.301  / B:0.111 0.01 0.3028)
+      - 2: edge 92 (cond with -1 / internal 0)  (A:0.111 0.01 0.301  / B:0.39 0.01 0.301)
+      - 3: edge 93 (cond with -1 / internal 0)  (A:0.39 0.01 0.301  / B:0.39 0.01 0.3028)
+  *Node 0:4600
+      - 0: edge 84 (cond with -1 / internal 0)  (A:0.111 0.01 0.3028  / B:0.111 0.09 0.3028)
+      - 1: edge 85 (cond with -1 / internal 0)  (A:0.111 0.09 0.3028  / B:0.111 0.09 0.301)
+      - 2: edge 86 (cond with -1 / internal 0)  (A:0.111 0.09 0.301  / B:0.111 0.01 0.301)
+      - 3: edge 87 (cond with -1 / internal 0)  (A:0.111 0.01 0.301  / B:0.111 0.01 0.3028)
+  *Node 0:4700
+      - 0: edge 94 (cond with -1 / internal 0)  (A:0.39 0.01 0.301  / B:0.39 0.09 0.301)
+      - 1: edge 89 (cond with -1 / internal 0)  (A:0.111 0.09 0.301  / B:0.39 0.09 0.301)
+      - 2: edge 86 (cond with -1 / internal 0)  (A:0.111 0.09 0.301  / B:0.111 0.01 0.301)
+      - 3: edge 92 (cond with -1 / internal 0)  (A:0.111 0.01 0.301  / B:0.39 0.01 0.301)
+  *Node 0:4800
+      - 0: edge 95 (cond with -1 / internal 0)  (A:0.39 0.01 0.3028  / B:0.39 0.09 0.3028)
+      - 1: edge 88 (cond with -1 / internal 0)  (A:0.39 0.09 0.3028  / B:0.111 0.09 0.3028)
+      - 2: edge 84 (cond with -1 / internal 0)  (A:0.111 0.01 0.3028  / B:0.111 0.09 0.3028)
+      - 3: edge 91 (cond with -1 / internal 0)  (A:0.39 0.01 0.3028  / B:0.111 0.01 0.3028)
+  *Node 0:4900
+      - 0: edge 96 (cond with -1 / internal 0)  (A:-0.29 0.01 0.301  / B:-0.29 0.09 0.301)
+      - 1: edge 97 (cond with -1 / internal 0)  (A:-0.29 0.09 0.301  / B:-0.011 0.09 0.301)
+      - 2: edge 98 (cond with -1 / internal 0)  (A:-0.011 0.09 0.301  / B:-0.011 0.01 0.301)
+      - 3: edge 99 (cond with -1 / internal 0)  (A:-0.011 0.01 0.301  / B:-0.29 0.01 0.301)
+  *Node 0:5000
+      - 0: edge 100 (cond with -1 / internal 0)  (A:-0.29 0.01 0.3028  / B:-0.29 0.09 0.3028)
+      - 1: edge 101 (cond with -1 / internal 0)  (A:-0.29 0.09 0.3028  / B:-0.011 0.09 0.3028)
+      - 2: edge 102 (cond with -1 / internal 0)  (A:-0.011 0.09 0.3028  / B:-0.011 0.01 0.3028)
+      - 3: edge 103 (cond with -1 / internal 0)  (A:-0.011 0.01 0.3028  / B:-0.29 0.01 0.3028)
+  *Node 0:5100
+      - 0: edge 102 (cond with -1 / internal 0)  (A:-0.011 0.09 0.3028  / B:-0.011 0.01 0.3028)
+      - 1: edge 104 (cond with -1 / internal 0)  (A:-0.011 0.09 0.3028  / B:-0.011 0.09 0.301)
+      - 2: edge 98 (cond with -1 / internal 0)  (A:-0.011 0.09 0.301  / B:-0.011 0.01 0.301)
+      - 3: edge 105 (cond with -1 / internal 0)  (A:-0.011 0.01 0.301  / B:-0.011 0.01 0.3028)
+  *Node 0:5200
+      - 0: edge 101 (cond with -1 / internal 0)  (A:-0.29 0.09 0.3028  / B:-0.011 0.09 0.3028)
+      - 1: edge 106 (cond with -1 / internal 0)  (A:-0.29 0.09 0.3028  / B:-0.29 0.09 0.301)
+      - 2: edge 97 (cond with -1 / internal 0)  (A:-0.29 0.09 0.301  / B:-0.011 0.09 0.301)
+      - 3: edge 104 (cond with -1 / internal 0)  (A:-0.011 0.09 0.3028  / B:-0.011 0.09 0.301)
+  *Node 0:5300
+      - 0: edge 103 (cond with -1 / internal 0)  (A:-0.011 0.01 0.3028  / B:-0.29 0.01 0.3028)
+      - 1: edge 107 (cond with -1 / internal 0)  (A:-0.29 0.01 0.3028  / B:-0.29 0.01 0.301)
+      - 2: edge 99 (cond with -1 / internal 0)  (A:-0.011 0.01 0.301  / B:-0.29 0.01 0.301)
+      - 3: edge 105 (cond with -1 / internal 0)  (A:-0.011 0.01 0.301  / B:-0.011 0.01 0.3028)
+  *Node 0:5400
+      - 0: edge 100 (cond with -1 / internal 0)  (A:-0.29 0.01 0.3028  / B:-0.29 0.09 0.3028)
+      - 1: edge 106 (cond with -1 / internal 0)  (A:-0.29 0.09 0.3028  / B:-0.29 0.09 0.301)
+      - 2: edge 96 (cond with -1 / internal 0)  (A:-0.29 0.01 0.301  / B:-0.29 0.09 0.301)
+      - 3: edge 107 (cond with -1 / internal 0)  (A:-0.29 0.01 0.3028  / B:-0.29 0.01 0.301)
+  *Node 0:5500
+      - 0: edge 108 (cond with -1 / internal 0)  (A:0 0 0.29  / B:0.1 0 0.29)
+      - 1: edge 109 (cond with -1 / internal 0)  (A:0.1 0 0.29  / B:0.1 0.1 0.29)
+      - 2: edge 110 (cond with -1 / internal 0)  (A:0.1 0.1 0.29  / B:0 0.1 0.29)
+      - 3: edge 111 (cond with -1 / internal 0)  (A:0 0.1 0.29  / B:0 0 0.29)
+  *Node 0:5600
+      - 0: edge 112 (cond with -1 / internal 0)  (A:0 0 0.28  / B:0.1 0 0.28)
+      - 1: edge 113 (cond with -1 / internal 0)  (A:0.1 0 0.28  / B:0.1 0.1 0.28)
+      - 2: edge 114 (cond with -1 / internal 0)  (A:0.1 0.1 0.28  / B:0 0.1 0.28)
+      - 3: edge 115 (cond with -1 / internal 0)  (A:0 0.1 0.28  / B:0 0 0.28)
+  *Node 0:5700
+      - 0: edge 116 (cond with -1 / internal 0)  (A:0 0 0.27  / B:0.1 0 0.27)
+      - 1: edge 117 (cond with -1 / internal 0)  (A:0.1 0 0.27  / B:0.1 0.1 0.27)
+      - 2: edge 118 (cond with -1 / internal 0)  (A:0.1 0.1 0.27  / B:0 0.1 0.27)
+      - 3: edge 119 (cond with -1 / internal 0)  (A:0 0.1 0.27  / B:0 0 0.27)
+  *Node 0:5800
+      - 0: edge 120 (cond with -1 / internal 0)  (A:0 0 0.26  / B:0.1 0 0.26)
+      - 1: edge 121 (cond with -1 / internal 0)  (A:0.1 0 0.26  / B:0.1 0.1 0.26)
+      - 2: edge 122 (cond with -1 / internal 0)  (A:0.1 0.1 0.26  / B:0 0.1 0.26)
+      - 3: edge 123 (cond with -1 / internal 0)  (A:0 0.1 0.26  / B:0 0 0.26)
+  *Node 0:5900
+      - 0: edge 124 (cond with -1 / internal 0)  (A:0 0 0.2  / B:0.1 0 0.2)
+      - 1: edge 125 (cond with -1 / internal 0)  (A:0.1 0 0.2  / B:0.1 0.1 0.2)
+      - 2: edge 126 (cond with -1 / internal 0)  (A:0.1 0.1 0.2  / B:0 0.1 0.2)
+      - 3: edge 127 (cond with -1 / internal 0)  (A:0 0.1 0.2  / B:0 0 0.2)
+  *Node 0:6000
+      - 0: edge 128 (cond with -1 / internal 0)  (A:0 0 0.1  / B:0.1 0 0.1)
+      - 1: edge 129 (cond with -1 / internal 0)  (A:0.1 0 0.1  / B:0.1 0.1 0.1)
+      - 2: edge 130 (cond with -1 / internal 0)  (A:0.1 0.1 0.1  / B:0 0.1 0.1)
+      - 3: edge 131 (cond with -1 / internal 0)  (A:0 0.1 0.1  / B:0 0 0.1)
+State  5 : Computation of couplings via RCN                                    Time :  Thu Mar 11 18:37:28 2021
+
+
+
+* WARNING *
+Node 5500 has a conductivity or thickness negative or null.
+
+
+
+* WARNING *
+Node 5600 has a conductivity or thickness negative or null.
+
+
+
+* WARNING *
+Node 5700 has a conductivity or thickness negative or null.
+
+
+
+* WARNING *
+Node 5800 has a conductivity or thickness negative or null.
+
+
+
+* WARNING *
+Node 5900 has a conductivity or thickness negative or null.
+
+
+
+* WARNING *
+Node 6000 has a conductivity or thickness negative or null.
+
+State  6 : Simplification of couplings                                         Time :  Thu Mar 11 18:37:28 2021
+
+State  7 : Network Output generation                                           Time :  Thu Mar 11 18:37:28 2021
+
+
+
+
+Execution completed on Thu Mar 11 18:37:28 2021
+
+
+
+

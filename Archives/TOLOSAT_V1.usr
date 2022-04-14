@@ -1,0 +1,59 @@
+$INFOS
+
+# TOLOSAT_V1.usr.nwk en date du 21_01_2021:
+# ----------------------------------------------
+#
+# Ce fichier contient la paramétrisation du calcul Thermica pour TOLOSAT. Notamment : 
+
+# - Les couplages conductifs entre divers noeuds particuliers
+
+# Dans ce programme, on fait les calculs pendant le SOLSTICE D'HIVER où:
+#
+# La periode orbitale est de 6307s
+#
+# L'éclipse débute au temps 0s et dure jusqu'au temps 1390s.
+#
+# Il n'y a pas d'éclipse entre le temps 0s à s et  à 6307s
+#
+######################################################################
+#
+# Dans cette simulation qui dure pendant 3 orbites, on ne chauffe pas
+#
+######################################################################
+$CONDUCTORS 
+#COMPUTED COUPLINGS
+#--------------------------------COUPLAGES STRUCTURE--------------------------------
+#Couplages au niveau des charnières en W/K
+GL(1200, 800) = 4.48 #panneau 1 - support panneau 1
+GL(1100, 700) = 4.48 #panneau 2 - support panneau 2
+GL(1400, 1000) = 4.48 #panneau 3 - support panneau 3
+GL(1300, 900) = 4.48 #panneau 4 - support panneau 4
+
+GL(600, 800) = 1.5 #dessus - support panneau 1
+GL(600, 700) = 1.5 #dessus - support panneau 2
+GL(600, 1000) = 1.5 #dessus - support panneau 3
+GL(600, 900) = 1.5 #dessus - support panneau 4
+
+GL(200, 800) = 0 #côté 1 - support panneau 1
+GL(300, 700) = 0 #côté 2 - support panneau 2
+GL(400, 900) = 0 #côté 3 - support panneau 4
+GL(500, 1000) = 0 #côté 4 - support panneau 3
+
+GL(200, 100) = 1.5 #côté 1 - dessous
+GL(300, 100) = 1.5 #côté 2 - dessous
+GL(400, 100) = 1.5 #côté 3 - dessous
+GL(500, 100) = 1.5 #côté 4 - dessous
+
+GL(200, 600) = 1.5 #côté 1 - dessus
+GL(300, 600) = 1.5 #côté 2 - dessus
+GL(400, 600) = 1.5 #côté 3 - dessus
+GL(500, 600) = 1.5 #côté 4 - dessus
+
+GL(200, 400) = 4.5 #côté 1 - côté 3
+GL(400, 300) = 4.5 #côté 3 - côté 2
+GL(300, 500) = 4.5 #côté 2 - côté 4
+GL(500, 200) = 4.5 #côté 4 - côté 1
+
+
+#------------------------------------------------------------------------------END OF COUPLINGS-----------------------------------------------------------------------------------------------
+

@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SYSML SYSML_VERSION="1.7" CONTENTS="MODEL" SAVEDATE="1643311173" SYSTEMA_VERSION="4.9.0">
+    <DATA_STRUCTURE NAME="model_V2.1.sysmdl" REFSET_ID="{8ab27393-a2d5-49c0-8cc0-4874fbcec4c5}">
+        <DATA_NODE TYPE="MODEL" REFOBJ_ID="2" NAME="Model">
+            <DATA_NODE TYPE="OBJECT" REFOBJ_ID="16" NAME="Structure">
+                <DATA_NODE TYPE="SHAPE" REFOBJ_ID="3" NAME="Dessous">
+                    <NODE_ATTRIBUTE TYPE="SHAPE" NAME="SHAPE">
+                        <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                            <ELEM X="0" Y="0" Z="0" TYPE="POINT" NAME="Point 1"/>
+                            <ELEM X="0.1" Y="0" Z="0" TYPE="POINT" NAME="Point 2"/>
+                            <ELEM X="0.1" Y="0.1" Z="0" TYPE="POINT" NAME="Point 3"/>
+                        </ELEM>
+                    </NODE_ATTRIBUTE>
+                </DATA_NODE>
+                <DATA_NODE TYPE="SHAPE" REFOBJ_ID="4" NAME="Coté 1">
+                    <NODE_ATTRIBUTE TYPE="SHAPE" NAME="SHAPE">
+                        <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                            <ELEM X="0" Y="0" Z="0" TYPE="POINT" NAME="Point 1"/>
+                            <ELEM X="0" Y="0.1" Z="0" TYPE="POINT" NAME="Point 2"/>
+                            <ELEM X="0" Y="0.1" Z="0.3" TYPE="POINT" NAME="Point 3"/>
+                        </ELEM>
+                    </NODE_ATTRIBUTE>
+                </DATA_NODE>
+                <DATA_NODE TYPE="SHAPE" REFOBJ_ID="5" NAME="Coté 2">
+                    <NODE_ATTRIBUTE TYPE="SHAPE" NAME="SHAPE">
+                        <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                            <ELEM X="0.1" Y="0" Z="0" TYPE="POINT" NAME="Point 1"/>
+                            <ELEM X="0.1" Y="0.1" Z="0" TYPE="POINT" NAME="Point 2"/>
+                            <ELEM X="0.1" Y="0.1" Z="0.3" TYPE="POINT" NAME="Point 3"/>
+                        </ELEM>
+                    </NODE_ATTRIBUTE>
+                </DATA_NODE>
+                <DATA_NODE TYPE="SHAPE" REFOBJ_ID="6" NAME="Coté 3">
+                    <NODE_ATTRIBUTE TYPE="SHAPE" NAME="SHAPE">
+                        <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                            <ELEM X="0.0001" Y="0" Z="0" TYPE="POINT" NAME="Point 1"/>
+                            <ELEM X="0" Y="0" Z="0" TYPE="POINT" NAME="Point 2"/>
+                            <ELEM X="0" Y="0" Z="0.03" TYPE="POINT" NAME="Point 3"/>
+                        </ELEM>
+                    </NODE_ATTRIBUTE>
+                </DATA_NODE>
+                <DATA_NODE TYPE="SHAPE" REFOBJ_ID="7" NAME="Coté 4">
+                    <NODE_ATTRIBUTE TYPE="SHAPE" NAME="SHAPE">
+                        <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                            <ELEM X="0.1" Y="0.1" Z="0" TYPE="POINT" NAME="Point 1"/>
+                            <ELEM X="0" Y="0.1" Z="0" TYPE="POINT" NAME="Point 2"/>
+                            <ELEM X="0" Y="0.1" Z="0.3" TYPE="POINT" NAME="Point 3"/>
+                        </ELEM>
+                    </NODE_ATTRIBUTE>
+                </DATA_NODE>
+                <DATA_NODE TYPE="SHAPE" REFOBJ_ID="8" NAME="Dessus">
+                    <NODE_ATTRIBUTE TYPE="SHAPE" NAME="SHAPE">
+                        <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                            <ELEM X="0" Y="0" Z="0.3" TYPE="POINT" NAME="Point 1"/>
+                            <ELEM X="0.1" Y="0" Z="0.3" TYPE="POINT" NAME="Point 2"/>
+                            <ELEM X="0.1" Y="0.1" Z="0.3" TYPE="POINT" NAME="Point 3"/>
+                        </ELEM>
+                    </NODE_ATTRIBUTE>
+                </DATA_NODE>
+                <NODE_ATTRIBUTE TYPE="COLOR" NAME="COLOR">
+                    <ELEM G="0.666666666666667" TYPE="COLOR" NAME="COLOR" R="0.666666666666667" B="0.498039215686275"/>
+                </NODE_ATTRIBUTE>
+                <NODE_ATTRIBUTE TYPE="PROP_APPLI" NAME="Thermica">
+                    <CONTENER TYPE="SHELL" NAME="Bulk">
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY NAME="Physical properties">
+                                    <ELEM TYPE="STRING" NAME="Selected material" STR="Aluminium 7075"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="VOLUME" NAME="Bulk"/>
+                    <CONTENER TYPE="SHELL" NAME="Transverse"/>
+                    <CONTENER TYPE="SHELL" NAME="Coating"/>
+                    <CONTENER TYPE="VOLUME" NAME="Coating"/>
+                    <CONTENER TYPE="SHELL" NAME="Miscellaneous"/>
+                    <CONTENER TYPE="SHELL" NAME="Enclosure"/>
+                    <CONTENER TYPE="VOLUME" NAME="Enclosure"/>
+                </NODE_ATTRIBUTE>
+            </DATA_NODE>
+            <DATA_NODE TYPE="OBJECT" REFOBJ_ID="17" NAME="Panneau Solaire Dessous">
+                <DATA_NODE TYPE="SHAPE" REFOBJ_ID="9" NAME="Panneau 2">
+                    <NODE_ATTRIBUTE TYPE="SHAPE" NAME="SHAPE">
+                        <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                            <ELEM X="0.4" Y="0" Z="0.3" TYPE="POINT" NAME="Point 1"/>
+                            <ELEM X="0.4" Y="0.1" Z="0.3" TYPE="POINT" NAME="Point 2"/>
+                            <ELEM X="0.101" Y="0.09" Z="0.3" TYPE="POINT" NAME="Point 3"/>
+                        </ELEM>
+                    </NODE_ATTRIBUTE>
+                </DATA_NODE>
+                <DATA_NODE TYPE="SHAPE" REFOBJ_ID="10" NAME="Panneau 1">
+                    <NODE_ATTRIBUTE TYPE="SHAPE" NAME="SHAPE">
+                        <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                            <ELEM X="-0.3" Y="0" Z="0.3" TYPE="POINT" NAME="Point 1"/>
+                            <ELEM X="-0.3" Y="0.1" Z="0.3" TYPE="POINT" NAME="Point 2"/>
+                            <ELEM X="-0.001" Y="0.09" Z="0.3" TYPE="POINT" NAME="Point 3"/>
+                        </ELEM>
+                    </NODE_ATTRIBUTE>
+                </DATA_NODE>
+                <DATA_NODE TYPE="SHAPE" REFOBJ_ID="11" NAME="Panneau 4">
+                    <NODE_ATTRIBUTE TYPE="SHAPE" NAME="SHAPE">
+                        <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                            <ELEM X="0.1" Y="-0.3" Z="0.3" TYPE="POINT" NAME="Point 1"/>
+                            <ELEM X="0" Y="-0.3" Z="0.3" TYPE="POINT" NAME="Point 2"/>
+                            <ELEM X="0.01" Y="-0.001" Z="0.3" TYPE="POINT" NAME="Point 3"/>
+                        </ELEM>
+                    </NODE_ATTRIBUTE>
+                </DATA_NODE>
+                <DATA_NODE TYPE="SHAPE" REFOBJ_ID="12" NAME="Panneau 3">
+                    <NODE_ATTRIBUTE TYPE="SHAPE" NAME="SHAPE">
+                        <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                            <ELEM X="0.1" Y="0.4" Z="0.3" TYPE="POINT" NAME="Point 1"/>
+                            <ELEM X="0" Y="0.4" Z="0.3" TYPE="POINT" NAME="Point 2"/>
+                            <ELEM X="0.01" Y="0.101" Z="0.3" TYPE="POINT" NAME="Point 3"/>
+                        </ELEM>
+                    </NODE_ATTRIBUTE>
+                </DATA_NODE>
+                <NODE_ATTRIBUTE TYPE="COLOR" NAME="COLOR">
+                    <ELEM G="0" TYPE="COLOR" NAME="COLOR" R="0" B="1"/>
+                </NODE_ATTRIBUTE>
+                <NODE_ATTRIBUTE TYPE="PROP_APPLI" NAME="Thermica">
+                    <CONTENER TYPE="SHELL" NAME="Bulk">
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Geom_Prop" NAME="Geometrical properties">
+                                    <ELEM TYPE="VALUE" ID="Thickness" VALUE="0.01"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Phys_Prop" NAME="Physical properties">
+                                    <ELEM TYPE="VALUE" ID="Conductivity" VALUE="148"/>
+                                    <ELEM TYPE="VALUE" ID="Density" VALUE="2333"/>
+                                    <ELEM TYPE="VALUE" ID="Specific_heat" VALUE="700"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="VOLUME" NAME="Bulk"/>
+                    <CONTENER TYPE="SHELL" NAME="Transverse"/>
+                    <CONTENER TYPE="SHELL" NAME="Coating"/>
+                    <CONTENER TYPE="VOLUME" NAME="Coating"/>
+                    <CONTENER TYPE="SHELL" NAME="Miscellaneous"/>
+                    <CONTENER TYPE="SHELL" NAME="Enclosure"/>
+                    <CONTENER TYPE="VOLUME" NAME="Enclosure"/>
+                </NODE_ATTRIBUTE>
+            </DATA_NODE>
+            <DATA_NODE TYPE="OBJECT" REFOBJ_ID="22" NAME="Panneau Solaire Dessus">
+                <DATA_NODE TYPE="SHAPE" REFOBJ_ID="18" NAME="Panneau 2 (1)">
+                    <NODE_ATTRIBUTE TYPE="SHAPE" NAME="SHAPE">
+                        <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                            <ELEM X="0.39" Y="0.01" Z="0.301" TYPE="POINT" NAME="Point 1"/>
+                            <ELEM X="0.39" Y="0.09" Z="0.301" TYPE="POINT" NAME="Point 2"/>
+                            <ELEM X="0.111" Y="0.09" Z="0.301" TYPE="POINT" NAME="Point 3"/>
+                        </ELEM>
+                    </NODE_ATTRIBUTE>
+                </DATA_NODE>
+                <DATA_NODE TYPE="SHAPE" REFOBJ_ID="19" NAME="Panneau 1 (1)">
+                    <NODE_ATTRIBUTE TYPE="SHAPE" NAME="SHAPE">
+                        <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                            <ELEM X="-0.29" Y="0.01" Z="0.301" TYPE="POINT" NAME="Point 1"/>
+                            <ELEM X="-0.29" Y="0.09" Z="0.301" TYPE="POINT" NAME="Point 2"/>
+                            <ELEM X="-0.011" Y="0.09" Z="0.301" TYPE="POINT" NAME="Point 3"/>
+                        </ELEM>
+                    </NODE_ATTRIBUTE>
+                </DATA_NODE>
+                <DATA_NODE TYPE="SHAPE" REFOBJ_ID="20" NAME="Panneau 4 (1)">
+                    <NODE_ATTRIBUTE TYPE="SHAPE" NAME="SHAPE">
+                        <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                            <ELEM X="0.09" Y="-0.29" Z="0.301" TYPE="POINT" NAME="Point 1"/>
+                            <ELEM X="0.01" Y="-0.29" Z="0.301" TYPE="POINT" NAME="Point 2"/>
+                            <ELEM X="0.011" Y="-0.011" Z="0.301" TYPE="POINT" NAME="Point 3"/>
+                        </ELEM>
+                    </NODE_ATTRIBUTE>
+                </DATA_NODE>
+                <DATA_NODE TYPE="SHAPE" REFOBJ_ID="21" NAME="Panneau 3 (1)">
+                    <NODE_ATTRIBUTE TYPE="SHAPE" NAME="SHAPE">
+                        <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                            <ELEM X="0.09" Y="0.39" Z="0.301" TYPE="POINT" NAME="Point 1"/>
+                            <ELEM X="0.01" Y="0.39" Z="0.301" TYPE="POINT" NAME="Point 2"/>
+                            <ELEM X="0.01" Y="0.111" Z="0.301" TYPE="POINT" NAME="Point 3"/>
+                        </ELEM>
+                    </NODE_ATTRIBUTE>
+                </DATA_NODE>
+                <NODE_ATTRIBUTE TYPE="PROP_APPLI" NAME="Thermica">
+                    <CONTENER TYPE="SHELL" NAME="Bulk">
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Geom_Prop" NAME="Geometrical properties">
+                                    <ELEM TYPE="VALUE" ID="Thickness" VALUE="0.01"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Phys_Prop" NAME="Physical properties">
+                                    <ELEM TYPE="VALUE" ID="Conductivity" VALUE="148"/>
+                                    <ELEM TYPE="VALUE" ID="Density" VALUE="2333"/>
+                                    <ELEM TYPE="VALUE" ID="Specific_heat" VALUE="700"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="VOLUME" NAME="Bulk"/>
+                    <CONTENER TYPE="SHELL" NAME="Transverse"/>
+                    <CONTENER TYPE="SHELL" NAME="Coating">
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY NAME="Thermo-optical IR">
+                                    <ELEM TYPE="STRING" NAME="Selected material" STR="SunCell"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY NAME="Thermo-optical UV">
+                                    <ELEM TYPE="STRING" NAME="Selected material" STR="SunCell"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="VOLUME" NAME="Coating"/>
+                    <CONTENER TYPE="SHELL" NAME="Miscellaneous"/>
+                    <CONTENER TYPE="SHELL" NAME="Enclosure"/>
+                    <CONTENER TYPE="VOLUME" NAME="Enclosure"/>
+                </NODE_ATTRIBUTE>
+            </DATA_NODE>
+            <DATA_NODE TYPE="OBJECT" REFOBJ_ID="23" NAME="Rack">
+                <DATA_NODE TYPE="SHAPE" REFOBJ_ID="50" NAME="OBC">
+                    <NODE_ATTRIBUTE TYPE="SHAPE" NAME="SHAPE">
+                        <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                            <ELEM X="0" Y="0" Z="0.29" TYPE="POINT" NAME="Point 1"/>
+                            <ELEM X="0.1" Y="0" Z="0.29" TYPE="POINT" NAME="Point 2"/>
+                            <ELEM X="0.1" Y="0.1" Z="0.29" TYPE="POINT" NAME="Point 3"/>
+                        </ELEM>
+                    </NODE_ATTRIBUTE>
+                    <NODE_ATTRIBUTE TYPE="PROP_APPLI" NAME="Thermica">
+                        <CONTENER TYPE="SHELL" NAME="Bulk">
+                            <FACE NAME="Alike sides">
+                                <LAYER NAME="Layer 1">
+                                    <PROP_CATEGORY ID="Geom_Prop" NAME="Geometrical properties">
+                                        <ELEM TYPE="VALUE" ID="Thickness" VALUE="0.01"/>
+                                    </PROP_CATEGORY>
+                                </LAYER>
+                            </FACE>
+                        </CONTENER>
+                        <CONTENER TYPE="SHELL" NAME="Transverse"/>
+                        <CONTENER TYPE="SHELL" NAME="Coating"/>
+                        <CONTENER TYPE="SHELL" NAME="Miscellaneous"/>
+                        <CONTENER TYPE="SHELL" NAME="Enclosure"/>
+                    </NODE_ATTRIBUTE>
+                </DATA_NODE>
+                <DATA_NODE TYPE="SHAPE" REFOBJ_ID="155" NAME="comms">
+                    <NODE_ATTRIBUTE TYPE="PROP_APPLI" NAME="Thermica">
+                        <CONTENER TYPE="SHELL" NAME="Bulk">
+                            <FACE NAME="Alike sides">
+                                <LAYER NAME="Layer 1">
+                                    <PROP_CATEGORY ID="Geom_Prop" NAME="Geometrical properties">
+                                        <ELEM TYPE="VALUE" ID="Thickness" VALUE="0.01"/>
+                                    </PROP_CATEGORY>
+                                </LAYER>
+                            </FACE>
+                        </CONTENER>
+                        <CONTENER TYPE="SHELL" NAME="Transverse"/>
+                        <CONTENER TYPE="SHELL" NAME="Coating"/>
+                        <CONTENER TYPE="SHELL" NAME="Miscellaneous"/>
+                        <CONTENER TYPE="SHELL" NAME="Enclosure"/>
+                    </NODE_ATTRIBUTE>
+                    <NODE_ATTRIBUTE TYPE="SHAPE" NAME="SHAPE">
+                        <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                            <ELEM X="0" Y="0" Z="0.225" TYPE="POINT" NAME="Point 1"/>
+                            <ELEM X="0.1" Y="0" Z="0.225" TYPE="POINT" NAME="Point 2"/>
+                            <ELEM X="0.1" Y="0.1" Z="0.225" TYPE="POINT" NAME="Point 3"/>
+                        </ELEM>
+                    </NODE_ATTRIBUTE>
+                </DATA_NODE>
+                <DATA_NODE TYPE="SHAPE" REFOBJ_ID="147" NAME="Power">
+                    <NODE_ATTRIBUTE TYPE="PROP_APPLI" NAME="Thermica">
+                        <CONTENER TYPE="SHELL" NAME="Bulk">
+                            <FACE NAME="Alike sides">
+                                <LAYER NAME="Layer 1">
+                                    <PROP_CATEGORY ID="Geom_Prop" NAME="Geometrical properties">
+                                        <ELEM TYPE="VALUE" ID="Thickness" VALUE="0.01"/>
+                                    </PROP_CATEGORY>
+                                </LAYER>
+                            </FACE>
+                        </CONTENER>
+                        <CONTENER TYPE="SHELL" NAME="Transverse"/>
+                        <CONTENER TYPE="SHELL" NAME="Coating"/>
+                        <CONTENER TYPE="SHELL" NAME="Miscellaneous"/>
+                        <CONTENER TYPE="SHELL" NAME="Enclosure"/>
+                    </NODE_ATTRIBUTE>
+                    <NODE_ATTRIBUTE TYPE="SHAPE" NAME="SHAPE">
+                        <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                            <ELEM X="0" Y="0" Z="0.265" TYPE="POINT" NAME="Point 1"/>
+                            <ELEM X="0.1" Y="0" Z="0.265" TYPE="POINT" NAME="Point 2"/>
+                            <ELEM X="0.1" Y="0.1" Z="0.265" TYPE="POINT" NAME="Point 3"/>
+                        </ELEM>
+                    </NODE_ATTRIBUTE>
+                </DATA_NODE>
+                <DATA_NODE TYPE="SHAPE" REFOBJ_ID="148" NAME="Batteries">
+                    <NODE_ATTRIBUTE TYPE="PROP_APPLI" NAME="Thermica">
+                        <CONTENER TYPE="SHELL" NAME="Bulk">
+                            <FACE NAME="Alike sides">
+                                <LAYER NAME="Layer 1">
+                                    <PROP_CATEGORY ID="Geom_Prop" NAME="Geometrical properties">
+                                        <ELEM TYPE="VALUE" ID="Thickness" VALUE="0.01"/>
+                                    </PROP_CATEGORY>
+                                </LAYER>
+                            </FACE>
+                        </CONTENER>
+                        <CONTENER TYPE="SHELL" NAME="Transverse"/>
+                        <CONTENER TYPE="SHELL" NAME="Coating"/>
+                        <CONTENER TYPE="SHELL" NAME="Miscellaneous"/>
+                        <CONTENER TYPE="SHELL" NAME="Enclosure"/>
+                    </NODE_ATTRIBUTE>
+                    <NODE_ATTRIBUTE TYPE="SHAPE" NAME="SHAPE">
+                        <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                            <ELEM X="0" Y="0" Z="0.25" TYPE="POINT" NAME="Point 1"/>
+                            <ELEM X="0.1" Y="0" Z="0.25" TYPE="POINT" NAME="Point 2"/>
+                            <ELEM X="0.1" Y="0.1" Z="0.25" TYPE="POINT" NAME="Point 3"/>
+                        </ELEM>
+                    </NODE_ATTRIBUTE>
+                </DATA_NODE>
+                <DATA_NODE TYPE="SHAPE" REFOBJ_ID="149" NAME="MTQ">
+                    <NODE_ATTRIBUTE TYPE="PROP_APPLI" NAME="Thermica">
+                        <CONTENER TYPE="SHELL" NAME="Bulk">
+                            <FACE NAME="Alike sides">
+                                <LAYER NAME="Layer 1">
+                                    <PROP_CATEGORY ID="Geom_Prop" NAME="Geometrical properties">
+                                        <ELEM TYPE="VALUE" ID="Thickness" VALUE="0.01"/>
+                                    </PROP_CATEGORY>
+                                </LAYER>
+                            </FACE>
+                        </CONTENER>
+                        <CONTENER TYPE="SHELL" NAME="Transverse"/>
+                        <CONTENER TYPE="SHELL" NAME="Coating"/>
+                        <CONTENER TYPE="SHELL" NAME="Miscellaneous"/>
+                        <CONTENER TYPE="SHELL" NAME="Enclosure"/>
+                    </NODE_ATTRIBUTE>
+                    <NODE_ATTRIBUTE TYPE="SHAPE" NAME="SHAPE">
+                        <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                            <ELEM X="0" Y="0" Z="0.15" TYPE="POINT" NAME="Point 1"/>
+                            <ELEM X="0.1" Y="0" Z="0.15" TYPE="POINT" NAME="Point 2"/>
+                            <ELEM X="0.1" Y="0.1" Z="0.15" TYPE="POINT" NAME="Point 3"/>
+                        </ELEM>
+                    </NODE_ATTRIBUTE>
+                </DATA_NODE>
+                <NODE_ATTRIBUTE TYPE="COLOR" NAME="COLOR">
+                    <ELEM G="0" TYPE="COLOR" NAME="COLOR" R="1" B="0"/>
+                </NODE_ATTRIBUTE>
+                <NODE_ATTRIBUTE TYPE="PROP_APPLI" NAME="Thermica">
+                    <CONTENER TYPE="SHELL" NAME="Bulk">
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Geom_Prop" NAME="Geometrical properties">
+                                    <ELEM TYPE="VALUE" ID="Thickness" VALUE="0.01"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Phys_Prop" NAME="Physical properties">
+                                    <ELEM TYPE="VALUE" ID="Conductivity" VALUE="148"/>
+                                    <ELEM TYPE="VALUE" ID="Density" VALUE="2333"/>
+                                    <ELEM TYPE="VALUE" ID="Specific_heat" VALUE="750"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="VOLUME" NAME="Bulk"/>
+                    <CONTENER TYPE="SHELL" NAME="Transverse"/>
+                    <CONTENER TYPE="SHELL" NAME="Coating"/>
+                    <CONTENER TYPE="VOLUME" NAME="Coating"/>
+                    <CONTENER TYPE="SHELL" NAME="Miscellaneous"/>
+                    <CONTENER TYPE="SHELL" NAME="Enclosure"/>
+                    <CONTENER TYPE="VOLUME" NAME="Enclosure"/>
+                </NODE_ATTRIBUTE>
+            </DATA_NODE>
+            <DATA_NODE TYPE="OBJECT" REFOBJ_ID="150" NAME="Payload 1">
+                <DATA_NODE TYPE="SHAPE" REFOBJ_ID="151" NAME="puissance">
+                    <NODE_ATTRIBUTE TYPE="SHAPE" NAME="SHAPE">
+                        <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                            <ELEM X="0" Y="0" Z="0.2" TYPE="POINT" NAME="Point 1"/>
+                            <ELEM X="0.1" Y="0" Z="0.2" TYPE="POINT" NAME="Point 2"/>
+                            <ELEM X="0.1" Y="0.1" Z="0.2" TYPE="POINT" NAME="Point 3"/>
+                        </ELEM>
+                    </NODE_ATTRIBUTE>
+                    <NODE_ATTRIBUTE TYPE="PROP_APPLI" NAME="Thermica">
+                        <CONTENER TYPE="SHELL" NAME="Bulk"/>
+                        <CONTENER TYPE="SHELL" NAME="Transverse"/>
+                        <CONTENER TYPE="SHELL" NAME="Coating">
+                            <FACE NAME="Alike sides">
+                                <LAYER NAME="Layer 1">
+                                    <PROP_CATEGORY NAME="Thermo-optical IR">
+                                        <ELEM TYPE="STRING" NAME="Selected material" STR="PCBZ"/>
+                                    </PROP_CATEGORY>
+                                    <PROP_CATEGORY NAME="Thermo-optical UV">
+                                        <ELEM TYPE="STRING" NAME="Selected material" STR="PCBZ"/>
+                                    </PROP_CATEGORY>
+                                </LAYER>
+                            </FACE>
+                        </CONTENER>
+                        <CONTENER TYPE="SHELL" NAME="Miscellaneous"/>
+                        <CONTENER TYPE="SHELL" NAME="Enclosure"/>
+                    </NODE_ATTRIBUTE>
+                </DATA_NODE>
+                <NODE_ATTRIBUTE TYPE="COLOR" NAME="COLOR">
+                    <ELEM G="0.666666666666667" TYPE="COLOR" NAME="COLOR" R="0.666666666666667" B="1"/>
+                </NODE_ATTRIBUTE>
+                <NODE_ATTRIBUTE TYPE="PROP_APPLI" NAME="Thermica">
+                    <CONTENER TYPE="SHELL" NAME="Bulk">
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Geom_Prop" NAME="Geometrical properties">
+                                    <ELEM TYPE="VALUE" ID="Thickness" VALUE="0.01"/>
+                                </PROP_CATEGORY>
+                                <PROP_CATEGORY ID="Phys_Prop" NAME="Physical properties">
+                                    <ELEM TYPE="VALUE" ID="Conductivity" VALUE="148"/>
+                                    <ELEM TYPE="VALUE" ID="Density" VALUE="2333"/>
+                                    <ELEM TYPE="VALUE" ID="Specific_heat" VALUE="750"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="VOLUME" NAME="Bulk"/>
+                    <CONTENER TYPE="SHELL" NAME="Transverse"/>
+                    <CONTENER TYPE="SHELL" NAME="Coating"/>
+                    <CONTENER TYPE="VOLUME" NAME="Coating"/>
+                    <CONTENER TYPE="SHELL" NAME="Miscellaneous"/>
+                    <CONTENER TYPE="SHELL" NAME="Enclosure"/>
+                    <CONTENER TYPE="VOLUME" NAME="Enclosure"/>
+                </NODE_ATTRIBUTE>
+            </DATA_NODE>
+            <DATA_NODE TYPE="OBJECT" REFOBJ_ID="152" NAME="Payload 2">
+                <DATA_NODE TYPE="SHAPE" REFOBJ_ID="153" NAME="puissance">
+                    <NODE_ATTRIBUTE TYPE="PROP_APPLI" NAME="Thermica">
+                        <CONTENER TYPE="SHELL" NAME="Bulk">
+                            <FACE NAME="Alike sides">
+                                <LAYER NAME="Layer 1">
+                                    <PROP_CATEGORY ID="Geom_Prop" NAME="Geometrical properties">
+                                        <ELEM TYPE="VALUE" ID="Thickness" VALUE="0.00174"/>
+                                    </PROP_CATEGORY>
+                                </LAYER>
+                            </FACE>
+                        </CONTENER>
+                        <CONTENER TYPE="SHELL" NAME="Transverse"/>
+                        <CONTENER TYPE="SHELL" NAME="Coating">
+                            <FACE NAME="Alike sides">
+                                <LAYER NAME="Layer 1">
+                                    <PROP_CATEGORY NAME="Thermo-optical IR">
+                                        <ELEM TYPE="STRING" NAME="Selected material" STR="PCBZ"/>
+                                    </PROP_CATEGORY>
+                                    <PROP_CATEGORY NAME="Thermo-optical UV">
+                                        <ELEM TYPE="STRING" NAME="Selected material" STR="PCBZ"/>
+                                    </PROP_CATEGORY>
+                                </LAYER>
+                            </FACE>
+                        </CONTENER>
+                        <CONTENER TYPE="SHELL" NAME="Miscellaneous"/>
+                        <CONTENER TYPE="SHELL" NAME="Enclosure"/>
+                    </NODE_ATTRIBUTE>
+                    <NODE_ATTRIBUTE TYPE="SHAPE" NAME="SHAPE">
+                        <ELEM SHAPETYPE="RECTANGLE_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="Rectangle">
+                            <ELEM X="0" Y="0" Z="0.175" TYPE="POINT" NAME="Point 1"/>
+                            <ELEM X="0.1" Y="0" Z="0.175" TYPE="POINT" NAME="Point 2"/>
+                            <ELEM X="0.1" Y="0.1" Z="0.175" TYPE="POINT" NAME="Point 3"/>
+                        </ELEM>
+                    </NODE_ATTRIBUTE>
+                </DATA_NODE>
+                <NODE_ATTRIBUTE TYPE="COLOR" NAME="COLOR">
+                    <ELEM G="0.666666666666667" TYPE="COLOR" NAME="COLOR" R="1" B="0.498039215686275"/>
+                </NODE_ATTRIBUTE>
+                <NODE_ATTRIBUTE TYPE="PROP_APPLI" NAME="Thermica">
+                    <CONTENER TYPE="SHELL" NAME="Bulk">
+                        <FACE NAME="Alike sides">
+                            <LAYER NAME="Layer 1">
+                                <PROP_CATEGORY ID="Phys_Prop" NAME="Physical properties">
+                                    <ELEM TYPE="VALUE" ID="Conductivity" VALUE="148"/>
+                                    <ELEM TYPE="VALUE" ID="Density" VALUE="2333"/>
+                                    <ELEM TYPE="VALUE" ID="Specific_heat" VALUE="750"/>
+                                </PROP_CATEGORY>
+                            </LAYER>
+                        </FACE>
+                    </CONTENER>
+                    <CONTENER TYPE="VOLUME" NAME="Bulk"/>
+                    <CONTENER TYPE="SHELL" NAME="Transverse"/>
+                    <CONTENER TYPE="SHELL" NAME="Coating"/>
+                    <CONTENER TYPE="VOLUME" NAME="Coating"/>
+                    <CONTENER TYPE="SHELL" NAME="Miscellaneous"/>
+                    <CONTENER TYPE="SHELL" NAME="Enclosure"/>
+                    <CONTENER TYPE="VOLUME" NAME="Enclosure"/>
+                </NODE_ATTRIBUTE>
+            </DATA_NODE>
+            <DATA_NODE TYPE="SHAPE" REFOBJ_ID="156" NAME="New 3 points cylinder (base center, height, radius)">
+                <NODE_ATTRIBUTE TYPE="SHAPE" NAME="SHAPE">
+                    <ELEM SHAPETYPE="CYLINDER_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="3 points cylinder">
+                        <ELEM X="0" Y="0" Z="0" TYPE="POINT" NAME="Point 1"/>
+                        <ELEM X="0" Y="0" Z="0.3" TYPE="POINT" NAME="Point 2"/>
+                        <ELEM X="0.0016" Y="0" Z="0" TYPE="POINT" NAME="Point 3"/>
+                    </ELEM>
+                </NODE_ATTRIBUTE>
+                <NODE_ATTRIBUTE TYPE="AXIS" NAME="AXIS">
+                    <ELEM AXISTYPE="TRAROT" TYPE="AXIS" NAME="Translations and rotations">
+                        <ELEM AXISTYPE="TRANSLATION" TYPE="AXIS" NAME="X, Y or Z translation">
+                            <ELEM TYPE="STRING" NAME="Translation direction" STR="TRAX"/>
+                            <ELEM L="0.00508" TYPE="LENGTH" NAME="Distance"/>
+                        </ELEM>
+                        <ELEM AXISTYPE="TRANSLATION" TYPE="AXIS" NAME="X, Y or Z translation">
+                            <ELEM TYPE="STRING" NAME="Translation direction" STR="TRAY"/>
+                            <ELEM L="0.00508" TYPE="LENGTH" NAME="Distance"/>
+                        </ELEM>
+                    </ELEM>
+                </NODE_ATTRIBUTE>
+            </DATA_NODE>
+            <DATA_NODE TYPE="SHAPE" REFOBJ_ID="164" NAME="New 3 points cylinder (base center, height, radius) (1)">
+                <NODE_ATTRIBUTE TYPE="SHAPE" NAME="SHAPE">
+                    <ELEM SHAPETYPE="CYLINDER_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="3 points cylinder">
+                        <ELEM X="0" Y="0" Z="0" TYPE="POINT" NAME="Point 1"/>
+                        <ELEM X="0" Y="0" Z="0.3" TYPE="POINT" NAME="Point 2"/>
+                        <ELEM X="0.0016" Y="0" Z="0" TYPE="POINT" NAME="Point 3"/>
+                    </ELEM>
+                </NODE_ATTRIBUTE>
+                <NODE_ATTRIBUTE TYPE="AXIS" NAME="AXIS">
+                    <ELEM AXISTYPE="TRAROT" TYPE="AXIS" NAME="Translations and rotations">
+                        <ELEM AXISTYPE="TRANSLATION" TYPE="AXIS" NAME="X, Y or Z translation">
+                            <ELEM TYPE="STRING" NAME="Translation direction" STR="TRAX"/>
+                            <ELEM L="0.00508" TYPE="LENGTH" NAME="Distance"/>
+                        </ELEM>
+                        <ELEM AXISTYPE="TRANSLATION" TYPE="AXIS" NAME="X, Y or Z translation">
+                            <ELEM TYPE="STRING" NAME="Translation direction" STR="TRAY"/>
+                            <ELEM L="0.09493" TYPE="LENGTH" NAME="Distance"/>
+                        </ELEM>
+                    </ELEM>
+                </NODE_ATTRIBUTE>
+            </DATA_NODE>
+            <DATA_NODE TYPE="SHAPE" REFOBJ_ID="159" NAME="New 3 points cylinder (base center, height, radius) (2)">
+                <NODE_ATTRIBUTE TYPE="SHAPE" NAME="SHAPE">
+                    <ELEM SHAPETYPE="CYLINDER_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="3 points cylinder">
+                        <ELEM X="0" Y="0" Z="0" TYPE="POINT" NAME="Point 1"/>
+                        <ELEM X="0" Y="0" Z="0.3" TYPE="POINT" NAME="Point 2"/>
+                        <ELEM X="0.0016" Y="0" Z="0" TYPE="POINT" NAME="Point 3"/>
+                    </ELEM>
+                </NODE_ATTRIBUTE>
+                <NODE_ATTRIBUTE TYPE="AXIS" NAME="AXIS">
+                    <ELEM AXISTYPE="TRAROT" TYPE="AXIS" NAME="Translations and rotations">
+                        <ELEM AXISTYPE="TRANSLATION" TYPE="AXIS" NAME="X, Y or Z translation">
+                            <ELEM TYPE="STRING" NAME="Translation direction" STR="TRAX"/>
+                            <ELEM L="0.09493" TYPE="LENGTH" NAME="Distance"/>
+                        </ELEM>
+                        <ELEM AXISTYPE="TRANSLATION" TYPE="AXIS" NAME="X, Y or Z translation">
+                            <ELEM TYPE="STRING" NAME="Translation direction" STR="TRAY"/>
+                            <ELEM L="0.09493" TYPE="LENGTH" NAME="Distance"/>
+                        </ELEM>
+                    </ELEM>
+                </NODE_ATTRIBUTE>
+            </DATA_NODE>
+            <DATA_NODE TYPE="SHAPE" REFOBJ_ID="157" NAME="New 3 points cylinder (base center, height, radius) (3)">
+                <NODE_ATTRIBUTE TYPE="SHAPE" NAME="SHAPE">
+                    <ELEM SHAPETYPE="CYLINDER_3P" REVERSE_NORMAL="false" TYPE="SHAPE" NAME="3 points cylinder">
+                        <ELEM X="0" Y="0" Z="0" TYPE="POINT" NAME="Point 1"/>
+                        <ELEM X="0" Y="0" Z="0.3" TYPE="POINT" NAME="Point 2"/>
+                        <ELEM X="0.0016" Y="0" Z="0" TYPE="POINT" NAME="Point 3"/>
+                    </ELEM>
+                </NODE_ATTRIBUTE>
+                <NODE_ATTRIBUTE TYPE="AXIS" NAME="AXIS">
+                    <ELEM AXISTYPE="TRAROT" TYPE="AXIS" NAME="Translations and rotations">
+                        <ELEM AXISTYPE="TRANSLATION" TYPE="AXIS" NAME="X, Y or Z translation">
+                            <ELEM TYPE="STRING" NAME="Translation direction" STR="TRAX"/>
+                            <ELEM L="0.09493" TYPE="LENGTH" NAME="Distance"/>
+                        </ELEM>
+                        <ELEM AXISTYPE="TRANSLATION" TYPE="AXIS" NAME="X, Y or Z translation">
+                            <ELEM TYPE="STRING" NAME="Translation direction" STR="TRAY"/>
+                            <ELEM L="0.00508" TYPE="LENGTH" NAME="Distance"/>
+                        </ELEM>
+                    </ELEM>
+                </NODE_ATTRIBUTE>
+            </DATA_NODE>
+        </DATA_NODE>
+    </DATA_STRUCTURE>
+</SYSML>

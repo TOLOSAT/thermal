@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SYSML SYSML_VERSION="1.7" CONTENTS="KINEMATICS" SAVEDATE="1619112176" SYSTEMA_VERSION="4.9.0">
+    <DATA_STRUCTURE NAME="kinematics_towards_sun.syskin" REFSET_ID="{db6d6431-fcbd-4ccc-b786-4e1ee3083d5d}">
+        <DATA_NODE TYPE="KINEMATICS" REFOBJ_ID="2" NAME="Kinematics">
+            <NODE_ATTRIBUTE TYPE="PHASES" NAME="PHASES">
+                <ELEM DEFAULT="Default phase" TYPE="PHASES">
+                    <ELEM TYPE="STRING" NAME="Default phase" STR="Default"/>
+                </ELEM>
+            </NODE_ATTRIBUTE>
+            <NODE_ATTRIBUTE TYPE="LAW_ATT" NAME="POINTING LAW_%P_Default">
+                <ELEM LAWTYPE="2 pointing vectors laws" TYPE="KINE_LAW_ELEM" NAME="Multiple laws">
+                    <ELEM LAWTYPE="Sun" TYPE="KINE_LAW_ELEM" NAME="Sun">
+                        <ELEM X="0" Y="0" Z="1" TYPE="VECTOR" NAME="Pointing vector"/>
+                    </ELEM>
+                    <ELEM LAWTYPE="Sun" TYPE="KINE_LAW_ELEM" NAME="Sun">
+                        <ELEM X="0" Y="0" Z="1" TYPE="VECTOR" NAME="Pointing vector"/>
+                    </ELEM>
+                </ELEM>
+            </NODE_ATTRIBUTE>
+        </DATA_NODE>
+    </DATA_STRUCTURE>
+</SYSML>

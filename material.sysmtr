@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SYSML SYSML_VERSION="1.7" CONTENTS="MATERIAL" SAVEDATE="1605801157" SYSTEMA_VERSION="4.9.0">
+    <DATA_STRUCTURE NAME="material.sysmtr" REFSET_ID="{7f18b84c-e672-4922-aacb-cbaee81d30c6}">
+        <DATA_NODE TYPE="MATERIAL" REFOBJ_ID="2" NAME="Material database">
+            <DATA_NODE TYPE="MATERIALDATA" REFOBJ_ID="3" NAME="Silicon">
+                <NODE_ATTRIBUTE TYPE="MATERIAL_CATEG" NAME="MATERIAL_CATEG_Thermica_Phys_Prop_%P_Default">
+                    <PROP_CATEGORY ID="Phys_Prop" NAME="Physical properties">
+                        <ELEM TYPE="VALUE" ID="Conductivity" VALUE="148"/>
+                        <ELEM TYPE="VALUE" ID="Density" VALUE="2333"/>
+                        <ELEM TYPE="VALUE" ID="Specific_heat" VALUE="700"/>
+                    </PROP_CATEGORY>
+                </NODE_ATTRIBUTE>
+            </DATA_NODE>
+            <NODE_ATTRIBUTE TYPE="PHASES" NAME="PHASES">
+                <ELEM DEFAULT="Default phase" TYPE="PHASES">
+                    <ELEM TYPE="STRING" NAME="Default phase" STR="Default"/>
+                </ELEM>
+            </NODE_ATTRIBUTE>
+        </DATA_NODE>
+    </DATA_STRUCTURE>
+</SYSML>

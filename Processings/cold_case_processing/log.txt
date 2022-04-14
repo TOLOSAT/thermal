@@ -1,0 +1,461 @@
+Generation of mission files.
+Mission files generated.
+> Execution : C:/Program Files (x86)/Systema/Systema-4.9.0/applications//Thermica-4.9.0/ConductionWIN.exe -param Conduction.sysprm -mission cold_case.sysset -log cold_case.cond.log -gl cold_case.gl.nwk -edg cold_case.edg.h5
+>  
+>  
+>  **************************
+> Conduction Computation
+>  **************************
+> THERMICA 4.9.0 - 64 bits
+AIRBUS Defence and Space SAS - 2021 - All rights reserved
+Information contact : Systema Support
+Telephone : +33 (0)5 31 96 80 00
+Email : engineering.software@airbus.com
+
+About license :
+Valid local license found, expires at 31/01/2022
+(file: C:/Program Files (x86)/Systema/Systema-4.9.0/licenses\Tolosat_Burguburu.moslf).
+
+>   - Number of active threads : 8 ( / 8 available)
+
+> State  1 : Model Initialisation
+> State  2 : Thermal Data Loading
+> State  3 : Mission Data Loading
+> State  4 : Edges creation (border)
+> State  4 : Edges creation (contact)
+> State  4 : Edges creation (edges)
+> State  5 : Computation of couplings via RCN
+Execution of computation executable "Thermica - Conduction" completed.
+> State  6 : Simplification of couplings
+> State  7 : Network Output generation
+>  
+> Execution completed on Thu Dec 02 18:39:08 2021
+
+>  **************************
+>  
+> Execution : C:/Program Files (x86)/Systema/Systema-4.9.0/applications//Thermica-4.9.0/NodeWIN.exe -param Nodal_Description.sysprm -mission cold_case.sysset -log cold_case.nod.log -nwk cold_case.nod.nwk
+>  
+>  
+>  **************************
+> Nodal description
+>  **************************
+> THERMICA 4.9.0 - 64 bits
+AIRBUS Defence and Space SAS - 2021 - All rights reserved
+Information contact : Systema Support
+Telephone : +33 (0)5 31 96 80 00
+Email : engineering.software@airbus.com
+
+About license :
+Valid local license found, expires at 31/01/2022
+(file: C:/Program Files (x86)/Systema/Systema-4.9.0/licenses\Tolosat_Burguburu.moslf).
+
+> State  1 : Model Initialisation
+> State  2 : Thermal Data Loading
+> State  3 : Contact Management
+> State  4 : Mission Data Loading
+> State  5 : Network Output generation
+> State  6 : Adding specific items
+Execution of computation executable "Thermica - Nodal_Description" completed.
+>  
+> Execution completed on Thu Dec 02 18:39:13 2021
+
+>  **************************
+>  
+> Execution : C:/Program Files (x86)/Systema/Systema-4.9.0/applications//Thermica-4.9.0/RadiationWIN.exe -param Radiation.sysprm -mission cold_case.sysset -h5 cold_case.rad.h5 -box cold_case.box.h5 -log cold_case.rad.log -gb cold_case.gb.txt -gr cold_case.gr.nwk
+>  
+>  
+>  **************************
+> Radiation Computation
+>  **************************
+> THERMICA 4.9.0 - 64 bits
+AIRBUS Defence and Space SAS - 2021 - All rights reserved
+Information contact : Systema Support
+Telephone : +33 (0)5 31 96 80 00
+Email : engineering.software@airbus.com
+
+About license :
+Valid local license found, expires at 31/01/2022
+(file: C:/Program Files (x86)/Systema/Systema-4.9.0/licenses\Tolosat_Burguburu.moslf).
+
+>   - Number of active threads : 8 ( / 8 available)
+
+> State  1 : Model Initialisation
+> State  2 : Thermal Data Loading
+> State  3 : Mission Data Loading
+> State  4 : Ray-Tracing Initialisation
+> State  5 : REF ray-tracing
+> State  6 : Symmetrization of Matrix
+> State  7 : Radiation Check-list generation
+> State  8 : Network Output Generation
+Execution of computation executable "Thermica - Radiation" completed.
+>  
+> Execution completed on Thu Dec 02 18:39:20 2021
+
+>  **************************
+>  
+> Execution : C:/Program Files (x86)/Systema/Systema-4.9.0/applications//Thermica-4.9.0/PlanetFluxesWIN.exe -param Planet_Fluxes.sysprm -mission cold_case.sysset -refh5 cold_case.box.h5 -hdf5 cold_case.pf.h5 -log cold_case.pf.log -fap cold_case.pf.nwk
+>  
+>  
+>  **************************
+> Planets Fluxes Computation
+>  **************************
+> THERMICA 4.9.0 - 64 bits
+AIRBUS Defence and Space SAS - 2021 - All rights reserved
+Information contact : Systema Support
+Telephone : +33 (0)5 31 96 80 00
+Email : engineering.software@airbus.com
+
+About license :
+Valid local license found, expires at 31/01/2022
+(file: C:/Program Files (x86)/Systema/Systema-4.9.0/licenses\Tolosat_Burguburu.moslf).
+
+> State  1 : Model Initialisation
+> State  2 : Thermal Data Loading
+> State  3 : Mission Data Loading
+> State  4 : Planetes Fluxes Computation
+> Time position 0  -  Sun constant on planet Earth : 1410.06 W/m2
+> Time position 1  -  Sun constant on planet Earth : 1410.07 W/m2
+> Time position 2  -  Sun constant on planet Earth : 1410.07 W/m2
+> Time position 3  -  Sun constant on planet Earth : 1410.07 W/m2
+> Time position 4  -  Sun constant on planet Earth : 1410.07 W/m2
+> Time position 5  -  Sun constant on planet Earth : 1410.07 W/m2
+> Time position 6  -  Sun constant on planet Earth : 1410.07 W/m2
+> Time position 7  -  Sun constant on planet Earth : 1410.07 W/m2
+> Time position 8  -  Sun constant on planet Earth : 1410.07 W/m2
+> Time position 9  -  Sun constant on planet Earth : 1410.07 W/m2
+> Time position 10  -  Sun constant on planet Earth : 1410.07 W/m2
+> Time position 11  -  Sun constant on planet Earth : 1410.07 W/m2
+> Time position 12  -  Sun constant on planet Earth : 1410.07 W/m2
+> Time position 13  -  Sun constant on planet Earth : 1410.08 W/m2
+> Time position 14  -  Sun constant on planet Earth : 1410.08 W/m2
+> Time position 15  -  Sun constant on planet Earth : 1410.08 W/m2
+> Time position 16  -  Sun constant on planet Earth : 1410.08 W/m2
+> Time position 17  -  Sun constant on planet Earth : 1410.08 W/m2
+> Time position 18  -  Sun constant on planet Earth : 1410.08 W/m2
+> Time position 19  -  Sun constant on planet Earth : 1410.08 W/m2
+> Time position 20  -  Sun constant on planet Earth : 1410.08 W/m2
+> Time position 21  -  Sun constant on planet Earth : 1410.09 W/m2
+> Time position 22  -  Sun constant on planet Earth : 1410.09 W/m2
+> Time position 23  -  Sun constant on planet Earth : 1410.09 W/m2
+> Time position 24  -  Sun constant on planet Earth : 1410.09 W/m2
+> Time position 25  -  Sun constant on planet Earth : 1410.09 W/m2
+> Time position 26  -  Sun constant on planet Earth : 1410.09 W/m2
+> Time position 27  -  Sun constant on planet Earth : 1410.09 W/m2
+> Time position 28  -  Sun constant on planet Earth : 1410.09 W/m2
+> State  5 : Network Outputs Generation
+Execution of computation executable "Thermica - Planet_Fluxes" completed.
+>  
+> Execution completed on Thu Dec 02 18:39:29 2021
+
+>  **************************
+>  
+> Execution : C:/Program Files (x86)/Systema/Systema-4.9.0/applications//Thermica-4.9.0/SolarFluxWIN.exe -param Solar_Flux.sysprm -mission cold_case.sysset -refh5 cold_case.box.h5 -hdf5 cold_case.sf.h5 -log cold_case.sf.log -fas cold_case.sf.nwk
+>  
+>  
+>  **************************
+> Solar Flux Computation
+>  **************************
+> THERMICA 4.9.0 - 64 bits
+AIRBUS Defence and Space SAS - 2021 - All rights reserved
+Information contact : Systema Support
+Telephone : +33 (0)5 31 96 80 00
+Email : engineering.software@airbus.com
+
+About license :
+Valid local license found, expires at 31/01/2022
+(file: C:/Program Files (x86)/Systema/Systema-4.9.0/licenses\Tolosat_Burguburu.moslf).
+
+>   - Number of active threads : 8 ( / 8 available)
+
+> State  1 : Model Initialisation
+> State  2 : Thermal Data Loading
+> State  3 : Mission Data Loading
+> State  4 : Ray-Tracing Initialisation
+> State  5 : Sun ray-tracing
+> Time position 0  -  Sun constant : 1410.04 W/m2
+> Time position 1  -  Sun constant : 1410.03 W/m2
+> Time position 2  -  Sun constant : 1410.02 W/m2
+> Time position 3  -  Sun constant : 1410.02 W/m2
+> Time position 4  -  Into eclipse
+> Time position 5  -  Into eclipse
+> Time position 6  -  Into eclipse
+> Time position 7  -  Into eclipse
+> Time position 8  -  Into eclipse
+> Time position 9  -  Into eclipse
+> Time position 10  -  Into eclipse
+> Time position 11  -  Sun constant : 1410.02 W/m2
+> Time position 12  -  Sun constant : 1410.03 W/m2
+> Time position 13  -  Sun constant : 1410.05 W/m2
+> Time position 14  -  Sun constant : 1410.06 W/m2
+> Time position 15  -  Sun constant : 1410.08 W/m2
+> Time position 16  -  Sun constant : 1410.1 W/m2
+> Time position 17  -  Sun constant : 1410.12 W/m2
+> Time position 18  -  Sun constant : 1410.13 W/m2
+> Time position 19  -  Sun constant : 1410.14 W/m2
+> Time position 20  -  Sun constant : 1410.15 W/m2
+> Time position 21  -  Sun constant : 1410.15 W/m2
+> Time position 22  -  Sun constant : 1410.15 W/m2
+> Time position 23  -  Sun constant : 1410.14 W/m2
+> Time position 24  -  Sun constant : 1410.13 W/m2
+> Time position 25  -  Sun constant : 1410.12 W/m2
+> Time position 26  -  Sun constant : 1410.1 W/m2
+> Time position 27  -  Sun constant : 1410.09 W/m2
+> Time position 28  -  Sun constant : 1410.07 W/m2
+> State  6 : SolarFlux Check-list generation
+> State  7 : Network Output Generation
+Execution of computation executable "Thermica - Solar_Flux" completed.
+>  
+> Execution completed on Thu Dec 02 18:39:36 2021
+
+>  **************************
+>  
+> Execution : C:/Program Files (x86)/Systema/Systema-4.9.0/applications//Thermisol-4.9.0/SkeletonWIN.exe -param Skeleton.sysprm -nwk cold_case.nod.nwk -gl cold_case.gl.nwk -gr cold_case.gr.nwk -fs cold_case.sf.nwk -usr TOLOSAT_Hotcase_PhaseA.usr -dck processing.dck
+>  
+>  
+>  **************************
+> Skeleton Generation
+>  **************************
+> THERMISOL 4.9.0 - 64 bits
+AIRBUS Defence and Space SAS - 2021 - All rights reserved
+Information contact : Systema Support
+Telephone : +33 (0)5 31 96 80 00
+Email : engineering.software@airbus.com
+
+About license :
+Valid local license found, expires at 31/01/2022
+(file: C:/Program Files (x86)/Systema/Systema-4.9.0/licenses\Tolosat_Burguburu.moslf).
+
+> State  1 : Skeleton generation
+> State  1 : Skeleton expansion
+>    using file - cold_case.nod.nwk
+>    using file - cold_case.gl.nwk
+>    using file - cold_case.gr.nwk
+>    using file - cold_case.sf.nwk
+>    using file - TOLOSAT_Hotcase_PhaseA.usr
+> Entering new block   $INFOS
+>    reading file - cold_case.nod.nwk
+>       -> block found
+>    reading file - cold_case.gl.nwk
+>       -> block found
+>    reading file - cold_case.gr.nwk
+>       -> block found
+>    reading file - cold_case.sf.nwk
+>       -> block found
+>    reading file - TOLOSAT_Hotcase_PhaseA.usr
+>       -> block found
+> Entering new block   $GLOBAL
+> Entering new block   $LOCALS
+>    reading file - cold_case.nod.nwk
+>       -> block found
+>    reading file - cold_case.gl.nwk
+>    reading file - cold_case.gr.nwk
+>    reading file - cold_case.sf.nwk
+>    reading file - TOLOSAT_Hotcase_PhaseA.usr
+> Entering new block   $VARIABLES
+>    reading file - cold_case.nod.nwk
+>    reading file - cold_case.gl.nwk
+>    reading file - cold_case.gr.nwk
+>    reading file - cold_case.sf.nwk
+>    reading file - TOLOSAT_Hotcase_PhaseA.usr
+> Entering new block   $ARRAYS
+>    reading file - cold_case.nod.nwk
+>    reading file - cold_case.gl.nwk
+>    reading file - cold_case.gr.nwk
+>    reading file - cold_case.sf.nwk
+>    reading file - TOLOSAT_Hotcase_PhaseA.usr
+> Entering new block   $TABLES
+>    reading file - cold_case.nod.nwk
+>    reading file - cold_case.gl.nwk
+>    reading file - cold_case.gr.nwk
+>    reading file - cold_case.sf.nwk
+>    reading file - TOLOSAT_Hotcase_PhaseA.usr
+> Entering new block   $EVENTS
+>    reading file - cold_case.nod.nwk
+>    reading file - cold_case.gl.nwk
+>    reading file - cold_case.gr.nwk
+>    reading file - cold_case.sf.nwk
+>    reading file - TOLOSAT_Hotcase_PhaseA.usr
+> Entering new block   $MODEL
+> Opening model  processing
+>    reading file - cold_case.nod.nwk
+>    reading file - cold_case.gl.nwk
+>    reading file - cold_case.gr.nwk
+>    reading file - cold_case.sf.nwk
+>    reading file - TOLOSAT_Hotcase_PhaseA.usr
+> Entering new block   $ENTITIES
+>    reading file - cold_case.nod.nwk
+>       -> block found
+>    reading file - cold_case.gl.nwk
+>    reading file - cold_case.gr.nwk
+>    reading file - cold_case.sf.nwk
+>    reading file - TOLOSAT_Hotcase_PhaseA.usr
+> Entering new block   $NODES
+>    reading file - cold_case.nod.nwk
+>       -> block found
+>    reading file - cold_case.gl.nwk
+>    reading file - cold_case.gr.nwk
+>    reading file - cold_case.sf.nwk
+>    reading file - TOLOSAT_Hotcase_PhaseA.usr
+> Entering new block   $EDGES
+>    reading file - cold_case.nod.nwk
+>    reading file - cold_case.gl.nwk
+>    reading file - cold_case.gr.nwk
+>    reading file - cold_case.sf.nwk
+>    reading file - TOLOSAT_Hotcase_PhaseA.usr
+> Entering new block   $CONDUCTORS
+>    reading file - cold_case.nod.nwk
+>    reading file - cold_case.gl.nwk
+>       -> block found
+>    reading file - cold_case.gr.nwk
+>       -> block found
+>    reading file - cold_case.sf.nwk
+>    reading file - TOLOSAT_Hotcase_PhaseA.usr
+>       -> block found
+> Entering new block   $LOCALS
+>    reading file - cold_case.nod.nwk
+>    reading file - cold_case.gl.nwk
+>    reading file - cold_case.gr.nwk
+>    reading file - cold_case.sf.nwk
+>    reading file - TOLOSAT_Hotcase_PhaseA.usr
+> Entering new block   $EVENTS
+>    reading file - cold_case.nod.nwk
+>       -> block found
+>    reading file - cold_case.gl.nwk
+>    reading file - cold_case.gr.nwk
+>    reading file - cold_case.sf.nwk
+>    reading file - TOLOSAT_Hotcase_PhaseA.usr
+> Entering new block   $ARRAYS
+>    reading file - cold_case.nod.nwk
+>       -> block found
+>    reading file - cold_case.gl.nwk
+>    reading file - cold_case.gr.nwk
+>    reading file - cold_case.sf.nwk
+>       -> block found
+>    reading file - TOLOSAT_Hotcase_PhaseA.usr
+> Entering new block   $TABLES
+>    reading file - cold_case.nod.nwk
+>    reading file - cold_case.gl.nwk
+>    reading file - cold_case.gr.nwk
+>    reading file - cold_case.sf.nwk
+>    reading file - TOLOSAT_Hotcase_PhaseA.usr
+> Entering new block   $VARIABLES
+>    reading file - cold_case.nod.nwk
+>    reading file - cold_case.gl.nwk
+>    reading file - cold_case.gr.nwk
+>    reading file - cold_case.sf.nwk
+>    reading file - TOLOSAT_Hotcase_PhaseA.usr
+> Entering new block   $CONTROL
+>    reading file - cold_case.nod.nwk
+>       -> block found
+>    reading file - cold_case.gl.nwk
+>    reading file - cold_case.gr.nwk
+>    reading file - cold_case.sf.nwk
+>       -> block found
+>    reading file - TOLOSAT_Hotcase_PhaseA.usr
+> Entering new block   $SUBROUTINES
+>    reading file - cold_case.nod.nwk
+>    reading file - cold_case.gl.nwk
+>    reading file - cold_case.gr.nwk
+>    reading file - cold_case.sf.nwk
+>       -> block found
+>    reading file - TOLOSAT_Hotcase_PhaseA.usr
+> Entering new block   $INITIAL
+>    reading file - cold_case.nod.nwk
+>    reading file - cold_case.gl.nwk
+>    reading file - cold_case.gr.nwk
+>    reading file - cold_case.sf.nwk
+>       -> block found
+>    reading file - TOLOSAT_Hotcase_PhaseA.usr
+>       -> block found
+> Entering new block   $VTEMPERATURE
+>    reading file - cold_case.nod.nwk
+>    reading file - cold_case.gl.nwk
+>    reading file - cold_case.gr.nwk
+>    reading file - cold_case.sf.nwk
+>    reading file - TOLOSAT_Hotcase_PhaseA.usr
+> Entering new block   $VTIME
+>    reading file - cold_case.nod.nwk
+>    reading file - cold_case.gl.nwk
+>    reading file - cold_case.gr.nwk
+>    reading file - cold_case.sf.nwk
+>       -> block found
+>    reading file - TOLOSAT_Hotcase_PhaseA.usr
+> Entering new block   $VRESULT
+>    reading file - cold_case.nod.nwk
+>    reading file - cold_case.gl.nwk
+>    reading file - cold_case.gr.nwk
+>    reading file - cold_case.sf.nwk
+>    reading file - TOLOSAT_Hotcase_PhaseA.usr
+> Entering new block   $OUTPUTS
+>    reading file - cold_case.nod.nwk
+>    reading file - cold_case.gl.nwk
+>    reading file - cold_case.gr.nwk
+>    reading file - cold_case.sf.nwk
+>    reading file - TOLOSAT_Hotcase_PhaseA.usr
+> Entering new block   $EXECUTION
+>    reading file - cold_case.nod.nwk
+>    reading file - cold_case.gl.nwk
+>    reading file - cold_case.gr.nwk
+>    reading file - cold_case.sf.nwk
+>    reading file - TOLOSAT_Hotcase_PhaseA.usr
+> Closing model  processing
+Execution of computation executable "Thermisol - Skeleton" completed.
+>  
+> Execution completed on Thu Dec 02 18:39:42 2021
+
+>  **************************
+>  
+> Execution : C:/Program Files (x86)/Systema/Systema-4.9.0/applications//Thermisol-4.9.0/SolverWIN.exe -param Solver.sysprm -dck processing.dck -log processing.temp.log -csv processing.temp.csv -out processing.temp.out -hdf processing.temp.h5
+>  
+>  
+>  **************************
+> Temperature Solver Execution
+>  **************************
+> State  1 : Creation of user fortran code
+> "C:\Program Files (x86)\Systema\Systema-4.9.0\applications\Thermisol-4.9.0\PreproWIN.exe" "processing.dck" "processing.temp.out" "processing.temp.h5" "processing.temp.csv" "processing.temp.log" "-" 0
+> State  2 : Compilation of user code
+> g77 -fno-underscoring -fno-globals -w -c "zz_processing_for.f"
+> State  3 : Link with solver library
+> g77 -fno-underscoring -fno-globals -w -o "zz_processing_prg_WIN.exe" "zz_processing_for.o" "C:\Program Files (x86)\Systema\Systema-4.9.0\applications\Thermisol-4.9.0\..\Libsolver-4.9.0\SolverLibWIN.a"  -ladvapi32 -lnetapi32 -lwsock32 "C:\Program Files (x86)\Systema\Systema-4.9.0\applications\Thermisol-4.9.0\..\Libsolver-4.9.0\PowerDummyLibWIN.a"
+> State  4 : Execution of solution program
+> .\zz_processing_prg_WIN.exe
+> THERMISOL 4.9.0 - 64 bits
+AIRBUS Defence and Space SAS - 2021 - All rights reserved
+Information contact : Systema Support
+Telephone : +33 (0)5 31 96 80 00
+Email : engineering.software@airbus.com
+
+About license :
+Valid local license found, expires at 31/01/2022
+(file: C:/Program Files (x86)/Systema/Systema-4.9.0/licenses\Tolosat_Burguburu.moslf).
+
+Execution of computation executable "Thermisol - Solver" completed.
+>  
+> Execution completed on Thu Dec 02 18:39:50 2021
+
+>  **************************
+>  
+> Execution : C:/Program Files (x86)/Systema/Systema-4.9.0/applications//Thermisol-4.9.0/PostherWIN.exe -param Posther.sysprm -h5 processing.temp.h5 -xls processing.xls -txt processing.txt
+>  
+>  
+>  **************************
+> Posther - Thermal Post-processing ToolBox
+>  **************************
+> THERMISOL 4.9.0 - 64 bits
+AIRBUS Defence and Space SAS - 2021 - All rights reserved
+Information contact : Systema Support
+Telephone : +33 (0)5 31 96 80 00
+Email : engineering.software@airbus.com
+
+About license :
+Valid local license found, expires at 31/01/2022
+(file: C:/Program Files (x86)/Systema/Systema-4.9.0/licenses\Tolosat_Burguburu.moslf).
+
+> State  1 : Initialisation
+> State  2 : Extraction
+Execution of computation executable "Thermisol - Posther" completed.
+>  
+> Execution completed on Thu Dec 02 18:39:55 2021
+
+>  **************************
+>  

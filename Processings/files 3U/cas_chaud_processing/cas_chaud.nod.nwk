@@ -1,0 +1,135 @@
+
+#**********************************************#
+#                                              #
+#     Nodal Description created by Thermica    #
+#                                              #
+#**********************************************#
+
+$INFOS
+
+#  Nodal description
+#  --------------------
+#
+#  File : cas_chaud.nod.nwk
+#  Version : Thermica  V.4.9.0 released on September 2020
+#  Executed on : Thu Mar 11 18:37:37 2021
+#  Input files :
+#    - Sysset : cas_chaud.sysset
+
+$GLOBAL
+   $LOCALS
+      # Aluminium_7075
+      REAL COND_Aluminium_7075 = 130.00;
+      REAL DENS_Aluminium_7075 = 2800.00;
+      REAL CP_Aluminium_7075   = 915.00;
+      # PCBZ
+      REAL EPS_PCBZ  = 0.800;
+      REAL ALP_PCBZ  = 0.290;
+      # SunCell
+      REAL EPS_SunCell  = 0.820;
+$ENDGLOBAL
+
+
+$ENTITIES
+
+$NODES
+
+   # Geometrical Nodes
+  D       100 = '/Structure                                      ', T= 0.000, A= 2.000000E-02, C= 1.0000E-05*DENS_Aluminium_7075*CP_Aluminium_7075, ALP= 1.000, EPS= 1.000;
+  D       200 = '/Structure                                      ', T= 0.000, A= 6.000000E-02, C= 3.0000E-05*DENS_Aluminium_7075*CP_Aluminium_7075, ALP= 1.000, EPS= 1.000;
+  D       300 = '/Structure                                      ', T= 0.000, A= 6.000000E-02, C= 3.0000E-05*DENS_Aluminium_7075*CP_Aluminium_7075, ALP= 1.000, EPS= 1.000;
+  D       400 = '/Structure                                      ', T= 0.000, A= 6.000000E-02, C= 3.0000E-05*DENS_Aluminium_7075*CP_Aluminium_7075, ALP= 1.000, EPS= 1.000;
+  D       500 = '/Structure                                      ', T= 0.000, A= 6.000000E-02, C= 3.0000E-05*DENS_Aluminium_7075*CP_Aluminium_7075, ALP= 1.000, EPS= 1.000;
+  D       600 = '/Structure                                      ', T= 0.000, A= 2.000000E-02, C= 1.0000E-05*DENS_Aluminium_7075*CP_Aluminium_7075, ALP= 1.000, EPS= 1.000;
+  D       700 = '/Panneau Solaire Structure/Panneau 3 Structure  ', T= 0.000, A= 5.980000E-02, C= 4.8830E+01                                      , ALP= 1.000, EPS= EPS_PCBZ   ;
+  D       800 = '/Panneau Solaire Structure/Panneau 3 Structure  ', T= 0.000, A= 5.980000E-02, C= 4.8830E+01                                      , ALP= 1.000, EPS= EPS_PCBZ   ;
+  D       900 = '/Panneau Solaire Structure/Panneau 3 Structure  ', T= 0.000, A= 5.000000E-04, C= 4.0828E-01                                      , ALP= 1.000, EPS= EPS_PCBZ   ;
+  D      1000 = '/Panneau Solaire Structure/Panneau 3 Structure  ', T= 0.000, A= 5.000000E-04, C= 4.0828E-01                                      , ALP= 1.000, EPS= EPS_PCBZ   ;
+  D      1100 = '/Panneau Solaire Structure/Panneau 3 Structure  ', T= 0.000, A= 1.495000E-03, C= 1.2207E+00                                      , ALP= 1.000, EPS= EPS_PCBZ   ;
+  D      1200 = '/Panneau Solaire Structure/Panneau 3 Structure  ', T= 0.000, A= 1.495000E-03, C= 1.2207E+00                                      , ALP= 1.000, EPS= EPS_PCBZ   ;
+  D      1300 = '/Panneau Solaire Structure/Panneau 1 Structure  ', T= 0.000, A= 5.980000E-02, C= 4.8830E+01                                      , ALP= 1.000, EPS= EPS_PCBZ   ;
+  D      1400 = '/Panneau Solaire Structure/Panneau 1 Structure  ', T= 0.000, A= 5.980000E-02, C= 4.8830E+01                                      , ALP= 1.000, EPS= EPS_PCBZ   ;
+  D      1500 = '/Panneau Solaire Structure/Panneau 1 Structure  ', T= 0.000, A= 1.495000E-03, C= 1.2207E+00                                      , ALP= 1.000, EPS= EPS_PCBZ   ;
+  D      1600 = '/Panneau Solaire Structure/Panneau 1 Structure  ', T= 0.000, A= 1.495000E-03, C= 1.2207E+00                                      , ALP= 1.000, EPS= EPS_PCBZ   ;
+  D      1700 = '/Panneau Solaire Structure/Panneau 1 Structure  ', T= 0.000, A= 5.000000E-04, C= 4.0828E-01                                      , ALP= 1.000, EPS= EPS_PCBZ   ;
+  D      1800 = '/Panneau Solaire Structure/Panneau 1 Structure  ', T= 0.000, A= 5.000000E-04, C= 4.0828E-01                                      , ALP= 1.000, EPS= EPS_PCBZ   ;
+  D      1900 = '/Panneau Solaire Structure/Panneau 2 Structure  ', T= 0.000, A= 5.980000E-02, C= 4.8830E+01                                      , ALP= 1.000, EPS= EPS_PCBZ   ;
+  D      2000 = '/Panneau Solaire Structure/Panneau 2 Structure  ', T= 0.000, A= 5.980000E-02, C= 4.8830E+01                                      , ALP= 1.000, EPS= EPS_PCBZ   ;
+  D      2100 = '/Panneau Solaire Structure/Panneau 2 Structure  ', T= 0.000, A= 1.495000E-03, C= 1.2207E+00                                      , ALP= 1.000, EPS= EPS_PCBZ   ;
+  D      2200 = '/Panneau Solaire Structure/Panneau 2 Structure  ', T= 0.000, A= 1.495000E-03, C= 1.2207E+00                                      , ALP= 1.000, EPS= EPS_PCBZ   ;
+  D      2300 = '/Panneau Solaire Structure/Panneau 2 Structure  ', T= 0.000, A= 5.000000E-04, C= 4.0828E-01                                      , ALP= 1.000, EPS= EPS_PCBZ   ;
+  D      2400 = '/Panneau Solaire Structure/Panneau 2 Structure  ', T= 0.000, A= 5.000000E-04, C= 4.0828E-01                                      , ALP= 1.000, EPS= EPS_PCBZ   ;
+  D      2500 = '/Panneau Solaire Structure/Panneau 4 Structure  ', T= 0.000, A= 5.980000E-02, C= 4.8830E+01                                      , ALP= 1.000, EPS= EPS_PCBZ   ;
+  D      2600 = '/Panneau Solaire Structure/Panneau 4 Structure  ', T= 0.000, A= 5.980000E-02, C= 4.8830E+01                                      , ALP= 1.000, EPS= EPS_PCBZ   ;
+  D      2700 = '/Panneau Solaire Structure/Panneau 4 Structure  ', T= 0.000, A= 5.000000E-04, C= 4.0828E-01                                      , ALP= 1.000, EPS= EPS_PCBZ   ;
+  D      2800 = '/Panneau Solaire Structure/Panneau 4 Structure  ', T= 0.000, A= 5.000000E-04, C= 4.0828E-01                                      , ALP= 1.000, EPS= EPS_PCBZ   ;
+  D      2900 = '/Panneau Solaire Structure/Panneau 4 Structure  ', T= 0.000, A= 1.495000E-03, C= 1.2207E+00                                      , ALP= 1.000, EPS= EPS_PCBZ   ;
+  D      3000 = '/Panneau Solaire Structure/Panneau 4 Structure  ', T= 0.000, A= 1.495000E-03, C= 1.2207E+00                                      , ALP= 1.000, EPS= EPS_PCBZ   ;
+  D      3100 = '/Panneau Solaire Dessus/Panneau 4               ', T= 0.000, A= 2.880000E-04, C= 2.3517E-01                                      , ALP= 1.000, EPS= EPS_SunCell;
+  D      3200 = '/Panneau Solaire Dessus/Panneau 4               ', T= 0.000, A= 2.880000E-04, C= 2.3517E-01                                      , ALP= 1.000, EPS= EPS_SunCell;
+  D      3300 = '/Panneau Solaire Dessus/Panneau 4               ', T= 0.000, A= 1.004400E-03, C= 8.2014E-01                                      , ALP= 1.000, EPS= EPS_SunCell;
+  D      3400 = '/Panneau Solaire Dessus/Panneau 4               ', T= 0.000, A= 1.004400E-03, C= 8.2014E-01                                      , ALP= 1.000, EPS= EPS_SunCell;
+  D      3500 = '/Panneau Solaire Dessus/Panneau 4               ', T= 0.000, A= 4.464000E-02, C= 3.6451E+01                                      , ALP= 1.000, EPS= EPS_SunCell;
+  D      3600 = '/Panneau Solaire Dessus/Panneau 4               ', T= 0.000, A= 4.464000E-02, C= 3.6451E+01                                      , ALP= 1.000, EPS= EPS_SunCell;
+  D      3700 = '/Panneau Solaire Dessus/Panneau 3               ', T= 0.000, A= 4.464000E-02, C= 3.6451E+01                                      , ALP= 1.000, EPS= EPS_SunCell;
+  D      3800 = '/Panneau Solaire Dessus/Panneau 3               ', T= 0.000, A= 2.880000E-04, C= 2.3517E-01                                      , ALP= 1.000, EPS= EPS_SunCell;
+  D      3900 = '/Panneau Solaire Dessus/Panneau 3               ', T= 0.000, A= 2.880000E-04, C= 2.3517E-01                                      , ALP= 1.000, EPS= EPS_SunCell;
+  D      4000 = '/Panneau Solaire Dessus/Panneau 3               ', T= 0.000, A= 4.464000E-02, C= 3.6451E+01                                      , ALP= 1.000, EPS= EPS_SunCell;
+  D      4100 = '/Panneau Solaire Dessus/Panneau 3               ', T= 0.000, A= 1.004400E-03, C= 8.2014E-01                                      , ALP= 1.000, EPS= EPS_SunCell;
+  D      4200 = '/Panneau Solaire Dessus/Panneau 3               ', T= 0.000, A= 1.004400E-03, C= 8.2014E-01                                      , ALP= 1.000, EPS= EPS_SunCell;
+  D      4300 = '/Panneau Solaire Dessus/Panneau 2               ', T= 0.000, A= 2.880000E-04, C= 2.3517E-01                                      , ALP= 1.000, EPS= EPS_SunCell;
+  D      4400 = '/Panneau Solaire Dessus/Panneau 2               ', T= 0.000, A= 1.004400E-03, C= 8.2014E-01                                      , ALP= 1.000, EPS= EPS_SunCell;
+  D      4500 = '/Panneau Solaire Dessus/Panneau 2               ', T= 0.000, A= 1.004400E-03, C= 8.2014E-01                                      , ALP= 1.000, EPS= EPS_SunCell;
+  D      4600 = '/Panneau Solaire Dessus/Panneau 2               ', T= 0.000, A= 2.880000E-04, C= 2.3517E-01                                      , ALP= 1.000, EPS= EPS_SunCell;
+  D      4700 = '/Panneau Solaire Dessus/Panneau 2               ', T= 0.000, A= 4.464000E-02, C= 3.6451E+01                                      , ALP= 1.000, EPS= EPS_SunCell;
+  D      4800 = '/Panneau Solaire Dessus/Panneau 2               ', T= 0.000, A= 4.464000E-02, C= 3.6451E+01                                      , ALP= 1.000, EPS= EPS_SunCell;
+  D      4900 = '/Panneau Solaire Dessus/Panneau 1               ', T= 0.000, A= 4.464000E-02, C= 3.6451E+01                                      , ALP= 1.000, EPS= EPS_SunCell;
+  D      5000 = '/Panneau Solaire Dessus/Panneau 1               ', T= 0.000, A= 4.464000E-02, C= 3.6451E+01                                      , ALP= 1.000, EPS= EPS_SunCell;
+  D      5100 = '/Panneau Solaire Dessus/Panneau 1               ', T= 0.000, A= 2.880000E-04, C= 2.3517E-01                                      , ALP= 1.000, EPS= EPS_SunCell;
+  D      5200 = '/Panneau Solaire Dessus/Panneau 1               ', T= 0.000, A= 1.004400E-03, C= 8.2014E-01                                      , ALP= 1.000, EPS= EPS_SunCell;
+  D      5300 = '/Panneau Solaire Dessus/Panneau 1               ', T= 0.000, A= 1.004400E-03, C= 8.2014E-01                                      , ALP= 1.000, EPS= EPS_SunCell;
+  D      5400 = '/Panneau Solaire Dessus/Panneau 1               ', T= 0.000, A= 2.880000E-04, C= 2.3517E-01                                      , ALP= 1.000, EPS= EPS_SunCell;
+  D      5500 = '/Rack                                           ', T= 0.000, A= 2.000000E-02, C= 0.0000E+00                                      , ALP= ALP_PCBZ, EPS= EPS_PCBZ   ;
+  D      5600 = '/Rack                                           ', T= 0.000, A= 2.000000E-02, C= 0.0000E+00                                      , ALP= ALP_PCBZ, EPS= EPS_PCBZ   ;
+  D      5700 = '/Rack                                           ', T= 0.000, A= 2.000000E-02, C= 0.0000E+00                                      , ALP= ALP_PCBZ, EPS= EPS_PCBZ   ;
+  D      5800 = '/Rack                                           ', T= 0.000, A= 2.000000E-02, C= 0.0000E+00                                      , ALP= ALP_PCBZ, EPS= EPS_PCBZ   ;
+  D      5900 = '/Payload 1                                      ', T= 0.000, A= 2.000000E-02, C= 0.0000E+00                                      , ALP= ALP_PCBZ, EPS= EPS_PCBZ   ;
+  D      6000 = '/Payload 2                                      ', T= 0.000, A= 2.000000E-02, C= 0.0000E+00                                      , ALP= ALP_PCBZ, EPS= EPS_PCBZ   ;
+
+   # Sensor nodes
+
+   # Space (or environment) node
+  B  99999999 = 'Space Node', T= -269.000;
+
+
+
+
+
+$CONTROLS
+   DATE50 = 2.610400E+04;
+   PERIOD = 1.704000E+04;
+
+
+$EVENTS
+
+   $TIMESTEP
+   $OUTPUT
+      # Earth_PenumbraIN_1   =  1.595015E+03 [PERIOD];
+      # Earth_PenumbraOUT_1  =  3.569227E+03 [PERIOD];
+      # Earth_EclipseIN_2   =  1.605634E+03 [PERIOD];
+      # Earth_EclipseOUT_2  =  3.558776E+03 [PERIOD];
+      # Earth_PenumbraIN_3   =  7.278950E+03 [PERIOD];
+      # Earth_PenumbraOUT_3  =  9.253014E+03 [PERIOD];
+      # Earth_EclipseIN_4   =  7.289571E+03 [PERIOD];
+      # Earth_EclipseOUT_4  =  9.242562E+03 [PERIOD];
+      # Earth_PenumbraIN_5   =  1.296289E+04 [PERIOD];
+      # Earth_PenumbraOUT_5  =  1.493680E+04 [PERIOD];
+      # Earth_EclipseIN_6   =  1.297351E+04 [PERIOD];
+      # Earth_EclipseOUT_6  =  1.492635E+04 [PERIOD];
+
+
+$ARRAYS
+   CHARACTER* SEQNAME(1) = 'Default';
+
+   REAL* SEQNB(2,*) =
+       0.000000E+00,  1;
