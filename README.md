@@ -7,6 +7,7 @@ Its main goal is to store and share the Systema Thermica® files that we use to 
 
 Former files that are obsolete to our current models are stored in the "Archives" file.  
 Types of files that may change during the study (depending on the goal/precision of the simulation) are stored in their respective files (Kinematics, Materials, Meshings and Models, Missions, Processings, Trajectories, USR Files)  
+![Repository's organization](/Assets/Images/Organization.png)
 
 ## Guide for Thermal Members
 ### How to use the Thermal GitHub
@@ -29,12 +30,16 @@ All files from a repository are stored in the corresponding file.
 All changes you make on any of these files will be kept by GitHub.  
 When you open the GitHub Desktop app, they'll be listed on the left of the screen.  
 On the bottom left of the screen, you have a fram with a "commit to *name of the branch*". You will need to click this button to synchronise the local changes on your computer with the files stored on GitHub.  
+![Commit to Main](/Assets/Images/Commit.png)
+
 **ALWAYS** give information about what your committing (title + short paragraph of explanations). It will make everything clearer if someone ever needs to browse through the history of the changes.
 
 After commiting your changes to the "main" branch (you could potentially commit to any other branch but we only have the "main" branch yet), you have to click the "Push" button on the top of the screen.  
+
 Then, the "current correct" version of the files is the one you just pushed, and the other versions are stored in the GitHub archives.
 
-If you want to use the files someone else commited to the main, use GitHub desktop and click "Pull" or "Create a Pull request" at the top of the screen. It will then modify the files from your GitHub file and replace them with the one stored in the GitHub.  
+If you want to use the files someone else commited to the main, use GitHub desktop and click "Fetch Origin" at the top of the screen. It will then modify the files from your GitHub file and replace them with the one stored in the GitHub.  
+![Fetching Origin](/Assets/Images/Fetch.png)
 
 #### IMPORTANT INFORMATION
 
@@ -45,7 +50,9 @@ As a consequence, **everytime you pull a meshing file from GitHub** you'll have 
 The code is stored in the *models and meshings* file. You can open it with any Python Idle environment (Spyder, Anaconda, Idle...).  
 
 1. Open the code
-2. Replace the Meshing and Model names in the corresponding places with the name of the files you'll be working with (pictures will be added later to clarify)
+2. Replace the Meshing and Model names in the corresponding places with the name of the files you'll be working with
 3. Run the code
+![Replacing model name](/Assets/Images/Model.png)
+![Replacing meshing name](/Assets/Images/Meshing.png)
 
 Then everything should be working well on Systema
