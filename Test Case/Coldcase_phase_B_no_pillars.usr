@@ -1,0 +1,206 @@
+$INFOS
+
+# TOLOSAT_V1.usr.nwk en date du 21_01_2021:
+# ----------------------------------------------
+#
+# Ce fichier contient la paramétrisation du calcul Thermica pour TOLOSAT. Notamment : 
+
+# - Les couplages conductifs entre divers noeuds particuliers
+
+# Dans ce programme, on fait les calculs pendant le SOLSTICE D'HIVER où:
+#
+# La periode orbitale est de 5678
+#
+# Il n'y a pas d'éclipse entre le temps 0s à 5678
+#
+######################################################################
+#
+# Dans cette simulation qui dure pendant 3 orbites, on ne chauffe pas
+#
+######################################################################
+
+$INITIAL
+
+
+
+QI1500 = 0.16 #Power
+
+QI1600 = 3.696 #COMMS
+
+#Forte inertie thermique des batteries (J/K)
+C1700 = 1000
+QI1700 = 8.0
+
+QI1800 = 7.8 #OBDH
+
+QI1900 = 3.324 #ADCS
+
+QI2000 = 0.8 #Iridium
+
+QI2100 = 3.5 #Gravimetry
+
+
+
+$CONDUCTORS 
+#COMPUTED COUPLINGS
+#--------------------------------COUPLAGES STRUCTURE--------------------------------
+#Couplages au niveau des charnières en W/K			
+GL(1100, 700) = 1.12 #panneau 1 - support panneau 1
+GL(1101, 701) = 1.12 #panneau 1 - support panneau 1
+GL(1102, 702) = 1.12 #panneau 1 - support panneau 1
+GL(1103, 703) = 1.12 #panneau 1 - support panneau 1
+GL(1200, 800) = 1.12 #panneau 2 - support panneau 2
+GL(1201, 801) = 1.12 #panneau 2 - support panneau 2
+GL(1202, 802) = 1.12 #panneau 2 - support panneau 2
+GL(1203, 803) = 1.12 #panneau 2 - support panneau 2
+GL(1300, 900) = 1.12 #panneau 3 - support panneau 3
+GL(1301, 901) = 1.12 #panneau 3 - support panneau 3
+GL(1302, 902) = 1.12 #panneau 3 - support panneau 3
+GL(1303, 903) = 1.12 #panneau 3 - support panneau 3
+GL(1400, 1000) = 1.12 #panneau 4 - support panneau 4
+GL(1401, 1001) = 1.12 #panneau 4 - support panneau 4
+GL(1402, 1002) = 1.12 #panneau 4 - support panneau 4
+GL(1403, 1003) = 1.12 #panneau 4 - support panneau 4
+
+GL(600, 702) = 0.5 #dessus - support panneau 1
+GL(603, 702) = 0.25 #dessus - support panneau 1
+GL(603, 703) = 0.25 #dessus - support panneau 1
+GL(606, 703) = 0.5 #dessus - support panneau 1
+GL(600, 803) = 0.5 #dessus - support panneau 2
+GL(601, 803) = 0.25 #dessus - support panneau 2
+GL(601, 802) = 0.25 #dessus - support panneau 2
+GL(602, 802) = 0.5 #dessus - support panneau 2
+GL(602, 902) = 0.5 #dessus - support panneau 3
+GL(605, 902) = 0.25 #dessus - support panneau 3
+GL(605, 903) = 0.25 #dessus - support panneau 3
+GL(608, 903) = 0.5 #dessus - support panneau 3
+GL(608, 1002) = 0.5 #dessus - support panneau 4
+GL(607, 1002) = 0.25 #dessus - support panneau 4
+GL(607, 1003) = 0.25 #dessus - support panneau 4
+GL(606, 1003) = 0.5 #dessus - support panneau 4		
+	
+GL(224, 702) = 0.5 #c�t� 1 - Panneau 1
+GL(225, 702) = 0.25 # - 
+GL(225, 703) = 0.25 # - 
+GL(226, 703) = 0.5 # - 
+GL(324, 802) = 0.5 #c�t� 2 - Panneau 2
+GL(325, 802) = 0.25 # - 
+GL(325, 803) = 0.25 # - 
+GL(326, 803) = 0.5 # - 
+GL(424, 902) = 0.5 #c�t� 3 - Panneau 3
+GL(425, 902) = 0.25 # - 
+GL(425, 903) = 0.25 # - 
+GL(426, 903) = 0.5 # - 
+GL(524, 1002) = 0.5 #c�t� 4 - Panneau 4
+GL(525, 1002) = 0.25 # - 
+GL(525, 1003) = 0.25 # - 
+GL(526, 1003) = 0.5 # - 
+			
+GL(200, 100) = 0.5 #c�t� 1 - dessous
+GL(201, 103) = 0.5 # - 
+GL(202, 106) = 0.5 # - 
+GL(300, 102) = 0.5 #c�t� 2 - 
+GL(301, 101) = 0.5 # - 
+GL(302, 100) = 0.5 # - 
+GL(400, 102) = 0.5 #c�t� 3 - 
+GL(401, 105) = 0.5 # - 
+GL(402, 108) = 0.5 # - 
+GL(500, 108) = 0.5 #c�t� 4 - 
+GL(501, 107) = 0.5 # - 
+GL(502, 106) = 0.5 # - 	
+			
+GL(224, 600) = 0.5 #c�t� 1 - dessus
+GL(225, 603) = 0.5 # - 
+GL(226, 606) = 0.5 # - 
+GL(324, 602) = 0.5 #c�t� 2 - 
+GL(325, 601) = 0.5 # - 
+GL(326, 600) = 0.5 # - 
+GL(424, 602) = 0.5 #c�t� 3 - 
+GL(425, 605) = 0.5 # - 
+GL(426, 608) = 0.5 # - 
+GL(524, 608) = 0.5 #c�t� 4 - 
+GL(525, 607) = 0.5 # - 
+GL(526, 606) = 0.5 # - 
+			
+GL(200, 302) = 0.5 #cote 1 - cote 2
+GL(203, 305) = 0.5 # - 
+GL(206, 308) = 0.5 # - 
+GL(209, 311) = 0.5 # - 
+GL(212, 314) = 0.5 # - 
+GL(215, 317) = 0.5 # - 
+GL(218, 320) = 0.5 # - 
+GL(221, 323) = 0.5 # - 
+GL(224, 326) = 0.5 # - 
+GL(300, 400) = 0.5 #cote 2 - cote 3
+GL(303, 403) = 0.5 # - 
+GL(306, 406) = 0.5 # - 
+GL(309, 409) = 0.5 # - 
+GL(312, 412) = 0.5 # - 
+GL(315, 415) = 0.5 # - 
+GL(318, 418) = 0.5 # - 
+GL(321, 421) = 0.5 # - 
+GL(324, 424) = 0.5 # - 
+GL(402, 500) = 0.5 #cote 3 - cote 4
+GL(405, 503) = 0.5 # - 
+GL(408, 506) = 0.5 # - 
+GL(411, 509) = 0.5 # - 
+GL(414, 512) = 0.5 # - 
+GL(417, 515) = 0.5 # - 
+GL(420, 518) = 0.5 # - 
+GL(423, 521) = 0.5 # - 
+GL(426, 524) = 0.5 # - 
+GL(502, 202) = 0.5 #c�t� 4 - c�t� 1
+GL(505, 205) = 0.5 # - 
+GL(508, 208) = 0.5 # - 
+GL(511, 211) = 0.5 # - 
+GL(514, 214) = 0.5 # - 
+GL(517, 217) = 0.5 # - 
+GL(520, 220) = 0.5 # - 
+GL(523, 223) = 0.5 # - 
+GL(526, 226) = 0.5 # - 
+#--------------------------------COUPLAGES RACK AVIONIQUE--------------------------------			
+#Couplages rack Power			
+GL(1500, 202) = 0.285 #rack Power - côté 1202			
+GL(1500, 302) = 0.285 #rack Power - côté 2302			
+GL(1500, 402) = 0.285 #rack Power - côté 3402			
+GL(1500, 502) = 0.285 #rack Power - côté 4502			
+			
+#Couplages rack Batterie			
+GL(1600, 202) = 0.285 #rack Batterie - côté 1202			
+GL(1600, 302) = 0.285 #rack Batterie - côté 2302			
+GL(1600, 402) = 0.285 #rack Batterie - côté 3402			
+GL(1600, 502) = 0.285 #rack Batterie - côté 4502			
+			
+#Couplages rack OBC			
+GL(1700, 202) = 0.285 #rack OBC - côté 1202			
+GL(1700, 302) = 0.285 #rack OBC - côté 2302			
+GL(1700, 402) = 0.285 #rack OBC - côté 3402			
+GL(1700, 502) = 0.285 #rack OBC - côté 4502			
+			
+#Couplages rack MTQ			
+GL(1800, 202) = 0.285 #rack MTQ - côté 1202			
+GL(1800, 302) = 0.285 #rack MTQ - côté 2302			
+GL(1800, 402) = 0.285 #rack MTQ - côté 3402			
+GL(1800, 502) = 0.285 #rack MTQ - côté 4502			
+			
+#Coupling Payload1 rack			
+GL(1900, 202) = 0.285 #rack Payload1 - côté 1202			
+GL(1900, 302) = 0.285 #rack Payload1 - côté 2302			
+GL(1900, 402) = 0.285 #rack Payload1 - côté 3402			
+GL(1900, 502) = 0.285 #rack Payload1 - côté 4502			
+GL(1900, 201) = 0.285 #rack Payload1 - côté 1201			
+GL(1900, 301) = 0.285 #rack Payload1 - côté 2301			
+GL(1900, 401) = 0.285 #rack Payload1 - côté 3401			
+GL(1900, 501) = 0.285 #rack Payload1 - côté 4501			
+			
+#Couplages Payload2 rack			
+GL(2000, 200) = 0.285 #rack Payload2 - côté 1200			
+GL(2000, 300) = 0.285 #rack Payload2 - côté 2300			
+GL(2000, 400) = 0.285 #rack Payload2 - côté 3400			
+GL(2000, 500) = 0.285 #rack Payload2 - côté 4500			
+GL(2000, 201) = 0.285 #rack Payload2 - côté 1201			
+GL(2000, 301) = 0.285 #rack Payload2 - côté 2301			
+GL(2000, 401) = 0.285 #rack Payload2 - côté 3401			
+GL(2000, 501) = 0.285 #rack Payload2 - côté 4501			
+#------------------------------------------------------------------------------END OF COUPLINGS-----------------------------------------------------------------------------------------------
+
